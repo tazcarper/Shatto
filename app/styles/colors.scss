@@ -1,0 +1,11 @@
+//colors
+
+$darkGrey : #333333;
+$lightGrey : #aaaaaa;
+
+::selection {
+  background: #e3d260; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #e3d260; /* Gecko Browsers */
+}
