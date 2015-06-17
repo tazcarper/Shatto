@@ -1,11 +1,11 @@
 jQuery(document).ready(function($){
 	var isLateralNavAnimating = false;
-	
+	console.log('hi')
 	//open/close lateral navigation
 	$('.cd-nav-trigger').on('click', function(event){
 		event.preventDefault();
 
-
+		console.log('clicked')
 		//stop if nav animation is running 
 		if( !isLateralNavAnimating ) {
 			if($(this).parents('.csstransitions').length > 0 ) {
@@ -13,6 +13,7 @@ jQuery(document).ready(function($){
 			}
 			
 			$('body').toggleClass('navigation-is-open');
+			$('.headerMain').toggleClass('makeBlack');
 			$('.cd-navigation-wrapper').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
 				//animation is over
 				isLateralNavAnimating = false;
