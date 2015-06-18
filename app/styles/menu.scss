@@ -1,17 +1,16 @@
 $headerHeight: 110px;
+
 header {
-  background: rgba(255,255,255,.90);
+  background: rgba(255, 255, 255, .90);
   position: fixed;
-  top:0;
-  left:0;
-  width:100%;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 999;
 }
-
 .headerContainer {
   padding: 0;
 }
-
 .headerMain {
   background: white;
   height: $headerHeight;
@@ -19,7 +18,6 @@ header {
   top: 0;
   width: 100%;
   z-index: 9;
-  border-bottom: 1px solid $darkGrey;
   padding-left: 0;
   padding-right: 0;
   -webkit-transition: background-color 550ms  ease;
@@ -27,6 +25,9 @@ header {
   -o-transition: background-color 550ms  ease;
   -ms-transition: background-color 550ms  ease;
   transition: background-color 550ms  ease;
+  -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
 
   @media (min-width:$screen-sm-min) {
     position: static;
@@ -38,50 +39,52 @@ header {
     padding-right: 15px;
     background: transparent !important;
     transition: background-color 1ms  ease;
+    -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0);
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0);
   }
   &.makeBlack {
-  background-color: black;
-}
-.shattoLogo {
-  width: 440px;
-  left: 50%;
-  margin-left: -220px;
-  top: 3px;
-  margin-top: 15px;
-  fill: $darkGrey;
-  position: relative;
-  z-index: 2;
- // animation: fill-logo-close .9s  infinite;
-  -webkit-animation-iteration-count: 1;
-  -moz-animation-iteration-count: 1;
-  -o-animation-iteration-count: 1;
-  animation-iteration-count: 1;
+    background-color: black;
+  }
+  .shattoLogo {
+    width: 440px;
+    left: 50%;
+    margin-left: -220px;
+    top: 3px;
+    margin-top: 15px;
+    fill: $darkGrey;
+    position: relative;
+    z-index: 2;
+    // animation: fill-logo-close .9s  infinite;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -o-animation-iteration-count: 1;
+    animation-iteration-count: 1;
 
-  @media (min-width:$screen-sm-min) {
-    position: static;
-    margin-left: 0;
-    width:450px;
-    margin-top: 18px;
-    margin-left: -160px;
+    @media (min-width:$screen-sm-min) {
+      position: static;
+      margin-left: 0;
+      width: 450px;
+      margin-top: 18px;
+      margin-left: -160px;
+    }
+    @media (min-width:$screen-md-min) {
+      margin-top: 15px;
+      width: 100%;
+      margin-left: 0;
+    }
+    @media (min-width:$screen-lg-min) {
+      margin-top: 15px;
+    }
   }
-  @media (min-width:$screen-md-min) {
-  margin-top: 15px;
-  width:100%;
-  margin-left: 0;
-  }
-  @media (min-width:$screen-lg-min) {
-  margin-top: 15px;
+  .letters {
+    display: none;
 
+    @media (min-width:$screen-md-min) {
+      display: block;
+    }
   }
 }
-.letters {
-  display: none;
-  @media (min-width:$screen-md-min) {
-  display: block;
-  }
-}
-}
-
 .cd-nav {
   position: fixed;
   z-index: 1;
@@ -116,6 +119,9 @@ header {
 
     @media (min-width:$screen-sm-min) {
       margin-top: 0;
+      width: auto;
+      float: right;
+      margin-bottom: 0;
     }
     a {
       font-size: 30px;
@@ -125,7 +131,8 @@ header {
       display: inline-block;
 
       @media (min-width:$screen-sm-min) {
-        font-size: 16px;
+        font-size: 13px;
+        color: black;
       }
       .selected {
         color: $darkGrey;
@@ -133,7 +140,7 @@ header {
         list-style: none;
       }
       &:hover {
-          text-decoration: none;
+        text-decoration: none;
       }
     }
     li {
@@ -152,16 +159,29 @@ header {
         background: transparent;
         border-bottom: none;
         margin: 0;
+        display: inline-block;
       }
       a {
         outline: none;
+        display: inline-block;
 
+        &::after {
+          display: block;
+          content: attr(title);
+          font-weight: 500;
+          height: 1px;
+          color: transparent;
+          overflow: hidden;
+          visibility: hidden;
+        }
         &:focus {
           text-decoration: none;
         }
         &:hover {
           //background: lighten($darkGrey, 35%);
           text-decoration: none;
+          font-weight: 500;
+          position: relative;
         }
       }
       &.selected {
@@ -183,6 +203,19 @@ header {
         }
       }
       &.social-icons {
+        display: block;
+
+        @media (min-width:$screen-md-min) {
+          display: block;
+          padding-top: 0;
+         
+        }
+        span {
+      color: $lightGrey;
+      @media (min-width:$screen-md-min) {
+      color: black;
+      }
+        }
         a {
           margin-top: 5px;
           margin-left: 15px;
@@ -193,13 +226,9 @@ header {
           background: none;
         }
       }
-      &.social-icons {
-        //padding-top: 10px;
-      }
+      
     }
-    span {
-      color: $lightGrey;
-    }
+    
   }
   .cd-navigation-wrapper {
 
@@ -230,7 +259,7 @@ header {
 
     @media (min-width:$screen-sm-min) {
       padding: 0;
-      background:transparent;
+      background: transparent;
       -webkit-transform: translateX(0);
       -moz-transform: translateX(0);
       -ms-transform: translateX(0);
@@ -241,12 +270,15 @@ header {
       -moz-transition: -moz-transform 0s;
       transition: transform 0s;
       height: auto;
-      margin-top: 55px;
+      margin-top: 70px;
       margin-left: 15%;
+
+      .home {
+        display: none;
+      }
     }
   }
 }
-
 .navigation-is-open {
   .head {
     animation: fill-logo-open .9s  infinite;
@@ -408,8 +440,6 @@ header {
 .no-touch .navigation-is-open .cd-nav-trigger:hover .cd-nav-icon::after, .no-touch .navigation-is-open .cd-nav-trigger:hover .cd-nav-icon::before {
   top: 0;
 }
-
-
 .no-js main {
   height: auto;
   overflow: visible;
