@@ -1,0 +1,80 @@
+// Hero
+.hero {
+  background: white;
+  padding-bottom: 75px;
+
+  .callOut {
+    background: rgba(255, 255, 255, .90);
+    padding: 20px 30px 20px 90px;
+    color: black;
+    border: 1px dotted $lightGrey;
+    width: 420px;
+    position: absolute;
+    bottom: 20%;
+    left: 70%;
+    z-index: 1;
+    margin-left: -175px;
+    display: none;
+
+    @media (min-width:$screen-sm-min) {
+      padding: 20px 30px 20px 90px;
+      left: 67%;
+      display: block;
+    }
+    @media (min-width:$screen-md-min) {
+      left: 74%;
+    }
+    @media (min-width:$screen-lg-min) {
+      left: 70%;
+    }
+    h2, p {
+      text-align: left;
+      margin: 0;
+      padding: 0;
+    }
+    p {
+      font-size: 14px;
+      padding: 0;
+    }
+  }
+  .mobile {
+  margin-top: 25px;
+  text-align: center;
+    h1 {
+      font-size: 200px;
+      font-weight: 500;
+      letter-spacing: .2px;
+      -ms-transform: rotate(90deg); /* IE 9 */
+      -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+      transform: rotate(90deg);
+      padding-bottom: 10px;
+    }
+  }
+  object {
+  	width:100%;
+  	max-width:220px;
+  }
+  @media (min-width:$screen-sm-min) {
+    background: url('../images/hero-bg-placeholder.jpg') 0 100px no-repeat;
+  }
+  @media (min-width:$screen-lg-min) {
+    background-position: 0 125px;
+  }
+  h1, p {
+    text-align: center;
+  }
+  h1 {
+    font-size: 60px;
+
+    @media (min-width:$screen-lg-min) {
+      font-size: 90px;
+    }
+  }
+  p {
+    font-size: 18px;
+
+    @media (min-width:$screen-md-min) {
+      padding: 0 15%;
+    }
+  }
+}

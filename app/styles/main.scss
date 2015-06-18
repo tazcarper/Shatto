@@ -1,39 +1,68 @@
 $icon-font-path: '../fonts/';
-
-// bower:scss
+// bower: scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-
 @import "colors.scss";
 @import "menu.scss";
 @import "font-icons.scss";
+@import "hero.scss";
 // endbower
 
+
+body, html {
+  font-family: "futura-pt", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  overflow-x: hidden;
+  background-color: white;
+  font-size: 16px;
+  color: black;
+  
+}
+body {
+  
+}
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
 }
+.desktop {
+  display: none;
 
-/* Space out content a bit */
-body,html {
-  font-family: "futura-pt",sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  overflow-x: hidden;
-  background-color: white;
-
+  @media (min-width:$screen-sm-min) {
+    display: block;
+  }
 }
+.mobile {
+  display: block;
 
-
+  @media (min-width:$screen-sm-min) {
+    display: none;
+  }
+}
+//fonts
+h1 {
+  font-size: 5.625em;
+  font-weight: 500;
+  font-family: "futura-pt-condensed", sans-serif;
+}
+h2 {
+  font-size: 3.125em;
+  font-weight: 500;
+  font-family: "futura-pt-condensed", sans-serif;
+}
+p {
+  font-family: "futura-pt", sans-serif;
+}
 // Main
 main {
-  border-top:1px solid $darkGrey;
+  border-top: 1px solid $darkGrey;
   position: relative;
   z-index: 2;  /* fix bug on iOS */
   min-height: 100vh;
-  overflow-y: auto;
-  background:white;
+  overflow: hidden;
+  background: white;
   -webkit-overflow-scrolling: touch;
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
@@ -48,25 +77,43 @@ main {
   -webkit-transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
   -moz-transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
   transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
+
   @media (min-width:$screen-sm-min) {
     -webkit-transform: translateZ(0) !important;
-  -moz-transform: translateZ(0) !important;
-  -ms-transform: translateZ(0) !important;
-  -o-transform: translateZ(0) !important;
-  transform: translateZ(0) !important;
+    -moz-transform: translateZ(0) !important;
+    -ms-transform: translateZ(0) !important;
+    -o-transform: translateZ(0) !important;
+    transform: translateZ(0) !important;
+  }
+}
+.mainContent {
+  padding-top: 130px;
+}
+// Main Bottle
+#mainBottle {
+  width: 236px;
+  left: 45%;
+  margin: 15px 0 0px -118px;
+  position: relative;
+  z-index: 3;
+  display: none;
+
+  @media (min-width:$screen-sm-min) {
+    left: 35%;
+    display: block;
+  }
+  @media (min-width:$screen-md-min) {
+    left: 50%;
   }
 }
 
-.mainContent {
-  padding-top: 130px;
-
+// Bottle Detail
+.bottleDetail {
+  margin-top: 35px;
+  background:white;
+  h2 {
+    text-align: center;
+    margin-bottom: 1px;
+    margin-top: 1px;
+  }
 }
-
-// Hero
-.hero {
-  background:url('../images/hero-bg-placeholder.jpg') 0 0 no-repeat;
-  background-size:cover;
-  min-height: 900px;
-}
-
-

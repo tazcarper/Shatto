@@ -116,7 +116,7 @@ header {
     padding-left: 0;
     margin-left: 0;
     list-style: none;
-
+  
     @media (min-width:$screen-sm-min) {
       margin-top: 0;
       width: auto;
@@ -280,6 +280,8 @@ header {
   }
 }
 .navigation-is-open {
+background:black;
+
   .head {
     animation: fill-logo-open .9s  infinite;
     animation-fill-mode: forwards;
@@ -289,11 +291,13 @@ header {
     animation-iteration-count: 1;
   }
   main {
+   
     -webkit-transform: translateX(100%);
     -moz-transform: translateX(100%);
     -ms-transform: translateX(100%);
     -o-transform: translateX(100%);
     transform: translateX(100%);
+  
   }
   .cd-nav {
     visibility: visible;
@@ -302,6 +306,7 @@ header {
     transition: visibility 0s 0s;
 
     .cd-navigation-wrapper {
+      height: 100%;
       -webkit-transform: translateX(0);
       -moz-transform: translateX(0);
       -ms-transform: translateX(0);

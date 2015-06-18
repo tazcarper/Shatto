@@ -12,7 +12,9 @@ jQuery(document).ready(function($){
 				isLateralNavAnimating = true; 
 			}
 			
-			$('body').toggleClass('navigation-is-open');
+			$('html').toggleClass('navigation-is-open');
+			console.log($(window).height());
+
 			$('.headerMain').toggleClass('makeBlack');
 			$('.cd-navigation-wrapper').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
 				//animation is over
