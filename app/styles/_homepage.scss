@@ -1,3 +1,49 @@
+section.products {
+  background: $white;
+  color: $black;
+  padding: 4em 0;
+  text-align: center;
+
+  a {
+    background-color: $black;
+    border-radius: 2em;
+    color: $white;
+    display: block;
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-bottom: 1em;
+    padding: .4em .8em;
+    text-transform: uppercase;
+  }
+
+  a:hover, a:focus, a:active {
+    background-color: $white;
+    color: $black;
+    text-decoration: none;
+  }
+
+  img {
+    display: none;
+  }
+
+  @media (min-width:$screen-sm-min) {
+    background: linear-gradient(to bottom, #ebebeb 100%,$white 0%); /* W3C */
+    background: $white url('../images/products-bg-placeholder.jpg') 0 0 repeat-x;
+
+    img {
+      display: inline-block;
+    }
+
+    a {
+      background: none;
+      border-radius: 0;
+      color: $black;
+      padding: 0;
+      margin: 1em 0;
+    }
+  }
+}
+
 section.map {
   background: $black;
   color: $white;
