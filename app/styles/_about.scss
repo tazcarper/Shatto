@@ -1,0 +1,82 @@
+.hero.about {
+  background: url('../images/about-hero-bg-placeholder.jpg') 30% 0 no-repeat;
+  background-size: auto 540px;
+  color: $white;
+  height: 540px;
+
+  @media (min-width:$screen-sm-min) {
+    background-size: auto 750px;
+    height: 750px;
+  }
+}
+
+section.shattoStory {
+  padding: 4em 0 0;
+
+  h4 {
+    color: $blue;
+  }
+
+  .col-md-3 {
+    border-bottom: 1px solid $lightGrey;
+    margin-bottom: 1em;
+  }
+
+  .col-md-3:last-of-type {
+    border: none;
+  }
+
+  p.small.center {
+    margin-top:4em;
+  }
+
+  @media (min-width:$screen-md-min) {
+    .col-md-3 {
+      border-right: 1px solid $lightGrey;
+      border-bottom: none;
+    }
+
+    .col-md-3:last-of-type {
+      border: none;
+    }
+  }
+}
+
+section.scheduleTour {
+  background: $white;
+  color: $black;
+  padding: 4em 0;
+  text-align: center;
+
+  @media (min-width:$screen-sm-min) {
+    background: $black url('../images/tours2-bg-placeholder.jpg') center top no-repeat;
+  }
+}
+
+section.findUs {
+  background: $blue;
+  background: linear-gradient(to bottom, #80e1ff 0%, #00c2fe 100%);
+  color: $black;
+  padding: 4em 0;
+  text-align: center;
+
+  h4,h5 {
+    color: $white;
+  }
+
+  h4 {
+    margin-top: 1em;
+  }
+
+  h5 {
+    margin-top: 1.5em;
+  }
+
+  .btn {
+    margin-top: 1.5em;
+  }
+
+  @media (min-width:$screen-sm-min) {
+
+  }
+}

@@ -4,6 +4,17 @@ section.products {
   padding: 4em 0;
   text-align: center;
 
+  h2 {
+    margin-bottom: 1em;
+  }
+
+  h2.mobile {
+    border-top: 1px solid $black;
+    border-bottom: 1px solid $black;
+    margin: 0 auto 1em;
+    width: 80%;
+  }
+
   a {
     background-color: $black;
     border-radius: 2em;
@@ -27,8 +38,9 @@ section.products {
   }
 
   @media (min-width:$screen-sm-min) {
-    background: linear-gradient(to bottom, #ebebeb 100%,$white 0%); /* W3C */
-    background: $white url('../images/products-bg-placeholder.jpg') 0 0 repeat-x;
+    background: $white;
+    background: url('../images/products-bg-placeholder.jpg') 0 0 repeat-x;
+    background: linear-gradient(to bottom, #ebebeb 0%,$white 100%);
 
     img {
       display: inline-block;

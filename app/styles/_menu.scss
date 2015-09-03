@@ -116,7 +116,7 @@ header {
     padding-left: 0;
     margin-left: 0;
     list-style: none;
-  
+
     @media (min-width:$screen-sm-min) {
       margin-top: 0;
       width: auto;
@@ -208,7 +208,7 @@ header {
         @media (min-width:$screen-md-min) {
           display: block;
           padding-top: 0;
-         
+
         }
         span {
       color: $lightGrey;
@@ -226,9 +226,9 @@ header {
           background: none;
         }
       }
-      
+
     }
-    
+
   }
   .cd-navigation-wrapper {
 
@@ -291,13 +291,13 @@ background:black;
     animation-iteration-count: 1;
   }
   main {
-   
+
     -webkit-transform: translateX(100%);
     -moz-transform: translateX(100%);
     -ms-transform: translateX(100%);
     -o-transform: translateX(100%);
     transform: translateX(100%);
-  
+
   }
   .cd-nav {
     visibility: visible;

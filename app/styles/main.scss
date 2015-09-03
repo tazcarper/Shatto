@@ -7,6 +7,8 @@ $icon-font-path: '../fonts/';
 @import "_hero.scss";
 @import "_footer.scss";
 @import "_homepage.scss";
+@import "_about.scss";
+@import "_404.scss";
 // endbower
 
 
@@ -50,6 +52,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   margin: 0;
   padding: 0;
+  text-transform: uppercase;
 }
 
 h1 {
@@ -65,11 +68,11 @@ h3 {
 }
 
 h4 {
-
+  font-size: 1.5em;
 }
 
 h5 {
-
+  font-size: 1em;
 }
 
 h6 {
@@ -163,6 +166,41 @@ main {
   text-decoration: none;
 }
 
+.btn.invert {
+  background-color: $black;
+  color: $white;
+}
+
+.btn.invert:hover, .btn.invert:focus, .btn.invert:active {
+  background-color: $white;
+  color: $black;
+}
+
 img {
   max-width: 100%;
+}
+
+.largeCopy {
+  font-size: 1.375em;
+}
+
+.largerCopy {
+  font-size: 1.875em;
+}
+
+.small {
+  font-size: .8em;
+}
+
+.center {
+  text-align: center;
+}
+
+.center.btn {
+  display: inline-block;
+}
+
+.pad2 {
+  padding-top: .5em;
+  padding-bottom: .5em;
 }

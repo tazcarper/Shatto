@@ -7,7 +7,26 @@
   ul {
     list-style: none;
     margin: 0;
+    padding: 0 0 1em;
+  }
+
+  ul>li {
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+  li, p {
+    font-size: .813em;
+    padding-bottom: .25em;
+  }
+
+  ul ul {
     padding: 0;
+  }
+
+  ul li li {
+    font-size: 1em;
+    text-transform: none;
   }
 
   a {
@@ -19,14 +38,7 @@
     text-decoration: none;
   }
 
-  li, p {
-    font-size: .813em;
-  }
 
-  h6 {
-    font-weight: normal;
-    text-transform: uppercase;
-  }
 
   .shattoLogo {
     fill: $lightGrey;
