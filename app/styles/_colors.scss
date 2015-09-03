@@ -1,11 +1,13 @@
 //colors
 
+$black : #000000;
 $darkGrey : #333333;
 $lightGrey : #aaaaaa;
+$white : #ffffff;
 
 ::selection {
-  background: #fff; /* WebKit/Blink Browsers */
+  background: $white; /* WebKit/Blink Browsers */
 }
 ::-moz-selection {
-  background: #fff; /* Gecko Browsers */
+  background: $white; /* Gecko Browsers */
 }

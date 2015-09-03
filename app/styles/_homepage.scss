@@ -1,0 +1,50 @@
+section.map {
+  background: $black;
+  color: $white;
+  padding: 4em 0 0;
+  text-align: center;
+
+  a {
+    color: inherit;
+  }
+
+  @media (min-width:$screen-sm-min) {
+    background: $black url('../images/map-bg-placeholder.jpg') center top no-repeat;
+  }
+}
+
+section.tours {
+  background: $white;
+  color: $black;
+  padding: 4em 0;
+  text-align: center;
+
+  .btn {
+    background-color: $black;
+    color: $white;
+    display: inline-block;
+    float: none;
+  }
+
+  .btn:hover, .btn:focus, .btn:active {
+    background-color: $white;
+    color: $black;
+  }
+
+  @media (min-width:$screen-sm-min) {
+    background: $black url('../images/tours-bg-placeholder.jpg') 0 0 no-repeat;
+    color: $white;
+    text-align: left;
+
+    .btn {
+      background-color: $white;
+      color: $black;
+      float: right;
+    }
+
+    .btn:hover, .btn:focus, .btn:active {
+      background-color: $black;
+      color: $white;
+    }
+  }
+}

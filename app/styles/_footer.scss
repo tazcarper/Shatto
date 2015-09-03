@@ -1,8 +1,48 @@
 .footer {
   background-color: #000000;
-  color: #ffffff;
+  color: $lightGrey;
+  font-size: 1em;
+  padding: 5em 0 4em;
 
   ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  a:focus, a:hover, a:active {
+    color: $white;
+    text-decoration: none;
+  }
+
+  li, p {
+    font-size: .813em;
+  }
+
+  h6 {
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+  .shattoLogo {
+    fill: $lightGrey;
+    width: 205px;
+    margin-top: -1em;
+  }
+
+  .shattoLogo + p {
+    margin-top:1em;
+  }
+
+  @media (max-width:$screen-md-min) {
+    padding: 4em 0;
+
+    p {
+      text-align: center;
+    }
   }
 }

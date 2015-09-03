@@ -1,7 +1,7 @@
 extends layouts/default
 
 block content
-  .container-fluid.mainContent.hero
+  section.container-fluid.mainContent.hero
    .container
     .row
       .col-md-12.desktop
@@ -13,9 +13,37 @@ block content
           p Lorem ipsum dolor sit amet, ius et paulo platonem molestiae, ad usu possit docendi inimicus. Et sed tota debet, no quo vitae sanctus philosophia.
       .col-xs-12.mobile
         object(type="image/svg+xml", data="images/mobile_hero.svg")
-  .container-fluid.bottleDetail
+  section.container-fluid.bottleDetail.desktop
     .container
       .row
-        .col-md-12.desktop
+        .col-sm-12
           h2 The cows can’t speak.
-          h2 So, we let the milk do the talking.   
+          h2 So, we let the milk do the talking.
+      .row
+        .col-sm-3
+          p info about milk
+        .col-sm-6
+          img(src="//placehold.it/540x1000?text=milk+bottle")
+        .col-sm-3
+          p more info about milk
+  section.container-fluid.map
+    .container
+      .row
+        .col-sm-5.col-sm-offset-7
+          h3.desktop Why buy the cow,<br>when you can get the<br>milk down the street?
+          h3.mobile Find Shatto Near You
+          form.form-inline
+            input.form-control(placeholder="ZIP Code")
+            button.form-control GO
+          br
+          p.mobile
+            a(href="#") Oh, just use my location. I'm not hiding.
+          img.desktop(src="//placehold.it/415x475?text=half+milk+bottle")
+  section.container-fluid.tours
+    .container
+      .row
+        .col-sm-5
+          h3.desktop See the milk we put into our milk.
+          h3.mobile Come Tour the Farm
+          p Go behind the stalls to discover how our milk is produced and bottled. And find out the secret ingredient we put into all our Shatto products. We’ll give you a hint. It’s milk.
+          a.btn(href="#") Schedule a tour
