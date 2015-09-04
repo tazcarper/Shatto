@@ -35,7 +35,7 @@ header {
     padding-left: 15px;
     padding-right: 15px;
     background: transparent !important;
-  
+
       @include transition(background-color 1ms ease);
     -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0);
     -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0);
@@ -98,7 +98,7 @@ header {
   @include transition (visibility 0s .7s);
   padding-left: 0;
   padding-right: 0;
-  
+
   @media (min-width:$screen-sm-min) {
     height: 100px;
     background: white;
@@ -131,7 +131,7 @@ header {
       display: inline-block;
 
       @media (min-width:$screen-sm-min) {
-        font-size: 13px;
+        font-size: 12px;
         color: black;
       }
       .selected {
@@ -208,7 +208,7 @@ header {
         @media (min-width:$screen-md-min) {
           display: block;
           padding-top: 0;
-
+          padding-right: 0;
         }
         span {
       color: $lightGrey;
@@ -270,8 +270,8 @@ header {
       -moz-transition: -moz-transform 0s;
       transition: transform 0s;
       height: auto;
-      margin-top: 70px;
-      margin-left: 15%;
+      margin-top: 56px;
+      // margin-left: 15%;
 
       .home {
         display: none;
@@ -323,7 +323,7 @@ background:black;
   .cd-nav-trigger {
 
     /* rotate trigger when navigation becomes visible */
- 
+
     @include transform(rotate(360deg));;
 
     .cd-nav-icon {
@@ -337,11 +337,11 @@ background:black;
         @include transition(width .5s ease, transform .5s ease);
       }
       &::before {
-     
+
         @include transform(rotate(45deg));
       }
       &::after {
-  
+
         @include transform(rotate(-45deg));
       }
     }
