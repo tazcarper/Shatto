@@ -39,7 +39,7 @@ section.products {
 
   @media (min-width:$screen-sm-min) {
     background: $white;
-    background: url('../images/products-bg-placeholder.jpg') 0 0 repeat-x;
+    background: url('../images/grey-gradient.png') 0 0 repeat-x;
     background: linear-gradient(to bottom, #ebebeb 0%,$white 100%);
 
     img {
@@ -68,7 +68,23 @@ section.map {
 
   @media (min-width:$screen-sm-min) {
     background: $black url('../images/map-bg-placeholder.jpg') center top no-repeat;
+    max-height: 752px;
+    overflow: hidden;
   }
+}
+
+section.signUp {
+  background: #054eab;
+  background: url('../images/blue-gradient.png') 0 0 repeat-x;
+  background: linear-gradient(to bottom, #0770f5 0%, #054eab 100%);
+  color: $white;
+  padding: 4em 0;
+  text-align: center;
+
+  input {
+    min-width: 300px;
+  }
+
 }
 
 section.tours {
@@ -92,12 +108,20 @@ section.tours {
   @media (min-width:$screen-sm-min) {
     background: $black url('../images/tours-bg-placeholder.jpg') 0 0 no-repeat;
     color: $white;
+    height: 571px;
     text-align: left;
+
+    h3 {
+      margin-bottom: .5em;
+    }
+
+    p {
+      margin-bottom: 2em;
+    }
 
     .btn {
       background-color: $white;
       color: $black;
-      float: right;
     }
 
     .btn:hover, .btn:focus, .btn:active {
