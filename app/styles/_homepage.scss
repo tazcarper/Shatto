@@ -39,7 +39,7 @@ section.products {
 
   @media (min-width:$screen-sm-min) {
     background: $white;
-    background: url('../images/grey-gradient.png') 0 0 repeat-x;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAM9CAAAAAB4LkYeAAAATklEQVR4AWN6zfSfiYGJEUSCaQb8EKKWOHWEVdBdlrA8Iw30MdLbl5iqaG4O5XoQOv6Tq5vo1PsfYvpwhSA/wkgQTTt7kEOW+BAdhaMQAIwQEXozRL0/AAAAAElFTkSuQmCC') 0 0 repeat-x; // ../images/grey-gradient.png
     background: linear-gradient(to bottom, #ebebeb 0%,$white 100%);
 
     img {
@@ -75,7 +75,7 @@ section.map {
 
 section.signUp {
   background: #054eab;
-  background: url('../images/blue-gradient.png') 0 0 repeat-x;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAGYCAIAAAAMaR/hAAAAZElEQVR4AcWU1Q2AMABEcdZleb4fC5CXXBXqJ/Vu9/Nuy7JMjvy3Qwc97gUd/DGda1FOMA6Uj+Ay/2COeJ1qPJh7jAknmrN4NBqj49V+iFbmnGmIPdLzWTvGyrui3uFbUeHZP34HqHIvewvbnAAAAABJRU5ErkJggg==') 0 0 repeat-x; // ../images/blue-gradient.png
   background: linear-gradient(to bottom, #0770f5 0%, #054eab 100%);
   color: $white;
   padding: 4em 0;
