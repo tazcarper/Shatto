@@ -1,0 +1,28 @@
+.hero.faq {
+
+  .faqContainer {
+    border: 1px solid $lightGrey;
+    border-radius: 1.5em;
+    margin-bottom: 1em;
+    padding: .5em 1em;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+
+  p.question {
+    cursor: pointer;
+  }
+
+  p.answer {
+    display: none;
+  }
+
+  @media (min-width:$screen-sm-min) {
+    background-color: #f4f5f7;
+    background: #f4f5f7 url('../images/faq-bg-placeholder.jpg') center top no-repeat;
+  }
+}

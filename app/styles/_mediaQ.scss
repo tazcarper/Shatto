@@ -1,0 +1,52 @@
+
+$S: 480px;
+$M: 768px;
+$ML: 992px;
+$L: 1201px;
+// tablet down
+$maxM: $M - 1px;
+$maxML: $ML - 1px;
+$maxL: $L - 1px;
+
+// media queries
+
+@mixin MQ($canvas) {
+	@if $canvas == S {
+		@media only screen and (min-width:$S) {
+			@content;
+		}
+	}
+	@else if $canvas == M {
+		@media only screen and (min-width:$M) {
+			@content;
+		}
+	}
+	@else if $canvas == ML {
+		@media only screen and (min-width:$ML) {
+			@content;
+		}
+	}
+	@else if $canvas == L {
+		@media only screen and (min-width:$L) {
+			@content;
+		}
+	}
+	
+	@else if $canvas == maxML {
+		@media only screen and (max-width:$maxML) {
+			@content;
+		}
+	}
+	@else if $canvas == maxL {
+		@media only screen and (max-width:$maxL) {
+			@content;
+		}
+	}
+	@else if $canvas == maxM {
+		@media only screen and (max-width:$maxM) {
+			@content;
+		}
+	}
+	
+	
+}
