@@ -9,6 +9,7 @@ $icon-font-path: '../fonts/';
 @import "_homepage.scss";
 @import "_about.scss";
 @import "_404.scss";
+@import "_faq.scss";
 // endbower
 
 
@@ -81,6 +82,11 @@ h6 {
 
 p {
   font-family: "futura-pt", sans-serif;
+}
+
+p a {
+  color: inherit;
+  text-decoration: underline;
 }
 
 // Main
