@@ -9,7 +9,7 @@
 
     var toggleFAQ = function(faq){
       $(faq).next('.answer').toggleClass('open');
-    }
+    };
 
     // on ready
     $(function() {
@@ -38,7 +38,7 @@
         }
       });
 
-      $('.faqContainer .question').on('click',function(event){
+      $('.faqContainer .question').on('click', function(event){
         toggleFAQ(event.target);
       });
     }); // end ready
