@@ -24,21 +24,21 @@ jQuery(document).ready(function($) {
 		event.preventDefault();
 
 		console.log('clicked')
-			//stop if nav animation is running 
-		if (!isLateralNavAnimating) {
-			if ($(this).parents('.csstransitions').length > 0) {
-				isLateralNavAnimating = true;
+		//stop if nav animation is running 
+		if( !isLateralNavAnimating ) {
+			if($(this).parents('.csstransitions').length > 0 ) {
+				isLateralNavAnimating = true; 
 			}
-
+			
 			$('html').toggleClass('navigation-is-open');
 			console.log($(window).height());
 
 			$('.headerMain').toggleClass('makeBlack');
-			$('.cd-navigation-wrapper').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {
+			$('.cd-navigation-wrapper').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
 				//animation is over
 				isLateralNavAnimating = false;
 
-
+				
 			});
 		}
 	});

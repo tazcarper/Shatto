@@ -13,6 +13,9 @@ $icon-font-path: '../fonts/';
 @import "_404.scss";
 @import "_faq.scss";
 @import "_products.scss";
+@import "_tours.scss";
+@import "_contact.scss";
+@import "_history.scss";
 // endbower
 
 
@@ -211,6 +214,10 @@ main {
   color: $black;
 }
 
+button.form-control.btn {
+  font-size: 1em;
+}
+
 img {
   max-width: 100%;
 }
@@ -238,4 +245,8 @@ img {
 .pad2 {
   padding-top: .5em;
   padding-bottom: .5em;
+}
+
+.form-control {
+  border-radius: 18px;
 }
