@@ -61,7 +61,7 @@
     background-position: 0 125px;
   }
   h1, p {
-    text-align: center;
+  //  text-align: center;
   }
   h1 {
     font-size: 60px;
@@ -74,7 +74,7 @@
     font-size: 18px;
 
     @media (min-width:$screen-md-min) {
-      padding: 0 15%;
+     // padding: 0 15%;
     }
   }
 }

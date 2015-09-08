@@ -1,0 +1,96 @@
+.productPage {
+	position: relative;
+	&section {
+		background:white;
+	}
+	&.hero {
+		background: url('../images/products/woodPlank.jpg') 50% 0 no-repeat;
+		height: 600px;
+		padding-top: 175px;
+		@include MQ(maxM){
+			background:white;
+		}
+		p {
+			margin-top: em(15);
+			font-size: em(20);
+		}
+		h1 {
+			font-size: em(120);
+			margin-bottom: 0;
+		}
+	}
+	.subMenu {
+		position: absolute;
+		bottom:3.075em;
+		width:100%;
+		@include MQ(maxML){
+			display: none;
+		}
+		@include MQ(maxL){
+			bottom:3.375em;
+		}
+		.table {
+			display: table;
+			margin:0 auto;
+		}
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			text-align: center;
+			li {
+				white-space: nowrap;
+				margin-right: em(9);
+				margin-left: em(9);
+				display: inline;
+				a {
+					color: white;
+					background:black;
+					padding:em(4) em(25);
+					border-radius: em(40);
+					display: inline;
+					text-transform: uppercase;
+					font-size:em(20);
+					text-decoration: none;
+					
+					
+					@include MQ(maxL){
+						font-size:em(17);
+					}
+					@include MQ(maxML){
+						font-size:em(15);
+					}
+				}
+			}
+		}
+	}
+	.productTitle {
+		position: relative;
+		h2 {
+			font-size:em(140);
+			background:white;
+			padding: 20px 40px;
+			position: relative;
+			z-index: 9;
+			display: inline-block;
+		}
+		.lines {
+			height: 3px;
+			width:0%;
+			opacity: 0;
+			position: absolute;
+			top:50%;
+			border-top:1px solid black;
+			border-bottom:1px solid black;
+			left:0;
+			right:0;
+			margin:0 auto;
+			@include transition(width .3s ease-out, opacity .5s ease-out);
+			&.visible {
+			width:90%;
+			opacity: 1;
+			}
+		}
+		
+	}
+}
