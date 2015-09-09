@@ -1,0 +1,107 @@
+.events-tours {
+  position: relative;
+
+  .hero {
+    background: url('../images/tours-hero-bg.jpg') 50% 0 no-repeat;
+    background-size: auto 385px;
+    color: $white;
+    height: 385px;
+
+    h1 {
+      text-align: center;
+      padding-top:175px;
+    }
+
+    @media (min-width:$screen-sm-min) {
+      background-size: auto 662px;
+      height: 662px;
+
+      h1 {
+        padding-top:400px;
+      }
+    }
+  }
+
+  section.intro {
+    padding: 4em 0;
+
+    .col-md-6>img {
+      margin: 2em 0;
+    }
+
+    @media (min-width:$screen-sm-min) {
+      .col-md-6>img {
+        margin: 4em 0;
+      }
+    }
+  }
+
+  section.farm-experience {
+    background: url('../images/demonstration.jpg') 0 0 no-repeat;
+    background-size: auto 20em;
+    color: $black;
+    height: auto;
+    padding: 4em 0;
+    padding-top: 24em;
+
+    @media (min-width:$screen-sm-min) {
+      background-position: center top;
+      background-size: auto;
+      // height: 850px;
+      padding-top: 4em;
+    }
+  }
+
+  section.caution {
+    background-color: $cautionYellow;
+    color: $black;
+    padding: 4em 0;
+  }
+
+  section.country-store {
+      background: url('../images/child-with-spoon.jpg') 50% 0 no-repeat;
+    background-size: auto 14em;
+    color: $black;
+    height: auto;
+    padding: 4em 0;
+    padding-top: 18em;
+
+    @media (min-width:$screen-sm-min) {
+      background-position: center top;
+      background-size: auto 577px;
+      color: $white;
+      height: 577px;
+      padding-top: 400px;
+    }
+  }
+
+  section.gallery {
+    padding: 4em 0 .5em;
+
+    h2 {
+      padding-bottom: 1em;
+    }
+
+    img {
+      display: inline-block;
+      margin-right: .5em;
+      max-height: 25em;
+    }
+  }
+
+}
+
+section.sign-up {
+  background-color: $white;
+  background-color: rgba($white,.70);
+  // bottom: 0;
+  height: 6.5em;
+  width: 100%;
+  padding: 1em 0;
+  position: fixed;
+  z-index: 999;
+
+  .btn {
+    font-size: 2em;
+  }
+}

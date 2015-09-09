@@ -43,13 +43,16 @@ section.shattoStory {
 }
 
 section.scheduleTour {
-  background: $white;
+  background: $white url('../images/tours2-bg-placeholder.jpg') center top no-repeat;
+  background-size: auto 20em;
   color: $black;
   padding: 4em 0;
+  padding-top: 24em;
   text-align: center;
 
   @media (min-width:$screen-sm-min) {
-    background: $black url('../images/tours2-bg-placeholder.jpg') center top no-repeat;
+    background-size: auto;
+    padding-top: 4em;
   }
 }
 
