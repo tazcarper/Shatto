@@ -132,19 +132,18 @@ main {
   overflow: hidden;
   background: white;
   -webkit-overflow-scrolling: touch;
-  -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  transform: translateZ(0);
+  // -webkit-transform: translateZ(0);
+  // -moz-transform: translateZ(0);
+  // -ms-transform: translateZ(0);
+  // -o-transform: translateZ(0);
+  // transform: translateZ(0);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  -webkit-transition: -webkit-transform 0.7s;
-  -moz-transition: -moz-transform 0.7s;
-  transition: transform 0.7s;
-  -webkit-transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
-  -moz-transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
-  transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
+
+  // @include transition(transform(all .5s ease));
+  // -webkit-transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
+  // -moz-transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
+  // transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
 
   @media (min-width:$screen-sm-min) {
     -webkit-transform: translateZ(0) !important;
@@ -152,6 +151,12 @@ main {
     -ms-transform: translateZ(0) !important;
     -o-transform: translateZ(0) !important;
     transform: translateZ(0) !important;
+
+  }
+  @include MQ(maxM){
+      -webkit-transition: -webkit-transform 0.5s;
+  -moz-transition: -moz-transform 0.5s;
+  transition: transform 0.5s;
   }
 }
 .mainContent {
