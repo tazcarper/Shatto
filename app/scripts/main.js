@@ -64,7 +64,7 @@
 				$('.cap').each(function(i, v) {
 					console.log(v);
 					setTimeout(function(){$(v).addClass('shown');},time);
-					time += 105;
+					time += 65;
 					console.log('go');
 				});
 			}
