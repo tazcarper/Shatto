@@ -7,6 +7,7 @@
 		background: url('../images/products/woodPlank.jpg') 50% 0 no-repeat;
 		height: 600px;
 		padding-top: 175px;
+		position: relative;
 		@include MQ(maxM){
 			background:white;
 		}
@@ -17,6 +18,134 @@
 		h1 {
 			font-size: em(120);
 			margin-bottom: 0;
+		}
+	}
+	.caps {
+		.cap {
+			@include transition(all .45s ease-out);
+			position: absolute;
+			max-width:none;
+			img {
+				width:auto;
+				max-width: none;
+				@include MQ(maxL){
+					max-width:270px;
+				}
+			}
+			
+		}
+		.brownCap {
+			left:0;
+			bottom:em(65);
+			@include transform(translateX(-100px));
+			&.shown {
+				@include transform(translateX(0px));
+
+			}
+			
+		}
+		.goldCap {
+			left:2.1em;
+			bottom:12.125em;
+			@include transform(translateX(-150%));
+			&.shown {
+				@include transform(translateX(0%));
+
+			}
+		}
+		.redCap {
+			top:- em(40);
+			left:17em;
+			@include transform(translateY(-150%));
+			&.shown {
+				@include transform(translateY(0%));
+
+			}
+		}
+		.blackCap {
+			top:0;
+			left:0;
+			@include transform(translateY(-150%));
+			&.shown {
+				@include transform(translateY(0%));
+
+			}
+		}
+		.silverCap {
+			right:-5em;
+			bottom:3.9em;
+			@include transform(translateX(100%));
+			&.shown {
+				@include transform(translateX(0%));
+
+			}
+		}
+		.LBCap {
+			right:12%;
+			bottom:5.5em;
+			@include transform(translateX(250%));
+			&.shown {
+				@include transform(translateX(0%));
+
+			}
+		}
+		.clearCap {
+			right:-6em;
+			top:-3em;
+			
+			@include transform(translateX(250%));
+			&.shown {
+				@include transform(translateX(0%));
+				@media only screen and (max-width:1785px) {
+				@include transform(translateX(100%));
+			}
+
+			}
+		}
+		.yellowCap {
+			top:0;
+			left:36em;
+			
+			@include transform(translateY(-150%));
+			&.shown {
+				@include transform(translateY(0%));
+				@media only screen and (max-width:1670px) {
+				@include transform(translateY(-150%)) ;
+			}
+			}
+
+		}
+		.greenCap {
+			bottom:4em;
+			left:17.9375em;
+			@include transform(translateY(-250%));
+			&.shown {
+				@include transform(translateY(0%));
+
+			}
+		}
+		.pinkCap {
+			top:-.8em;
+			right:30%;
+			z-index: 5;
+			@include transform(translateY(-250%));
+			&.shown {
+				@include transform(translateY(0%));
+
+			}
+		}
+		.blueCap {
+			top:-.3em;
+			right:12%;
+			z-index: 5;
+			@include transform(translateY(-250%));
+			&.shown {
+				@include transform(translateY(0%));
+				@media only screen and (max-width:1785px) {
+				@include transform(translateX(80px));
+			}
+
+			}
 		}
 	}
 	.subMenu {
