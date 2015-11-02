@@ -1,15 +1,21 @@
 .productPage {
 	position: relative;
+	margin-bottom: 1.5em;
+	
+			
 	&section {
-		background:white;
+		background: white;
 	}
 	&.hero {
 		background: url('../images/products/woodPlank.jpg') 50% 0 no-repeat;
 		height: 600px;
 		padding-top: 175px;
 		position: relative;
-		@include MQ(maxM){
-			background:white;
+
+		@include MQ(maxM) {
+			background: white;
+			height: auto;
+			padding-top: em(60);
 		}
 		p {
 			margin-top: em(15);
@@ -21,203 +27,247 @@
 		}
 	}
 	.caps {
+		@include MQ(maxM) {
+			display: none;
+		}
 		.cap {
 			@include transition(all .45s ease-out);
 			position: absolute;
-			max-width:none;
+			max-width: none;
+
 			img {
-				width:auto;
+				width: auto;
 				max-width: none;
-				@include MQ(maxL){
-					max-width:270px;
+
+				@include MQ(maxL) {
+					max-width: 270px;
 				}
 			}
-			
 		}
 		.brownCap {
-			left:0;
-			bottom:em(65);
+			left: 0;
+			bottom: em(65);
 			@include transform(translateX(-100px));
+
 			&.shown {
 				@include transform(translateX(0px));
-
 			}
-			
 		}
 		.goldCap {
-			left:2.1em;
-			bottom:12.125em;
+			left: 2.1em;
+			bottom: 12.125em;
 			@include transform(translateX(-150%));
+
 			&.shown {
 				@include transform(translateX(0%));
-
 			}
 		}
 		.redCap {
-			top:- em(40);
-			left:17em;
+			top: - em(40);
+			left: 17em;
 			@include transform(translateY(-150%));
+
 			&.shown {
 				@include transform(translateY(0%));
-
 			}
 		}
 		.blackCap {
-			top:0;
-			left:0;
+			top: 0;
+			left: 0;
 			@include transform(translateY(-150%));
+
 			&.shown {
 				@include transform(translateY(0%));
-
 			}
 		}
 		.silverCap {
-			right:-5em;
-			bottom:3.9em;
+			right: -5em;
+			bottom: 3.9em;
 			@include transform(translateX(100%));
+
 			&.shown {
 				@include transform(translateX(0%));
-
 			}
 		}
 		.LBCap {
-			right:12%;
-			bottom:5.5em;
+			right: 12%;
+			bottom: 5.5em;
 			@include transform(translateX(250%));
+
 			&.shown {
 				@include transform(translateX(0%));
-
 			}
 		}
 		.clearCap {
-			right:-6em;
-			top:-3em;
-			
+			right: -6em;
+			top: -3em;
 			@include transform(translateX(250%));
+
 			&.shown {
 				@include transform(translateX(0%));
-				@media only screen and (max-width:1785px) {
-				@include transform(translateX(100%));
-			}
 
+				@media only screen and (max-width:1785px) {
+					@include transform(translateX(100%));
+				}
 			}
 		}
 		.yellowCap {
-			top:0;
-			left:36em;
-			
+			top: 0;
+			left: 36em;
 			@include transform(translateY(-150%));
+
 			&.shown {
 				@include transform(translateY(0%));
-				@media only screen and (max-width:1670px) {
-				@include transform(translateY(-150%)) ;
-			}
-			}
 
+				@media only screen and (max-width:1670px) {
+					@include transform(translateY(-150%));
+				}
+			}
 		}
 		.greenCap {
-			bottom:4em;
-			left:17.9375em;
+			bottom: 4em;
+			left: 17.9375em;
 			@include transform(translateY(-250%));
+
 			&.shown {
 				@include transform(translateY(0%));
-
 			}
 		}
 		.pinkCap {
-			top:-.8em;
-			right:30%;
+			top: -.8em;
+			right: 30%;
 			z-index: 5;
 			@include transform(translateY(-250%));
+
 			&.shown {
 				@include transform(translateY(0%));
-
 			}
 		}
 		.blueCap {
-			top:-.3em;
-			right:12%;
+			top: -.3em;
+			right: 12%;
 			z-index: 5;
 			@include transform(translateY(-250%));
+
 			&.shown {
 				@include transform(translateY(0%));
-				@media only screen and (max-width:1785px) {
-				@include transform(translateX(80px));
-			}
 
+				@media only screen and (max-width:1785px) {
+					@include transform(translateX(80px));
+				}
 			}
 		}
 	}
 	.subMenu {
 		position: absolute;
-		bottom:3.075em;
-		width:100%;
-		@include MQ(maxML){
+		bottom: 3.075em;
+		width: 100%;
+
+		@include MQ(maxML) {
 			display: none;
 		}
-		@include MQ(maxL){
-			bottom:3.375em;
+		@include MQ(maxL) {
+			bottom: 3.375em;
 		}
 		.table {
 			display: table;
-			margin:0 auto;
+			margin: 0 auto;
 		}
 		ul {
 			list-style: none;
 			padding: 0;
 			margin: 0;
 			text-align: center;
+
 			li {
 				white-space: nowrap;
 				margin-right: em(9);
 				margin-left: em(9);
 				display: inline;
+
 				a {
 					color: white;
-					background:black;
-					padding:em(4) em(25);
+					background: black;
+					padding: em(4) em(25);
 					border-radius: em(40);
 					display: inline;
 					text-transform: uppercase;
-					font-size:em(20);
+					font-size: em(20);
 					text-decoration: none;
-					
-					
-					@include MQ(maxL){
-						font-size:em(17);
+
+					@include MQ(maxL) {
+						font-size: em(17);
 					}
-					@include MQ(maxML){
-						font-size:em(15);
+					@include MQ(maxML) {
+						font-size: em(15);
 					}
 				}
 			}
 		}
 	}
+
 	.productTitle {
 		position: relative;
+
 		h2 {
-			font-size:em(140);
-			background:white;
+			font-size: em(140);
+			background: white;
 			padding: 20px 40px;
 			position: relative;
 			z-index: 9;
 			display: inline-block;
+
+			@include MQ(maxM) {
+				font-size: em(45);
+			}
 		}
 		.lines {
 			height: 3px;
-			width:0%;
+			width: 0%;
 			opacity: 0;
 			position: absolute;
-			top:50%;
-			border-top:1px solid black;
-			border-bottom:1px solid black;
-			left:0;
-			right:0;
-			margin:0 auto;
+			top: 50%;
+			border-top: 1px solid black;
+			border-bottom: 1px solid black;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
 			@include transition(width .3s ease-out, opacity .5s ease-out);
-			&.visible {
-			width:90%;
-			opacity: 1;
+
+			
+		}
+	}
+
+	.productImages {
+		position: relative;
+		min-height: 460px;
+
+		.product {
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			max-width: 403px;
+			z-index: 2;
+			@include transition(all .5s ease);
+			&.onePercent {
+				margin-top: 35px;
+				z-index: 1;
+				max-width:350px;
+				
+			}
+		}
+	}
+	// Visible scroll class animations
+	&.visible {
+		.lines {
+				width: 90%;
+				opacity: 1;
+		}
+		.productImages {
+			.onePercent {
+				@include transform(translateX(-190px));
+			
 			}
 		}
 		

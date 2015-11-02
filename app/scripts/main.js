@@ -65,8 +65,19 @@
 					console.log(v);
 					setTimeout(function(){$(v).addClass('shown');},time);
 					time += 65;
-					console.log('go');
+					
 				});
+				var controller = new ScrollMagic.Controller({globalSceneOptions: {duration: 0}});
+				// build scene
+					var scene = new ScrollMagic.Scene({triggerElement: "#milk", reverse: false})
+						.setClassToggle("#milk", "visible") // add class toggle
+						.addIndicators() // add indicators (requires plugin)
+						.addTo(controller);
+					var scene = new ScrollMagic.Scene({triggerElement: "#flavoredMilk", reverse: false})
+						.setClassToggle("#flavoredMilk", "visible") // add class toggle
+						.addIndicators() // add indicators (requires plugin)
+						.addTo(controller);	
+
 			}
 
 
