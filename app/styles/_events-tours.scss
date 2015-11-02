@@ -53,6 +53,7 @@
   }
 
   section.caution {
+    background: url('../images/warning-bar-bg.png') top left repeat-x, url('../images/warning-bar-bg.png') bottom left repeat-x;
     background-color: $cautionYellow;
     color: $black;
     padding: 4em 0;
@@ -98,8 +99,8 @@ section.sign-up {
   height: 6.5em;
   width: 100%;
   padding: 1em 0;
-  position: fixed;
-  z-index: 999;
+  // position: fixed;
+  // z-index: 999;
 
   .btn {
     font-size: 2em;
