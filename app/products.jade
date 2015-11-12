@@ -57,9 +57,21 @@ block content
 					.milkLines.lines
 			.row
 				.col-md-12.productImages
-					.product
+					.product.trigger(data-product="HG_skim")
 						img(src="images/products/half-gallons/ShattoMilk_HalfGallon_Skim.png" srcset="images/products/half-gallons/ShattoMilk_HalfGallon_Skim_2x.png")
-					.product.onePercent
+					.product.onePercent.trigger(data-product="HG_1percent")
+						img(src="images/products/half-gallons/ShattoMilk_HalfGallon_1Percent.png" srcset="images/products/half-gallons/ShattoMilk_HalfGallon_1Percent_2x.png")
+	section.container-fluid.productPage.productSection#milk
+		.container
+			.row
+				.col-md-12.text-center.productTitle
+					h2 MILK
+					.milkLines.lines
+			.row
+				.col-md-12.productImages
+					.product.trigger(data-product="HG_skim")
+						img(src="images/products/half-gallons/ShattoMilk_HalfGallon_Skim.png" srcset="images/products/half-gallons/ShattoMilk_HalfGallon_Skim_2x.png")
+					.product.onePercent.trigger(data-product="HG_1percent")
 						img(src="images/products/half-gallons/ShattoMilk_HalfGallon_1Percent.png" srcset="images/products/half-gallons/ShattoMilk_HalfGallon_1Percent_2x.png")
 	section.container-fluid.productPage.productSection#flavoredMilk
 		.container
@@ -70,3 +82,87 @@ block content
 			.row
 				.col-md-12.productImages
 					img(src="images/products/milkPlaceholder.png" )
+	.popUp_info__overlay
+	.popUp_info
+		.popUp_info__content
+			.row
+				.popUp_close
+				.col-sm-9
+					ul
+						li Flavor One
+						li Flavor Two
+						li Flavor Three
+					.nutritionFacts
+						.row
+							.col-sm-12.top
+								.row
+									.col-sm-5.nutFacts
+										h2 Nutrition Facts
+									.col-sm-3.servingSize
+										p Serving size 1 package
+										p Amount per package
+									.col-sm-4.calories
+										h3 Calories&nbsp;
+											span 45
+									.col-sm-12
+										.border		
+						.row
+							.col-lg-10.col-md-8.middle
+								.row
+									.col-lg-6
+										.row
+											.col-lg-6.column
+												p
+													span.dailyValue 2% DV
+													span.title.bold Total Fat
+													span.weight 1g
+												p
+													span.dailyValue 2% DV
+													span.title.bold Total Fat
+													span.weight 1g	
+											.col-lg-6.column
+												p
+													span.dailyValue 3% DV
+													span.title.bold Total Fat
+													span.weight 2g
+												p
+													span.dailyValue 3% DV
+													span.title.bold Total Fat
+													span.weight 2g	
+									.col-lg-6
+										.row
+											.col-lg-6.column
+												p
+													span.dailyValue 4% DV
+													span.title.bold Total Fat
+													span.weight 3g
+												p
+													span.dailyValue 4% DV
+													span.title.bold Total Fat
+													span.weight 3g	
+											.col-lg-6.column
+												p
+													span.dailyValue 5% DV
+													span.title.bold Total Fat
+													span.weight 4g
+												p
+													span.dailyValue 5% DV
+													span.title.bold Total Fat
+													span.weight 4g	
+							.col-lg-2.col-md-4
+								.row
+									.col-sm-12
+										p Abbrev. footnote statement to be inserted here.							
+					.ingredients
+						p
+							span Ingredients:
+							| MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes.
+				.col-sm-3.sizes
+					p Available Sizes:
+					ul
+						li
+							h2 Gallon
+						li
+							h2 Half Gallon
+						li
+							h2 Pint

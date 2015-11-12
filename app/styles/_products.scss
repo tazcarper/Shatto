@@ -237,7 +237,20 @@
 			
 		}
 	}
-
+	// Visible scroll class animations
+	&.visible {
+		.lines {
+				width: 90%;
+				opacity: 1;
+		}
+		.productImages {
+			.onePercent {
+				right:40%;
+			
+			}
+		}
+		
+	}
 	.productImages {
 		position: relative;
 		min-height: 460px;
@@ -248,28 +261,32 @@
 			right: 0;
 			margin: 0 auto;
 			max-width: 403px;
-			z-index: 2;
-			@include transition(all .5s ease);
+			z-index: 10;
+			cursor: pointer;
+			@include transition(all 0.35s ease);
+			//@include transition( right 0.5s ease);
+
+			&:hover {
+				@include transform(scale(1.01));
+			}
 			&.onePercent {
 				margin-top: 35px;
 				z-index: 1;
 				max-width:350px;
 				
 			}
-		}
-	}
-	// Visible scroll class animations
-	&.visible {
-		.lines {
-				width: 90%;
-				opacity: 1;
-		}
-		.productImages {
-			.onePercent {
-				@include transform(translateX(-190px));
-			
+			&.selected {
+
+				right:57% !important;
+				z-index: 20;
+				max-width: 403px;
+				margin-top:0;
+				&:hover {
+					@include transform(scale(1.00));
+				}
 			}
+			
 		}
-		
 	}
+	
 }

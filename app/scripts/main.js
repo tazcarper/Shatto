@@ -62,24 +62,117 @@
 			if ($('.productPage')[0]) {
 				var time = 0;
 				$('.cap').each(function(i, v) {
-					console.log(v);
-					setTimeout(function(){$(v).addClass('shown');},time);
+					setTimeout(function() {
+						$(v).addClass('shown');
+					}, time);
 					time += 65;
-					
+
 				});
-				var controller = new ScrollMagic.Controller({globalSceneOptions: {duration: 0}});
+				var controller = new ScrollMagic.Controller({
+					globalSceneOptions: {
+						duration: 0
+					}
+				});
 				// build scene
-					var scene = new ScrollMagic.Scene({triggerElement: "#milk", reverse: false})
-						.setClassToggle("#milk", "visible") // add class toggle
-						.addIndicators() // add indicators (requires plugin)
-						.addTo(controller);
-					var scene = new ScrollMagic.Scene({triggerElement: "#flavoredMilk", reverse: false})
-						.setClassToggle("#flavoredMilk", "visible") // add class toggle
-						.addIndicators() // add indicators (requires plugin)
-						.addTo(controller);	
+				var scene = new ScrollMagic.Scene({
+						triggerElement: "#milk",
+						reverse: false
+					})
+					.setClassToggle("#milk", "visible") // add class toggle
+					.addIndicators() // add indicators (requires plugin)
+					.addTo(controller);
+				var scene = new ScrollMagic.Scene({
+						triggerElement: "#flavoredMilk",
+						reverse: false
+					})
+					.setClassToggle("#flavoredMilk", "visible") // add class toggle
+					.addIndicators() // add indicators (requires plugin)
+					.addTo(controller);
 
 			}
 
+			function whichTransitionEvent() {
+				var t,
+					el = document.createElement("fakeelement");
+
+				var transitions = {
+					"transition": "transitionend",
+					"OTransition": "oTransitionEnd",
+					"MozTransition": "transitionend",
+					"WebkitTransition": "webkitTransitionEnd"
+				}
+
+				for (t in transitions) {
+					if (el.style[t] !== undefined) {
+						return transitions[t];
+					}
+				}
+			}
+
+			var transitionEvent = whichTransitionEvent();
+
+
+
+			function productToggle(trigger, elem, switcher) {
+				var self = $(this);
+				console.log(trigger.parent());
+
+				if (!switcher) {
+					$('.popUp_info').removeClass('popUp_info--open');
+					$('.popUp_info__overlay').removeClass('active');
+					console.log('false')
+					$('.popUp_info__content').one(transitionEvent,
+						function(event) {
+							console.log('done')
+					$('.popUp_info').detach().appendTo('body');		
+						});
+					
+				} else {
+
+					$('.popUp_info').detach().appendTo(trigger.parent());
+					// AJAX to GET PRODUCT INFO
+					trigger.addClass('selected');
+					trigger.one(transitionEvent,
+						function(event) {
+							$('.popUp_info').addClass('popUp_info--open');
+							$('.popUp_info__overlay').addClass('active');
+						});
+
+					popUpShown = true;
+				}
+
+			};
+
+			var popUpShown = false;
+
+			$('.product').each(function(e) {
+				var productID = $(this).data('dialog');
+
+			});
+			$('.product').on('click', function(e) {
+
+				var theProduct = $(this).data('product');
+				if ($(this).hasClass('selected')) {
+					$('.selected').removeClass('selected');
+					productToggle($(this), theProduct, false);
+					console.log('proidct is selected')
+				} else {
+					$('.selected').removeClass('selected');
+					productToggle($(this), theProduct, true);
+					popUpShown = true;
+
+				}
+			});
+			$('.popUp_info__overlay, .popUp_close').on('click', function(e){
+				popUpShown = false;
+				$('.selected').removeClass('selected');
+				$('.popUp_info__overlay').removeClass('active');
+				$('.popUp_info').removeClass('popUp_info--open');
+			});
+			$
+
+			
+			//dlgtrigger.addEventListener('click', dlg.toggle.bind(dlg));
 
 
 		}); // end ready
