@@ -124,12 +124,16 @@
 					$('.popUp_info__content').one(transitionEvent,
 						function(event) {
 							console.log('done')
-					$('.popUp_info').detach().appendTo('body');		
+							$('.popUp_info').detach().prependTo('body');
 						});
-					
-				} else {
 
-					$('.popUp_info').detach().appendTo(trigger.parent());
+				} else {
+					if (Modernizr.mq('(max-width: 767px)')) {
+						$('.popUp_info').detach().appendTo(trigger);
+					} else {
+						$('.popUp_info').detach().appendTo(trigger.parent());
+					}
+
 					// AJAX to GET PRODUCT INFO
 					trigger.addClass('selected');
 					trigger.one(transitionEvent,
@@ -150,28 +154,40 @@
 
 			});
 			$('.product').on('click', function(e) {
-
+				
 				var theProduct = $(this).data('product');
-				if ($(this).hasClass('selected')) {
-					$('.selected').removeClass('selected');
-					productToggle($(this), theProduct, false);
-					console.log('proidct is selected')
-				} else {
-					$('.selected').removeClass('selected');
-					productToggle($(this), theProduct, true);
-					popUpShown = true;
+				if (Modernizr.mq('(min-width: 767px)')) {
+					if ($(this).hasClass('selected')) {
+						$('.selected').removeClass('selected');
+						productToggle($(this), theProduct, false);
+						console.log('proidct is selected')
+					} else {
+						$('.selected').removeClass('selected');
+						productToggle($(this), theProduct, true);
+						popUpShown = true;
 
+					}
+				} else {
+					if (!$(this).hasClass('selected')) {
+						console.log('product clicked');
+						$('.selected').removeClass('selected');
+						productToggle($(this), theProduct, true);
+						popUpShown = true
+					}
 				}
 			});
-			$('.popUp_info__overlay, .popUp_close').on('click', function(e){
-				popUpShown = false;
-				$('.selected').removeClass('selected');
+			$('.popUp_info__overlay, .popUp_close').on('click', function(e) {
+				
+				console.log('close clicked');
+				$('.product').removeClass('selected');
 				$('.popUp_info__overlay').removeClass('active');
 				$('.popUp_info').removeClass('popUp_info--open');
+				popUpShown = false;
+				e.stopPropagation();
 			});
-			$
 
-			
+
+
 			//dlgtrigger.addEventListener('click', dlg.toggle.bind(dlg));
 
 

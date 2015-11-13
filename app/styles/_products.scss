@@ -1,7 +1,38 @@
+#mobileCollapse {
+	// Mobile Category Links
+	.mobileCategory {
+		display: none;
+		@include MQ(maxM){
+			display: block;
+			color: black;
+			font-size:40px;
+			text-align: center;
+			border-top:1px solid black;
+			border-bottom:1px solid black;
+			background:black;
+			color: white;
+			@include transition(all .15s ease-out);
+			&.collapsed {
+				background:white;
+				color: black;
+			}
+			&:hover, &:focus {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
 .productPage {
 	position: relative;
 	margin-bottom: 1.5em;
-	
+	@include MQ(M){
+		display: block !important;
+		height:  auto !important;
+	}
+	@include MQ(maxM) { 
+		padding-top: 15px;
+	}
 			
 	&section {
 		background: white;
@@ -162,7 +193,7 @@
 		position: absolute;
 		bottom: 3.075em;
 		width: 100%;
-
+		z-index: 1;
 		@include MQ(maxML) {
 			display: none;
 		}
@@ -265,24 +296,45 @@
 			cursor: pointer;
 			@include transition(all 0.35s ease);
 			//@include transition( right 0.5s ease);
-
+			@include MQ(maxM){
+				position: relative;
+				
+				margin-bottom: 25px;
+				img {
+					position: relative;
+					left:0;
+					@include transition(all 0.35s ease);
+				}
+			}
 			&:hover {
 				@include transform(scale(1.01));
 			}
 			&.onePercent {
+				max-width:350px;
 				margin-top: 35px;
 				z-index: 1;
-				max-width:350px;
+				@include MQ(maxM){
+					max-width: 403px;
+					margin-top: 0;
+				}
 				
 			}
 			&.selected {
 
-				right:57% !important;
+				right:58% ;
 				z-index: 20;
 				max-width: 403px;
 				margin-top:0;
 				&:hover {
 					@include transform(scale(1.00));
+				}
+				@include MQ(maxM){
+					right:100%;
+					max-width: 100%;
+					img {
+						position: relative;
+						left:-50%;
+					}
 				}
 			}
 			
