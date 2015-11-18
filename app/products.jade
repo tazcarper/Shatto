@@ -51,18 +51,39 @@ block content
 							a(href="#").btn.invert Non-dairy
 	#mobileCollapse
 		a.mobileCategory.collapsed(data-toggle="collapse", data-parent="#mobileCollapse", href="#milk", aria-controls="milk") MILK
-		section.container-fluid.productPage.productSection.collapse(role="tabpanel")#milk
-			.container
+		section.productPage.productSection.collapse(role="tabpanel")#milk
+			.container.ML_Fluid
 				.row.hidden-sm.hidden-xs
 					.col-md-12.text-center.productTitle
 						h2 MILK
 						.milkLines.lines
 				.row
 					.col-md-12.productImages
-						.product.trigger(data-product="HG_skim")
-							img(src="images/products/half-gallons/ShattoMilk_HalfGallon_Skim.png" srcset="images/products/half-gallons/ShattoMilk_HalfGallon_Skim_2x.png")
-						.product.onePercent.trigger(data-product="HG_1percent")
-							img(src="images/products/half-gallons/ShattoMilk_HalfGallon_1Percent.png" srcset="images/products/half-gallons/ShattoMilk_HalfGallon_1Percent_2x.png")
+						.product.trigger.text-center(data-product="HG_skim")
+							img(src="images/products/half-gallons/ShattoMilk_HalfGallon_Skim.png" srcset="images/products/half-gallons/ShattoMilk_HalfGallon_Skim.png 1x, images/products/half-gallons/ShattoMilk_HalfGallon_Skim_2x.png 2x")
+							.productName
+								h5 Skim
+								p.factsLabel Nutrition Facts
+						.product.onePercent.trigger.text-center(data-product="HG_onePercent")
+							img(src="images/products/half-gallons/ShattoMilk_HalfGallon_Skim.png" srcset="images/products/half-gallons/ShattoMilk_HalfGallon_Skim.png 1x, images/products/half-gallons/ShattoMilk_HalfGallon_Skim_2x.png 2x")
+							.productName
+								h5 1% 
+								p.factsLabel Nutrition Facts	
+						.product.twoPercent.trigger.text-center(data-product="HG_twoPercent")
+							img(src="images/products/half-gallons/ShattoMilk_HalfGallon_Skim.png" srcset="images/products/half-gallons/ShattoMilk_HalfGallon_Skim.png 1x, images/products/half-gallons/ShattoMilk_HalfGallon_Skim_2x.png 2x")
+							.productName
+								h5 2% 
+								p.factsLabel Nutrition Facts	
+						.product.whole.trigger.text-center(data-product="HG_whole")
+							img(src="images/products/half-gallons/ShattoMilk_HalfGallon_Skim.png" srcset="images/products/half-gallons/ShattoMilk_HalfGallon_Skim.png 1x, images/products/half-gallons/ShattoMilk_HalfGallon_Skim_2x.png 2x")
+							.productName
+								h5 Whole
+								p.factsLabel Nutrition Facts
+						.product.pintCream.trigger.text-center(data-product="pint_cream")
+							img(src="images/products/pints/pint_cream.png" srcset="images/products/pints/pint_cream.png 1x, images/products/pints/pint_cream_2x.png 2x")
+							.productName
+								h5 Whole Cream
+								p.factsLabel Nutrition Facts		
 		section.container-fluid.productPage.productSection#flavoredMilk
 			.container
 				.row

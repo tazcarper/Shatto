@@ -31,7 +31,7 @@
 		height:  auto !important;
 	}
 	@include MQ(maxM) { 
-		padding-top: 15px;
+		padding-top: 50px;
 	}
 			
 	&section {
@@ -191,13 +191,13 @@
 	}
 	.subMenu {
 		position: absolute;
-		bottom: 3.075em;
+		bottom: -5px;
 		width: 100%;
 		z-index: 1;
 		@include MQ(maxML) {
 			display: none;
 		}
-		@include MQ(maxL) {
+		@include MQ(maxML) {
 			bottom: 3.375em;
 		}
 		.table {
@@ -275,31 +275,99 @@
 				opacity: 1;
 		}
 		.productImages {
-			.onePercent {
-				right:40%;
-			
+
+		.onePercent {
+				max-width:210px;
+				margin-top: 6%;
+				z-index: 9;
+				right:37%;
+				@include MQ(maxM) {
+					max-width: 250px;
+					margin-top: 0;
+				}
+				@include MQ(maxM){
+					max-width:230px;
+				}
+				
+			}
+			.twoPercent {
+				max-width:175px;
+				margin-top: 9%;
+				z-index: 8;
+				right:68%;
+				@include MQ(maxM) {
+				max-width: 250px;
+					margin-top: 0;
+				}
+				
+			}
+			.whole {
+				max-width:150px;
+				margin-top: 8%;
+				z-index: 8;
+				right:-39%;
+				@include MQ(maxM) {
+				max-width: 250px;
+					margin-top: 0;
+				}
+			}
+			.pintCream {
+				max-width:125px;
+				margin-top: 21%;
+				z-index: 8;
+				right:-61%;
+				@include MQ(maxM) {
+				max-width: 250px;
+					margin-top: 0;
+				}
 			}
 		}
-		
 	}
 	.productImages {
 		position: relative;
-		min-height: 460px;
-
+		min-height: 540px;
+		.productName {
+			@include MQ(maxML) {
+				display: none;
+			}
+			opacity: 1;
+			@include transition(all 0.35s ease);
+		}
+		h5 {
+			font-size:22px;
+			margin-top: 15px;
+			position: relative;
+			top:0;
+			
+		}
+		p {
+			&.factsLabel {
+				border:1px solid black;
+				border-radius: 55px;
+				display: inline-block;
+				padding: 1px 7px;
+				margin-top: 8px;
+				font-size:12px;
+			}
+		}
 		.product {
 			position: absolute;
 			left: 0;
 			right: 0;
 			margin: 0 auto;
-			max-width: 403px;
+			max-width: 250px;
 			z-index: 10;
 			cursor: pointer;
 			@include transition(all 0.35s ease);
-			//@include transition( right 0.5s ease);
+			img {
+				@include transform(translate3d(0,0,0) scale(1));
+				@include transition(all 0.35s ease);
+			}
+
+
 			@include MQ(maxM){
 				position: relative;
-				
-				margin-bottom: 25px;
+				margin-bottom: 50px;
 				img {
 					position: relative;
 					left:0;
@@ -307,34 +375,38 @@
 				}
 			}
 			&:hover {
-				@include transform(scale(1.01));
-			}
-			&.onePercent {
-				max-width:350px;
-				margin-top: 35px;
-				z-index: 1;
-				@include MQ(maxM){
-					max-width: 403px;
-					margin-top: 0;
+				img {
+				@include transform(translate3d(0,0,0) scale(1.015));
+
 				}
 				
 			}
+			
 			&.selected {
-
+		
 				right:58% ;
 				z-index: 20;
-				max-width: 403px;
+				max-width:250px;
 				margin-top:0;
+				@include transform(scale(1));
+				img {
+					@include transform(translate3d(0,0,0) scale(1));
+				}
 				&:hover {
-					@include transform(scale(1.00));
+					//@include transform(scale(1.00));
 				}
 				@include MQ(maxM){
 					right:100%;
 					max-width: 100%;
+
 					img {
 						position: relative;
-						left:-50%;
+						left:-53%;
+						max-width: 240px;
 					}
+				}
+				.productName {
+					opacity: 0;
 				}
 			}
 			

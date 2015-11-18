@@ -1,33 +1,37 @@
 extends layouts/default
 
 block content
-  section.container-fluid.mainContent.hero
-   .container
-    .row
-      .col-md-12.desktop.text-center
-        h1 Pure, honest milk. No bull.
-        p At Shatto milk, nothing gets in the way of producing the freshest, most natural dairy products around. No hormones. No factory farms. No bull. Ok, a few bulls. We hope you'll understand.
-        img#mainBottle(src="images/shatto-bottle-temp.png", alt="Shatto Milk")
-        .callOut
-          h2 Extra! Extra!
-          p Lorem ipsum dolor sit amet, ius et paulo platonem molestiae, ad usu possit docendi inimicus. Et sed tota debet, no quo vitae sanctus philosophia.
-      .col-xs-12.mobile
-        object(type="image/svg+xml", data="images/mobile_hero.svg")
-
-  section.container-fluid.bottleDetail.desktop
-    .container
+  #floatingTrigger
+    section.container-fluid.mainContent.hero
+     .container
       .row
-        .col-sm-12
-          h2 The cows can’t speak.
-          h2 So, we let the milk do the talking.
-      .row
-        .col-sm-3
-          p info about milk
-        .col-sm-6
-          img(src="//placehold.it/540x1000?text=milk+bottle")
-        .col-sm-3
-          p more info about milk
+        img.shadow(src="images/rotation/reflection.png")
+        .col-md-12.desktop.text-center
+          h1 Pure, honest milk. No bull.
+          p At Shatto milk, nothing gets in the way of producing the freshest, most natural dairy products around.
+          p No hormones. No factory farms. No bull. Ok, a few bulls. We hope you'll understand.
+          .callOut
+            h2 Extra! Extra!
+            p Lorem ipsum dolor sit amet, ius et paulo platonem molestiae, ad usu possit docendi inimicus. Et sed tota debet, no quo vitae sanctus philosophia.
+        .col-xs-12.mobile
+          object(type="image/svg+xml", data="images/mobile_hero.svg")
 
+    section.container-fluid.bottleDetail.desktop
+      .container
+        #floatingBottle
+          .shadowContainer
+            img#mainBottle(src="images/rotation/1.png", alt="Shatto Milk", srcset="images/rotation/1.png 1x, images/rotation/1_2x.png 2x")
+        .row
+          .col-sm-12
+            h2 The cows can’t speak.
+            h2 So, we let the milk do the talking.
+            .stopPoint
+        .row
+          .col-sm-3
+            p info about milk
+          .col-sm-6
+          .col-sm-3
+            p more info about milk
   section.container-fluid.products
     .container
       .row
@@ -53,21 +57,18 @@ block content
         .col-sm-2.col-xs-6
           img(src="//placehold.it/175x325?text=Non-Dairy")
           a(href="#") Non-Dairy
-
-  section.container-fluid.map
-    .container
-      .row
-        .col-sm-5.col-sm-offset-7
-          h3.desktop Why buy the cow,<br>when you can get the<br>milk down the street?
-          h3.mobile Find Shatto Near You
-          form.form-inline
-            input.form-control(placeholder="ZIP Code")
-            button.form-control.btn.invert GO
-          br
-          p.mobile
-            a(href="#") Oh, just use my location. I'm not hiding.
-          img.desktop(src="images/half-bottle.png")
-
+    section.container-fluid.map
+      .container
+        .row
+          .col-sm-5.col-sm-offset-7
+            h3.desktop Why buy the cow,<br>when you can get the<br>milk down the street?
+            h3.mobile Find Shatto Near You
+            form.form-inline
+              input.form-control(placeholder="ZIP Code")
+              button.form-control.btn.invert GO
+            br
+            p.mobile
+              a(href="#") Oh, just use my location. I'm not hiding.
   section.container-fluid.signUp.desktop
     .container
       .row

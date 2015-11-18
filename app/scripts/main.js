@@ -5,7 +5,7 @@
 	}
 
 	(function(window, document, $) {
-		var headerContainer = $('.headerContainer');
+		var headerContainer = $('header');
 		// lazy loader INIT
 		//var layzr = new Layzr();
 
@@ -17,18 +17,25 @@
 
 		// on ready
 		$(function() {
-
+			var maxHeight = 0, halfHeight = 0;
 			// header scroll
 			window.addEventListener('scroll', function(e) {
 				var distanceY = window.pageYOffset || document.documentElement.scrollTop,
 					shrinkOn = 200;
-
+				//console.log(distanceY);
+				maxHeight = $(window).height() - ($(window).height() * 0.15);
+				halfHeight = maxHeight * 0.5;
+				console.log($(window).height());
+				console.log(maxHeight);
 				if (distanceY > shrinkOn) {
 					headerContainer.addClass('smaller');
+
 				} else {
 					if (headerContainer.hasClass('smaller')) {
 						headerContainer.removeClass('smaller');
 					}
+					var newH = 300-distanceY;
+				$('#floatingBottle').css({'top':newH});
 				}
 			});
 
@@ -58,6 +65,52 @@
 				toggleFAQ(event.target);
 			});
 
+			if ($('#floatingBottle')[0]) {
+				var theH = 0;
+				var floatingBottle = $('#floatingBottle');
+				var waypoints = $('#floatingTrigger').waypoint(function(direction) {
+					console.log(direction)
+					if (direction === 'down'){
+						//$('#mainBottle').css({'max-width':'400px'});
+						floatingBottle.addClass('start').css({'margin-top': halfHeight * -1});
+						theH = $('#mainBottle').height();
+						$('#mainBottle').css({'max-height':maxHeight})
+						//floatingBottle.css({"max-height":theH})
+						$('.bottleDetail').height(maxHeight);
+						console.log(theH);
+						$('.shadow').addClass('hidden');
+
+					}
+					else {
+						//$('#mainBottle').css({'max-width':'250px'});
+						floatingBottle.removeClass('start').css({'margin-top':'0'});
+						
+						if (!floatingBottle.hasClass('stop')){
+							$('.shadow').removeClass('hidden');
+						}
+					}
+				
+				
+				}, {
+					offset: '-200'
+				});
+				var stopWay = $('.stopPoint').waypoint(function(direction) {
+					console.log(direction)
+					if (direction === 'down'){
+						// $('#mainBottle').css({'max-width':'300px'});
+						floatingBottle.css({'top':'inherit', 'margin-top':'0'});
+						floatingBottle.addClass('stop');
+						$('.shadow').addClass('hidden');
+					}
+					else {
+						// $('#mainBottle').css({'max-width':'250px'});
+						
+					}
+					}, {
+					offset: '20%'
+				})
+			}
+
 			// Product Page Animation
 			if ($('.productPage')[0]) {
 				var time = 0;
@@ -79,14 +132,14 @@
 						reverse: false
 					})
 					.setClassToggle("#milk", "visible") // add class toggle
-					.addIndicators() // add indicators (requires plugin)
+					//.addIndicators() // add indicators (requires plugin)
 					.addTo(controller);
 				var scene = new ScrollMagic.Scene({
 						triggerElement: "#flavoredMilk",
 						reverse: false
 					})
 					.setClassToggle("#flavoredMilk", "visible") // add class toggle
-					.addIndicators() // add indicators (requires plugin)
+					//.addIndicators() // add indicators (requires plugin)
 					.addTo(controller);
 
 			}
@@ -115,7 +168,6 @@
 
 			function productToggle(trigger, elem, switcher) {
 				var self = $(this);
-				console.log(trigger.parent());
 
 				if (!switcher) {
 					$('.popUp_info').removeClass('popUp_info--open');
@@ -136,10 +188,11 @@
 
 					// AJAX to GET PRODUCT INFO
 					trigger.addClass('selected');
+					$('.popUp_info__overlay').addClass('active');
 					trigger.one(transitionEvent,
 						function(event) {
 							$('.popUp_info').addClass('popUp_info--open');
-							$('.popUp_info__overlay').addClass('active');
+
 						});
 
 					popUpShown = true;
@@ -154,18 +207,17 @@
 
 			});
 			$('.product').on('click', function(e) {
-				
+
 				var theProduct = $(this).data('product');
 				if (Modernizr.mq('(min-width: 767px)')) {
 					if ($(this).hasClass('selected')) {
 						$('.selected').removeClass('selected');
 						productToggle($(this), theProduct, false);
-						console.log('proidct is selected')
+
 					} else {
 						$('.selected').removeClass('selected');
 						productToggle($(this), theProduct, true);
 						popUpShown = true;
-
 					}
 				} else {
 					if (!$(this).hasClass('selected')) {
@@ -177,8 +229,7 @@
 				}
 			});
 			$('.popUp_info__overlay, .popUp_close').on('click', function(e) {
-				
-				console.log('close clicked');
+
 				$('.product').removeClass('selected');
 				$('.popUp_info__overlay').removeClass('active');
 				$('.popUp_info').removeClass('popUp_info--open');

@@ -1,13 +1,15 @@
-$headerHeight: 110px;
+$headerHeight: 70px;
 
 .smaller {
+
   @include MQ(S) {
+
     .headerMain {
       height: 60px;
-
+      
       .cowHead {
         width: 70px;
-        left: 90px;
+        left: 95px;
 
         @include MQ(maxML) {
           left: 60px;
@@ -36,10 +38,11 @@ $headerHeight: 110px;
           bottom: 0;
           right: 0;
         }
-        .letters {
+        
+      }
+      .letters {
           opacity: 0;
         }
-      }
     }
     .cd-nav-trigger {
       top: 4px;
@@ -54,17 +57,23 @@ $headerHeight: 110px;
   }
 }
 header {
-  background: rgba(255, 255, 255, .95);
+  background: rgba(255, 255, 255, .98);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 999;
+  padding: 0 !important;
+ &.smaller {
+
+      border-bottom:1px solid black;
+    
+ }
 }
 .headerContainer {
   padding: 0;
   overflow: hidden;
-
+  
   @include MQ(M) {
     max-width: 1170px;
   }
@@ -112,10 +121,10 @@ header {
   }
   .cowHead {
     outline: none;
-    width: 80px;
+    width: 50px;
     margin: 0 auto;
     position: absolute;
-    left: 87px;
+    left: 105px;
     @include transition(all .2s ease);
 
     @include MQ(maxML) {
@@ -137,9 +146,9 @@ header {
     outline: none;
     position: absolute;
     width: 190px;
-    top: 67px;
+    top: 50px;
     left: 35px;
-
+    @include transition(all .2s ease);
     @include MQ(maxML) {
       width: 0;
     }
@@ -316,7 +325,7 @@ header {
     @include transform(translateX(0));
     visibility: visible;
     height: auto;
-    margin-top: 83px;
+    margin-top: 70px;
     // margin-left: 15%;
     @include transition(margin .2s ease);
 
