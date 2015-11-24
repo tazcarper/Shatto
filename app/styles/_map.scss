@@ -1,0 +1,365 @@
+.mapContainer {
+	padding: 0;
+	position: relative;
+}
+.mapOverlay {
+	background:rgba(0,0,0,0.4);
+	position: absolute;
+	z-index: 55;
+	width:100%;
+	height: 100%;
+	.findInput {
+		margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+top:50%;
+width:100%;
+max-width:280px;
+position: absolute;
+	}
+}
+#jlocator {
+	width: 100%;
+	float: left;
+	height: 900px;
+	.map {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		float: right;
+		background-color: #a5bfdd;
+	}
+	.hidden {
+		display: none;
+	}
+	.controls {
+		background: #fff;
+		padding-bottom: 5px;
+		width: 96%;
+		padding: 0 2%;
+		float: left;
+		border-bottom: 1px solid #e3e3e3;
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: border-box;
+	}
+	.autocomplete {
+		display: block;
+		float: left;
+		text-indent: 5px;
+		width: 150px;
+		height: 20px;
+		border: 1px solid #ddd;
+		margin: 5px 5px 5px 0;
+	}
+	.stores {
+		overflow: auto;
+		height: 550px;
+	}
+	.store {
+		cursor: pointer;
+		p {
+			padding: 3px 7px;
+			margin: 0;
+			border-bottom: 1px dashed #ccc;
+			//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			text-shadow: 1px 1px 1px #fff;
+		}
+		&:hover {
+			background-color: #dfe5ff;
+		}
+	}
+	.active {
+		background-color: #dfe5ff;
+	}
+	.title {
+		font-family: verdana;
+		font-size: 13px;
+		line-height: 13px;
+		color: #ca3f1a;
+	}
+	.tags {
+		color: #7f4f24;
+	}
+	.info-window {
+		.store {
+			p {
+				border: 0;
+				font-size: 11px;
+			}
+			&:hover {
+				background-color: #fff;
+			}
+		}
+		.active {
+			background-color: #fff;
+		}
+		.directions {
+			display: none;
+		}
+	}
+	.country {
+		padding-right: 20px;
+	}
+	.us {
+		background: url(../img/flags/small/us.png) no-repeat right center;
+	}
+	.es {
+		background: url(../img/flags/small/es.png) no-repeat right center;
+	}
+	.it {
+		background: url(../img/flags/small/it.png) no-repeat right center;
+	}
+	.ru {
+		background: url(../img/flags/small/ru.png) no-repeat right center;
+	}
+	.gb {
+		background: url(../img/flags/small/gb.png) no-repeat right center;
+	}
+	.au {
+		background: url(../img/flags/small/au.png) no-repeat right center;
+	}
+	.fr {
+		background: url(../img/flags/small/fr.png) no-repeat right center;
+	}
+	.directions {
+		label {
+			color: #1e87aa;
+			background: url(../img/icons/directions.png) no-repeat 0 50%;
+			padding-left: 10px;
+			cursor: help;
+		}
+		input {
+			border: 1px solid #aaa;
+			height: 1.16em;
+			width: 200px;
+			margin-left: 10px;
+		}
+	}
+	.search-within-radius {
+		.drop-down {
+			margin-right: 5px;
+		}
+		.autocomplete {
+			width: 130px;
+			margin-right: 5px;
+		}
+		.distance {
+			margin-top: 6px;
+		}
+	}
+	.no-results p {
+		text-align: center;
+		padding: 20px 0;
+	}
+	> .panel {
+		width: 40%;
+		float: left;
+	}
+}
+@media only screen and(max-width:600px) {
+	#jlocator {
+		font-size: 13px;
+		line-height: 18px;
+		.map {
+			width: 100%;
+			height: 300px;
+		}
+		.controls {
+			padding-top: 10px;
+			padding-bottom: 10px;
+			.box {
+				width: auto;
+			}
+		}
+		.stores {
+			height: 240px;
+		}
+		> .panel {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+.jplist-hidden {
+	display: none;
+}
+.reset-box {
+	margin: 4px 5px 5px 0;
+}
+.jplist-select {
+	border: 1px solid #ddd;
+	height: 23px;
+}
+.jplist-btn {
+	display: inline-block;
+	padding: 3px 10px;
+	margin-bottom: 0;
+	color: #333;
+	//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+	cursor: pointer;
+	line-height: 20px;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid #ddd;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 2px;
+	background-color: #f5f5f5;
+}
+.drop-down {
+	float: left;
+	width: 130px;
+	height: 22px;
+	border: 1px solid #ddd;
+	margin: 5px 5px 5px 0;
+	.panel {
+		float: left;
+		width: 125px;
+		height: 22px;
+		line-height: 22px;
+		overflow: hidden;
+		background: #fff url(../img/icons/down.png) no-repeat 99% 50%;
+		cursor: pointer;
+		margin: 0;
+		padding: 0 0 0 5px;
+	}
+	ul {
+		position: relative;
+		top: 0;
+		left: -1px;
+		z-index: 1000;
+		width: 130px;
+		display: none;
+		overflow: hidden;
+		background-color: #fff;
+		border: 1px solid #ccc;
+		list-style: none;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0 0 3px 3px;
+		margin: 0;
+		padding: 0;
+		li {
+			cursor: pointer;
+			width: 130px;
+			float: left;
+			background-color: #fff;
+			padding: 0 0 0 5px;
+			&:hover {
+				background-color: #ececec;
+			}
+		}
+	}
+	&:hover .panel {
+		background: #fff url(../img/icons/down-dark.png) no-repeat 99% 50%;
+	}
+}
+.filter {
+	float: left;
+	input {
+		display: block;
+		float: left;
+		text-indent: 5px;
+		width: 150px;
+		height: 20px;
+		border: 1px solid #ddd;
+		margin: 5px 20px 5px 0;
+	}
+}
+.search-title {
+	margin: 5px 10px 0 0;
+}
+.filter-buttons {
+	float: left;
+	clear: left;
+	margin: 10px 20px 0 0;
+	input {
+		vertical-align: bottom;
+		background: #fff;
+		border: 1px solid #0c5f1f;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 3px;
+		color: #0c5f1f;
+	}
+}
+.paging {
+	float: left;
+	margin: 5px 20px 5px 0;
+	span {
+		cursor: pointer;
+		color: #0381bb;
+		margin: 0 10px 0 0;
+	}
+	.current {
+		font-weight: 700;
+		color: #f03800;
+	}
+}
+.pagingprev {
+	float: left;
+}
+.pagingmid {
+	float: left;
+}
+.pagingnext {
+	float: left;
+}
+.paging-results {
+	float: left;
+	margin: 5px 20px 5px 0;
+}
+.radio-filters {
+	float: left;
+	margin: 5px 15px 0 0;
+	input {
+		vertical-align: baseline;
+	}
+	label {
+		margin-right: 10px;
+	}
+}
+.radio {
+	float: left;
+}
+.cb-group-filter {
+	float: left;
+	margin: 5px 5px 0 0;
+	padding-left: 15px;
+	border: 1px dotted #9fc2ce;
+	.cb {
+		float: left;
+		margin-right: 10px;
+		input {
+			vertical-align: text-top;
+		}
+	}
+}
+.jplist-sticky {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 1000;
+	background: #f1f1f1;
+	padding-bottom: 5px;
+}
+.range-slider {
+	float: left;
+	margin-top: 5px;
+	.value {
+		float: left;
+		margin: 0 15px;
+		font-size: 12px;
+	}
+	.ui-slider {
+		float: left;
+		width: 130px;
+	}
+}
+.ui-slider {
+	margin-top: 5px;
+}
+.filter-button.selected {
+	border: 1px solid #ca3f1a;
+	color: #ca3f1a;
+}

@@ -1,25 +1,42 @@
 .hero.about {
-  background: url('../images/about-hero-bg-placeholder.jpg') 30% 0 no-repeat;
-  background-size: auto 540px;
+  background: url('../images/about-hero-bg-placeholder.jpg') top center no-repeat;
+  
   color: $white;
-  height: 540px;
-
+  height: 800px;
+  min-height: auto;
+h1 {
+  font-size:4.5em;
+  text-transform: uppercase;
+  text-align: center;
+  @include fadeInUp();
+}
   @media (min-width:$screen-sm-min) {
-    background-size: auto 750px;
-    height: 750px;
+    
+    
   }
 }
 
 section.shattoStory {
-  padding: 4em 0 0;
+  padding: 2em 0 0;
 
   h4 {
     color: $blue;
+    line-height: 85%;
+    margin-bottom: 1em;
+    min-height: 80px;
+    margin-top: 10px;
+    @include MQ(maxM){
+      min-height: auto;
+    }
   }
 
   .col-md-3 {
     border-bottom: 1px solid $lightGrey;
     margin-bottom: 1em;
+  }
+
+  .pods {
+    margin-top: 2em;
   }
 
   .col-md-3:last-of-type {
@@ -44,15 +61,31 @@ section.shattoStory {
 
 section.scheduleTour {
   background: $white url('../images/tours2-bg-placeholder.jpg') center top no-repeat;
-  background-size: auto 20em;
+ background-size:cover;
   color: $black;
-  padding: 4em 0;
-  padding-top: 24em;
+  padding: 2em 0;
+  
   text-align: center;
-
-  @media (min-width:$screen-sm-min) {
-    background-size: auto;
-    padding-top: 4em;
+  min-height:  693px;
+  @include MQ(maxM) {
+    background:white;
+  }
+  h5 {
+    margin-bottom: 25px;
+    font-weight: 300;
+    font-family: "futura-pt", sans-serif;
+    font-size:.9em;
+    text-transform: inherit;
+    a {
+      color: black;
+    }
+    @include MQ(maxM) {
+      font-size:1.1em;
+      margin-top: 25px;
+    }
+  }
+  .mobile {
+    width:100%;
   }
 }
 
@@ -60,19 +93,50 @@ section.findUs {
   background: $blue;
   background: linear-gradient(to bottom, #80e1ff 0%, #00c2fe 100%);
   color: $black;
-  padding: 4em 0;
+  padding: 2em 0;
   text-align: center;
-
+  h2,h3 {
+     font-family: "futura-pt", sans-serif;
+  }
+  h3 {
+    font-size:.85em;
+    @include MQ(maxM) {
+      font-size:.75em;
+      margin-bottom: 15px;
+      margin-top: 15px;
+    }
+  }
   h4,h5 {
     color: $white;
   }
 
   h4 {
     margin-top: 1em;
+    font-size:1.1em;
+    @include MQ(maxM) {
+      font-size:2em;
+    }
   }
 
   h5 {
     margin-top: 1.5em;
+    @include MQ(maxM){
+      font-size:1.5em;
+    }
+  }
+  h6 {
+    font-size:.6em;
+    line-height: 1.3em;
+    @include MQ(maxM){
+      font-size:1.2em;
+    }
+    
+  }
+  p {
+    font-size:.55em;
+    @include MQ(maxM){
+      font-size:1em;
+    }
   }
 
   .btn {

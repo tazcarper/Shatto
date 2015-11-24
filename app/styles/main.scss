@@ -1,6 +1,7 @@
 $icon-font-path: '../fonts/';
 // bower: scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "animate/animate.scss";
 @import "_bourbon.scss";
 @import "_mediaQ.scss";
 @import "_colors.scss";
@@ -17,6 +18,7 @@ $icon-font-path: '../fonts/';
 @import "_contact.scss";
 @import "_history.scss";
 @import "_modal.scss";
+@import "_map.scss";
 
 // endbower
 
@@ -24,7 +26,7 @@ $icon-font-path: '../fonts/';
 body, html {
   font-family: "futura-pt", sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   overflow-x: hidden;
   background-color: white;
   font-size: 16px;
@@ -63,13 +65,13 @@ h1 {
   font-size: 5.625em;
 }
 h2 {
-  font-size: 3.125em;
+  font-size: 2.125em;
 }
 h3 {
-  font-size: 2.5em;
+  font-size: 1.3em;
 }
 h4 {
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 h5 {
   font-size: 1em;
@@ -79,6 +81,10 @@ h6 {
 }
 p {
   font-family: "futura-pt", sans-serif;
+  font-size:.65em;
+  @include MQ(maxM){
+    font-size:1em;
+  }
 }
 p a {
   color: inherit;
@@ -172,8 +178,12 @@ main {
     -moz-transition: -moz-transform 0.5s;
     transition: transform 0.5s;
   }
+ 
 }
 .container {
+  @include MQ(L){
+    width:1200px;
+  }
   &.ML_Fluid {
     @include MQ(maxML) {
       width: 100%;
@@ -185,9 +195,8 @@ main {
 }
 // Bottle Detail
 .bottleDetail {
-  padding-top: 4em;
-  padding-bottom: 4em;
-  height: 960px;
+   padding: 2em 0;
+  //height: 960px;
   background: white;
   position: relative;
 
@@ -195,18 +204,21 @@ main {
     text-align: center;
     margin-bottom: 1px;
     margin-top: 1px;
+    font-size:em(30);
   }
 }
 // buttons
 .btn {
   background-color: $white;
-  border-radius: 2em;
+  border-radius: 24px;
   color: $black;
   display: block;
-  font-size: 1.25em;
-  font-weight: bold;
-  padding: .4em .8em;
+  font-size: em(12);
+  font-weight: 400;
+  padding: 6px 20px;
   text-transform: uppercase;
+  outline:none !important;
+  height: auto;
   @include transition(background .4s ease, color .4s ease);
 }
 .btn:hover, .btn:focus, .btn:active {
@@ -223,7 +235,7 @@ main {
   color: $black;
 }
 button.form-control.btn {
-  font-size: 1em;
+  
 }
 .btn.blue {
   background-color: $blue;
@@ -237,13 +249,13 @@ img {
   max-width: 100%;
 }
 .largeCopy {
-  font-size: 1.375em;
+  font-size: .75em;
 }
 .largerCopy {
-  font-size: 1.875em;
+  font-size: .8em;
 }
 .small {
-  font-size: .8em;
+  font-size: .6em;
 }
 .center {
   text-align: center;
@@ -257,6 +269,9 @@ img {
 }
 .form-control {
   border-radius: 18px;
+  font-size:em(10);
+  height: auto;
+
 }
 #floatingBottle {
   z-index: 999999;
@@ -270,8 +285,8 @@ img {
 
 
   &.start {
-    top: 55% !important;
-    margin-top: -50%;
+    top: 50% !important;
+    @include transform(translate(0, -50%));
     @include transition(all 0.6s ease);
     #mainBottle {
       max-width:370px;
@@ -282,13 +297,17 @@ img {
   }
   &.stop {
     position: absolute;
-     @include transition(all 0.0s ease);
-    top: 200px !important;
+     @include transition(all 0.6s ease);
+     top:220px !important;
+     @include transform(translate(0 ,0));
+    #mainBottle {
+      max-width: none;
+    }
   }
   #mainBottle {
     @include transition(all 0.3s ease);
     max-width: 280px;
-    
+   
   }
   .shadowContainer {
     position: relative;
@@ -346,4 +365,9 @@ img {
       font-size: 14px;
       padding: 0;
     }
+  }
+  .stopPoint {
+    width:100%;
+    // background:red;
+    height: 1px;
   }

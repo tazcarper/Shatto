@@ -1,20 +1,19 @@
 section.products {
   background: $white;
   color: $black;
-  padding: 4em 0;
+  padding: 2em 0;
   text-align: center;
-
+  
   h2 {
     margin-bottom: 1em;
+    font-size: em(30);
   }
-
   h2.mobile {
     border-top: 1px solid $black;
     border-bottom: 1px solid $black;
     margin: 0 auto 1em;
     width: 80%;
   }
-
   a {
     background-color: $black;
     border-radius: 2em;
@@ -26,26 +25,23 @@ section.products {
     padding: .4em .8em;
     text-transform: uppercase;
   }
-
   a:hover, a:focus, a:active {
     background-color: $white;
     color: $black;
     text-decoration: none;
   }
-
   img {
     display: none;
   }
-
   @media (min-width:$screen-sm-min) {
     background: $white;
-    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAM9CAAAAAB4LkYeAAAATklEQVR4AWN6zfSfiYGJEUSCaQb8EKKWOHWEVdBdlrA8Iw30MdLbl5iqaG4O5XoQOv6Tq5vo1PsfYvpwhSA/wkgQTTt7kEOW+BAdhaMQAIwQEXozRL0/AAAAAElFTkSuQmCC') 0 0 repeat-x; // ../images/grey-gradient.png
-    background: linear-gradient(to bottom, #ebebeb 0%,$white 100%);
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAM9CAAAAAB4LkYeAAAATklEQVR4AWN6zfSfiYGJEUSCaQb8EKKWOHWEVdBdlrA8Iw30MdLbl5iqaG4O5XoQOv6Tq5vo1PsfYvpwhSA/wkgQTTt7kEOW+BAdhaMQAIwQEXozRL0/AAAAAElFTkSuQmCC') 0 0 repeat-x;
+    // ../images/grey-gradient.png
+    background: linear-gradient(to bottom, #ebebeb 0%, $white 100%);
 
     img {
       display: inline-block;
     }
-
     a {
       background: none;
       border-radius: 0;
@@ -55,58 +51,90 @@ section.products {
     }
   }
 }
-
-section.map {
+section.mapFinder {
   background: $black;
   color: $white;
-  padding: 4em 0 0;
+  padding: 0;
   text-align: center;
+  position: relative;
 
   a {
     color: inherit;
   }
+  .form-control {
+    @include MQ(maxM){
+      max-width:300px;
+      margin:em(8) auto;
+    }
+  }
+  .setHeight {
+    height: 300px;
+  }
+  @include MQ(M) {
+    background: $black url('../images/home/mapBG.jpg') center center no-repeat;
 
-  @media (min-width:$screen-sm-min) {
-    background: $black url('../images/map-bg-placeholder.jpg') center top no-repeat;
-    max-height: 752px;
-    overflow: hidden;
+    .setHeight {
+      height: 500px;
+    }
+  }
+  @include MQ(L) {
+    .setHeight {
+      height: 747px;
+    }
+  }
+  
+  .findText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width:75%;
+    max-width: 560px;
+    @include transform(translate(-50%, -50%));
+    h3 {
+    font-size: em(30);
+    font-weight: 400;
+    margin-bottom: em(8);
+    @include MQ(M) {
+      font-size: em(30);
+    }
+    @include MQ(L) {
+      font-size: em(31);
+    }
+  }
   }
 }
-
 section.signUp {
-  background: #054eab;
-  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAGYCAIAAAAMaR/hAAAAZElEQVR4AcWU1Q2AMABEcdZleb4fC5CXXBXqJ/Vu9/Nuy7JMjvy3Qwc97gUd/DGda1FOMA6Uj+Ay/2COeJ1qPJh7jAknmrN4NBqj49V+iFbmnGmIPdLzWTvGyrui3uFbUeHZP34HqHIvewvbnAAAAABJRU5ErkJggg==') 0 0 repeat-x; // ../images/blue-gradient.png
-  background: linear-gradient(to bottom, #0770f5 0%, #054eab 100%);
+  background:url('../images/home/signUpBg.jpg') 50% -1px no-repeat;
+  @include MQ(maxM) {
+    background-size:cover;
+  }
   color: $white;
-  padding: 4em 0;
+  padding: 2em 0;
   text-align: center;
-
+ 
   input {
     min-width: 300px;
   }
-
 }
-
 section.tours {
   background: $white;
   color: $black;
-  padding: 4em 0;
+  padding: 2em 0;
   text-align: center;
-
+  min-height: 600px;
   .btn {
     background-color: $black;
     color: $white;
     display: inline-block;
     float: none;
   }
-
   .btn:hover, .btn:focus, .btn:active {
     background-color: $white;
     color: $black;
   }
-
   @media (min-width:$screen-sm-min) {
-    background: $black url('../images/tours-bg-placeholder.jpg') 0 0 no-repeat;
+    background: $black url('../images/tours-bg-placeholder.jpg') top center no-repeat;
+
     color: $white;
     height: 571px;
     text-align: left;
@@ -114,16 +142,13 @@ section.tours {
     h3 {
       margin-bottom: .5em;
     }
-
     p {
       margin-bottom: 2em;
     }
-
     .btn {
       background-color: $white;
       color: $black;
     }
-
     .btn:hover, .btn:focus, .btn:active {
       background-color: $black;
       color: $white;

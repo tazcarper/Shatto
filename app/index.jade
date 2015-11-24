@@ -19,8 +19,7 @@ block content
     section.container-fluid.bottleDetail.desktop
       .container
         #floatingBottle
-          .shadowContainer
-            img#mainBottle(src="images/rotation/1.png", alt="Shatto Milk", srcset="images/rotation/1.png 1x, images/rotation/1_2x.png 2x")
+          img#mainBottle(src="images/rotation/1.png", alt="Shatto Milk", srcset="images/rotation/1.png 1x, images/rotation/1_2x.png 2x")
         .row
           .col-sm-12
             h2 The cows can’t speak.
@@ -32,49 +31,56 @@ block content
           .col-sm-6
           .col-sm-3
             p more info about milk
-  section.container-fluid.products
-    .container
+  section.container-fluid.products.visible
+    .container.ML_Fluid
       .row
         .col-xs-12
           h2.desktop From Our Farm to Your Face.
           h2.mobile Products
       .row
-        .col-sm-2.col-xs-6
-          img(src="//placehold.it/175x325?text=Cheese")
-          a(href="#") Cheese
-        .col-sm-2.col-xs-6
-          img(src="//placehold.it/175x325?text=Flavored+Milk")
-          a(href="#") Flavored Milk
-        .col-sm-2.col-xs-6
-          img(src="//placehold.it/175x325?text=Milk")
-          a(href="#") Milk
-        .col-sm-2.col-xs-6
-          img(src="//placehold.it/175x325?text=Ice+Cream")
-          a(href="#") Ice Cream
-        .col-sm-2.col-xs-6
-          img(src="//placehold.it/175x325?text=Butter")
-          a(href="#") Butter
-        .col-sm-2.col-xs-6
-          img(src="//placehold.it/175x325?text=Non-Dairy")
-          a(href="#") Non-Dairy
-    section.container-fluid.map
-      .container
-        .row
-          .col-sm-5.col-sm-offset-7
-            h3.desktop Why buy the cow,<br>when you can get the<br>milk down the street?
-            h3.mobile Find Shatto Near You
-            form.form-inline
-              input.form-control(placeholder="ZIP Code")
-              button.form-control.btn.invert GO
-            br
-            p.mobile
-              a(href="#") Oh, just use my location. I'm not hiding.
+          .col-md-12.productImages.home
+            .product.milk.text-center
+              img(src="images/home/milk.png" srcset="images/home/milk.png 1x, images/home/milk_2x.png 2x")
+              .productName
+                h5 Milk
+            .product.juice.text-center
+              img(src="images/home/juice.png" srcset="images/home/juice.png 1x, images/home/juice_2x.png 2x") 
+              .productName
+                h5 Non-Dairy
+            .product.cheese.text-center
+              img(src="images/home/cheese.png" srcset="images/home/cheese.png 1x, images/home/cheese_2x.png 2x")
+              .productName
+                h5 Cheese
+            .product.flavoredMilk.text-center
+              img(src="images/home/flavored.png" srcset="images/home/flavored.png 1x, images/home/flavored_2x.png 2x")
+              .productName
+                h5 Flavored Milk
+            .product.iceCream.text-center
+              img(src="images/home/iceCream.png" srcset="images/home/iceCream.png 1x, images/home/iceCream_2x.png 2x")
+              .productName
+                h5 Ice Cream
+            .product.butter.text-center
+              img(src="images/home/butter.png" srcset="images/home/butter.png 1x, images/home/butter_2x.png 2x")
+              .productName
+                h5 Butter
+  section.container-fluid.mapFinder
+    .row
+      .col-sm-6.col-sm-offset-6.setHeight
+        .findText
+          h3.desktop Why buy the cow, when you can get the milk down the street?
+          h3.mobile Find Shatto Near You
+          form.form-inline
+            input.form-control(placeholder="ZIP Code")
+            button.form-control.btn.invert GO
+          br
+          p.mobile
+            a(href="#") Oh, just use my location. I'm not hiding.
   section.container-fluid.signUp.desktop
     .container
       .row
         .col-md-12
           h2 Get the Whole Story.<br>And the 2%, 1% And Skim.
-          p.largerCopy Sign up to receive blog posts, news and updates from the Shatto Farm.
+          p.largeCopy Sign up to receive blog posts, news and updates from the Shatto Farm.
           form.form-inline
             input.form-control(placeholder="Email Address")
             button.form-control.btn.invert Sign Up

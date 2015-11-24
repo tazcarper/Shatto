@@ -1,0 +1,8 @@
+extends layouts/default
+block content
+	section.container-fluid.mapContainer
+		#jlocator
+			.mapOverlay
+				.findInput
+					input.form-control(type="text", placeholder="City, State or ZIP", data-radius="10000", data-zoom="10", data-control-action="filter", data-control-name="autocomplete", data-control-type="autocomplete", autocompelte="off")
+			.map(data-type='map')

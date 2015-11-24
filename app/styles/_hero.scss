@@ -3,12 +3,11 @@
   background: $white;
   padding-bottom: 75px;
   min-height: 980px;
-  padding-top: 130px;
+  padding-top: 120px;
   position: relative;
   h1 {
     text-transform: capitalize;
-    font-weight: 500;
-    font-weight:90px;
+   
   }
   
   .mobile {
@@ -37,9 +36,9 @@
   }
   h1 {
     font-size: 60px;
-  
+    font-weight: 300;
     @media (min-width:$screen-md-min) {
-      font-size: 90px;
+      font-size: 100px;
     }
   }
   p {

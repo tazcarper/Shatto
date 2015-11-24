@@ -17,7 +17,8 @@
 
 		// on ready
 		$(function() {
-			var maxHeight = 0, halfHeight = 0;
+			var maxHeight = 0,
+				halfHeight = 0;
 			// header scroll
 			window.addEventListener('scroll', function(e) {
 				var distanceY = window.pageYOffset || document.documentElement.scrollTop,
@@ -34,8 +35,10 @@
 					if (headerContainer.hasClass('smaller')) {
 						headerContainer.removeClass('smaller');
 					}
-					var newH = 300-distanceY;
-				$('#floatingBottle').css({'top':newH});
+					var newH = 300 - distanceY;
+					$('#floatingBottle').css({
+						'top': newH
+					});
 				}
 			});
 
@@ -70,44 +73,48 @@
 				var floatingBottle = $('#floatingBottle');
 				var waypoints = $('#floatingTrigger').waypoint(function(direction) {
 					console.log(direction)
-					if (direction === 'down'){
+					if (direction === 'down') {
 						//$('#mainBottle').css({'max-width':'400px'});
-						floatingBottle.addClass('start').css({'margin-top': halfHeight * -1});
+						floatingBottle.addClass('start');
 						theH = $('#mainBottle').height();
-						$('#mainBottle').css({'max-height':maxHeight})
-						//floatingBottle.css({"max-height":theH})
-						$('.bottleDetail').height(maxHeight);
+						$('#mainBottle').css({
+								'max-height': maxHeight
+							})
+							//floatingBottle.css({"max-height":theH})
+						$('.stopPoint').height(maxHeight);
 						console.log(theH);
 						$('.shadow').addClass('hidden');
 
-					}
-					else {
+					} else {
 						//$('#mainBottle').css({'max-width':'250px'});
-						floatingBottle.removeClass('start').css({'margin-top':'0'});
-						
-						if (!floatingBottle.hasClass('stop')){
+						floatingBottle.removeClass('start').css({
+							'margin-top': '0'
+						});
+
+						if (!floatingBottle.hasClass('stop')) {
 							$('.shadow').removeClass('hidden');
 						}
 					}
-				
-				
+
+
 				}, {
 					offset: '-200'
 				});
-				var stopWay = $('.stopPoint').waypoint(function(direction) {
+				var stopWay = $('.bottleDetail').waypoint(function(direction) {
 					console.log(direction)
-					if (direction === 'down'){
+					if (direction === 'down' && !floatingBottle.hasClass('stop')) {
 						// $('#mainBottle').css({'max-width':'300px'});
-						floatingBottle.css({'top':'inherit', 'margin-top':'0'});
-						floatingBottle.addClass('stop');
+						floatingBottle.css({
+							'top': 'inherit'
+						});
+						floatingBottle.addClass('stop').removeClass('start');
 						$('.shadow').addClass('hidden');
-					}
-					else {
+					} else {
 						// $('#mainBottle').css({'max-width':'250px'});
-						
+
 					}
-					}, {
-					offset: '20%'
+				}, {
+					offset: '61'
 				})
 			}
 
@@ -142,6 +149,78 @@
 					//.addIndicators() // add indicators (requires plugin)
 					.addTo(controller);
 
+
+				function productToggle(trigger, elem, switcher) {
+					var self = $(this);
+
+					if (!switcher) {
+						$('.popUp_info').removeClass('popUp_info--open');
+						$('.popUp_info__overlay').removeClass('active');
+						console.log('false')
+						$('.popUp_info__content').one(transitionEvent,
+							function(event) {
+								console.log('done')
+								$('.popUp_info').detach().prependTo('body');
+							});
+
+					} else {
+						if (Modernizr.mq('(max-width: 767px)')) {
+							$('.popUp_info').detach().appendTo(trigger);
+						} else {
+							$('.popUp_info').detach().appendTo(trigger.parent());
+						}
+
+						// AJAX to GET PRODUCT INFO
+						trigger.addClass('selected');
+						$('.popUp_info__overlay').addClass('active');
+						trigger.one(transitionEvent,
+							function(event) {
+								$('.popUp_info').addClass('popUp_info--open');
+
+							});
+
+						popUpShown = true;
+					}
+
+				};
+
+				var popUpShown = false;
+
+				$('.product').each(function(e) {
+					var productID = $(this).data('dialog');
+
+				});
+				$('.product').on('click', function(e) {
+
+					var theProduct = $(this).data('product');
+					if (Modernizr.mq('(min-width: 767px)')) {
+						if ($(this).hasClass('selected')) {
+							$('.selected').removeClass('selected');
+							productToggle($(this), theProduct, false);
+
+						} else {
+							$('.selected').removeClass('selected');
+							productToggle($(this), theProduct, true);
+							popUpShown = true;
+						}
+					} else {
+						if (!$(this).hasClass('selected')) {
+							console.log('product clicked');
+							$('.selected').removeClass('selected');
+							productToggle($(this), theProduct, true);
+							popUpShown = true
+						}
+					}
+				});
+				$('.popUp_info__overlay, .popUp_close').on('click', function(e) {
+
+					$('.product').removeClass('selected');
+					$('.popUp_info__overlay').removeClass('active');
+					$('.popUp_info').removeClass('popUp_info--open');
+					popUpShown = false;
+					e.stopPropagation();
+				});
+
 			}
 
 			function whichTransitionEvent() {
@@ -166,82 +245,103 @@
 
 
 
-			function productToggle(trigger, elem, switcher) {
-				var self = $(this);
-
-				if (!switcher) {
-					$('.popUp_info').removeClass('popUp_info--open');
-					$('.popUp_info__overlay').removeClass('active');
-					console.log('false')
-					$('.popUp_info__content').one(transitionEvent,
-						function(event) {
-							console.log('done')
-							$('.popUp_info').detach().prependTo('body');
-						});
-
-				} else {
-					if (Modernizr.mq('(max-width: 767px)')) {
-						$('.popUp_info').detach().appendTo(trigger);
-					} else {
-						$('.popUp_info').detach().appendTo(trigger.parent());
-					}
-
-					// AJAX to GET PRODUCT INFO
-					trigger.addClass('selected');
-					$('.popUp_info__overlay').addClass('active');
-					trigger.one(transitionEvent,
-						function(event) {
-							$('.popUp_info').addClass('popUp_info--open');
-
-						});
-
-					popUpShown = true;
-				}
-
-			};
-
-			var popUpShown = false;
-
-			$('.product').each(function(e) {
-				var productID = $(this).data('dialog');
-
-			});
-			$('.product').on('click', function(e) {
-
-				var theProduct = $(this).data('product');
-				if (Modernizr.mq('(min-width: 767px)')) {
-					if ($(this).hasClass('selected')) {
-						$('.selected').removeClass('selected');
-						productToggle($(this), theProduct, false);
-
-					} else {
-						$('.selected').removeClass('selected');
-						productToggle($(this), theProduct, true);
-						popUpShown = true;
-					}
-				} else {
-					if (!$(this).hasClass('selected')) {
-						console.log('product clicked');
-						$('.selected').removeClass('selected');
-						productToggle($(this), theProduct, true);
-						popUpShown = true
-					}
-				}
-			});
-			$('.popUp_info__overlay, .popUp_close').on('click', function(e) {
-
-				$('.product').removeClass('selected');
-				$('.popUp_info__overlay').removeClass('active');
-				$('.popUp_info').removeClass('popUp_info--open');
-				popUpShown = false;
-				e.stopPropagation();
-			});
-
-
-
 			//dlgtrigger.addEventListener('click', dlg.toggle.bind(dlg));
+
+			$('main').flowtype({
+				minimum: 400,
+				maximum: 1400,
+				minFont: 18,
+				maxFont: 32,
+				fontRatio: 30
+			});
+
+			if ($('.mapContainer')[0]) {
+				$('#jlocator').height($(window).height());
+				$(window).resize(function() {
+					$('#jlocator').height($(window).height());
+				}).resize();
+				$('#jlocator').jlocator({
+					startZoom: 13,
+					latitude: 39.0936738,
+					longitude: -94.589048,
+					jplist: {
+
+
+
+						//panel controls
+						control_types: {
+
+							'autocomplete': {
+								class_name: 'Autocomplete',
+								options: {
+									/* 
+									Autocomplete control options:
+									can be used to limit google autocomplete results to City and Country only
+									for example:
+									             
+									types: ['(cities)']
+									,componentRestrictions: {country: 'us'}
+									*/
+								}
+							}
+						}
+					}
+
+				});
+			}
 
 
 		}); // end ready
 	})
 );
+
+/*
+ * FlowType.JS v1.1
+ * Copyright 2013-2014, Simple Focus http://simplefocus.com/
+ *
+ * FlowType.JS by Simple Focus (http://simplefocus.com/)
+ * is licensed under the MIT License. Read a copy of the
+ * license in the LICENSE.txt file or at
+ * http://choosealicense.com/licenses/mit
+ *
+ * Thanks to Giovanni Difeterici (http://www.gdifeterici.com/)
+ */
+
+(function($) {
+	$.fn.flowtype = function(options) {
+
+		// Establish default settings/variables
+		// ====================================
+		var settings = $.extend({
+				maximum: 9999,
+				minimum: 1,
+				maxFont: 9999,
+				minFont: 1,
+				fontRatio: 35
+			}, options),
+
+			// Do the magic math
+			// =================
+			changes = function(el) {
+				var $el = $(el),
+					elw = $el.width(),
+					width = elw > settings.maximum ? settings.maximum : elw < settings.minimum ? settings.minimum : elw,
+					fontBase = width / settings.fontRatio,
+					fontSize = fontBase > settings.maxFont ? settings.maxFont : fontBase < settings.minFont ? settings.minFont : fontBase;
+				$el.css('font-size', fontSize + 'px');
+			};
+
+		// Make the magic visible
+		// ======================
+		return this.each(function() {
+			// Context for resize callback
+			var that = this;
+			// Make changes upon resize
+			$(window).resize(function() {
+				changes(that);
+			});
+			// Set changes on load
+			changes(this);
+		});
+	};
+}(jQuery));
