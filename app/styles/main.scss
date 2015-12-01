@@ -196,7 +196,7 @@ main {
 // Bottle Detail
 .bottleDetail {
    padding: 2em 0;
-  //height: 960px;
+  height: 1050px;
   background: white;
   position: relative;
 
@@ -275,38 +275,39 @@ img {
 }
 #floatingBottle {
   z-index: 999999;
-  position: fixed;
-  top: 300px;
+  position: relative;
+  @include transform(translate3d(0 ,-2010px,0));
+    @include transition(all 1s ease-out);
   text-align: center;
-  width: 75%;
-  left: 50%;
-  margin-left: -37.5%;
-  
-
-
+  left:0;
+  right:0;
+  top:0;
+  position: absolute;
   &.start {
-    top: 50% !important;
-    @include transform(translate(0, -50%));
-    @include transition(all 0.6s ease);
+   
+    @include transform(translate3d(0 ,-1000px,0));
+    
     #mainBottle {
-      max-width:370px;
+      max-width:100%;
+      @include transition(all 0.6s ease);
+      @include transform(scale(1));
     }
     .shadow, .callOut {
      opacity: 0;
     }
   }
   &.stop {
-    position: absolute;
+    
      @include transition(all 0.6s ease);
-     top:220px !important;
-     @include transform(translate(0 ,0));
+    
+     @include transform(translate3d(0 ,-90px,0));
     #mainBottle {
-      max-width: none;
+     @include transform(scale(0.75));
+     
     }
   }
   #mainBottle {
-    @include transition(all 0.3s ease);
-    max-width: 280px;
+    @include transform(scale(.75));
    
   }
   .shadowContainer {

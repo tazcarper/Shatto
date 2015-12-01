@@ -5,14 +5,14 @@ $white: #fff;
 //@extend-elements
 //original selectors
 //.popUp_info, .popUp_info__overlay
-%extend_1 {
+%modal1 {
 	width: 100%;
 	height: 100%;
 	top: 0;
 	left: 0;
 }
 .popUp_info {
-	@extend %extend_1;
+	@extend %modal1;
 	position: absolute;
 	display: flex;
 	align-items: center;
@@ -79,7 +79,7 @@ $white: #fff;
 	}
 }
 .popUp_info__overlay {
-	@extend %extend_1;
+	@extend %modal1;
 	position: absolute;
 
 	background: rgba(255, 255, 255, 0.95);

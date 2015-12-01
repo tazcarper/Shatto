@@ -12,7 +12,7 @@ $headerHeight: 70px;
         left: 95px;
 
         @include MQ(maxML) {
-          left: 60px;
+          left: 6 px;
           top: 5px;
           width: 70px;
         }
@@ -128,9 +128,9 @@ header {
     @include transition(all .2s ease);
 
     @include MQ(maxML) {
-      width: 125px;
-      top: 10px;
-      left: 35px;
+      width: 100px;
+      top: 15px;
+      left: 75px;
     }
     @include MQ(maxM) {
       width: 85px;

@@ -36,9 +36,9 @@
 						headerContainer.removeClass('smaller');
 					}
 					var newH = 300 - distanceY;
-					$('#floatingBottle').css({
-						'top': newH
-					});
+					// $('#floatingBottle').css({
+					// 	'top': newH
+					// });
 				}
 			});
 
@@ -76,13 +76,9 @@
 					if (direction === 'down') {
 						//$('#mainBottle').css({'max-width':'400px'});
 						floatingBottle.addClass('start');
-						theH = $('#mainBottle').height();
-						$('#mainBottle').css({
-								'max-height': maxHeight
-							})
-							//floatingBottle.css({"max-height":theH})
-						$('.stopPoint').height(maxHeight);
-						console.log(theH);
+						
+						
+					
 						$('.shadow').addClass('hidden');
 
 					} else {
@@ -111,11 +107,41 @@
 						$('.shadow').addClass('hidden');
 					} else {
 						// $('#mainBottle').css({'max-width':'250px'});
-
+						floatingBottle.addClass('start').removeClass('stop');
 					}
 				}, {
-					offset: '61'
+					offset: '-700'
 				})
+			}
+
+			// Contact
+			if ($('.contact')[0]) {
+				if (Modernizr.mq('(min-width: 767px)')) {
+					var nlform = new NLForm(document.getElementById('nl-form'));
+				}
+				var span = $('<span>').css('display', 'inline-block')
+					.css('word-break', 'break-all').appendTo('body').css('visibility', 'hidden');
+
+				function initSpan(textarea) {
+					span.text(textarea.text())
+						.width(textarea.width())
+						.css('font', textarea.css('font'));
+				}
+				$('textarea').on({
+					input: function() {
+						var text = $(this).val();
+						if (text !== '') {
+							span.text(text);
+							$(this).height(text ? span.height() : '1.1em');
+						}
+					},
+					focus: function() {
+						initSpan($(this));
+					},
+					keypress: function(e) {
+						if (e.which == 13) e.preventDefault();
+					}
+				});
 			}
 
 			// Product Page Animation
