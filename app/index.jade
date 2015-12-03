@@ -25,10 +25,16 @@ block content
             .stopPoint
         .row
           .col-sm-3
-            p info about milk
+            .pod.pod1
+              p Fresh, natural, wholesome milk. It speaks for itself. Still, there’s a story to be told about how that milk came to be. And a pretty interesting one at that.
+            .pod.pod2
+              p That’s why we equip every Shatto bottle with, well, a quip. It’s just our way of giving you a little insight into our process.
           .col-sm-6
           .col-sm-3
-            p more info about milk
+            .pod.pod3
+              p Like the time our cows got into a patch of four-leaf clovers. That’s right, an entire patch. Lucky us, because the next day we had Mint Chocolate Milk.
+            .pod.pod4
+              p In the end, you’ll find that we’re pretty transparent here at our family farm. Maybe that’s why we started putting milk in glass bottles.
   section.container-fluid.products.visible
     .container.ML_Fluid
       .row
@@ -38,24 +44,26 @@ block content
       .row
           .col-md-12.productImages.home
             #floatingBottle
-              img#mainBottle(src="images/rotation/1.png", alt="Shatto Milk", srcset="images/rotation/1.png 1x, images/rotation/1_2x.png 2x")
-            .product.juice.text-center
+              img#mainBottle(src="images/rotation/1.png", alt="Shatto Milk", srcset="images/rotation/1.png 1x, images/rotation/1_2x.png 2x", data-bottleposition="1").shown
+              .productName
+                h5 Milk
+            a.product.juice.text-center(href="/products.html#juice")
               img(src="images/home/juice.png" srcset="images/home/juice.png 1x, images/home/juice_2x.png 2x") 
               .productName
                 h5 Non-Dairy
-            .product.cheese.text-center
+            a.product.cheese.text-center(href="/products.html#cheese")
               img(src="images/home/cheese.png" srcset="images/home/cheese.png 1x, images/home/cheese_2x.png 2x")
               .productName
                 h5 Cheese
-            .product.flavoredMilk.text-center
+            a.product.flavoredMilk.text-center(href="/products.html#flavoredMilk")
               img(src="images/home/flavored.png" srcset="images/home/flavored.png 1x, images/home/flavored_2x.png 2x")
               .productName
                 h5 Flavored Milk
-            .product.iceCream.text-center
+            a.product.iceCream.text-center(href="/products.html#iceCream")
               img(src="images/home/iceCream.png" srcset="images/home/iceCream.png 1x, images/home/iceCream_2x.png 2x")
               .productName
                 h5 Ice Cream
-            .product.butter.text-center
+            a.product.butter.text-center(href="/products.html#butter")
               img(src="images/home/butter.png" srcset="images/home/butter.png 1x, images/home/butter_2x.png 2x")
               .productName
                 h5 Butter

@@ -26,8 +26,8 @@
 				//console.log(distanceY);
 				maxHeight = $(window).height() - ($(window).height() * 0.15);
 				halfHeight = maxHeight * 0.5;
-				console.log($(window).height());
-				console.log(maxHeight);
+				// console.log($(window).height());
+				// console.log(maxHeight);
 				if (distanceY > shrinkOn) {
 					headerContainer.addClass('smaller');
 
@@ -69,48 +69,128 @@
 			});
 
 			if ($('#floatingBottle')[0]) {
-				var theH = 0;
-				var floatingBottle = $('#floatingBottle');
+				var theH = 0,
+					floatingBottle = $('#floatingBottle');
+
+				var bottleWidth = $('#floatingBottle img').width(),
+					theBottle = $('#floatingBottle'),
+					bottles = 16,
+					arrayIndex = 8,
+					// Custom rotation order
+					customRotation = [9, 10, 11, 12, 13, 14, 15, 16, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+					screenWidth,
+					bottlesArray = Array.apply(null, {
+						length: bottles
+					}).map(Number.call, Number);
+				for (var i = 2; i <= bottlesArray.length; i++) {
+					theBottle.append('<img src="images/rotation/' + i + '.png" data-bottleposition="' + i + '">');
+				}
+
+				function bottleMouseMove(e) {
+					if (floatingBottle.hasClass('start')){
+					var x = e.pageX - $('#floatingBottle').offset().left;
+					var bottlePos = customRotation[parseInt(x / screenWidth * customRotation.length)];
+					arrayIndex = parseInt(x / screenWidth * customRotation.length);
+
+					if ($('.shown').data('bottleposition') !== bottlePos) {
+						$('.shown').removeClass('shown');
+						theBottle.find("[data-bottleposition='" + bottlePos + "']").addClass('shown');
+					}
+				}
+				}
+
+				function changeIt(i) {
+					var origNum = i;
+					console.log('run change it');
+					$('.shown').removeClass('shown');
+					theBottle.find("[data-bottleposition='" + customRotation[i] + "']").addClass('shown');
+					// if not on starting position
+					if (i !== 8) {
+
+						if (arrayIndex !== 8 && arrayIndex < 8) {
+							origNum++;
+							setTimeout(function() {
+								changeIt(origNum)
+							}, 35);
+						} else if (arrayIndex !== 8 && arrayIndex > 8) {
+							origNum--;
+							setTimeout(function() {
+								changeIt(origNum)
+							}, 35);
+						}
+
+					}
+					// if center frame, reset base array index to starting position (8)
+					if (i === 8) {
+						arrayIndex = 8;
+					}
+				}
+
+				function rotateBack() {
+					if (arrayIndex !== 8 && arrayIndex < 8) {
+						console.log('left side out');
+						changeIt(arrayIndex);
+
+					}
+					if (arrayIndex !== 8 && arrayIndex > 8) {
+						console.log('RIGHT');
+						changeIt(arrayIndex);
+					}
+				}
+
+				function onResize() {
+					screenWidth = theBottle.width();
+				}
+				
+				
+				theBottle.on('mousemove', bottleMouseMove);
+				
+
+				$(window).resize(onResize);
+				onResize();
+
 				var waypoints = $('#floatingTrigger').waypoint(function(direction) {
-					console.log(direction)
 					if (direction === 'down') {
 						//$('#mainBottle').css({'max-width':'400px'});
 						floatingBottle.addClass('start');
-						
-						
-					
-						$('.shadow').addClass('hidden');
+						$('#mainBottle').addClass('shown');
+
+
+
+						$('.shadow').addClass('hideIt');
 
 					} else {
-						//$('#mainBottle').css({'max-width':'250px'});
-						floatingBottle.removeClass('start').css({
-							'margin-top': '0'
-						});
+						floatingBottle.removeClass('start');
+						rotateBack();
 
 						if (!floatingBottle.hasClass('stop')) {
-							$('.shadow').removeClass('hidden');
+							$('.shadow').removeClass('hideIt');
 						}
 					}
 
 
 				}, {
-					offset: '-200'
+					offset: '-600'
 				});
 				var stopWay = $('.bottleDetail').waypoint(function(direction) {
 					console.log(direction)
 					if (direction === 'down' && !floatingBottle.hasClass('stop')) {
 						// $('#mainBottle').css({'max-width':'300px'});
-						floatingBottle.css({
-							'top': 'inherit'
-						});
+						
 						floatingBottle.addClass('stop').removeClass('start');
-						$('.shadow').addClass('hidden');
+						rotateBack();
+						$('#mainBottle').wrap('<a href="/products.html#milk"></a>');
+						$('.product').each(function(e){
+							$(this).addClass('productShown')
+						})
 					} else {
 						// $('#mainBottle').css({'max-width':'250px'});
 						floatingBottle.addClass('start').removeClass('stop');
+						$('#mainBottle').unwrap('<a href="/products.html#milk"></a>');
+
 					}
 				}, {
-					offset: '-700'
+					offset: '-650'
 				})
 			}
 
