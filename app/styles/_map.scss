@@ -3,6 +3,7 @@
 	position: relative;
 }
 .mapOverlay {
+	display: none;
 	background:rgba(0,0,0,0.4);
 	position: absolute;
 	z-index: 55;

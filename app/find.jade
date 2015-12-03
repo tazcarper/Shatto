@@ -5,6 +5,13 @@ block content
 	section.container-fluid.mapContainer
 		#jlocator
 			.mapOverlay
-				.findInput
-					input.form-control(type="text", placeholder="City, State or ZIP", data-radius="10000", data-zoom="10", data-control-action="filter", data-control-name="autocomplete", data-control-type="autocomplete", autocompelte="off")
+				div(data-type="panel")
+					.controls(data-type="controls")
+						.findInput
+							input.form-control(type="text", placeholder="City, State or ZIP", data-radius="10000", data-zoom="10", data-control-action="filter", data-control-name="autocomplete", data-control-type="autocomplete", autocompelte="on")
+					.stores(data-type="stores")
+						.store(data-type="store",data-latitude="39.0936738", data-longitude="-94.589048", data-marker-icon="images/map-icon.png")
+							p.milk
+								span.title(data-type="title") Store 1<br/>
+								span.address(data-type="address") Kansas City			
 			.map(data-type='map')

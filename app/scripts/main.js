@@ -361,37 +361,20 @@
 				fontRatio: 30
 			});
 
+			// Store Locatore / Find Page
 			if ($('.mapContainer')[0]) {
+
 				$('#jlocator').height($(window).height());
+
 				$(window).resize(function() {
 					$('#jlocator').height($(window).height());
 				}).resize();
+
 				$('#jlocator').jlocator({
 					startZoom: 13,
 					latitude: 39.0936738,
-					longitude: -94.589048,
-					jplist: {
-
-
-
-						//panel controls
-						control_types: {
-
-							'autocomplete': {
-								class_name: 'Autocomplete',
-								options: {
-									/* 
-									Autocomplete control options:
-									can be used to limit google autocomplete results to City and Country only
-									for example:
-									             
-									types: ['(cities)']
-									,componentRestrictions: {country: 'us'}
-									*/
-								}
-							}
-						}
-					}
+					longitude: -94.589048
+					
 
 				});
 			}
