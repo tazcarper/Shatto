@@ -38,13 +38,19 @@ block content
   section.container-fluid.products.visible
     .container.ML_Fluid
       .row
-        .col-xs-12
+        .col-xs-12.visible-xs
+          img(src="images/rotation/1.png", alt="Shatto Milk", srcset="images/rotation/1.png 1x, images/rotation/1_2x.png 2x", style="display:block; width:100%; max-width:270px; margin:0 auto; margin-bottom:25px;")
+        .col-xs-12.title
           h2.desktop From Our Farm to Your Face.
           h2.mobile Products
       .row
           .col-md-12.productImages.home
             #floatingBottle
-              img#mainBottle(src="images/rotation/1.png", alt="Shatto Milk", srcset="images/rotation/1.png 1x, images/rotation/1_2x.png 2x", data-bottleposition="1").shown
+              a
+                img#mainBottle(src="images/rotation/1.png", alt="Shatto Milk", srcset="images/rotation/1.png 1x, images/rotation/1_2x.png 2x", data-bottleposition="1").shown
+                .productName.hidden-xs
+                  h5 Milk
+            a.product.milkButton.text-center.visible-xs(href="/products.html#milk")
               .productName
                 h5 Milk
             a.product.juice.text-center(href="/products.html#juice")
@@ -76,7 +82,7 @@ block content
           form.form-inline
             input.form-control(placeholder="ZIP Code")
             button.form-control.btn.invert GO
-          br
+          br.hidden-xs
           p.mobile
             a(href="#") Oh, just use my location. I'm not hiding.
   section.container-fluid.signUp.desktop

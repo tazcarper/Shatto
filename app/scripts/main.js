@@ -19,6 +19,19 @@
 		$(function() {
 			var maxHeight = 0,
 				halfHeight = 0;
+
+			var widthMatch = matchMedia("all and (max-width: 767px)");
+			var widthHandler = function(matchList) {
+				if (matchList.matches) {
+					console.log('small')
+				} else {
+					// Do stuff for larger screens
+				}
+			};
+
+			widthMatch.addListener(widthHandler);
+			widthHandler(widthMatch);
+			Grid.init();
 			// header scroll
 			window.addEventListener('scroll', function(e) {
 				var distanceY = window.pageYOffset || document.documentElement.scrollTop,
@@ -54,7 +67,7 @@
 					}
 
 					$('html').toggleClass('navigation-is-open');
-					console.log($(window).height());
+					
 
 					$('.headerMain').toggleClass('makeBlack');
 					$('.cd-navigation-wrapper').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {
@@ -68,7 +81,9 @@
 				toggleFAQ(event.target);
 			});
 
+			// homepage scripts
 			if ($('#floatingBottle')[0]) {
+
 				var theH = 0,
 					floatingBottle = $('#floatingBottle');
 
@@ -86,17 +101,18 @@
 					theBottle.append('<img src="images/rotation/' + i + '.png" data-bottleposition="' + i + '">');
 				}
 
-				function bottleMouseMove(e) {
-					if (floatingBottle.hasClass('start')){
-					var x = e.pageX - $('#floatingBottle').offset().left;
-					var bottlePos = customRotation[parseInt(x / screenWidth * customRotation.length)];
-					arrayIndex = parseInt(x / screenWidth * customRotation.length);
 
-					if ($('.shown').data('bottleposition') !== bottlePos) {
-						$('.shown').removeClass('shown');
-						theBottle.find("[data-bottleposition='" + bottlePos + "']").addClass('shown');
+				function bottleMouseMove(e) {
+					if (floatingBottle.hasClass('start')) {
+						var x = e.pageX - $('#floatingBottle').offset().left;
+						var bottlePos = customRotation[parseInt(x / screenWidth * customRotation.length)];
+						arrayIndex = parseInt(x / screenWidth * customRotation.length);
+
+						if ($('.shown').data('bottleposition') !== bottlePos) {
+							$('.shown').removeClass('shown');
+							theBottle.find("[data-bottleposition='" + bottlePos + "']").addClass('shown');
+						}
 					}
-				}
 				}
 
 				function changeIt(i) {
@@ -127,71 +143,69 @@
 				}
 
 				function rotateBack() {
-					if (arrayIndex !== 8 && arrayIndex < 8) {
-						console.log('left side out');
-						changeIt(arrayIndex);
 
-					}
-					if (arrayIndex !== 8 && arrayIndex > 8) {
-						console.log('RIGHT');
-						changeIt(arrayIndex);
-					}
+					changeIt(arrayIndex);
+
+
+
 				}
-
-				function onResize() {
-					screenWidth = theBottle.width();
-				}
+				// if desktop
 				
-				
-				theBottle.on('mousemove', bottleMouseMove);
-				
-
-				$(window).resize(onResize);
-				onResize();
-
-				var waypoints = $('#floatingTrigger').waypoint(function(direction) {
-					if (direction === 'down') {
-						//$('#mainBottle').css({'max-width':'400px'});
-						floatingBottle.addClass('start');
-						$('#mainBottle').addClass('shown');
+					function onResize() {
+						screenWidth = theBottle.width();
+					}
 
 
+					theBottle.on('mousemove', bottleMouseMove);
 
-						$('.shadow').addClass('hideIt');
 
-					} else {
-						floatingBottle.removeClass('start');
-						rotateBack();
+					$(window).resize(onResize);
+					onResize();
 
-						if (!floatingBottle.hasClass('stop')) {
-							$('.shadow').removeClass('hideIt');
+
+					var waypoints = $('#floatingTrigger').waypoint(function(direction) {
+						if (direction === 'down') {
+							//$('#mainBottle').css({'max-width':'400px'});
+							floatingBottle.addClass('start');
+							$('#mainBottle').addClass('shown');
+
+
+
+							$('.shadow').addClass('hideIt');
+
+						} else {
+							floatingBottle.removeClass('start');
+							rotateBack();
+
+							if (!floatingBottle.hasClass('stop')) {
+								$('.shadow').removeClass('hideIt');
+							}
 						}
-					}
 
 
-				}, {
-					offset: '-600'
-				});
-				var stopWay = $('.bottleDetail').waypoint(function(direction) {
-					console.log(direction)
-					if (direction === 'down' && !floatingBottle.hasClass('stop')) {
-						// $('#mainBottle').css({'max-width':'300px'});
-						
-						floatingBottle.addClass('stop').removeClass('start');
-						rotateBack();
-						$('#mainBottle').wrap('<a href="/products.html#milk"></a>');
-						$('.product').each(function(e){
-							$(this).addClass('productShown')
-						})
-					} else {
-						// $('#mainBottle').css({'max-width':'250px'});
-						floatingBottle.addClass('start').removeClass('stop');
-						$('#mainBottle').unwrap('<a href="/products.html#milk"></a>');
+					}, {
+						offset: '-600'
+					});
+					var stopWay = $('.bottleDetail').waypoint(function(direction) {
+						if (direction === 'down' && !floatingBottle.hasClass('stop')) {
+							// $('#mainBottle').css({'max-width':'300px'});
 
-					}
-				}, {
-					offset: '-650'
-				})
+							floatingBottle.addClass('stop').removeClass('start').find('a').attr('href', '/products.html#milk');
+							rotateBack();
+							//$('#mainBottle').wrap('<a href="/products.html#milk"></a>');
+							$('.product').each(function(e) {
+								$(this).addClass('productShown')
+							})
+						} else {
+							// $('#mainBottle').css({'max-width':'250px'});
+							floatingBottle.addClass('start').removeClass('stop').find('a').attr('href', '');
+							//$('#mainBottle').unwrap('<a href="/products.html#milk"></a>');
+
+						}
+					}, {
+						offset: '-650'
+					})
+				
 			}
 
 			// Contact
@@ -329,6 +343,7 @@
 
 			}
 
+			// css3 transition event listener
 			function whichTransitionEvent() {
 				var t,
 					el = document.createElement("fakeelement");
@@ -353,13 +368,13 @@
 
 			//dlgtrigger.addEventListener('click', dlg.toggle.bind(dlg));
 
-			$('main').flowtype({
-				minimum: 400,
-				maximum: 1400,
-				minFont: 18,
-				maxFont: 32,
-				fontRatio: 30
-			});
+			// $('main').flowtype({
+			// 	minimum: 400,
+			// 	maximum: 1400,
+			// 	minFont: 32,
+			// 	maxFont: 32,
+			// 	fontRatio: 30
+			// });
 
 			// Store Locatore / Find Page
 			if ($('.mapContainer')[0]) {
@@ -372,9 +387,10 @@
 
 				$('#jlocator').jlocator({
 					startZoom: 13,
+
 					latitude: 39.0936738,
 					longitude: -94.589048
-					
+
 
 				});
 			}
@@ -384,17 +400,24 @@
 	})
 );
 
-/*
- * FlowType.JS v1.1
- * Copyright 2013-2014, Simple Focus http://simplefocus.com/
- *
- * FlowType.JS by Simple Focus (http://simplefocus.com/)
- * is licensed under the MIT License. Read a copy of the
- * license in the LICENSE.txt file or at
- * http://choosealicense.com/licenses/mit
- *
- * Thanks to Giovanni Difeterici (http://www.gdifeterici.com/)
- */
+
+// fade out on link click
+
+// $('a').click(function(event) {
+	
+// 	event.preventDefault();
+
+// 	newLocation = this.href;
+
+// 	$('body').fadeOut(150, newpage);
+
+// });
+
+function newpage() {
+
+	window.location = newLocation;
+
+}
 
 (function($) {
 	$.fn.flowtype = function(options) {

@@ -1,21 +1,36 @@
 .events-tours {
   position: relative;
-
+   h2 {
+     
+      font-size:4em;
+      @include MQ(maxM) {
+        font-size:2.5em;
+        margin-bottom: 15px;
+      }
+    }
+    h3 {
+      font-size:2.8em;
+      margin-bottom: 15px;
+      @include MQ(maxM) {
+        font-size:2.2em;
+      }
+    }
   .hero {
     background: url('../images/tours-hero-bg.jpg') 50% 0 no-repeat;
     background-size: auto 385px;
     color: $white;
     height: 385px;
-
+    min-height: auto;
     h1 {
       text-align: center;
       padding-top:175px;
+      text-transform: uppercase;
     }
 
     @media (min-width:$screen-sm-min) {
-      background-size: auto 662px;
-      height: 662px;
-
+      background-size: auto 658px;
+      height: 658px;
+    min-height: auto;
       h1 {
         padding-top:400px;
       }
@@ -24,14 +39,54 @@
 
   section.intro {
     padding: 4em 0;
-
+    padding-left: 15px;
+    padding-right: 15px;
+    h2 {
+       margin-bottom: 35px;
+    }
+    .scheduleOverlay {
+      position: absolute;
+      top:3em;
+      width:100%;
+      left:0;
+      background:rgba(255,255,255,0.65);
+      z-index: 5;
+      padding: 10px 0;
+      @include MQ(maxM) {
+        display: none;
+      }
+      .btn {
+        background:#00aeef;
+        width:40%;
+        margin:0 auto;
+        color: white;
+        padding-top:10px;
+        padding-bottom: 10px;
+        font-size:25px;
+      }
+    }
+    .images {
+      max-width:1100px;
+      margin:0 auto;
+      position: relative;
+    }
     .col-md-6>img {
       margin: 2em 0;
+      img {
+        width:100%;
+      }
     }
 
-    @media (min-width:$screen-sm-min) {
-      .col-md-6>img {
-        margin: 4em 0;
+    
+    .rightPod {
+     
+      @include MQ(M) {
+        padding-left:5px;
+      }
+    }
+    .leftPod {
+      @include MQ(M) {
+        padding-right:5px;
       }
     }
   }
@@ -43,7 +98,25 @@
     height: auto;
     padding: 4em 0;
     padding-top: 24em;
+    padding-left: 15px;
+    padding-right: 15px;
+    @include MQ(maxM) {
+      padding:22em 0 2em 0;
+      padding-left: 15px;
+    padding-right: 15px;
+    }
+    b {
+      font-weight:500;
 
+    }
+    p {
+      margin-top: 15px;
+    }
+   
+    svg {
+      width:100px;
+      margin:15px 0;
+    }
     @media (min-width:$screen-sm-min) {
       background-position: center top;
       background-size: auto;
@@ -57,37 +130,56 @@
     background-color: $cautionYellow;
     color: $black;
     padding: 4em 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    @include MQ(maxM) {
+      padding:3.5em 0;
+      padding-left: 15px;
+    padding-right: 15px;
+    }
   }
 
-  section.country-store {
+section.country-store {
       background: url('../images/child-with-spoon.jpg') 50% 0 no-repeat;
     background-size: auto 14em;
     color: $black;
     height: auto;
-    padding: 4em 0;
-    padding-top: 18em;
-
+    padding: 2em 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 16em;
+    
     @media (min-width:$screen-sm-min) {
       background-position: center top;
-      background-size: auto 577px;
+      background-size: auto 557px;
       color: $white;
-      height: 577px;
-      padding-top: 400px;
+      height: 557px;
+     
+      padding-bottom: 2em;
+      padding-top: 22em;
+      padding-left: 15px;
+    padding-right: 15px;
+
     }
   }
 
   section.gallery {
-    padding: 4em 0 .5em;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    @include MQ(maxM) {
+      padding-top: 0; 
+      padding-bottom: 4em;
 
+    }
     h2 {
       padding-bottom: 1em;
     }
 
-    img {
-      display: inline-block;
-      margin-right: .5em;
-      max-height: 25em;
-    }
+    // img {
+    //   display: inline-block;
+    //   margin-right: .5em;
+    //   max-height: 25em;
+    // }
   }
 
 }

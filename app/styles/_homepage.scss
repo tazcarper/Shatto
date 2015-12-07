@@ -1,17 +1,20 @@
 section.products {
   background: $white;
   color: $black;
-  padding: 2em 0;
+  padding: 4em 0;
   text-align: center;
-  
+
+  @include MQ(maxM) {
+    padding: 0;
+  }
   h2 {
     margin-bottom: 1em;
-    font-size: em(30);
+    font-size: 4em;
   }
   h2.mobile {
     border-top: 1px solid $black;
     border-bottom: 1px solid $black;
-    margin: 0 auto 1em;
+    margin: 0 auto 15px;
     width: 80%;
   }
   a {
@@ -32,6 +35,17 @@ section.products {
   }
   img {
     display: none;
+  }
+  .title {
+    @include MQ(maxM) {
+      img {
+        width: 100%;
+        max-width: 300px;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 30px;
+      }
+    }
   }
   @media (min-width:$screen-sm-min) {
     background: $white;
@@ -58,17 +72,29 @@ section.mapFinder {
   text-align: center;
   position: relative;
 
+  @include MQ(maxM) {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom:15px;
+    a {
+      font-size:16px;
+    }
+  }
   a {
     color: inherit;
   }
   .form-control {
-    @include MQ(maxM){
-      max-width:300px;
-      margin:em(8) auto;
+    @include MQ(maxM) {
+      max-width: 300px;
+      margin: em(8) auto;
     }
   }
   .setHeight {
     height: 300px;
+    @include MQ(maxM) {
+      height: auto;
+    }
   }
   @include MQ(M) {
     background: $black url('../images/home/mapBG.jpg') center center no-repeat;
@@ -82,36 +108,48 @@ section.mapFinder {
       height: 747px;
     }
   }
-  
   .findText {
     position: absolute;
     top: 50%;
     left: 50%;
-    width:75%;
+    width: 75%;
     max-width: 560px;
     @include transform(translate(-50%, -50%));
+
     h3 {
-    font-size: em(30);
-    font-weight: 400;
-    margin-bottom: em(8);
-    @include MQ(M) {
       font-size: em(30);
+      font-weight: 400;
+      margin-bottom: em(8);
+
+      @include MQ(M) {
+        font-size: em(30);
+      }
+      @include MQ(L) {
+        font-size: em(31);
+      }
     }
-    @include MQ(L) {
-      font-size: em(31);
+    @include MQ(maxM) {
+      position: static;
+      max-width: none;
+      width: 100%;
+      @include transform(translate(0, 0));
+
+      h3 {
+        font-size: em(20);
+      }
     }
-  }
   }
 }
 section.signUp {
-  background:url('../images/home/signUpBg.jpg') 50% -1px no-repeat;
+  background: url('../images/home/signUpBg.jpg') 50% -1px no-repeat;
+
   @include MQ(maxM) {
-    background-size:cover;
+    background-size: cover;
   }
   color: $white;
   padding: 2em 0;
   text-align: center;
- 
+
   input {
     min-width: 300px;
   }
@@ -122,6 +160,9 @@ section.tours {
   padding: 2em 0;
   text-align: center;
   min-height: 600px;
+  @include MQ(maxM) {
+    min-height: auto;
+  }
   .btn {
     background-color: $black;
     color: $white;
@@ -134,7 +175,6 @@ section.tours {
   }
   @media (min-width:$screen-sm-min) {
     background: $black url('../images/tours-bg-placeholder.jpg') top center no-repeat;
-
     color: $white;
     height: 571px;
     text-align: left;

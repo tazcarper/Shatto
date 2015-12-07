@@ -31,7 +31,9 @@
 .productPage, .products {
 	position: relative;
 	//margin-bottom: 1.5em;
-
+	@include MQ(maxM) {
+		padding:.5em 0;
+	}
 	@include MQ(M) {
 		display: block !important;
 		//height: auto !important;
@@ -295,10 +297,42 @@
 		.productImages {
 			&.home {
 				min-height: 580px;
+				@include MQ(maxM) {
+					min-height: auto;
+					display: inline-block;
+					margin-bottom: 15px;
+					.product {
+						opacity: 1 !important;
+						float: left !important;
+						width:50% !important;
+						max-width: none !important;
+						position: static;
+					}
+				}
 				a {
 					background:transparent !important;
+					padding: 0;
+					@include MQ(maxM) {
+						margin-top:0 !important;
+					}
 				}
 				@include transition(all 0s ease);
+				.productName {
+					@include MQ(maxM) {
+							display: block;
+							color: black;
+							opacity: 1;
+							max-width:none;
+
+							h5 {color: white;
+								background:black;
+								border-radius: 25px;
+								display: inline-block;
+								width:95%;
+								padding:7px 0;
+							}
+						}
+				}
 				.product {
 					max-width: none;
 					width:100%;
@@ -315,6 +349,11 @@
 					right:0;
 					margin-top: 2px;
 					position: relative;
+					@include MQ(maxM) {
+						img {
+							display: none;
+						}
+					}
 				}
 				&.juice {
 					left:0%;
@@ -323,14 +362,20 @@
 					max-width:225px;
 					z-index: 9;
 					opacity: 0;
+					@include MQ(maxM) {
+						img {
+							display: none;
+						}
+					}
 					@include transition(all .2s .5s ease-out);
 					&.productShown {
 						left:-35%;
 						opacity: 1;
-					}
-					@include MQ(maxL) {
+						@include MQ(maxL) {
 						left:-38%;
 					}
+					}
+					
 				}
 				&.cheese {
 					left:0%;
@@ -339,14 +384,20 @@
 					max-width:247px;
 					z-index: 8;
 					opacity: 0;
+					@include MQ(maxM) {
+						img {
+							display: none;
+						}
+					}
 					@include transition(all .2s .5s ease-out);
 					&.productShown {
 						left:-71%;
 						opacity: 1;
-					}
-					@include MQ(maxML){
+						@include MQ(maxML){
 						left:-65%;
 					}
+					}
+					
 				}
 				
 				&.flavoredMilk {
@@ -356,17 +407,23 @@
 					max-width:150px;
 					z-index: 9;
 					opacity: 0;
+					@include MQ(maxM) {
+						img {
+							display: none;
+						}
+					}
 					@include transition(all .2s .5s ease-out);
 					&.productShown {
-						right:-33%;
+						right:-31%;
 						opacity: 1;
-					}
-					@include MQ(maxL) {
+						@include MQ(maxL) {
 						right:-41%;
 					}
 					@include MQ(maxML) {
 						right:-35%;
 					}
+					}
+					
 				}
 				&.iceCream {
 					left:0;
@@ -375,17 +432,23 @@
 					z-index: 8;
 					max-width: 180px;
 					opacity: 0;
+					@include MQ(maxM) {
+						img {
+							display: none;
+						}
+					}
 					@include transition(all .2s .5s ease-out);
 					&.productShown {
 						right:-55%;
 						opacity: 1;
-					}
-					@include MQ(maxL) {
+						@include MQ(maxL) {
 					right:-67%;	
 					}
 					@include MQ(maxML) {
 						right:-55%;
 					}
+					}
+					
 				}
 				&.butter {
 					left:0;
@@ -394,17 +457,23 @@
 					z-index: 7;
 					max-width: 170px;
 					opacity: 0;
+					@include MQ(maxM) {
+						img {
+							display: none;
+						}
+					}
 					@include transition(all .2s .5s ease-out);
 					&.productShown {
 						right:-77%;
 						opacity: 1;
-					}
-					@include MQ(maxL) {
+						@include MQ(maxL) {
 					right:-90%;	
 					}
 					@include MQ(maxML) {
 						right:-80%;
 					}
+					}
+					
 				}
 				}
 			}
@@ -489,6 +558,7 @@
 					}
 					.productName {
 						opacity: 0;
+
 					}
 				}
 			}

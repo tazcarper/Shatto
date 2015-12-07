@@ -34,7 +34,7 @@
 		if(isNaN(zoom)){
 			zoom = 17;
 		}
-				
+					
 		//add data
 		control.$control.data('jplist-autocomplete', autocomplete);
 		control.$control.data('jplist-autocomplete-zoom', zoom);
@@ -84,7 +84,8 @@
 			
 			//send panel redraw event
 			control.$jplistBox.trigger(control.options.force_ask_event, [false]);
-			
+			console.log('auto complete done');
+			$('.mapOverlay').addClass('shrink');
 		});
 		
 		control.$control.off('keyup').on('keyup', function(e){	

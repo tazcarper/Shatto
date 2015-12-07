@@ -74,7 +74,8 @@ section.scheduleTour {
     margin-bottom: 25px;
     font-weight: 300;
     font-family: "futura-pt", sans-serif;
-    font-size:.9em;
+    font-size:1.5em;
+    line-height: 1.3em;
     text-transform: inherit;
     a {
       color: black;
@@ -99,9 +100,9 @@ section.findUs {
      font-family: "futura-pt", sans-serif;
   }
   h3 {
-    font-size:.85em;
+    font-size:1em;
     @include MQ(maxM) {
-      font-size:.75em;
+      font-size:1em;
       margin-bottom: 15px;
       margin-top: 15px;
     }
@@ -120,20 +121,21 @@ section.findUs {
 
   h5 {
     margin-top: 1.5em;
+    font-size:1.5em;
     @include MQ(maxM){
       font-size:1.5em;
     }
   }
   h6 {
-    font-size:.6em;
+    font-size:1em;
     line-height: 1.3em;
     @include MQ(maxM){
-      font-size:1.2em;
+      font-size:.9em;
     }
     
   }
   p {
-    font-size:.55em;
+    font-size:.95em;
     @include MQ(maxM){
       font-size:1em;
     }

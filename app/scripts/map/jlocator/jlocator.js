@@ -55,7 +55,7 @@
 					
 			//map defauls
 			startZoom: 2
-			,storeZoom: 17
+			,storeZoom: 13
 			,latitude: 0
 			,longitude: 90	
 			

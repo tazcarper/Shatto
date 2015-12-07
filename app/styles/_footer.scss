@@ -3,6 +3,10 @@
   color: $lightGrey;
   font-size: .65em;
   padding: 3em 0 4em 0;
+  @include MQ(maxM) {
+    padding:1em 0;
+    text-align: center;
+  }
 
   ul {
     list-style: none;
@@ -19,7 +23,7 @@
     font-size: .813em;
     padding-bottom: 6px;
     @include MQ(maxM) {
-      font-size:1em;
+      font-size:18px;
     }
 
   }
@@ -29,7 +33,7 @@
   }
 
   ul li li {
-    font-size: 1em;
+    font-size: 18px;
     text-transform: none;
   }
 
@@ -54,11 +58,5 @@
     margin-top:1em;
   }
 
-  @media (max-width:$screen-md-min) {
-    padding: 4em 0;
-
-    p {
-      text-align: center;
-    }
-  }
+  
 }

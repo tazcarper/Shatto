@@ -19,13 +19,26 @@ html.no-js
     
     // build:js scripts/vendor/modernizr.js
     script(src='../bower_components/modernizr/modernizr.js')
-    script(src="//use.typekit.net/eci1rtm.js")
-    script.
-     try{Typekit.load();}catch(e){}
-
     // endbuild
-
+    script.
+      (function(d) {
+      var config = {
+      kitId: 'eci1rtm',
+      scriptTimeout: 3000,
+      async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    // build:js scripts/vendor.js
+    // bower:js
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+    // endbower
+    // endbuild
+    script.
+      $(window).load(function(){$('#status').fadeOut();$('#preloader').delay(350).fadeOut(150);$('body').delay(350).css({'overflow':'visible'});$('body').fadeIn(1000);});
   body
+   #preloader
+    #status
    header.container-fluid
      .container-fluid.headerContainer
       .row
@@ -74,7 +87,7 @@ html.no-js
                           C495.25,40.02,497.93,33.62,497.93,26.61L497.93,26.61z M471.66,46.9c-5.43,0-10.32-2.07-14.24-5.98\
                           c-3.85-3.92-5.91-8.81-5.91-14.31c0-5.5,2.07-10.52,5.91-14.44c3.79-3.85,8.81-5.91,14.24-5.91c5.43,0,10.39,2.06,14.23,5.91\
                           c3.85,3.85,5.92,8.94,5.92,14.44c0,5.5-2.07,10.46-5.92,14.31C481.98,44.83,477.03,46.9,471.66,46.9L471.66,46.9z')
-         a.cd-nav-trigger(href='#cd-nav')
+         .cd-nav-trigger
           | Menu
           span.cd-nav-icon
           svg(x='0px', y='0px', width='54px', height='54px', viewbox='0 0 54 54')
@@ -123,11 +136,7 @@ html.no-js
       r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
       ga('create','UA-XXXXX-X');ga('send','pageview');
 
-    // build:js scripts/vendor.js
-    // bower:js
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
-    // endbower
-    // endbuild
+    
 
     // build:js scripts/plugins.js
     script(src='scripts/plugins/layzr.js')
@@ -143,11 +152,12 @@ html.no-js
     //- script(src='../bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js')
     script(src='../bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js')
     //- script(src='../bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js')
+    script(src='scripts/plugins/jquery.waypoints.js')
+
+    if tour
+      script(src='scripts/plugins/grid.js')
     if contact
       script(src='scripts/contact/nlform.js')
-    script(src='scripts/plugins/ScrollMagic.js')
-    script(src='scripts/plugins/plugins/debug.addIndicators.js')
-    script(src='scripts/plugins/jquery.waypoints.js') 
     if map  
       script(src='http://maps.google.com/maps/api/js?libraries=places,geometry')
       script(src='scripts/map/jplist.min.js')
@@ -163,3 +173,5 @@ html.no-js
     // build:js scripts/main.js
     script(src='scripts/main.js')
     // endbuild
+
+
