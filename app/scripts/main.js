@@ -31,7 +31,7 @@
 
 			widthMatch.addListener(widthHandler);
 			widthHandler(widthMatch);
-			Grid.init();
+
 			// header scroll
 			window.addEventListener('scroll', function(e) {
 				var distanceY = window.pageYOffset || document.documentElement.scrollTop,
@@ -206,6 +206,10 @@
 						offset: '-650'
 					})
 				
+			}
+			// Events page - Grid init
+			if ($('.og-grid')[0]){
+					Grid.init();
 			}
 
 			// Contact
@@ -404,7 +408,7 @@
 // fade out on link click
 
 // $('a').click(function(event) {
-	
+
 // 	event.preventDefault();
 
 // 	newLocation = this.href;
