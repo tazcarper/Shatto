@@ -122,10 +122,10 @@ section.mapFinder {
       margin-bottom: em(8);
 
       @include MQ(M) {
-        font-size: em(30);
+        font-size: em(35);
       }
       @include MQ(L) {
-        font-size: em(31);
+        font-size: em(50);
       }
     }
     @include MQ(maxM) {
@@ -159,7 +159,7 @@ section.tours {
   color: $black;
   padding: 2em 0;
   text-align: center;
-  min-height: 600px;
+  min-height: 500px;
   @include MQ(maxM) {
     min-height: auto;
   }
@@ -174,13 +174,13 @@ section.tours {
     color: $black;
   }
   @media (min-width:$screen-sm-min) {
-    background: $black url('../images/tours-bg-placeholder.jpg') top center no-repeat;
+    background: $black url('../images/tours-bg-placeholder.jpg') no-repeat;
     color: $white;
-    height: 571px;
+    height: 500px;
     text-align: left;
 
     h3 {
-      margin-bottom: .5em;
+      margin-bottom: 1.3em;
     }
     p {
       margin-bottom: 2em;

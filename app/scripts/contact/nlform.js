@@ -13,7 +13,7 @@
 
 	function NLForm(el) {
 		this.el = el;
-		this.overlay = this.el.querySelector('.nl-overlay');
+		this.overlay = this.el.querySelector('.formOverlay');
 		this.fields = [];
 		this.fldOpen = -1;
 		this._init();
@@ -64,23 +64,28 @@
 		_createDropDown: function() {
 			var self = this;
 			this.fld = document.createElement('div');
-			this.fld.className = 'nl-field nl-dd';
+			this.fld.className = 'formField formDropdown';
 			this.toggle = document.createElement('a');
 			this.toggle.innerHTML = this.elOriginal.options[this.elOriginal.selectedIndex].innerHTML;
-			this.toggle.className = 'nl-field-toggle';
+			this.toggle.className = 'formField-toggle';
 			this.optionsList = document.createElement('ul');
 			var ihtml = '';
 			Array.prototype.slice.call(this.elOriginal.querySelectorAll('option')).forEach(function(el, i) {
-				ihtml += self.elOriginal.selectedIndex === i ? '<li class="nl-dd-checked">' + el.innerHTML + '</li>' : '<li>' + el.innerHTML + '</li>';
+				ihtml += self.elOriginal.selectedIndex === i ? '<li class="formDropdown-checked">' + el.innerHTML + '</li>' : '<li>' + el.innerHTML + '</li>';
 				// selected index value
 				if (self.elOriginal.selectedIndex === i) {
 					self.selectedIdx = i;
 				}
 			});
 			this.optionsList.innerHTML = ihtml;
+			this.optionsList.className ="custom_dropdown";
+			this.ddContainer = document.createElement('div');
+			this.ddContainer.className = "selection";
 			this.fld.appendChild(this.toggle);
-			this.fld.appendChild(this.optionsList);
+
+			this.ddContainer.appendChild(this.optionsList);
 			this.elOriginal.parentNode.insertBefore(this.fld, this.elOriginal);
+			this.fld.parentNode.insertBefore(this.ddContainer,this.fld)
 			this.elOriginal.style.display = 'none';
 		},
 		_createInput: function() {
@@ -89,13 +94,13 @@
 
 			this.fld = document.createElement('div');
 			if (this.elOriginal.className === 'message') {
-				this.fld.className = 'nl-field nl-ti-text textarea';
+				this.fld.className = 'formField userMsg textarea';
 			} else {
-				this.fld.className = 'nl-field nl-ti-text';
+				this.fld.className = 'formField userMsg';
 			}
 			this.toggle = document.createElement('a');
 			this.toggle.innerHTML = this.elOriginal.getAttribute('placeholder');
-			this.toggle.className = 'nl-field-toggle';
+			this.toggle.className = 'formField-toggle';
 			this.optionsList = document.createElement('ul');
 
 			if (this.elOriginal.className === 'message') {
@@ -111,10 +116,10 @@
 			this.getinputWrapper.className = 'nl-ti-input';
 			if (this.elOriginal.className === 'message') {
 				this.inputsubmit = document.createElement('span');
-				this.inputsubmit.className = 'nl-field-go icon-checkmark bottom';
+				this.inputsubmit.className = 'formField-go icon-checkmark bottom';
 			} else {
 				this.inputsubmit = document.createElement('span');
-				this.inputsubmit.className = 'nl-field-go icon-checkmark';
+				this.inputsubmit.className = 'formField-go icon-checkmark';
 			}
 
 
@@ -147,7 +152,10 @@
 				var opts = Array.prototype.slice.call(this.optionsList.querySelectorAll('li'));
 				opts.forEach(function(el, i) {
 					el.addEventListener('click', function(ev) {
+						console.log('clicked an item');
 						ev.preventDefault();
+						console.log(el);
+						console.log(opts.indexOf(el));
 						self.close(el, opts.indexOf(el));
 					});
 					el.addEventListener('touchstart', function(ev) {
@@ -204,20 +212,27 @@
 			this.form.fldOpen = this.pos;
 			var self = this;
 			console.log(this);
-			this.fld.className += ' nl-field-open';
-
+			
+			console.log(this.elOriginal.type);
+			if (this.elOriginal.type === 'select-one') {
+				console.log('its dropdown')
+				$('.selection').addClass('open');
+			}
+			else {
+				this.fld.className += ' formField-open';
+			}
 			if (this.elOriginal.className === 'message') {
-				$('.nl-field-open textarea').val(this.elOriginal.value.replace(/<br\s*[\/]?>/gi, "\n"));
+				$('.formField-open textarea').val(this.elOriginal.value.replace(/<br\s*[\/]?>/gi, "\n"));
 				console.log(this.elOriginal.value);
-				$('.nl-field-open textarea').focus();
+				$('.formField-open textarea').focus();
 
-				$('.nl-field-open textarea').attr('placeholder', '');
+				$('.formField-open textarea').attr('placeholder', '');
 				console.log(this);
 
 			} else {
-				$('.nl-field-open input').focus();
+				$('.formField-open input').focus();
 			}
-			$('.nl-overlay').addClass('open');
+			$('.formOverlay').addClass('open');
 		},
 		close: function(opt, idx) {
 			if (!this.open) {
@@ -225,14 +240,15 @@
 			}
 			this.open = false;
 			this.form.fldOpen = -1;
-			this.fld.className = this.fld.className.replace(/\b nl-field-open\b/, '');
-			$('.nl-overlay').removeClass('open');
+			
+			$('.formOverlay').removeClass('open');
 			if (this.type === 'dropdown') {
+				$('.selection').removeClass('open');
 				if (opt) {
-					// remove class nl-dd-checked from previous option
+					
 					var selectedopt = this.optionsList.children[this.selectedIdx];
 					selectedopt.className = '';
-					opt.className = 'nl-dd-checked';
+					opt.className = 'checked';
 					this.toggle.innerHTML = opt.innerHTML;
 					// update selected index value
 					this.selectedIdx = idx;
@@ -240,15 +256,14 @@
 					this.elOriginal.value = this.elOriginal.children[this.selectedIdx].value;
 				}
 			} else if (this.type === 'input') {
-
-				console.log(this)
+				this.fld.className = this.fld.className.replace(/\b formField-open\b/, '');
 				this.getinput.blur();
 				this.toggle.innerHTML = this.getinput.value.trim() !== '' ? this.getinput.value : this.getinput.getAttribute('placeholder');
 				this.elOriginal.value = this.getinput.value;
 				console.log(this.elOriginal.value)
 				if (this.elOriginal.value === '') {
 					console.log('its blank');
-					$('.textarea .nl-field-toggle').text('___________________________________________________');
+					$('.textarea .formField-toggle').text('___________________________________________________');
 				}
 
 			}

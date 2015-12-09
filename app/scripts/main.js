@@ -32,10 +32,23 @@
 			widthMatch.addListener(widthHandler);
 			widthHandler(widthMatch);
 
+			// browser check
+			outdatedBrowser({
+				bgColor: '#f25648',
+				color: '#ffffff',
+				lowerThan: 'transform',
+				languagePath: 'your_path/outdatedbrowser/lang/en.html'
+			})
+
 			// header scroll
 			window.addEventListener('scroll', function(e) {
+				// distance from top
 				var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+					//parallax image
+
+
 					shrinkOn = 200;
+
 				//console.log(distanceY);
 				maxHeight = $(window).height() - ($(window).height() * 0.15);
 				halfHeight = maxHeight * 0.5;
@@ -53,7 +66,20 @@
 					// 	'top': newH
 					// });
 				}
+				// adjust bg of parallax
+				if ($('.parallax')[0]) {
+					$('.parallax').each(function() {
+
+						var yPos = (($(window).scrollTop() - $(this).offset().top) / $(this).data('speed')),
+							coords = '50% ' + yPos + 'px';
+						$(this).css({
+							backgroundPosition: coords
+						});
+					});
+				}
 			});
+
+
 
 			//open/close lateral navigation
 			$('.cd-nav-trigger').on('click', function(event) {
@@ -67,7 +93,7 @@
 					}
 
 					$('html').toggleClass('navigation-is-open');
-					
+
 
 					$('.headerMain').toggleClass('makeBlack');
 					$('.cd-navigation-wrapper').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {
@@ -150,66 +176,66 @@
 
 				}
 				// if desktop
-				
-					function onResize() {
-						screenWidth = theBottle.width();
+
+				function onResize() {
+					screenWidth = theBottle.width();
+				}
+
+
+				theBottle.on('mousemove', bottleMouseMove);
+
+
+				$(window).resize(onResize);
+				onResize();
+
+
+				var waypoints = $('#floatingTrigger').waypoint(function(direction) {
+					if (direction === 'down') {
+						//$('#mainBottle').css({'max-width':'400px'});
+						floatingBottle.addClass('start');
+						$('#mainBottle').addClass('shown');
+
+
+
+						$('.shadow').addClass('hideIt');
+
+					} else {
+						floatingBottle.removeClass('start');
+						rotateBack();
+
+						if (!floatingBottle.hasClass('stop')) {
+							$('.shadow').removeClass('hideIt');
+						}
 					}
 
 
-					theBottle.on('mousemove', bottleMouseMove);
+				}, {
+					offset: '-600'
+				});
+				var stopWay = $('.bottleDetail').waypoint(function(direction) {
+					if (direction === 'down' && !floatingBottle.hasClass('stop')) {
+						// $('#mainBottle').css({'max-width':'300px'});
 
+						floatingBottle.addClass('stop').removeClass('start').find('a').attr('href', '/products.html#milk');
+						rotateBack();
+						//$('#mainBottle').wrap('<a href="/products.html#milk"></a>');
+						$('.product').each(function(e) {
+							$(this).addClass('productShown')
+						})
+					} else {
+						// $('#mainBottle').css({'max-width':'250px'});
+						floatingBottle.addClass('start').removeClass('stop').find('a').attr('href', '');
+						//$('#mainBottle').unwrap('<a href="/products.html#milk"></a>');
 
-					$(window).resize(onResize);
-					onResize();
+					}
+				}, {
+					offset: '-650'
+				})
 
-
-					var waypoints = $('#floatingTrigger').waypoint(function(direction) {
-						if (direction === 'down') {
-							//$('#mainBottle').css({'max-width':'400px'});
-							floatingBottle.addClass('start');
-							$('#mainBottle').addClass('shown');
-
-
-
-							$('.shadow').addClass('hideIt');
-
-						} else {
-							floatingBottle.removeClass('start');
-							rotateBack();
-
-							if (!floatingBottle.hasClass('stop')) {
-								$('.shadow').removeClass('hideIt');
-							}
-						}
-
-
-					}, {
-						offset: '-600'
-					});
-					var stopWay = $('.bottleDetail').waypoint(function(direction) {
-						if (direction === 'down' && !floatingBottle.hasClass('stop')) {
-							// $('#mainBottle').css({'max-width':'300px'});
-
-							floatingBottle.addClass('stop').removeClass('start').find('a').attr('href', '/products.html#milk');
-							rotateBack();
-							//$('#mainBottle').wrap('<a href="/products.html#milk"></a>');
-							$('.product').each(function(e) {
-								$(this).addClass('productShown')
-							})
-						} else {
-							// $('#mainBottle').css({'max-width':'250px'});
-							floatingBottle.addClass('start').removeClass('stop').find('a').attr('href', '');
-							//$('#mainBottle').unwrap('<a href="/products.html#milk"></a>');
-
-						}
-					}, {
-						offset: '-650'
-					})
-				
 			}
 			// Events page - Grid init
-			if ($('.og-grid')[0]){
-					Grid.init();
+			if ($('.og-grid')[0]) {
+				Grid.init();
 			}
 
 			// Contact
@@ -251,27 +277,23 @@
 					}, time);
 					time += 65;
 
-				});
-				var controller = new ScrollMagic.Controller({
-					globalSceneOptions: {
-						duration: 0
-					}
-				});
-				// build scene
-				var scene = new ScrollMagic.Scene({
-						triggerElement: "#milk",
-						reverse: false
+					var milk = $('#milk').waypoint(function(direction) {
+
+						if (direction === 'down') {
+							if (!$(this.element).hasClass('visible')) {
+								$(this.element).addClass('visible');
+								console.log(this.element.id)
+								makeShadows('#'+this.element.id);
+							}
+						}
+					}, {
+						offset: '250'
 					})
-					.setClassToggle("#milk", "visible") // add class toggle
-					//.addIndicators() // add indicators (requires plugin)
-					.addTo(controller);
-				var scene = new ScrollMagic.Scene({
-						triggerElement: "#flavoredMilk",
-						reverse: false
-					})
-					.setClassToggle("#flavoredMilk", "visible") // add class toggle
-					//.addIndicators() // add indicators (requires plugin)
-					.addTo(controller);
+
+				});
+
+				
+
 
 
 				function productToggle(trigger, elem, switcher) {
@@ -300,7 +322,9 @@
 						trigger.one(transitionEvent,
 							function(event) {
 								$('.popUp_info').addClass('popUp_info--open');
-
+								console.log($('.selected .main').width());
+								// var bottleShadow = $('.product.select').find('.bottleShadow');
+								// bottleShadow.css('width',)
 							});
 
 						popUpShown = true;
@@ -314,24 +338,26 @@
 					var productID = $(this).data('dialog');
 
 				});
-				$('.product').on('click', function(e) {
-
-					var theProduct = $(this).data('product');
+				$('.product img').on('click', function(e) {
+					var current = $(this).parent();
+					console.log(current);
+					var theProduct = current.data('product');
 					if (Modernizr.mq('(min-width: 767px)')) {
-						if ($(this).hasClass('selected')) {
+						if (current.hasClass('selected')) {
 							$('.selected').removeClass('selected');
-							productToggle($(this), theProduct, false);
+
+							productToggle(current, theProduct, false);
 
 						} else {
 							$('.selected').removeClass('selected');
-							productToggle($(this), theProduct, true);
+							productToggle(current, theProduct, true);
 							popUpShown = true;
 						}
 					} else {
-						if (!$(this).hasClass('selected')) {
+						if (!current.hasClass('selected')) {
 							console.log('product clicked');
 							$('.selected').removeClass('selected');
-							productToggle($(this), theProduct, true);
+							productToggle(current, theProduct, true);
 							popUpShown = true
 						}
 					}
@@ -345,6 +371,24 @@
 					e.stopPropagation();
 				});
 
+
+				
+			}
+
+			function makeShadows (section) {
+				console.log(section)
+				// $.each($(section + ' .product'), function(){
+				// 	console.log(i);
+				// 	var self = $(this);
+
+				// 	console.log('main image width');
+				// 	console.log(self);
+					
+				// 	console.log(self[0].clientWidth);
+				// 	var shadowWidth = self[0].clientWidth * 1.625;
+				// 	var shadowLeft = shadowWidth  / 2;
+				// 	self.find('.bottleShadow').css({'width':shadowWidth});
+				// });
 			}
 
 			// css3 transition event listener

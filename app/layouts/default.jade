@@ -109,15 +109,15 @@ html.no-js
                   li
                     a(href='find.html', title="FIND").textSlide
                       span(data-hover="LOCATE") LOCATE
-                  li
-                    a(href='merchandise.html', title="MERCHANDISE").textSlide
-                      span(data-hover="MERCH") MERCH
+                  //- li
+                  //-   a(href='merchandise.html', title="MERCHANDISE").textSlide
+                  //-     span(data-hover="MERCH") MERCH
                   li
                     a(href='about.html', title="ABOUT").textSlide
                       span(data-hover="ABOUT") ABOUT
-                  li
-                    a(href='blog.html', title="BLOG").textSlide
-                      span(data-hover="BLOG") BLOG
+                  //- li
+                  //-   a(href='blog.html', title="BLOG").textSlide
+                  //-     span(data-hover="BLOG") BLOG
                   li
                     a(href='contact.html', title="CONTACT").textSlide
                       span(data-hover="CONTACT") CONTACT
@@ -126,6 +126,7 @@ html.no-js
     block content
 
     include footer.jade
+    .outdated
 
     // Google Analytics: change UA-XXXXX-X to be your site's ID.
     script.
@@ -153,6 +154,7 @@ html.no-js
     script(src='../bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js')
     //- script(src='../bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js')
     script(src='scripts/plugins/jquery.waypoints.js')
+    script(src='scripts/plugins/oldBrowser.js')
 
     if tour
       script(src='scripts/plugins/grid.js')
