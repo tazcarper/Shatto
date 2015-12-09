@@ -10,6 +10,9 @@ section.products {
   h2 {
     margin-bottom: 1em;
     font-size: 4em;
+    @include MQ(maxML) {
+      font-size:3.2em;
+    }
   }
   h2.mobile {
     border-top: 1px solid $black;

@@ -219,10 +219,17 @@ main {
     margin-bottom: 1px;
     margin-top: 1px;
     font-size: 4em;
+    @include MQ(maxML) {
+      font-size:3.3em;
+    }
   }
   .pod {
     position: absolute;
-
+    opacity: 0;
+    @include transition(opacity, 0.5s,ease-out);
+    &.visible {
+      opacity: 1;
+    }
     &.pod1 {
       top: 50px;
     }
@@ -308,7 +315,8 @@ img {
   z-index: 999999;
   position: relative;
   @include transform(translate3d(0, -2060px, 0));
-  @include transition(all .5s ease-out);
+
+@include transition(transform ,0.5s, ease-out, opacity ,0s ,ease ,width ,0.5s, ease-out);
   text-align: center;
   left: 0;
   right: 0;
@@ -354,6 +362,7 @@ img {
     .shadow, .callOut {
       opacity: 0;
     }
+    
   }
   &.stop {
     // @include transition(all 0.5s ease-out);
@@ -372,7 +381,7 @@ img {
     &:hover {
       img {
         @include transform(translate3d(0, -5px, 0));
-        @include transition(transform .35s ease-out);
+        
       }
     }
     img {
@@ -385,7 +394,11 @@ img {
   }
   img {
     @include transform(scale(.75));
-    @include transition(transform 0.5s ease);
+    -webkit-transition: transform 0.3s ease-out, opacity 0.0s ease 0.0s;
+-moz-transition: transform 0.3s ease-out, opacity 0.0s ease 0.0s;
+-ms-transition: transform 0.3s ease-out, opacity 0.0s ease 0.0s; /* IE10 is actually unprefixed */
+-o-transition: transform 0.3s ease-out, opacity 0.0s ease 0.0s;
+transition: transform 0.3s ease-out, opacity 0.0s ease 0.0s;
     position: absolute;
     top: 0;
     margin: 0 auto;

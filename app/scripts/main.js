@@ -133,7 +133,24 @@
 						var x = e.pageX - $('#floatingBottle').offset().left;
 						var bottlePos = customRotation[parseInt(x / screenWidth * customRotation.length)];
 						arrayIndex = parseInt(x / screenWidth * customRotation.length);
+						console.log(arrayIndex);
+						$('.pod').removeClass('visible');
+						if (arrayIndex === 8){
+							$('.pod').removeClass('visible');
+						}
+						else if (arrayIndex <= 3){
 
+							$('.pod1').addClass('visible');
+						}
+						else if (arrayIndex <= 7){
+							$('.pod2').addClass('visible');
+						}
+						else if (arrayIndex <= 12){
+							$('.pod3').addClass('visible');
+						}
+						else if (arrayIndex <= 16){
+							$('.pod4').addClass('visible');
+						}
 						if ($('.shown').data('bottleposition') !== bottlePos) {
 							$('.shown').removeClass('shown');
 							theBottle.find("[data-bottleposition='" + bottlePos + "']").addClass('shown');
