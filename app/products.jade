@@ -37,17 +37,18 @@ block content
 						li
 							a(href="#milk").btn.invert Milk
 						li
-							a(href="#").btn.invert Flavored Milk
+							a(href="#flavoredMilk").btn.invert Flavored Milk
 						li
-							a(href="#").btn.invert Ice Cream
+							a(href="#iceCream").btn.invert Ice Cream
 						li
-							a(href="#").btn.invert Cheese
+							a(href="#cheese").btn.invert Cheese
 						li
 							a(href="#").btn.invert Butter
 						li
 							a(href="#").btn.invert Non-dairy
 	#mobileCollapse
 		a.mobileCategory.collapsed(data-toggle="collapse", data-parent="#mobileCollapse", href="#milk", aria-controls="milk") MILK
+		a.mobileCategory.collapsed(data-toggle="collapse", data-parent="#mobileCollapse", href="#flavoredMilk", aria-controls="flavored milk") FLAVORED MILK
 		section.productPage.productSection.collapse(role="tabpanel")#milk
 			.container.ML_Fluid
 				.row.hidden-sm.hidden-xs
@@ -57,28 +58,28 @@ block content
 				.row
 					.col-md-12.productImages
 						.product.trigger.text-center.front(data-product="HG_skim")
-							img.main(src="images/products/half-gallons/ShattoMilk_HalfGallon_Skim.png" srcset="images/products/half-gallons/ShattoMilk_HalfGallon_Skim.png 1x, images/products/half-gallons/ShattoMilk_HalfGallon_Skim_2x.png 2x")
+							img.main(src="images/products/half-gallons/1x/Skim.png" srcset="images/products/half-gallons/1x/Skim.png 1x, images/products/half-gallons/2x/Skim.png 2x")
 							.bottleShadow
 								img(src="images/products/half-gallons/shadow.png")
 							.productName
 								h5 Skim
 								p.factsLabel Nutrition Facts
 						.product.onePercent.trigger.text-center(data-product="HG_onePercent")
-							img.main(src="images/products/half-gallons/ShattoMilk_HalfGallon_Skim.png" srcset="images/products/half-gallons/ShattoMilk_HalfGallon_Skim.png 1x, images/products/half-gallons/ShattoMilk_HalfGallon_Skim_2x.png 2x")
+							img.main(src="images/products/half-gallons/1x/1.png" srcset="images/products/half-gallons/1x/1.png 1x, images/products/half-gallons/2x/1.png 2x")
 							.bottleShadow
 								img(src="images/products/half-gallons/shadow.png")
 							.productName
 								h5 1% 
 								p.factsLabel Nutrition Facts	
 						.product.twoPercent.trigger.text-center(data-product="HG_twoPercent")
-							img.main(src="images/products/half-gallons/ShattoMilk_HalfGallon_Skim.png" srcset="images/products/half-gallons/ShattoMilk_HalfGallon_Skim.png 1x, images/products/half-gallons/ShattoMilk_HalfGallon_Skim_2x.png 2x")
+							img.main(src="images/products/half-gallons/1x/2.png" srcset="images/products/half-gallons/1x/2.png 1x, images/products/half-gallons/2x/2.png 2x")
 							.bottleShadow
 								img(src="images/products/half-gallons/shadow.png")
 							.productName
 								h5 2% 
 								p.factsLabel Nutrition Facts	
 						.product.whole.trigger.text-center(data-product="HG_whole")
-							img.main(src="images/products/half-gallons/ShattoMilk_HalfGallon_Skim.png" srcset="images/products/half-gallons/ShattoMilk_HalfGallon_Skim.png 1x, images/products/half-gallons/ShattoMilk_HalfGallon_Skim_2x.png 2x")
+							img.main(src="images/products/half-gallons/1x/Whole.png" srcset="images/products/half-gallons/1x/Whole.png 1x, images/products/half-gallons/2x/Whole.png 2x")
 							.bottleShadow
 								img(src="images/products/half-gallons/shadow.png")
 							.productName
@@ -91,15 +92,209 @@ block content
 							.productName
 								h5 Whole Cream
 								p.factsLabel Nutrition Facts		
-		section.container-fluid.productPage.productSection#flavoredMilk
-			.container
-				.row
+		section.productPage.productSection.collapse(role="tabpanel")#flavoredMilk
+			.container.ML_Fluid
+				.row.hidden-sm.hidden-xs
 					.col-md-12.text-center.productTitle
-						h2 Flavored Milk
-						.flavoredLines.lines
+						h2 FLAVORED MILK
+						.milkLines.lines
 				.row
 					.col-md-12.productImages
-						img(src="images/products/milkPlaceholder.png" )
+						.product.trigger.text-center.chocolate(data-product="chocolate")
+							img.main(src="images/products/quarts/1x/Chocolate.png" srcset="images/products/quarts/1x/Chocolate.png 1x, images/products/quarts/2x/Chocolate.png 2x")
+							.bottleShadow
+								img(src="images/products/half-gallons/shadow.png")
+							.productName
+								h5 Chocolate
+								p.factsLabel Nutrition Facts
+						.product.trigger.text-center.strawberry(data-product="strawberry")
+							img.main(src="images/products/quarts/1x/Strawberry.png" srcset="images/products/quarts/1x/Strawberry.png 1x, images/products/quarts/2x/Strawberry.png 2x")
+							.bottleShadow
+								img(src="images/products/half-gallons/shadow.png")
+							.productName
+								h5 Strawberry
+								p.factsLabel Nutrition Facts
+						.product.trigger.text-center.cookies_N_Cream(data-product="cookies_N_Cream")
+							img.main(src="images/products/quarts/1x/CookiesandCream.png" srcset="images/products/quarts/1x/CookiesandCream.png 1x, images/products/quarts/2x/CookiesandCream.png 2x")
+							.bottleShadow
+								img(src="images/products/half-gallons/shadow.png")
+							.productName
+								h5 Cookies N' Cream
+								p.factsLabel Nutrition Facts
+						.product.trigger.text-center.banana(data-product="banana")
+							img.main(src="images/products/quarts/1x/Banana.png" srcset="images/products/quarts/1x/Banana.png 1x, images/products/quarts/2x/Banana.png 2x")
+							.bottleShadow
+								img(src="images/products/half-gallons/shadow.png")
+							.productName
+								h5 Banana
+								p.factsLabel Nutrition Facts
+						.product.trigger.text-center.cottonCandy(data-product="cottonCandy")
+							img.main(src="images/products/quarts/1x/CottonCandy.png" srcset="images/products/quarts/1x/CottonCandy.png 1x, images/products/quarts/2x/CottonCandy.png 2x")
+							.bottleShadow
+								img(src="images/products/half-gallons/shadow.png")
+							.productName
+								h5 Cotton Candy
+								p.factsLabel Nutrition Facts
+						.product.trigger.text-center.coffee(data-product="coffee")
+							img.main(src="images/products/quarts/1x/Coffee.png" srcset="images/products/quarts/1x/Coffee.png 1x, images/products/quarts/2x/Coffee.png 2x")
+							.bottleShadow
+								img(src="images/products/half-gallons/shadow.png")
+							.productName
+								h5 Coffee
+								p.factsLabel Nutrition Facts
+						.product.trigger.text-center.eggNog(data-product="eggNog")
+							img.main(src="images/products/quarts/1x/EggNog.png" srcset="images/products/quarts/1x/EggNog.png 1x, images/products/quarts/2x/EggNog.png 2x")
+							.bottleShadow
+								img(src="images/products/half-gallons/shadow.png")
+							.productName
+								h5 Egg Nog
+								p.factsLabel Nutrition Facts
+						.product.trigger.text-center.rootBeer(data-product="rootBeer")
+							img.main(src="images/products/quarts/1x/RootBeer.png" srcset="images/products/quarts/1x/RootBeer.png 1x, images/products/quarts/2x/RootBeer.png 2x")
+							.bottleShadow
+								img(src="images/products/half-gallons/shadow.png")
+							.productName
+								h5 Root Beer
+								p.factsLabel Nutrition Facts
+						.product.trigger.text-center.pumpkinSpiceEggNog(data-product="pumpkinSpiceEggNog")
+							img.main(src="images/products/quarts/1x/PumpkinSpiceEggNog.png" srcset="images/products/quarts/1x/PumpkinSpiceEggNog.png 1x, images/products/quarts/2x/PumpkinSpiceEggNog.png 2x")
+							.bottleShadow
+								img(src="images/products/half-gallons/shadow.png")
+							.productName
+								h5 Pumpkin Spice Egg Nog
+								p.factsLabel Nutrition Facts
+		section.productPage.productSection.collapse(role="tabpanel")#iceCream
+			.container.ML_Fluid
+				.row.hidden-sm.hidden-xs
+					.col-md-12.text-center.productTitle
+						h2 ICE CREAM
+						.milkLines.lines
+				.row
+					.col-md-12.productImages
+						.product.trigger.text-center.vanilla(data-product="Vanilla")
+							img.main(src="images/products/icecream-pints/1x/Vanilla.png" srcset="images/products/icecream-pints/1x/Vanilla.png 1x, images/products/icecream-pints/2x/Vanilla.png 2x")
+							.bottleShadow
+								img(src="images/products/half-gallons/shadow.png")
+							.productName
+								h5 Vanilla
+								p.factsLabel Nutrition Facts
+						.product.trigger.text-center.strawberryIceCream(data-product="Strawberry")
+							img.main(src="images/products/icecream-pints/1x/Strawberry.png" srcset="images/products/icecream-pints/1x/Strawberry.png 1x, images/products/icecream-pints/2x/Strawberry.png 2x")
+							.bottleShadow
+								img(src="images/products/half-gallons/shadow.png")
+							.productName
+								h5 Strawberry
+								p.factsLabel Nutrition Facts	
+						.product.trigger.text-center.chocolateIceCream(data-product="Chocolate")
+							img.main(src="images/products/icecream-pints/1x/Chocolate.png" srcset="images/products/icecream-pints/1x/Chocolate.png 1x, images/products/icecream-pints/2x/Chocolate.png 2x")
+							.bottleShadow
+								img(src="images/products/half-gallons/shadow.png")
+							.productName
+								h5 Chocolate
+								p.factsLabel Nutrition Facts	
+						.product.trigger.text-center.caramelSeaSalt(data-product="CaramelSeaSalt")
+							img.main(src="images/products/icecream-pints/1x/CaramelSeaSalt.png" srcset="images/products/icecream-pints/1x/CaramelSeaSalt.png 1x, images/products/icecream-pints/2x/CaramelSeaSalt.png 2x")
+							.bottleShadow
+								img(src="images/products/half-gallons/shadow.png")
+							.productName
+								h5 Caramel Sea Salt
+								p.factsLabel Nutrition Facts
+				.row
+					.col-md-12.productImages
+						.product.trigger.text-center.bar.oatmealRaisin(data-product="oatmealRaisin")
+							img.main(src="images/products/icecream-bars/1x/oatmealRaisin.png" srcset="images/products/icecream-bars/1x/oatmealRaisin.png 1x, images/products/icecream-bars/2x/oatmealRaisin.png 2x")
+							.bottleShadow
+								img(src="images/products/half-gallons/shadow.png")
+							.productName
+								h5 Oatmeal raisin cookie and caramel sea salt ice cream
+								p.factsLabel Nutrition Facts
+						.product.trigger.text-center.bar.sugarCookie(data-product="sugarCookie")
+							img.main(src="images/products/icecream-bars/1x/SugarCookie.png" srcset="images/products/icecream-bars/1x/SugarCookie.png 1x, images/products/icecream-bars/2x/SugarCookie.png 2x")
+							.bottleShadow
+								img(src="images/products/half-gallons/shadow.png")
+							.productName
+								h5 Sugar cookie and strawberry ice cream
+								p.factsLabel Nutrition Facts	
+						.product.trigger.text-center.bar.chocolateChip(data-product="ChocolateChip")
+							img.main(src="images/products/icecream-bars/1x/ChocolateChip.png" srcset="images/products/icecream-bars/1x/ChocolateChip.png 1x, images/products/icecream-bars/2x/ChocolateChip.png 2x")
+							.bottleShadow
+								img(src="images/products/half-gallons/shadow.png")
+							.productName
+								h5 Chocolate chip cookie and vanilla ice cream
+								p.factsLabel Nutrition Facts	
+						.product.trigger.text-center.bar.brownie(data-product="Brownie")
+							img.main(src="images/products/icecream-bars/1x/Brownie.png" srcset="images/products/icecream-bars/1x/Brownie.png 1x, images/products/icecream-bars/2x/Brownie.png 2x")
+							.bottleShadow
+								img(src="images/products/half-gallons/shadow.png")
+							.productName
+								h5 Chocolate brownie and vanilla ice cream
+								p.factsLabel Nutrition Facts
+		section.productPage.productSection.collapse(role="tabpanel")#cheese
+			.container.ML_Fluid
+				.row.hidden-sm.hidden-xs
+					.col-md-12.text-center.productTitle
+						h2 CHEESE
+						.milkLines.lines
+				.row
+					.col-md-12.productImages
+						.product.trigger.text-center.cajun(data-product="Cajun")
+							img.main(src="images/products/cheese-curds/1x/Cajun.png" srcset="images/products/cheese-curds/1x/Cajun.png 1x, images/products/cheese-curds/2x/Cajun.png 2x")
+							.bottleShadow
+								img(src="images/products/half-gallons/shadow.png")
+							.productName
+								h5 Cajun-flavored Cheddar Cheese Curds
+								p.factsLabel Nutrition Facts
+						.product.trigger.text-center.whiteCheddar(data-product="whiteCheddar")
+							img.main(src="images/products/cheese-curds/1x/WhiteCheddar.png" srcset="images/products/cheese-curds/1x/WhiteCheddar.png 1x, images/products/cheese-curds/2x/WhiteCheddar.png 2x")
+							.bottleShadow
+								img(src="images/products/half-gallons/shadow.png")
+							.productName
+								h5 White CheDdar Cheese Curds 
+								p.factsLabel Nutrition Facts	
+						.product.trigger.text-center.dill(data-product="Dill")
+							img.main(src="images/products/cheese-curds/1x/Dill.png" srcset="images/products/cheese-curds/1x/Dill.png 1x, images/products/cheese-curds/2x/Dill.png 2x")
+							.bottleShadow
+								img(src="images/products/half-gallons/shadow.png")
+							.productName
+								h5 Dill-flavored Cheddar Cheese Curds
+								p.factsLabel Nutrition Facts	
+						.product.trigger.text-center.mushroomGarlic(data-product="MushroomGarlic")
+							img.main(src="images/products/cheese-curds/1x/MushroomGarlic.png" srcset="images/products/cheese-curds/1x/MushroomGarlic.png 1x, images/products/cheese-curds/2x/MushroomGarlic.png 2x")
+							.bottleShadow
+								img(src="images/products/half-gallons/shadow.png")
+							.productName
+								h5 Garlic Mushroom Cheddar Cheese Curds
+								p.factsLabel Nutrition Facts
+				.row
+					.col-md-12.productImages
+						.product.trigger.text-center.cajun(data-product="Cajun")
+							img.main(src="images/products/cheese-curds/1x/Cajun.png" srcset="images/products/cheese-curds/1x/Cajun.png 1x, images/products/cheese-curds/2x/Cajun.png 2x")
+							.bottleShadow
+								img(src="images/products/half-gallons/shadow.png")
+							.productName
+								h5 Cajun-flavored Cheddar Cheese Curds
+								p.factsLabel Nutrition Facts
+						.product.trigger.text-center.whiteCheddar(data-product="whiteCheddar")
+							img.main(src="images/products/cheese-curds/1x/WhiteCheddar.png" srcset="images/products/cheese-curds/1x/WhiteCheddar.png 1x, images/products/cheese-curds/2x/WhiteCheddar.png 2x")
+							.bottleShadow
+								img(src="images/products/half-gallons/shadow.png")
+							.productName
+								h5 White CheDdar Cheese Curds 
+								p.factsLabel Nutrition Facts	
+						.product.trigger.text-center.dill(data-product="Dill")
+							img.main(src="images/products/cheese-curds/1x/Dill.png" srcset="images/products/cheese-curds/1x/Dill.png 1x, images/products/cheese-curds/2x/Dill.png 2x")
+							.bottleShadow
+								img(src="images/products/half-gallons/shadow.png")
+							.productName
+								h5 Dill-flavored Cheddar Cheese Curds
+								p.factsLabel Nutrition Facts	
+						.product.trigger.text-center.mushroomGarlic(data-product="MushroomGarlic")
+							img.main(src="images/products/cheese-curds/1x/MushroomGarlic.png" srcset="images/products/cheese-curds/1x/MushroomGarlic.png 1x, images/products/cheese-curds/2x/MushroomGarlic.png 2x")
+							.bottleShadow
+								img(src="images/products/half-gallons/shadow.png")
+							.productName
+								h5 Garlic Mushroom Cheddar Cheese Curds
+								p.factsLabel Nutrition Facts				
 	.popUp_info__overlay
 	.popUp_info
 		.popUp_info__content

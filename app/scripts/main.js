@@ -1,4 +1,4 @@
-// http://gregfranko.com/blog/i-love-my-iife/
+
 (function(library) {
 		// Calls the second IIFE and locally passes in the global jQuery, window, and document objects
 		library(window, document, window.jQuery);
@@ -135,20 +135,16 @@
 						arrayIndex = parseInt(x / screenWidth * customRotation.length);
 						console.log(arrayIndex);
 						$('.pod').removeClass('visible');
-						if (arrayIndex === 8){
+						if (arrayIndex === 8) {
 							$('.pod').removeClass('visible');
-						}
-						else if (arrayIndex <= 3){
+						} else if (arrayIndex <= 3) {
 
 							$('.pod1').addClass('visible');
-						}
-						else if (arrayIndex <= 7){
+						} else if (arrayIndex <= 7) {
 							$('.pod2').addClass('visible');
-						}
-						else if (arrayIndex <= 12){
+						} else if (arrayIndex <= 12) {
 							$('.pod3').addClass('visible');
-						}
-						else if (arrayIndex <= 16){
+						} else if (arrayIndex <= 16) {
 							$('.pod4').addClass('visible');
 						}
 						if ($('.shown').data('bottleposition') !== bottlePos) {
@@ -300,25 +296,80 @@
 							if (!$(this.element).hasClass('visible')) {
 								$(this.element).addClass('visible');
 								console.log(this.element.id)
-								makeShadows('#'+this.element.id);
+								// console.log(setSectionHeight(this.element));
+								// $(this.element).find('.productImages').height(setSectionHeight(this.element));
 							}
 						}
 					}, {
 						offset: '250'
-					})
+					});
+					var flavoredMilk = $('#flavoredMilk').waypoint(function(direction) {
+
+						if (direction === 'down') {
+							if (!$(this.element).hasClass('visible')) {
+								$(this.element).addClass('visible');
+								console.log(this.element.id);
+								// $(this.element).find('.productImages').height(setSectionHeight(this.element));
+							}
+						}
+					}, {
+						offset: '250'
+					});
+					var iceCream = $('#iceCream').waypoint(function(direction) {
+								
+						if (direction === 'down') {
+							if (!$(this.element).hasClass('visible')) {
+								$(this.element).addClass('visible');
+								console.log(this.element.id);
+								// $(this.element).find('.productImages').height(setSectionHeight(this.element));
+							}
+						}
+					}, {
+						offset: '250'
+					});
+					var cheese = $('#cheese').waypoint(function(direction) {
+								
+
+						if (direction === 'down') {
+							if (!$(this.element).hasClass('visible')) {
+								$(this.element).addClass('visible');
+								console.log(this.element.id);
+								// $(this.element).find('.productImages').height(setSectionHeight(this.element));
+							}
+						}
+					}, {
+						offset: '250'
+					});
+
 
 				});
 
-				
+				// $('.productImages').each(function(e){
+				// 	var self = $(this);
+				// 	self.height(setSectionHeight(self));
+				// });
 
+				// function setSectionHeight(section){
+				// 	var self = $(this);
+				// 	var largestHeight = 0;
+				// 	$(section).find('.product').each(function(e){
+				// 		console.log($(this));
+				// 		var itsHeight = $(this).height();
+				// 		if (itsHeight > largestHeight){
+				// 			largestHeight = itsHeight;
+				// 		}
+				// 	});
+				// 	return largestHeight;
+				// }
 
 
 				function productToggle(trigger, elem, switcher) {
 					var self = $(this);
 
 					if (!switcher) {
-						$('.popUp_info').removeClass('popUp_info--open');
 						$('.popUp_info__overlay').removeClass('active');
+						$('.popUp_info').removeClass('popUp_info--open');
+						
 						console.log('false')
 						$('.popUp_info__content').one(transitionEvent,
 							function(event) {
@@ -335,11 +386,12 @@
 
 						// AJAX to GET PRODUCT INFO
 						trigger.addClass('selected');
-						$('.popUp_info__overlay').addClass('active');
+						
 						trigger.one(transitionEvent,
 							function(event) {
 								$('.popUp_info').addClass('popUp_info--open');
-								console.log($('.selected .main').width());
+								$('.popUp_info__overlay').addClass('active');
+								
 								// var bottleShadow = $('.product.select').find('.bottleShadow');
 								// bottleShadow.css('width',)
 							});
@@ -389,18 +441,18 @@
 				});
 
 
-				
+
 			}
 
-			function makeShadows (section) {
+			function makeShadows(section) {
 				console.log(section)
-				// $.each($(section + ' .product'), function(){
-				// 	console.log(i);
-				// 	var self = $(this);
+					// $.each($(section + ' .product'), function(){
+					// 	console.log(i);
+					// 	var self = $(this);
 
 				// 	console.log('main image width');
 				// 	console.log(self);
-					
+
 				// 	console.log(self[0].clientWidth);
 				// 	var shadowWidth = self[0].clientWidth * 1.625;
 				// 	var shadowLeft = shadowWidth  / 2;
@@ -484,41 +536,3 @@ function newpage() {
 
 }
 
-(function($) {
-	$.fn.flowtype = function(options) {
-
-		// Establish default settings/variables
-		// ====================================
-		var settings = $.extend({
-				maximum: 9999,
-				minimum: 1,
-				maxFont: 9999,
-				minFont: 1,
-				fontRatio: 35
-			}, options),
-
-			// Do the magic math
-			// =================
-			changes = function(el) {
-				var $el = $(el),
-					elw = $el.width(),
-					width = elw > settings.maximum ? settings.maximum : elw < settings.minimum ? settings.minimum : elw,
-					fontBase = width / settings.fontRatio,
-					fontSize = fontBase > settings.maxFont ? settings.maxFont : fontBase < settings.minFont ? settings.minFont : fontBase;
-				$el.css('font-size', fontSize + 'px');
-			};
-
-		// Make the magic visible
-		// ======================
-		return this.each(function() {
-			// Context for resize callback
-			var that = this;
-			// Make changes upon resize
-			$(window).resize(function() {
-				changes(that);
-			});
-			// Set changes on load
-			changes(this);
-		});
-	};
-}(jQuery));

@@ -25,8 +25,8 @@
 	}
 }
 .productPage {
-	padding-top: 60px;
-	padding-bottom: 60px;
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 .productPage, .products {
 	position: relative;
@@ -296,13 +296,11 @@
 		width: 145%;
 		@include transition(all 0.35s ease);
 		opacity: 1;
-
-		
 	}
 	// Visible scroll class animations
 	&.visible {
 		.lines {
-			width: 90%;
+			width: 100%;
 			opacity: 1;
 		}
 		.productImages {
@@ -556,14 +554,248 @@
 						margin-top: 0;
 					}
 				}
+				&.chocolate {
+					width: 150px;
+					margin-top: 2%;
+					z-index: 9;
+					right: 100%;
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
+				&.strawberry {
+					width: 140px;
+					margin-top: 3%;
+					z-index: 8;
+					right: 65%;
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
+				&.cookies_N_Cream {
+					width: 130px;
+					margin-top: 4%;
+					z-index: 7;
+					right: 48%;
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
+				&.banana {
+					width: 120px;
+					margin-top: 5%;
+					z-index: 6;
+					right: 30%;
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
+				&.cottonCandy {
+					width: 110px;
+					margin-top: 6%;
+					z-index: 5;
+					right: 15%;
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
+				&.coffee {
+					width: 115px;
+					margin-top: 5%;
+					z-index: 4;
+					right: -25%;
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
+				&.eggNog {
+					width: 120px;
+					margin-top: 4%;
+					z-index: 5;
+					right: -43%;
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
+				&.rootBeer {
+					width: 135px;
+					margin-top: 3%;
+					z-index: 6;
+					right: -62%;
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
+				&.pumpkinSpiceEggNog {
+					width: 150px;
+					margin-top: 2%;
+					z-index: 7;
+					right: -84%;
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
+				// ICE CREAM PINTS
+				&.vanilla {
+					width: 300px;
+					margin-top: 2%;
+					z-index: 7;
+					right: 25%;
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
+				&.strawberryIceCream {
+					width: 240px;
+					margin-top: 7%;
+					z-index: 3;
+					right: 72%;
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
+				&.chocolateIceCream {
+					width: 270px;
+					margin-top: 5%;
+					z-index: 6;
+					right: -25%;
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
+				&.caramelSeaSalt {
+					width: 230px;
+					margin-top: 8%;
+					z-index: 5;
+					right: -70%;
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
+				// ICE CREAM BARS
+				&.oatmealRaisin {
+					width: 290px;
+					margin-top: 6%;
+					z-index: 2;
+					right: 75%;
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
+				&.sugarCookie {
+					width: 320px;
+					margin-top: 4%;
+					z-index: 3;
+					right: 25%;
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
+				&.chocolateChip {
+					width: 380px;
+					margin-top: 0%;
+					z-index: 6;
+					right: -25%;
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
+				&.brownie {
+					width: 300px;
+					margin-top: 4%;
+					z-index: 5;
+					right: -70%;
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
+				// CHEESE CURDS
+				&.cajun {
+					width: 290px;
+					margin-top: 6%;
+					z-index: 2;
+					right: 75%;
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
+				&.whiteCheddar {
+					width: 340px;
+					margin-top: 3%;
+					z-index: 6;
+					right: 25%;
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
+				&.dill {
+					width: 290px;
+					margin-top: 5%;
+					z-index: 3;
+					right: -25%;
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
+				&.mushroomGarlic {
+					width: 260px;
+					margin-top: 6%;
+					z-index: 2;
+					right: -70%;
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
 				// ITEM SELECTED
 
 				&.selected {
-					right: 70%;
+					right: 0;
 					z-index: 20;
 					width: 300px;
 					margin-top: 0;
-					@include transform(scale(1));
+					@include transform(scale(1) translate3d(-120%, 0, 0));
 
 					img {
 						@include transform(translate3d(0, 0, 0) scale(1));
@@ -574,13 +806,12 @@
 						.bottleShadow {
 							opacity: 1;
 							@include transform(translate3d(0, 0, 0));
-							left:-25%;
-							width:145%
+							left: -25%;
+							width: 145%
 						}
 					}
 					@include MQ(maxML) {
-						width: 220px;
-						right: 65%;
+						width: 240px;
 					}
 					@include MQ(maxM) {
 						right: 100%;
@@ -598,13 +829,52 @@
 				}
 			}
 		}
+		&#flavoredMilk {
+			.productImages {
+				min-height: 580px;
+				.product.selected {
+					width: 250px;
+					@include transform(scale(1) translate3d(-145%, 0, 0));
+
+					@include MQ(maxML) {
+						width: 200px;
+					}
+				}
+			}
+		}
+		&#iceCream, &#cheese {
+			.productImages {
+				min-height: 510px;
+				.product.selected {
+					margin-top: 5%;
+					@include transform(scale(1) translate3d(-125%, 0, 0));
+					&.bar {
+					margin-top: 0;
+					@include transform(scale(1) translate3d(-110%, 0, 0));
+					width:370px;
+					@include MQ(maxL) {
+						width:320px;
+						margin-top: 5%;
+					}
+					@include MQ(maxML) {
+						width:280px;
+					}
+					}
+				}
+			}
+		}
+		&#cheese {
+			.productImages {
+				min-height: 580px;
+			}
+		}
 	}
 	.productImages {
 		position: relative;
 		min-height: 560px;
-
+		margin-top: 35px;
 		.productName {
-			@include MQ(maxML) {
+			@include MQ(maxL) {
 				display: none;
 			}
 			opacity: 1;
@@ -615,6 +885,7 @@
 			margin-top: 15px;
 			position: relative;
 			top: 0;
+			padding: 0 10%;
 		}
 		p {
 			&.factsLabel {
@@ -635,7 +906,7 @@
 			z-index: 5;
 			cursor: pointer;
 			opacity: 0;
-			@include transition(all 0.35s ease);
+			@include transition(all 0.55s ease);
 
 			&.front {
 				z-index: 10;
@@ -644,7 +915,7 @@
 			}
 			img {
 				@include transform(translate3d(0, 0, 0));
-				@include transition(all 0.35s ease);
+				@include transition(all 0.55s ease);
 			}
 			@include MQ(maxM) {
 				position: relative;
@@ -653,7 +924,7 @@
 				img {
 					position: relative;
 					left: 0;
-					@include transition(all 0.35s ease);
+					@include transition(all 0.55s ease);
 				}
 			}
 			&:hover {
@@ -697,6 +968,13 @@
 				.productName {
 					opacity: 0;
 				}
+			}
+			// flavored
+			&.strawberry, &.cookies_N_Cream, &.banana, &.chocolate, &.cottonCandy {
+				right: 100%;
+			}
+			&.rootBeer, &.eggNog, &.coffee {
+				right: 0;
 			}
 		}
 	}
