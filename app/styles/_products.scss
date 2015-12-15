@@ -25,8 +25,9 @@
 	}
 }
 .productPage {
-	padding-top: 50px;
-	padding-bottom: 50px;
+	//padding-top: 50px;
+	//padding-bottom: 50px;
+
 }
 .productPage, .products {
 	position: relative;
@@ -52,7 +53,7 @@
 		position: relative;
 		min-height: auto;
 		padding-bottom: 0;
-		margin-bottom: -60px;
+		//margin-bottom: -60px;
 
 		@include MQ(maxM) {
 			background: white;
@@ -554,6 +555,52 @@
 						margin-top: 0;
 					}
 				}
+				
+				// ICE CREAM PINTS
+				&.vanilla {
+					width: 300px;
+					margin-top: 2%;
+					z-index: 7;
+					right: 25%;
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
+				&.strawberryIceCream {
+					width: 240px;
+					margin-top: 7%;
+					z-index: 3;
+					right: 72%;
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
+				&.chocolateIceCream {
+					width: 270px;
+					margin-top: 5%;
+					z-index: 6;
+					right: -25%;
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
+				&.caramelSeaSalt {
+					width: 230px;
+					margin-top: 8%;
+					z-index: 5;
+					right: -70%;
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
 				&.chocolate {
 					width: 150px;
 					margin-top: 2%;
@@ -653,51 +700,6 @@
 						margin-top: 0;
 					}
 				}
-				// ICE CREAM PINTS
-				&.vanilla {
-					width: 300px;
-					margin-top: 2%;
-					z-index: 7;
-					right: 25%;
-
-					@include MQ(maxM) {
-						width: 250px;
-						margin-top: 0;
-					}
-				}
-				&.strawberryIceCream {
-					width: 240px;
-					margin-top: 7%;
-					z-index: 3;
-					right: 72%;
-
-					@include MQ(maxM) {
-						width: 250px;
-						margin-top: 0;
-					}
-				}
-				&.chocolateIceCream {
-					width: 270px;
-					margin-top: 5%;
-					z-index: 6;
-					right: -25%;
-
-					@include MQ(maxM) {
-						width: 250px;
-						margin-top: 0;
-					}
-				}
-				&.caramelSeaSalt {
-					width: 230px;
-					margin-top: 8%;
-					z-index: 5;
-					right: -70%;
-
-					@include MQ(maxM) {
-						width: 250px;
-						margin-top: 0;
-					}
-				}
 				// ICE CREAM BARS
 				&.oatmealRaisin {
 					width: 290px;
@@ -788,6 +790,43 @@
 						margin-top: 0;
 					}
 				}
+				// BIG CHEESES
+				&.plattsburg, &.wexford {
+					width: 300px;
+					margin-top: 2%;
+					z-index: 2;
+					right: 70%;
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
+				&.smithFork, &.lilly {
+					width: 425px;
+					margin-top: 0%;
+					z-index: 5;
+					right: 0%;
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
+				&.winstead, &.perrin {
+					width: 300px;
+					margin-top: 2%;
+					z-index: 2;
+					right: -65%;
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
+				&.lilly {
+					margin-top: 0%;
+				}
 				// ITEM SELECTED
 
 				&.selected {
@@ -831,7 +870,7 @@
 		}
 		&#flavoredMilk {
 			.productImages {
-				min-height: 580px;
+				// min-height: 580px;
 				.product.selected {
 					width: 250px;
 					@include transform(scale(1) translate3d(-145%, 0, 0));
@@ -844,7 +883,7 @@
 		}
 		&#iceCream, &#cheese {
 			.productImages {
-				min-height: 510px;
+			// 	min-height: 510px;
 				.product.selected {
 					margin-top: 5%;
 					@include transform(scale(1) translate3d(-125%, 0, 0));
@@ -863,15 +902,26 @@
 				}
 			}
 		}
-		&#cheese {
-			.productImages {
-				min-height: 580px;
-			}
-		}
+		// &#cheese {
+		// 	.productImages {
+		// 		min-height: 580px;
+		// 	}
+		// }
+		// #curds {
+		// 	.productImages {
+		// 		min-height: 550px;
+		// 	}
+		// }
+		// #cheeseOne, #cheeseTwo {
+		// 	.productImages {
+		// 		min-height: 450px;
+		// 	}
+		// }
+
 	}
 	.productImages {
 		position: relative;
-		min-height: 560px;
+		// min-height: 560px;
 		margin-top: 35px;
 		.productName {
 			@include MQ(maxL) {
@@ -906,7 +956,7 @@
 			z-index: 5;
 			cursor: pointer;
 			opacity: 0;
-			@include transition(all 0.55s ease);
+			@include transition(all 0.35s ease-out);
 
 			&.front {
 				z-index: 10;
@@ -915,7 +965,7 @@
 			}
 			img {
 				@include transform(translate3d(0, 0, 0));
-				@include transition(all 0.55s ease);
+				@include transition(all 0.35s ease-out);
 			}
 			@include MQ(maxM) {
 				position: relative;
@@ -924,7 +974,7 @@
 				img {
 					position: relative;
 					left: 0;
-					@include transition(all 0.55s ease);
+					@include transition(all 0.35s ease-out);
 				}
 			}
 			&:hover {
@@ -968,7 +1018,9 @@
 				.productName {
 					opacity: 0;
 				}
+
 			}
+
 			// flavored
 			&.strawberry, &.cookies_N_Cream, &.banana, &.chocolate, &.cottonCandy {
 				right: 100%;
@@ -976,6 +1028,105 @@
 			&.rootBeer, &.eggNog, &.coffee {
 				right: 0;
 			}
+			&.chocolate {
+					width: 150px;
+					margin-top: 2%;
+					z-index: 9;
+					
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
+				&.strawberry {
+					width: 140px;
+					margin-top: 3%;
+					z-index: 8;
+					
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
+				&.cookies_N_Cream {
+					width: 130px;
+					margin-top: 4%;
+					z-index: 7;
+				
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
+				&.banana {
+					width: 120px;
+					margin-top: 5%;
+					z-index: 6;
+					
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
+				&.cottonCandy {
+					width: 110px;
+					margin-top: 6%;
+					z-index: 5;
+				
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
+				&.coffee {
+					width: 115px;
+					margin-top: 5%;
+					z-index: 4;
+					
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
+				&.eggNog {
+					width: 120px;
+					margin-top: 4%;
+					z-index: 5;
+					
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
+				&.rootBeer {
+					width: 135px;
+					margin-top: 3%;
+					z-index: 6;
+					
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
+				&.pumpkinSpiceEggNog {
+					width: 150px;
+					margin-top: 2%;
+					z-index: 7;
+					
+
+					@include MQ(maxM) {
+						width: 250px;
+						margin-top: 0;
+					}
+				}
 		}
 	}
 }

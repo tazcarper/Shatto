@@ -17,6 +17,7 @@
 
 		// on ready
 		$(function() {
+			console.log('ready')
 			var maxHeight = 0,
 				halfHeight = 0;
 
@@ -344,23 +345,9 @@
 
 				});
 
-				// $('.productImages').each(function(e){
-				// 	var self = $(this);
-				// 	self.height(setSectionHeight(self));
-				// });
+				
 
-				// function setSectionHeight(section){
-				// 	var self = $(this);
-				// 	var largestHeight = 0;
-				// 	$(section).find('.product').each(function(e){
-				// 		console.log($(this));
-				// 		var itsHeight = $(this).height();
-				// 		if (itsHeight > largestHeight){
-				// 			largestHeight = itsHeight;
-				// 		}
-				// 	});
-				// 	return largestHeight;
-				// }
+
 
 
 				function productToggle(trigger, elem, switcher) {
@@ -440,8 +427,29 @@
 					e.stopPropagation();
 				});
 
+				$(window).load(function() {
+				$('.productImages').each(function(e){
+					var self = $(this);
+					self.height(setSectionHeight(self));
+				});
 
-
+				function setSectionHeight(section){
+					var self = $(this);
+					var largestHeight = 0;
+					$(section).find('.product').each(function(e){
+						console.log($(this));
+						var titleHeight =0;
+						$(this).find('.productName').each(function(e){
+							titleHeight = $(this).height();
+						});
+						var itsHeight = $(this).height() + titleHeight;
+						if (itsHeight > largestHeight){
+							largestHeight = itsHeight;
+						}
+					});
+					return largestHeight;
+				}
+				});
 			}
 
 			function makeShadows(section) {
