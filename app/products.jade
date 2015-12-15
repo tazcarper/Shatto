@@ -2,7 +2,7 @@ extends layouts/default
 
 block content
 	div#trigger
-	section.container-fluid.mainContent.productPage.hero
+	section.mainContent.productPage.hero
 		.container
 			.caps
 				.cap.LBCap
@@ -29,7 +29,7 @@ block content
 					img(src="images/products/brown_cap.png")
 			.row
 				.col-md-12.text-center
-					h1 Milk At Its Finest.
+					img(src="images/shatto.svg").productLogo
 		.container-fluid.subMenu
 			.row
 				.col-md-12.table
@@ -48,10 +48,9 @@ block content
 							a(href="#").btn.invert Non-dairy
 	#mobileCollapse
 		a.mobileCategory.collapsed(data-toggle="collapse", data-parent="#mobileCollapse", href="#milk", aria-controls="milk") MILK
-		a.mobileCategory.collapsed(data-toggle="collapse", data-parent="#mobileCollapse", href="#flavoredMilk", aria-controls="flavored milk") FLAVORED MILK
 		section.productPage.productSection.collapse(role="tabpanel")#milk
 			.container.ML_Fluid
-				.row.hidden-sm.hidden-xs
+				.row.hidden-xs
 					.col-md-12.text-center.productTitle
 						h2 MILK
 						.milkLines.lines
@@ -91,10 +90,11 @@ block content
 								img(src="images/products/half-gallons/shadow.png")
 							.productName
 								h5 Whole Cream
-								p.factsLabel Nutrition Facts		
+								p.factsLabel Nutrition Facts
+		a.mobileCategory.collapsed(data-toggle="collapse", data-parent="#mobileCollapse", href="#flavoredMilk", aria-controls="flavored milk") FLAVORED MILK							
 		section.productPage.productSection.collapse(role="tabpanel")#flavoredMilk
 			.container.ML_Fluid
-				.row.hidden-sm.hidden-xs
+				.row.hidden-xs
 					.col-md-12.text-center.productTitle
 						h2 FLAVORED MILK
 						.milkLines.lines
@@ -163,9 +163,10 @@ block content
 							.productName
 								h5 Pumpkin Spice Egg Nog
 								p.factsLabel Nutrition Facts
+		a.mobileCategory.collapsed(data-toggle="collapse", data-parent="#mobileCollapse", href="#iceCream", aria-controls="Ice Cream") ICE CREAM
 		section.productPage.productSection.collapse(role="tabpanel")#iceCream
 			.container.ML_Fluid
-				.row.hidden-sm.hidden-xs
+				.row.hidden-xs
 					.col-md-12.text-center.productTitle
 						h2 ICE CREAM
 						.milkLines.lines
@@ -229,9 +230,10 @@ block content
 							.productName
 								h5 Chocolate brownie and vanilla ice cream
 								p.factsLabel Nutrition Facts
+		a.mobileCategory.collapsed(data-toggle="collapse", data-parent="#mobileCollapse", href="#cheese", aria-controls="Cheese") CHEESE
 		section.productPage.productSection.collapse(role="tabpanel")#cheese
 			.container.ML_Fluid
-				.row.hidden-sm.hidden-xs
+				.row.hidden-xs
 					.col-md-12.text-center.productTitle
 						h2 CHEESE
 						.milkLines.lines
@@ -311,7 +313,81 @@ block content
 								img(src="images/products/half-gallons/shadow.png")
 							.productName
 								h5 Perrin <span class="smaller">(A Shatto original with a mild manner)</span>
-								p.factsLabel Nutrition Facts				
+								p.factsLabel Nutrition Facts
+		a.mobileCategory.collapsed(data-toggle="collapse", data-parent="#mobileCollapse", href="#butter", aria-controls="Butter") BUTTER
+		section.productPage.productSection.collapse(role="tabpanel")#butter
+			.container.ML_Fluid
+				.row.hidden-xs
+					.col-md-12.text-center.productTitle
+						h2 BUTTER
+						.milkLines.lines
+				.row
+					.col-md-12.productImages
+						.product.trigger.text-center.garlic(data-product="garlicButter")
+							img.main(src="images/products/butter/garlic/1x.png" srcset="images/products/butter/garlic/1x.png 1x, images/products/butter/garlic/2x.png 2x")
+							.bottleShadow
+								img(src="images/products/butter/shadow.png")
+							.productName
+								h5 Garlic Butter
+								p.factsLabel Nutrition Facts
+						.product.trigger.text-center.honey(data-product="honeyButter")
+							img.main(src="images/products/butter/honey/1x.png" srcset="images/products/butter/honey/1x.png 1x, images/products/butter/honey/2x.png 2x")
+							.bottleShadow
+								img(src="images/products/butter/shadow.png")
+							.productName
+								h5 Honey Butter
+								p.factsLabel Nutrition Facts	
+						.product.trigger.text-center.plain(data-product="plainButter")
+							img.main(src="images/products/butter/plain/1x.png" srcset="images/products/butter/plain/1x.png 1x, images/products/butter/plain/2x.png 2x")
+							.bottleShadow
+								img(src="images/products/butter/shadow.png")
+							.productName
+								h5 Plain Ol' Butter
+								p.factsLabel Nutrition Facts	
+						.product.trigger.text-center.unsalted(data-product="unsaltedButter")
+							img.main(src="images/products/unsalted/garlic/1x.png" srcset="images/products/butter/unsalted/1x.png 1x, images/products/butter/unsalted/2x.png 2x", alt="Unsalted Butter")
+							.bottleShadow
+								img(src="images/products/butter/shadow.png")
+							.productName
+								h5 Unsalted Butter
+								p.factsLabel Nutrition Facts
+		a.mobileCategory.collapsed(data-toggle="collapse", data-parent="#mobileCollapse", href="#nonDairy", aria-controls="Non-Dairy") NON-DAIRY						
+		section.productPage.productSection.collapse(role="tabpanel")#nonDairy
+			.container.ML_Fluid
+				.row.hidden-xs
+					.col-md-12.text-center.productTitle
+						h2 NON-DAIRY
+						.milkLines.lines
+				.row
+					.col-md-12.productImages
+						.product.trigger.text-center.unsweetenedTea(data-product="unsweetenedTea")
+							img.main(src="images/products/juices/iceTea/1x.png" srcset="images/products/juices/iceTea/1x.png 1x, images/products/juices/iceTea/2x.png 2x")
+							.bottleShadow
+								img(src="images/products/butter/shadow.png")
+							.productName
+								h5 UNSWEETENED TEA
+								p.factsLabel Nutrition Facts
+						.product.trigger.text-center.fruitPunch(data-product="fruitPunch")
+							img.main(src="images/products/juices/fruitPunch/1x.png" srcset="images/products/juices/fruitPunch/1x.png 1x, images/products/juices/fruitPunch/2x.png 2x")
+							.bottleShadow
+								img(src="images/products/butter/shadow.png")
+							.productName
+								h5 FRUIT PUNCH
+								p.factsLabel Nutrition Facts	
+						.product.trigger.text-center.lemonade(data-product="lemonade")
+							img.main(src="images/products/juices/lemon/1x.png" srcset="images/products/juices/lemon/1x.png 1x, images/products/juices/lemon/2x.png 2x")
+							.bottleShadow
+								img(src="images/products/butter/shadow.png")
+							.productName
+								h5 Lemonade
+								p.factsLabel Nutrition Facts	
+						.product.trigger.text-center.orangeDrink(data-product="orangeDrink")
+							img.main(src="images/products/juices/orange/1x.png" srcset="images/products/juices/orange/1x.png 1x, images/products/juices/orange/2x.png 2x")
+							.bottleShadow
+								img(src="images/products/butter/shadow.png")
+							.productName
+								h5 Orange Drink
+								p.factsLabel Nutrition Facts						
 	.popUp_info__overlay
 	.popUp_info
 		.popUp_info__content
