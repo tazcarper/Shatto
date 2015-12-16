@@ -7,7 +7,7 @@ section.products {
   @include MQ(maxM) {
     padding: 0;
   }
-  h2 {
+  h2 { 
     margin-bottom: 1em;
     font-size: 4em;
     @include MQ(maxML) {

@@ -523,27 +523,3 @@ transition: transform 0.3s ease-out, opacity 0.0s ease 0.0s;
   background-position: center;
   margin: -100px 0 0 -100px; /* is width and height divided by two */
 }
-.track {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 30px;
-  border: 1px solid #888888;
-  border-radius: 18px;
-}
-.drag {
-  position: absolute;
-  top: 0%;
-  transform: translate(-50%, -50%);
-  left: 0;
-  width: 40px;
-  height: 40px;
-  background-color: #ededed;
-  border-radius: 50%;
-}
-.flame {
-  position: absolute;
-  left: 30%;
-  top: 30%;
-}

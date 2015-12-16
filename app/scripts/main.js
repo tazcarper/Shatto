@@ -1,3 +1,60 @@
+/**
+ * jQuery Unveil
+ * A very lightweight jQuery plugin to lazy load images
+ * http://luis-almeida.github.com/unveil
+ *
+ * Licensed under the MIT license.
+ * Copyright 2013 Luís Almeida
+ * https://github.com/luis-almeida
+ */
+
+;(function($) {
+
+  $.fn.unveil = function(threshold, callback) {
+
+    var $w = $(window),
+        th = threshold || 0,
+        retina = window.devicePixelRatio > 1,
+        attrib = retina? "data-src-retina" : "data-src",
+        images = this,
+        loaded;
+
+    this.one("unveil", function() {
+      var source = this.getAttribute(attrib);
+      source = source || this.getAttribute("data-src");
+      if (source) {
+        this.setAttribute("src", source);
+        if (typeof callback === "function") callback.call(this);
+      }
+    });
+
+    function unveil() {
+      var inview = images.filter(function() {
+        var $e = $(this);
+        if ($e.is(":hidden")) return;
+
+        var wt = $w.scrollTop(),
+            wb = wt + $w.height(),
+            et = $e.offset().top,
+            eb = et + $e.height();
+
+        return eb >= wt - th && et <= wb + th;
+      });
+
+      loaded = inview.trigger("unveil");
+      images = images.not(loaded);
+    }
+
+    $w.on("scroll.unveil resize.unveil lookup.unveil", unveil);
+
+    unveil();
+
+    return this;
+
+  };
+
+})(window.jQuery || window.Zepto);
+
 (function(library) {
 		// Calls the second IIFE and locally passes in the global jQuery, window, and document objects
 		library(window, document, window.jQuery);
@@ -17,6 +74,10 @@
 		// on ready
 		$(function() {
 			console.log('ready')
+			window.onbeforeunload = function(){
+	window.scrollTo(0,0);
+}
+			$('img').unveil(300);
 			var maxHeight = 0,
 				halfHeight = 0;
 
@@ -290,6 +351,109 @@
 					}, time);
 					time += 65;
 
+					
+
+				});
+
+				var moving = false;
+
+				function productToggle(trigger, elem, switcher) {
+					var self = $(this);
+					moving = true;
+
+					// FALSE
+					if (switcher === false) {
+						$('.popUp_info__overlay').removeClass('active');
+						$('.popUp_info').removeClass('popUp_info--open');
+
+					
+						trigger.one(transitionEvent,
+							function(event) {
+								console.log('done')
+								$('.popUp_info').detach().prependTo('body');
+								moving = false;
+							});
+
+					} 
+					// TRUE
+					else {
+						if (Modernizr.mq('(max-width: 767px)')) {
+							$('.popUp_info').detach().appendTo(trigger);
+						} else {
+							$('.popUp_info').detach().appendTo(trigger.parent());
+						}
+
+						// AJAX to GET PRODUCT INFO
+						trigger.addClass('selected');
+						
+						trigger.one(transitionEvent,
+							function(event) {
+								
+								$('.popUp_info').addClass('popUp_info--open');
+								$('.popUp_info__overlay').addClass('active');
+								moving  = false;
+
+							});
+
+						
+					}
+
+				};
+
+				
+
+				$('.product').each(function(e) {
+					var productID = $(this).data('dialog');
+
+				});
+				var moving = false;
+				$('.product img').on('click', function(e) {
+					var current = $(this).parent();
+					
+					var theProduct = current.data('product');
+
+					if (Modernizr.mq('(min-width: 767px)')) {
+
+
+						if (current.hasClass('selected') && moving === false) {
+							console.log('img click close')
+							$('.selected').removeClass('selected');
+
+							productToggle(current, theProduct, false);
+
+						} else {
+							if (!moving){
+							$('.selected').removeClass('selected');
+							productToggle(current, theProduct, true);
+							}
+						}
+
+					} else {
+
+						if (!current.hasClass('selected')) {
+
+							console.log('product clicked');
+							$('.selected').removeClass('selected');
+							productToggle(current, theProduct, true);
+							
+						}
+					}
+				});
+				$('.popUp_info__overlay, .popUp_close').on('click', function(e) {
+
+					$('.selected').removeClass('selected');
+					$('.popUp_info__overlay').removeClass('active');
+					$('.popUp_info').removeClass('popUp_info--open');
+					moving = false;
+					e.stopPropagation();
+				});
+
+				$(window).load(function() {
+					var waypointOffset = 200;
+					$('.productImages').each(function(e) {
+						var self = $(this);
+						self.height(setSectionHeight(self));
+					});
 					var milk = $('#milk').waypoint(function(direction) {
 
 						if (direction === 'down') {
@@ -302,7 +466,7 @@
 							}
 						}
 					}, {
-						offset: '250'
+						offset: waypointOffset
 					});
 					var flavoredMilk = $('#flavoredMilk').waypoint(function(direction) {
 
@@ -328,7 +492,7 @@
 							}
 						}
 					}, {
-						offset: '250'
+						offset: waypointOffset
 					});
 					var cheese = $('#cheese').waypoint(function(direction) {
 
@@ -342,7 +506,7 @@
 							}
 						}
 					}, {
-						offset: '250'
+						offset: waypointOffset
 					});
 					var butter = $('#butter').waypoint(function(direction) {
 
@@ -356,7 +520,7 @@
 							}
 						}
 					}, {
-						offset: '250'
+						offset: waypointOffset
 					});
 
 					var nonDairy = $('#nonDairy').waypoint(function(direction) {
@@ -371,112 +535,20 @@
 							}
 						}
 					}, {
-						offset: '250'
+						offset: waypointOffset
 					});
 
 				});
-
-
-
-				function productToggle(trigger, elem, switcher) {
-					var self = $(this);
-
-					if (!switcher) {
-						$('.popUp_info__overlay').removeClass('active');
-						$('.popUp_info').removeClass('popUp_info--open');
-
-						console.log('false')
-						$('.popUp_info__content').one(transitionEvent,
-							function(event) {
-								console.log('done')
-								$('.popUp_info').detach().prependTo('body');
-							});
-
-					} else {
-						if (Modernizr.mq('(max-width: 767px)')) {
-							$('.popUp_info').detach().appendTo(trigger);
-						} else {
-							$('.popUp_info').detach().appendTo(trigger.parent());
-						}
-
-						// AJAX to GET PRODUCT INFO
-						trigger.addClass('selected');
-
-						trigger.one(transitionEvent,
-							function(event) {
-								$('.popUp_info').addClass('popUp_info--open');
-								$('.popUp_info__overlay').addClass('active');
-
-								// var bottleShadow = $('.product.select').find('.bottleShadow');
-								// bottleShadow.css('width',)
-							});
-
-						popUpShown = true;
-					}
-
-				};
-
-				var popUpShown = false;
-
-				$('.product').each(function(e) {
-					var productID = $(this).data('dialog');
-
-				});
-				$('.product img').on('click', function(e) {
-					var current = $(this).parent();
-					console.log(current);
-					var theProduct = current.data('product');
-					if (Modernizr.mq('(min-width: 767px)')) {
-						if (current.hasClass('selected')) {
-							$('.selected').removeClass('selected');
-
-							productToggle(current, theProduct, false);
-
-						} else {
-							$('.selected').removeClass('selected');
-							productToggle(current, theProduct, true);
-							popUpShown = true;
-						}
-					} else {
-						if (!current.hasClass('selected')) {
-							console.log('product clicked');
-							$('.selected').removeClass('selected');
-							productToggle(current, theProduct, true);
-							popUpShown = true
-						}
-					}
-				});
-				$('.popUp_info__overlay, .popUp_close').on('click', function(e) {
-
-					$('.product').removeClass('selected');
-					$('.popUp_info__overlay').removeClass('active');
-					$('.popUp_info').removeClass('popUp_info--open');
-					popUpShown = false;
-					e.stopPropagation();
-				});
-
-				$(window).load(function() {
-					$('.productImages').each(function(e) {
-						var self = $(this);
-						self.height(setSectionHeight(self));
-					});
-
-
-				});
-
+				
 				function setSectionHeight(section) {
 					var self = $(this);
 					var largestHeight = 0;
 					$(section).children('.product').each(function(e, i) {
-						console.log($(this));
-						var titleHeight = 0;
-						$(this).children('.productName').each(function() {
-							titleHeight = $(this).height();
-							console.log('title height ' + titleHeight)
-						});
+						
+						var titleHeight = 70;
+						
 						var itsHeight = $(i).height() + titleHeight;
-						console.log('its height')
-						console.log(itsHeight);
+						
 						if (itsHeight > largestHeight) {
 							largestHeight = itsHeight;
 						}

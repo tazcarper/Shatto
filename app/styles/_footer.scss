@@ -20,7 +20,7 @@
   }
 
   li, p {
-    font-size: .813em;
+    font-size: 14px;
     padding-bottom: 6px;
     @include MQ(maxM) {
       font-size:18px;
@@ -33,7 +33,7 @@
   }
 
   ul li li {
-    font-size: 18px;
+    font-size: 14px;
     text-transform: none;
   }
 

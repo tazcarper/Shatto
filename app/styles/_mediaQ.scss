@@ -4,6 +4,7 @@ $M: 768px;
 $ML: 992px;
 $L: 1201px;
 // tablet down
+$maxS: $S - 1px;
 $maxM: $M - 1px;
 $maxML: $ML - 1px;
 $maxL: $L - 1px;
@@ -44,6 +45,11 @@ $maxL: $L - 1px;
 	}
 	@else if $canvas == maxM {
 		@media only screen and (max-width:$maxM) {
+			@content;
+		}
+	}
+	@else if $canvas == maxS {
+		@media only screen and (max-width:$maxS) {
 			@content;
 		}
 	}
