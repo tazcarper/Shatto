@@ -1,6 +1,4 @@
-<html>
-<head><?php wp_head(); ?></head>
-<body>
+<?php get_header(); ?>
 <?php
 if ( have_posts() ) {
     while ( have_posts() ) {
@@ -9,7 +7,5 @@ if ( have_posts() ) {
         the_content();
     }
 }
-wp_footer();
 ?>
-</body>
-</html>
+<?php get_footer(); ?>
