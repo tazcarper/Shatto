@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory-->
     <?php wp_head(); ?>
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/styles/main.css"/>
-    <script src="<?php echo get_template_directory_uri(); ?>/scripts/vendor/modernizr.js"></script>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/dist/styles/main.css"/>
+    <script src="<?php echo get_template_directory_uri(); ?>/dist/scripts/vendor/modernizr.js"></script>
     <script>
       (function(d) {
       var config = {
