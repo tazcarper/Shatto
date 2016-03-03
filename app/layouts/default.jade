@@ -16,7 +16,7 @@ html.no-js
     // build:css styles/main.css
     link(rel='stylesheet' href='styles/main.css')
     // endbuild
-    
+
     // build:js scripts/vendor/modernizr.js
     script(src='../bower_components/modernizr/modernizr.js')
     // endbuild
@@ -31,7 +31,7 @@ html.no-js
       })(document);
     // build:js scripts/vendor.js
     // bower:js
-   
+
     // endbower
     // endbuild
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
@@ -138,7 +138,7 @@ html.no-js
       r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
       ga('create','UA-XXXXX-X');ga('send','pageview');
 
-    
+
 
     // build:js scripts/plugins.js
     script(src='scripts/plugins/layzr.js')
@@ -157,20 +157,20 @@ html.no-js
     script(src='scripts/plugins/jquery.waypoints.js')
     script(src='scripts/plugins/oldBrowser.js')
 
-    if tour
-      script(src='scripts/plugins/grid.js')
-    if contact
-      script(src='scripts/contact/nlform.js')
-    if map  
-      script(src='http://maps.google.com/maps/api/js?libraries=places,geometry')
-      script(src='scripts/map/jplist.min.js')
-      script(src='scripts/map/jlocator/jlocator.js')
-      script(src='scripts/map/jlocator/controller/controller.js')
-      script(src='scripts/map/jlocator/view/panel.js')
-      script(src='scripts/map/jlocator/view/map.js')
-      script(src='scripts/map/jlocator/models/store.js')
-      script(src='scripts/map/jlocator/controls/autocomplete.js')
-      script(src='scripts/map/jlocator/controls/autocomplete-radius.js')
+    //- if tour
+    script(src='scripts/plugins/grid.js')
+    //- if contact
+    script(src='scripts/contact/nlform.js')
+    //- if map
+    script(src='http://maps.google.com/maps/api/js?libraries=places,geometry')
+    script(src='scripts/map/jplist.min.js')
+    script(src='scripts/map/jlocator/jlocator.js')
+    script(src='scripts/map/jlocator/controller/controller.js')
+    script(src='scripts/map/jlocator/view/panel.js')
+    script(src='scripts/map/jlocator/view/map.js')
+    script(src='scripts/map/jlocator/models/store.js')
+    script(src='scripts/map/jlocator/controls/autocomplete.js')
+    script(src='scripts/map/jlocator/controls/autocomplete-radius.js')
     // endbuild
 
     // build:js scripts/main.js
