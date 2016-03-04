@@ -339,6 +339,42 @@
             if (e.which == 13) e.preventDefault();
           }
         });
+
+        $('form').submit(function(event){
+          event.preventDefault();
+          console.log('submit');
+
+          // var stuffToSend = {'input_values':{}}, myForm = $(this);
+
+          // // find form values and assign for gravity forms
+          // stuffToSend.input_values.input_1 = myForm.find('input#name').val();
+          // stuffToSend.input_values.input_2 = myForm.find('select#subject').val();
+          // stuffToSend.input_values.input_3 = myForm.find('input#message').val();
+          // stuffToSend.input_values.input_4 = myForm.find('input#email').val();
+
+
+          // $.ajax({
+          //   url: "/gravityformsapi/forms/1/submissions",
+          //   method: "POST",
+          //   data: JSON.stringify(stuffToSend),
+          //   dataType: "json",
+          //   processData: false,
+          //   headers: {"Content-Type":"application/json"}
+          // }).success(function(data) {
+          //   if ( data.response.is_valid ) {
+          //     // hide form
+          //     contactForm.hide();
+          //     // show thank you
+          //     $('.thankYou').html($(data.response.confirmation_message).find('.gform_confirmation_message').text());
+          //     $('.thankYou').show();
+          //     // fire analytics event
+          //     // ga();
+          //   } else {
+          //     // handle errors
+          //   }
+          // });
+
+        });
       }
 
       // Product Page Animation
@@ -627,19 +663,16 @@
       // Store Locatore / Find Page
       if ($('.mapContainer')[0]) {
 
-        $('#jlocator').height($(window).height());
+        // $('#jlocator').height($(window).height()-$('.headerMain').height());
 
-        $(window).resize(function() {
-          $('#jlocator').height($(window).height());
-        }).resize();
+        // $(window).resize(function() {
+        //   $('#jlocator').height($(window).height()-$('.headerMain').height());
+        // }).resize();
 
         $('#jlocator').jlocator({
           startZoom: 13,
-
           latitude: 39.0936738,
           longitude: -94.589048
-
-
         });
       }
 

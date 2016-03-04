@@ -151,7 +151,7 @@ $black_50:rgba(0, 0, 0, 0.5);
 	}
 	.btn {
 		border: 2px solid transparent;
-		max-width: 150px;
+		width: 150px;
 		cursor: pointer;
 
 		&:hover {
@@ -426,7 +426,7 @@ textarea {
 	opacity: 0;
 	@include transform(translate3d(0, -50px, 0) scale(0.9));
 	@include transition(all 0.2s ease);
-	
+
 	&.open {
 		visibility: visible;
 		opacity: 1;

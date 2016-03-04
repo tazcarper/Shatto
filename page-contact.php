@@ -23,7 +23,7 @@
                   <input type="email" placeholder="________________" value="" class="email">
                 </p>
                 <p>Thanks for your time!</p>
-                <div class="submit btn invert">SEND</div>
+                <button class="submit btn invert">SEND</button>
                 <div class="formOverlay"></div>
               </div>
               <div class="sentSuccess">

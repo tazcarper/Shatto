@@ -1,6 +1,6 @@
 <?php
 /*
- *  Author: SHS
+ *  Author: shs
  *  Functions file for shatto theme
  */
 
@@ -108,15 +108,18 @@ function shatto_pagination()
 add_action('wp_enqueue_scripts', 'shatto_styles'); // Add Theme Stylesheet
 add_action('init', 'register_shatto_menu'); // Add shatto Blank Menu
 add_action('init', 'create_post_type_product'); // Add our Product Custom Post Type
+add_action('init', 'create_post_type_location'); // Add our Location Custom Post Type
+add_action('init', 'create_post_type_faq'); // Add our FAQ Custom Post Type
+add_action('init', 'create_faq_taxonomies', 0 ); // Add categories for FAQs
 add_action('init', 'shatto_pagination'); // Add our shatto Pagination
 remove_action('wp_head', 'wp_generator'); // Display the XHTML generator that is generated on the wp_head hook, WP version
 
 // Create Product Custom Post type
 function create_post_type_product()
 {
-  register_taxonomy_for_object_type('category', 'shs-product'); // Register Taxonomies for Category
-  register_taxonomy_for_object_type('post_tag', 'shs-product');
-  register_post_type('shs-product', // Register Custom Post Type
+  register_taxonomy_for_object_type('category', 'shatto-product'); // Register Taxonomies for Category
+  register_taxonomy_for_object_type('post_tag', 'shatto-product');
+  register_post_type('shatto-product', // Register Custom Post Type
     array(
     'labels' => array(
       'name' => __('Products', 'shatto'), // Rename these to suit
@@ -147,6 +150,101 @@ function create_post_type_product()
       'category'
     ) // Add Category and Post Tags support
   ));
+}
+
+// Create Location Custom Post type
+function create_post_type_location()
+{
+  register_taxonomy_for_object_type('category', 'shatto-location'); // Register Taxonomies for Category
+  register_taxonomy_for_object_type('post_tag', 'shatto-location');
+  register_post_type('shatto-location', // Register Custom Post Type
+    array(
+    'labels' => array(
+      'name' => __('Locations', 'shatto'), // Rename these to suit
+      'singular_name' => __('Location', 'shatto'),
+      'add_new' => __('Add New', 'shatto'),
+      'add_new_item' => __('Add New Location', 'shatto'),
+      'edit' => __('Edit', 'shatto'),
+      'edit_item' => __('Edit Location', 'shatto'),
+      'new_item' => __('New Location', 'shatto'),
+      'view' => __('View Location', 'shatto'),
+      'view_item' => __('View Location', 'shatto'),
+      'search_items' => __('Search Locations', 'shatto'),
+      'not_found' => __('No Locations found', 'shatto'),
+      'not_found_in_trash' => __('No Locations found in Trash', 'shatto')
+    ),
+    'public' => true,
+    'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
+    'has_archive' => true,
+    'supports' => array(
+      'title',
+      'editor',
+      'excerpt',
+      'thumbnail'
+    ), // Go to Dashboard Custom shatto Blank post for supports
+    'can_export' => true, // Allows export in Tools > Export
+  ));
+}
+
+// Create faq Custom Post type
+function create_post_type_faq()
+{
+    register_post_type('faqs', // Register Custom Post Type
+        array(
+        'labels' => array(
+            'name' => __('FAQs', 'shatto'), // Rename these to suit
+            'singular_name' => __('FAQ', 'shatto'),
+            'add_new' => __('Add New', 'shatto'),
+            'add_new_item' => __('Add New FAQ', 'shatto'),
+            'edit' => __('Edit', 'shatto'),
+            'edit_item' => __('Edit FAQ', 'shatto'),
+            'new_item' => __('New FAQ', 'shatto'),
+            'view' => __('View FAQ', 'shatto'),
+            'view_item' => __('View FAQ', 'shatto'),
+            'search_items' => __('Search FAQs', 'shatto'),
+            'not_found' => __('No FAQs found', 'shatto'),
+            'not_found_in_trash' => __('No FAQs found in Trash', 'shatto')
+        ),
+        'public' => true,
+        'capability_type' => 'post',
+        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
+        'has_archive' => false,
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'thumbnail',
+            'revisions'
+        ),
+        'can_export' => true // Allows export in Tools > Export
+    ));
+}
+
+function create_faq_taxonomies()
+{
+    register_taxonomy( 'faqs_categories',
+        array( 'faqs' ),
+        array(
+            'hierarchical'      => true, // Set this to 'false' for non-hierarchical taxonomy (like tags)
+            'labels'            => array(
+                'name'              => _x( 'FAQ Categories', 'taxonomy general name' ),
+                'singular_name'     => _x( 'FAQ Category', 'taxonomy singular name' ),
+                'search_items'      => __( 'Search FAQ Categories' ),
+                'all_items'         => __( 'All FAQ Categories' ),
+                'parent_item'       => __( 'Parent FAQ Category' ),
+                'parent_item_colon' => __( 'Parent FAQ Category:' ),
+                'edit_item'         => __( 'Edit FAQ Category' ),
+                'update_item'       => __( 'Update FAQ Category' ),
+                'add_new_item'      => __( 'Add New FAQ Category' ),
+                'new_item_name'     => __( 'New FAQ Category Name' ),
+                'menu_name'         => __( 'Categories' ),
+            ),
+            'show_ui'           => true,
+            'show_admin_column' => true,
+            'query_var'         => true,
+            'rewrite'           => array( 'slug' => 'faqs_categories' )
+        )
+    );
 }
 
 // override min-height from ACF

@@ -10,37 +10,37 @@
         <ul>
           <li><a href="products">Products</a>
             <ul>
-              <li><a href="#">Milk</a></li>
-              <li><a href="#">Flavored Milks</a></li>
-              <li><a href="#">Cheeses</a></li>
-              <li><a href="#">Butter</a></li>
-              <li><a href="#">Ice Crean</a></li>
-              <li><a href="#">Non-Dairy</a></li>
+              <li><a href="/products">Milk</a></li>
+              <li><a href="/products">Flavored Milks</a></li>
+              <li><a href="/products">Cheeses</a></li>
+              <li><a href="/products">Butter</a></li>
+              <li><a href="/products">Ice Crean</a></li>
+              <li><a href="/products">Non-Dairy</a></li>
             </ul>
           </li>
         </ul>
       </div>
       <div class="col-md-2 hidden-sm hidden-xs">
         <ul>
-          <li><a href="events-tours">Events/Tours</a>
+          <li><a href="/events-tours">Events/Tours</a>
             <ul>
-              <li><a href="#">Photos</a></li>
+              <li><a href="/events-tours">Photos</a></li>
             </ul>
           </li>
         </ul>
         <ul>
-          <li><a href="locate">Store Locator</a></li>
+          <li><a href="/locate">Store Locator</a></li>
         </ul>
         <ul>
-          <li><a href="merchandise">Merchandise</a></li>
+          <li><a href="/merchandise">Merchandise</a></li>
         </ul>
       </div>
       <div class="col-md-2 hidden-sm hidden-xs">
         <ul>
           <li><a href="about">About Shatto</a>
             <ul>
-              <li><a href="faq">FAQs</a></li>
-              <li><a href="history">History</a></li>
+              <li><a href="/faq">FAQs</a></li>
+              <li><a href="/history">History</a></li>
             </ul>
           </li>
         </ul>
@@ -48,7 +48,7 @@
           <li><a href="#">News</a></li>
         </ul>
         <ul>
-          <li><a href="contact">Contact</a>
+          <li><a href="/contact">Contact</a>
             <ul>
               <li><a href="#">Directions to the farm</a></li>
             </ul>
@@ -80,4 +80,4 @@
 </script>-->
 <script src="http://maps.google.com/maps/api/js?libraries=places,geometry"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/dist/scripts/plugins.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/dist/scripts/main.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/main.js"></script>

@@ -44,7 +44,7 @@
 #jlocator {
 	width: 100%;
 	float: left;
-	height: 900px;
+	height: 600px;
 	@include MQ(maxM) {
 		height: 300px !important;
 	}
@@ -100,7 +100,7 @@
 		background-color: #dfe5ff;
 	}
 	.title {
-		
+
 		font-size: 18px;
 		font-weight: 500;
 		color: #000000;
