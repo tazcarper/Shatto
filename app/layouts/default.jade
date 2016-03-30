@@ -155,10 +155,10 @@ html.no-js
     script(src='../bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js')
     //- script(src='../bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js')
     script(src='scripts/plugins/jquery.waypoints.js')
+    script(src='scripts/plugins/unveil.js')
     script(src='scripts/plugins/oldBrowser.js')
+    
 
-    if tour
-      script(src='scripts/plugins/grid.js')
     if contact
       script(src='scripts/contact/nlform.js')
     if map  
@@ -172,6 +172,8 @@ html.no-js
       script(src='scripts/map/jlocator/controls/autocomplete.js')
       script(src='scripts/map/jlocator/controls/autocomplete-radius.js')
     // endbuild
+
+    block customScripts
 
     // build:js scripts/main.js
     script(src='scripts/main.js')

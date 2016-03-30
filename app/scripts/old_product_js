@@ -1,0 +1,93 @@
+var moving = false;
+
+				function productToggle(trigger, elem, switcher) {
+					var self = $(this);
+					moving = true;
+
+					// FALSE
+					if (switcher === false) {
+						$('.popUp_info__overlay').removeClass('active');
+						$('.popUp_info').removeClass('popUp_info--open');
+
+					
+						trigger.one(transitionEvent,
+							function(event) {
+								console.log('done')
+								$('.popUp_info').detach().prependTo('body');
+								moving = false;
+							});
+
+					} 
+					// TRUE
+					else {
+						if (Modernizr.mq('(max-width: 767px)')) {
+							$('.popUp_info').detach().appendTo(trigger);
+						} else {
+							$('.popUp_info').detach().appendTo(trigger.parent());
+						}
+
+						// AJAX to GET PRODUCT INFO
+						trigger.addClass('selected');
+						
+						trigger.one(transitionEvent,
+							function(event) {
+								
+								$('.popUp_info').addClass('popUp_info--open');
+								$('.popUp_info__overlay').addClass('active');
+								moving  = false;
+
+							});
+
+						
+					}
+
+				};
+
+				
+
+				$('.product').each(function(e) {
+					var productID = $(this).data('dialog');
+
+				});
+				var moving = false;
+				$('.product img').on('click', function(e) {
+					var current = $(this).parent();
+					
+					var theProduct = current.data('product');
+
+					if (Modernizr.mq('(min-width: 767px)')) {
+
+
+						if (current.hasClass('selected') && moving === false) {
+							console.log('img click close')
+							$('.selected').removeClass('selected');
+
+							productToggle(current, theProduct, false);
+
+						} else {
+							if (!moving){
+							$('.selected').removeClass('selected');
+							productToggle(current, theProduct, true);
+							}
+						}
+
+					} else {
+
+						if (!current.hasClass('selected')) {
+
+							console.log('product clicked');
+							$('.selected').removeClass('selected');
+							productToggle(current, theProduct, true);
+							
+						}
+					}
+				});
+
+				$('.popUp_info__overlay, .popUp_close').on('click', function(e) {
+
+					$('.selected').removeClass('selected');
+					$('.popUp_info__overlay').removeClass('active');
+					$('.popUp_info').removeClass('popUp_info--open');
+					moving = false;
+					e.stopPropagation();
+				});

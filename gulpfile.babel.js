@@ -5,6 +5,9 @@ import browserSync from 'browser-sync';
 import del from 'del';
 import {stream as wiredep} from 'wiredep';
 
+
+const imagemin = require('gulp-imagemin');
+const pngquant = require('imagemin-pngquant');
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
@@ -57,18 +60,16 @@ gulp.task('html', ['views','styles'], () => {
 });
 
 gulp.task('images', () => {
-  return gulp.src('app/images/**/*')
-    .pipe($.if($.if.isFile, $.cache($.imagemin({
+  return gulp.src('app/images/**/*/*')
+    .pipe(imagemin({
       progressive: true,
-      interlaced: true,
-      // don't remove IDs from SVGs, they are often used
-      // as hooks for embedding and styling
-      svgoPlugins: [{cleanupIDs: false}]
+      svgoPlugins: [{removeViewBox: false}],
+      use: [pngquant()]
     }))
     .on('error', function (err) {
       console.log(err);
       this.end();
-    })))
+    })
     .pipe(gulp.dest('dist/images'));
 });
 

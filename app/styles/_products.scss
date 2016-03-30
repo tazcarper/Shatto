@@ -292,7 +292,7 @@
 		position: relative;
 
 		h2 {
-			font-size: 3.85em;
+			font-size: 7em;
 			background: white;
 			padding: 20px 40px;
 			position: relative;
@@ -300,7 +300,7 @@
 			display: inline-block;
 
 			@include MQ(maxM) {
-				font-size: em(45);
+				font-size: em(40);
 			}
 		}
 		.lines {
@@ -318,14 +318,18 @@
 		}
 	}
 	// Bottle Shadows
-	.bottleShadow {
+	.shadowContainer {
 		position: relative;
-		top: -17px;
-		left: -25%;
+	}
+	.bottleShadow {
+		position: absolute;
+		bottom:0px;
+		left: -23%;
 		text-align: center;
 		width: 145%;
 		z-index: -1;
 		@include transition(all 0.35s ease);
+		@include transform(translate3d(0, 9px, 0));
 		opacity: .75;
 	}
 	&#butter {
@@ -714,7 +718,8 @@
 		position: relative;
 		// min-height: 560px;
 		margin-top: 35px;
-
+		padding-left: 0;
+		padding-right: 0;
 		@include MQ(maxM) {
 			height: auto !important;
 		}
@@ -753,7 +758,8 @@
 			}
 		}
 		.product {
-			position: absolute;
+			position: relative;
+			float: left;
 			left: 0;
 			right: 0;
 			margin: 0 auto;
@@ -762,11 +768,13 @@
 			cursor: pointer;
 			opacity: 0;
 			@include transition(all 0.35s ease-out);
-
+			&:first-child {
+				position: relative;
+			}
 			&.front {
 				z-index: 10;
-				opacity: 1;
-				width: 270px;
+				
+				//width: 270px;
 			}
 			img {
 				@include transform(translate3d(0, 0, 0));
@@ -788,10 +796,10 @@
 					-webkit-backface-visibility: hidden;
 				}
 				.bottleShadow {
-					@include transform(translate3d(0, 4px, 0));
-					left: -15%;
-					width: 125%;
-					opacity: 0.25;
+					@include transform(translate3d(0, 13px, 0));
+					// left: -15%;
+					// width: 125%;
+					opacity: 0.15;
 				}
 			}
 			&.selected {
@@ -836,59 +844,103 @@
 					width: 270px;
 				}
 			}
-			&.onePercent {
-				width: 210px;
-				margin-top: 6%;
-				z-index: 9;
-
-				&.reveal {
-					right: 37%;
+			&.front {
+				//left:-35px;
+				margin-left: -2%;
+				width:319px;
+				@include MQ(maxL){
+					margin-left: -5%;
+					width: 319px * 0.9;
 				}
-				@include MQ(maxM) {
-					width: 250px;
+				@include MQ(maxML) {
+					width:179px;
 					margin-top: 0;
 				}
-				@include MQ(maxM) {
-					width: 230px;
+			}
+			&.onePercent {
+				width:273px;
+				margin-top: 6%;
+				z-index: 9;
+				margin-left:-5%;
+				&.reveal {
+					
+				}
+				@include MQ(maxL) {
+					
+					width:273px * 0.9;
+					margin-left: -10%;
+				}
+				@include MQ(maxML) {
+					width:179px;
+					margin-top: 0;
 				}
 			}
 			&.twoPercent {
-				width: 175px;
+				width:226px;
 				margin-top: 9%;
 				z-index: 8;
-
+				margin-left: 1%;
 				&.reveal {
-					right: 68%;
+					
 				}
-				@include MQ(maxM) {
-					width: 250px;
+				@include MQ(maxL) {
+					margin-left: 0;
+					width:226px  * 0.9;
+				}
+				@include MQ(maxML) {
+					width:179px;
+					margin-top: 0;
 					margin-top: 0;
 				}
 			}
 			&.whole {
-				width: 150px;
+				width:179px;
 				margin-top: 8%;
 				z-index: 4;
-
+				margin-left: 1%;
 				&.reveal {
-					right: -39%;
+					
 				}
 				@include MQ(maxM) {
-					width: 250px;
+					// width: 250px;
+					margin-top: 0;
+				}
+				@include MQ(maxL){
+					margin-left:-2%;
+					
+				}
+				@include MQ(maxML) {
 					margin-top: 0;
 				}
 			}
 			&.pintCream {
-				width: 125px;
-				margin-top: 21%;
+				width:110px;
+				margin-top: 30%;
 				z-index: 5;
-
-				&.reveal {
-					right: -61%;
-				}
+				margin-left: -1%;
+				
 				@include MQ(maxM) {
-					width: 250px;
+					// width: 250px;
 					margin-top: 0;
+				}
+				@include MQ(maxML) {
+					margin-top: 2%;
+					margin-left: 4%;
+				}
+			}
+			&.halfCream {
+				width:133px;
+				margin-top: 26%;
+				z-index: 5;
+				margin-left: -2%;
+				
+				@include MQ(maxM) {
+					// width: 250px;
+					margin-top: 0;
+				}
+				@include MQ(maxML) {
+					margin-top: 0;
+					margin-left: 2%;
 				}
 			}
 			// ICE CREAM PINTS

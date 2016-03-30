@@ -183,13 +183,16 @@ main {
 }
 .container {
   @include MQ(L) {
-    width: 1200px;
+    //width: 1200px;
   }
-  &.ML_Fluid {
-    @include MQ(maxML) {
-      width: 100%;
-    }
-  }
+  // &.ML_Fluid {
+  //   @include MQ(maxL){
+  //     width:95%;
+  //   }
+  //   @include MQ(maxML) {
+  //     width: 100%;
+  //   }
+  // }
 }
 .parallax {
   position: relative;
@@ -314,7 +317,7 @@ img {
 #floatingBottle {
   z-index: 999999;
   position: relative;
-  @include transform(translate3d(0, -2060px, 0));
+  @include transform(translate3d(0, -2090px, 0));
 
 @include transition(transform ,0.5s, ease-out, opacity ,0s ,ease ,width ,0.5s, ease-out);
   text-align: center;
