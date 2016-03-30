@@ -23,16 +23,19 @@
     font-weight: bold;
   }
 
-  p.answer {
-    font-size: .875em;
+  .answer {
     margin-top: 0;
     max-height: 0;
     overflow: hidden;
 
-    @include transition(max-height .5s ease, margin-top .7s);
+    @include transition(max-height .5s, margin-top .5s);
+
+    p {
+      font-size: .875em;
+    }
   }
 
-  p.answer.open {
+  .answer.open {
     margin-top: .5em;
     max-height: 1000px;
   }
