@@ -317,6 +317,9 @@
 			@include transition(width .3s ease-out, opacity .5s ease-out);
 		}
 	}
+
+	// prudcts
+
 	// Bottle Shadows
 	.shadowContainer {
 		position: relative;
@@ -357,7 +360,7 @@
 		}
 		.productImages {
 			&.home {
-				min-height: 580px;
+				//min-height: 580px;
 
 				@include MQ(maxM) {
 					min-height: auto;
@@ -369,7 +372,7 @@
 						float: left !important;
 						width: 50% !important;
 						max-width: none !important;
-						position: static;
+						position: static !important;
 					}
 				}
 				a {
@@ -383,6 +386,13 @@
 				@include transition(all 0s ease);
 
 				.productName {
+					@include transition(all .15s ease);
+					@include MQ(maxML) {
+						h5 {
+							//font-size:18px;
+							opacity: 0;
+						}
+					}
 					@include MQ(maxM) {
 						display: block;
 						color: black;
@@ -397,163 +407,197 @@
 							display: inline-block;
 							width: 95%;
 							padding: 7px 0;
+							opacity: 1;
 
 						}
 					}
 				}
 				.product {
-					max-width: none;
-					width: 100%;
-					right: auto;
-					left: auto;
-					margin: 0 auto;
-					top: 0;
+					
 
 					// HOME PRODUCTS (ON HOME PAGE)
-
+					right:auto;
+					left:auto;
+					position: absolute;
+					top:0;
+					float: none;
+					display: inline-block;
+					@include MQ(M){
+					&.cheese {
+						left:3%;
+						top:110px;
+					}
 					&.milk {
 						z-index: 10;
-						max-width: 264px;
-						left: 0;
-						right: 0;
-						margin-top: 2px;
-						position: relative;
-
-						@include MQ(maxM) {
-							img {
-								display: none;
-							}
-						}
+						
 					}
 					&.juice {
-						left: 0%;
-						right: 0;
-						margin-top: 45px;
-						max-width: 225px;
 						z-index: 9;
-						opacity: 0;
-
-						@include MQ(maxM) {
-							img {
-								display: none;
-							}
-						}
-						@include transition(all .2s .5s ease-out);
-
-						&.productShown {
-							left: -35%;
-							opacity: 1;
-
-							@include MQ(maxL) {
-								left: -38%;
-							}
-						}
-					}
-					&.cheese {
-						left: 0%;
-						right: 0;
-						margin-top: 150px;
-						max-width: 247px;
-						z-index: 8;
-						opacity: 0;
-
-						@include MQ(maxM) {
-							img {
-								display: none;
-							}
-						}
-						@include transition(all .2s .5s ease-out);
-
-						&.productShown {
-							left: -71%;
-							opacity: 1;
-
-							@include MQ(maxML) {
-								left: -65%;
-							}
-						}
+						left:-195px;
+						top:35px;
+						position: relative;
 					}
 					&.flavoredMilk {
-						left: 0;
-						right: 0%;
-						margin-top: 112px;
-						max-width: 150px;
-						z-index: 9;
-						opacity: 0;
-
-						@include MQ(maxM) {
-							img {
-								display: none;
-							}
-						}
-						@include transition(all .2s .5s ease-out);
-
-						&.productShown {
-							right: -31%;
-							opacity: 1;
-
-							@include MQ(maxL) {
-								right: -41%;
-							}
-							@include MQ(maxML) {
-								right: -35%;
-							}
-						}
+						right:25.5%;
+						top:105px;
+						z-index: 10;
 					}
 					&.iceCream {
-						left: 0;
-						right: 0%;
-						margin-top: 280px;
-						z-index: 8;
-						max-width: 180px;
-						opacity: 0;
-
-						@include MQ(maxM) {
-							img {
-								display: none;
-							}
-						}
-						@include transition(all .2s .5s ease-out);
-
-						&.productShown {
-							right: -55%;
-							opacity: 1;
-
-							@include MQ(maxL) {
-								right: -67%;
-							}
-							@include MQ(maxML) {
-								right: -55%;
-							}
-						}
+						right:11%;
+						top:270px;
+						z-index: 9;
 					}
 					&.butter {
-						left: 0;
-						right: 0%;
-						margin-top: 370px;
-						z-index: 7;
-						max-width: 170px;
-						opacity: 0;
-
-						@include MQ(maxM) {
-							img {
-								display: none;
-							}
-						}
-						@include transition(all .2s .5s ease-out);
-
-						&.productShown {
-							right: -77%;
-							opacity: 1;
-
-							@include MQ(maxL) {
-								right: -90%;
-							}
-							@include MQ(maxML) {
-								right: -80%;
-							}
-						}
+						right:0%;
+						top:auto;
+						bottom:0%;
 					}
+
+					}
+		
+					// &.milk {
+					// 	z-index: 10;
+					// 	max-width: 264px;
+					// 	left: 0;
+					// 	right: 0;
+					// 	margin-top: 2px;
+					// 	position: relative;
+
+					// 	@include MQ(maxM) {
+					// 		img {
+					// 			display: none;
+					// 		}
+					// 	}
+					// }
+					// &.juice {
+					// 	left: 0%;
+					// 	right: 0;
+					// 	margin-top: 45px;
+					// 	max-width: 225px;
+					// 	z-index: 9;
+					// 	opacity: 0;
+
+					// 	@include MQ(maxM) {
+					// 		img {
+					// 			display: none;
+					// 		}
+					// 	}
+					// 	@include transition(all .2s .5s ease-out);
+
+					// 	&.productShown {
+					// 		left: -35%;
+					// 		opacity: 1;
+
+					// 		@include MQ(maxL) {
+					// 			left: -38%;
+					// 		}
+					// 	}
+					// }
+					// &.cheese {
+					// 	left: 0%;
+					// 	right: 0;
+					// 	margin-top: 150px;
+					// 	max-width: 247px;
+					// 	z-index: 8;
+					// 	opacity: 0;
+
+					// 	@include MQ(maxM) {
+					// 		img {
+					// 			display: none;
+					// 		}
+					// 	}
+					// 	@include transition(all .2s .5s ease-out);
+
+					// 	&.productShown {
+					// 		left: -71%;
+					// 		opacity: 1;
+
+					// 		@include MQ(maxML) {
+					// 			left: -65%;
+					// 		}
+					// 	}
+					// }
+					// &.flavoredMilk {
+					// 	left: 0;
+					// 	right: 0%;
+					// 	margin-top: 112px;
+					// 	max-width: 150px;
+					// 	z-index: 9;
+					// 	opacity: 0;
+
+					// 	@include MQ(maxM) {
+					// 		img {
+					// 			display: none;
+					// 		}
+					// 	}
+					// 	@include transition(all .2s .5s ease-out);
+
+					// 	&.productShown {
+					// 		right: -31%;
+					// 		opacity: 1;
+
+					// 		@include MQ(maxL) {
+					// 			right: -41%;
+					// 		}
+					// 		@include MQ(maxML) {
+					// 			right: -35%;
+					// 		}
+					// 	}
+					// }
+					// &.iceCream {
+					// 	left: 0;
+					// 	right: 0%;
+					// 	margin-top: 280px;
+					// 	z-index: 8;
+					// 	max-width: 180px;
+					// 	opacity: 0;
+
+					// 	@include MQ(maxM) {
+					// 		img {
+					// 			display: none;
+					// 		}
+					// 	}
+					// 	@include transition(all .2s .5s ease-out);
+
+					// 	&.productShown {
+					// 		right: -55%;
+					// 		opacity: 1;
+
+					// 		@include MQ(maxL) {
+					// 			right: -67%;
+					// 		}
+					// 		@include MQ(maxML) {
+					// 			right: -55%;
+					// 		}
+					// 	}
+					// }
+					// &.butter {
+					// 	left: 0;
+					// 	right: 0%;
+					// 	margin-top: 370px;
+					// 	z-index: 7;
+					// 	max-width: 170px;
+					// 	opacity: 0;
+
+					// 	@include MQ(maxM) {
+					// 		img {
+					// 			display: none;
+					// 		}
+					// 	}
+					// 	@include transition(all .2s .5s ease-out);
+
+					// 	&.productShown {
+					// 		right: -77%;
+					// 		opacity: 1;
+
+					// 		@include MQ(maxL) {
+					// 			right: -90%;
+					// 		}
+					// 		@include MQ(maxML) {
+					// 			right: -80%;
+					// 		}
+					// 	}
+					// }
 				}
 			}
 			.product {
@@ -725,7 +769,7 @@
 		}
 		.productName {
 			@include MQ(maxL) {
-				display: none;
+				//display: none;
 			}
 			@include MQ(maxM) {
 				display: block;
@@ -782,7 +826,7 @@
 			}
 			@include MQ(maxM) {
 				position: relative;
-				margin-bottom: 50px;
+				//margin-bottom: 50px;
 
 				img {
 					position: relative;

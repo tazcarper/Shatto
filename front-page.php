@@ -2,7 +2,7 @@
 <div id="floatingTrigger">
   <section class="container-fluid mainContent hero">
     <div class="container">
-      <div class="row"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/rotation/reflection.png" class="shadow"/>
+      <div class="row">
         <div class="col-md-12 desktop text-center">
           <h1><?php the_field('hero_title'); ?></h1>
           <?php the_field('hero_copy'); ?>
@@ -20,7 +20,7 @@
   <section class="container-fluid bottleDetail desktop">
     <div class="container">
       <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-10 center-block">
           <h2><?php the_field('bottle_title'); ?></h2>
           <div class="stopPoint"></div>
         </div>
@@ -47,7 +47,7 @@
     </div>
   </section>
   <section class="container-fluid products visible">
-    <div class="container ML_Fluid">
+   
       <div class="row">
         <div class="col-xs-12 visible-xs"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/rotation/1.png" alt="Shatto Milk" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/rotation/1.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/rotation/1_2x.png 2x" style="display:block; width:100%; max-width:270px; margin:0 auto; margin-bottom:25px;"/></div>
         <div class="col-xs-12 title">
@@ -57,19 +57,26 @@
       </div>
       <div class="row">
         <div class="col-md-12 productImages home">
-          <div id="floatingBottle"><a><img id="mainBottle" src="<?php echo get_template_directory_uri(); ?>/dist/images/rotation/1.png" alt="Shatto Milk" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/rotation/1.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/rotation/1_2x.png 2x" data-bottleposition="1" class="shown"/>
+          <div id="floatingBottle" class="img-1">
+          <a>
+            <div id="mainBottle"></div>
+          <img src="<?php echo get_template_directory_uri(); ?>/dist/images/rotation/reflection.png" class="shadow"/>
               <div class="productName hidden-xs">
                 <h5>Milk</h5>
               </div></a></div><a href="/products.html#milk" class="product milkButton text-center visible-xs">
             <div class="productName">
               <h5>Milk</h5>
-            </div></a><a href="/products.html#juice" class="product juice text-center"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/home/juice.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/home/juice.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/home/juice_2x.png 2x"/>
-            <div class="productName">
-              <h5>Non-Dairy</h5>
-            </div></a><a href="/products.html#cheese" class="product cheese text-center"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/home/cheese.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/home/cheese.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/home/cheese_2x.png 2x"/>
+            </div></a>
+            <div class="productContainer">
+            <a href="/products.html#cheese" class="product cheese text-center"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/home/cheese.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/home/cheese.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/home/cheese_2x.png 2x"/>
             <div class="productName">
               <h5>Cheese</h5>
-            </div></a><a href="/products.html#flavoredMilk" class="product flavoredMilk text-center"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/home/flavored.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/home/flavored.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/home/flavored_2x.png 2x"/>
+            </div></a>
+            <a href="/products.html#juice" class="product juice text-center"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/home/juice.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/home/juice.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/home/juice_2x.png 2x"/>
+            <div class="productName">
+              <h5>Non-Dairy</h5>
+            </div></a>
+            <a href="/products.html#flavoredMilk" class="product flavoredMilk text-center"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/home/flavored.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/home/flavored.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/home/flavored_2x.png 2x"/>
             <div class="productName">
               <h5>Flavored Milk</h5>
             </div></a><a href="/products.html#iceCream" class="product iceCream text-center"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/home/iceCream.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/home/iceCream.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/home/iceCream_2x.png 2x"/>
@@ -81,7 +88,7 @@
             </div></a>
         </div>
       </div>
-    </div>
+      </div>
   </section>
   <section class="container-fluid mapFinder">
     <div class="row">

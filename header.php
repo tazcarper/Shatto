@@ -18,7 +18,7 @@
       })(document);
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script>$(window).load(function(){$('#status').fadeOut();$('#preloader').delay(350).fadeOut(150);$('body').delay(350).css({'overflow':'visible'});$('body').fadeIn(1000);});</script>
+    <script>var stylesheet_directory_uri = "<?php echo get_template_directory_uri(); ?>"; $(window).load(function(){$('#status').fadeOut();$('#preloader').delay(350).fadeOut(150);$('body').delay(350).css({'overflow':'visible'});$('body').fadeIn(1000);});</script>
   </head>
   <body>
     <div id="preloader">

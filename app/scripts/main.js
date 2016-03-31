@@ -53,6 +53,10 @@
 
   };
 
+
+$(window).resize(function(){
+  console.log($(window).width());
+});
 })(window.jQuery || window.Zepto);
 
 (function(library) {
@@ -174,26 +178,31 @@
         var theH = 0,
           floatingBottle = $('#floatingBottle');
 
-        var bottleWidth = $('#floatingBottle img').width(),
-          theBottle = $('#floatingBottle'),
+        var bottleWidth = $('#floatingBottle').width(),
+          theBottle = $('#mainBottle'),
           bottles = 16,
           arrayIndex = 8,
+          currentUrl = stylesheet_directory_uri,
           // Custom rotation order
           customRotation = [9, 10, 11, 12, 13, 14, 15, 16, 1, 2, 3, 4, 5, 6, 7, 8, 9],
           screenWidth,
           bottlesArray = Array.apply(null, {
             length: bottles
           }).map(Number.call, Number);
-        for (var i = 2; i <= bottlesArray.length; i++) {
-          theBottle.append('<img src="/wp-content/themes/shatto-website/dist/images/rotation/' + i + '.png" data-bottleposition="' + i + '">');
-        }
+        // for (var i = 2; i <= bottlesArray.length; i++) {
+        //   theBottle.append('<img src="'+currentUrl+'/dist/images/rotation/' + i + '.png" data-bottleposition="' + i + '">');
+        // }
 
         function bottleMouseMove(e) {
+          //console.log('screenwidth ',screenWidth);
           if (floatingBottle.hasClass('start')) {
-            var x = e.pageX - $('#floatingBottle').offset().left;
-            var bottlePos = customRotation[parseInt(x / screenWidth * customRotation.length)];
+            floatingBottle.addClass('disableTransition');
+            var x = e.pageX - theBottle.offset().left;
+            // Find bottle pos
+            var bottlePos = customRotation[parseInt(x / 370 * customRotation.length)];
+            console.log(bottlePos);
             arrayIndex = parseInt(x / screenWidth * customRotation.length);
-            // console.log(arrayIndex);
+             console.log('arrayindex ' , arrayIndex);
             $('.pod').removeClass('visible');
             if (arrayIndex === 8) {
               $('.pod').removeClass('visible');
@@ -207,18 +216,29 @@
             } else if (arrayIndex <= 16) {
               $('.pod4').addClass('visible');
             }
-            if ($('.shown').data('bottleposition') !== bottlePos) {
-              $('.shown').removeClass('shown');
-              theBottle.find("[data-bottleposition='" + bottlePos + "']").addClass('shown');
-            }
+            
+              var bottleBgPos = 'img-' + bottlePos;
+              theBottle.attr('class',
+               function(i, c){
+                  return c.replace(/(^|\s)img-\S+/g, '');
+               })
+              .addClass(bottleBgPos);
+              
+             // $('.shown').removeClass('shown');
+             // theBottle.find("[data-bottleposition='" + bottlePos + "']").addClass('shown');
+            
           }
         }
 
         function changeIt(i) {
           var origNum = i;
+
           // console.log('run change it');
-          $('.shown').removeClass('shown');
-          theBottle.find("[data-bottleposition='" + customRotation[i] + "']").addClass('shown');
+          //$('.shown').removeClass('shown');
+          theBottle.attr('class',
+               function(i, c){
+                  return c.replace(/(^|\s)img-\S+/g, '');
+               }).addClass('img-' + customRotation[origNum]);
           // if not on starting position
           if (i !== 8) {
 
@@ -226,12 +246,12 @@
               origNum++;
               setTimeout(function() {
                 changeIt(origNum)
-              }, 35);
+              }, 25);
             } else if (arrayIndex !== 8 && arrayIndex > 8) {
               origNum--;
               setTimeout(function() {
                 changeIt(origNum)
-              }, 35);
+              }, 25);
             }
 
           }
@@ -273,7 +293,7 @@
             $('.shadow').addClass('hideIt');
 
           } else {
-            floatingBottle.removeClass('start');
+            floatingBottle.removeClass('start disableTransition');
             rotateBack();
 
             if (!floatingBottle.hasClass('stop')) {
@@ -289,7 +309,7 @@
           if (direction === 'down' && !floatingBottle.hasClass('stop')) {
             // $('#mainBottle').css({'max-width':'300px'});
 
-            floatingBottle.addClass('stop').removeClass('start').find('a').attr('href', '/products.html#milk');
+            floatingBottle.addClass('stop').removeClass('start disableTransition').find('a').attr('href', '/products.html#milk');
             rotateBack();
             //$('#mainBottle').wrap('<a href="/products.html#milk"></a>');
             $('.product').each(function(e) {

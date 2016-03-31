@@ -1,5 +1,6 @@
 $headerHeight: 70px;
 
+// When nav gets small
 .smaller {
 
   @include MQ(S) {
@@ -10,7 +11,7 @@ $headerHeight: 70px;
       .cowHead {
         width: 70px;
         left: 95px;
-
+        top:5px;
         @include MQ(maxML) {
           left: 6 px;
           top: 5px;
@@ -125,6 +126,7 @@ header {
     margin: 0 auto;
     position: absolute;
     left: 105px;
+    top:10px;
     @include transition(all .2s ease);
 
     @include MQ(maxML) {
@@ -146,7 +148,7 @@ header {
     outline: none;
     position: absolute;
     width: 190px;
-    top: 50px;
+    top: 55px;
     left: 35px;
     @include transition(all .2s ease);
     @include MQ(maxML) {

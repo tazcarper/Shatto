@@ -3,7 +3,7 @@ section.products {
   color: $black;
   padding: 4em 0;
   text-align: center;
-
+  height: 930px;
   @include MQ(maxM) {
     padding: 0;
   }
