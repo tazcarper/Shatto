@@ -125,7 +125,7 @@
         }
         var newH = 300 - distanceY;
         // $('#floatingBottle').css({
-        // 	'top': newH
+        //  'top': newH
         // });
       }
       // adjust bg of parallax
@@ -144,16 +144,14 @@
     //open/close lateral navigation
     $('.cd-nav-trigger').on('click', function (event) {
       event.preventDefault();
-
+      $('.cd-navigation-wrapper').addClass("transition");
       // console.log('clicked')
       //stop if nav animation is running
       if (!isLateralNavAnimating) {
         if ($(this).parents('.csstransitions').length > 0) {
           isLateralNavAnimating = true;
         }
-
         $('html').toggleClass('navigation-is-open');
-
         $('.headerMain').toggleClass('makeBlack');
         $('.cd-navigation-wrapper').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function () {
           //animation is over
@@ -602,22 +600,6 @@
       })();
     }
 
-    function makeShadows(section) {}
-    // console.log(section)
-    // $.each($(section + ' .product'), function(){
-    // 	console.log(i);
-    // 	var self = $(this);
-
-    // 	console.log('main image width');
-    // 	console.log(self);
-
-    // 	console.log(self[0].clientWidth);
-    // 	var shadowWidth = self[0].clientWidth * 1.625;
-    // 	var shadowLeft = shadowWidth  / 2;
-    // 	self.find('.bottleShadow').css({'width':shadowWidth});
-    // });
-
-
     // css3 transition event listener
     function whichTransitionEvent() {
       var t,
@@ -642,11 +624,11 @@
     //dlgtrigger.addEventListener('click', dlg.toggle.bind(dlg));
 
     // $('main').flowtype({
-    // 	minimum: 400,
-    // 	maximum: 1400,
-    // 	minFont: 32,
-    // 	maxFont: 32,
-    // 	fontRatio: 30
+    //  minimum: 400,
+    //  maximum: 1400,
+    //  minFont: 32,
+    //  maxFont: 32,
+    //  fontRatio: 30
     // });
 
     // Store Locatore / Find Page
@@ -664,20 +646,21 @@
         longitude: -94.589048
       });
     }
+    transitionChange();
+    $(window).on('resize', function () {
+      transitionChange();
+    });
   }); // end ready
 });
+var breakpoint = 767;
+function transitionChange(e) {
 
-// fade out on link click
-
-// $('a').click(function(event) {
-
-// 	event.preventDefault();
-
-// 	newLocation = this.href;
-
-// 	$('body').fadeOut(150, newpage);
-
-// });
+  if (Modernizr.mq('(min-width:' + breakpoint + 'px)')) {
+    $('.cd-navigation-wrapper').removeClass("transition");
+    $('html').removeClass('navigation-is-open');
+    $('.headerMain').removeClass('makeBlack');
+  }
+}
 
 function newpage() {
 

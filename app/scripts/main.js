@@ -54,9 +54,9 @@
   };
 
 
-$(window).resize(function(){
-  console.log($(window).width());
-});
+  $(window).resize(function() {
+    console.log($(window).width());
+  });
 })(window.jQuery || window.Zepto);
 
 (function(library) {
@@ -128,7 +128,7 @@ $(window).resize(function(){
           }
           var newH = 300 - distanceY;
           // $('#floatingBottle').css({
-          // 	'top': newH
+          //  'top': newH
           // });
         }
         // adjust bg of parallax
@@ -149,17 +149,14 @@ $(window).resize(function(){
       //open/close lateral navigation
       $('.cd-nav-trigger').on('click', function(event) {
         event.preventDefault();
-
+        $('.cd-navigation-wrapper').addClass("transition");
         // console.log('clicked')
         //stop if nav animation is running
         if (!isLateralNavAnimating) {
           if ($(this).parents('.csstransitions').length > 0) {
             isLateralNavAnimating = true;
           }
-
           $('html').toggleClass('navigation-is-open');
-
-
           $('.headerMain').toggleClass('makeBlack');
           $('.cd-navigation-wrapper').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {
             //animation is over
@@ -202,7 +199,7 @@ $(window).resize(function(){
             var bottlePos = customRotation[parseInt(x / 370 * customRotation.length)];
             console.log(bottlePos);
             arrayIndex = parseInt(x / screenWidth * customRotation.length);
-             console.log('arrayindex ' , arrayIndex);
+            console.log('arrayindex ', arrayIndex);
             $('.pod').removeClass('visible');
             if (arrayIndex === 8) {
               $('.pod').removeClass('visible');
@@ -216,17 +213,17 @@ $(window).resize(function(){
             } else if (arrayIndex <= 16) {
               $('.pod4').addClass('visible');
             }
-            
-              var bottleBgPos = 'img-' + bottlePos;
-              theBottle.attr('class',
-               function(i, c){
+
+            var bottleBgPos = 'img-' + bottlePos;
+            theBottle.attr('class',
+                function(i, c) {
                   return c.replace(/(^|\s)img-\S+/g, '');
-               })
+                })
               .addClass(bottleBgPos);
-              
-             // $('.shown').removeClass('shown');
-             // theBottle.find("[data-bottleposition='" + bottlePos + "']").addClass('shown');
-            
+
+            // $('.shown').removeClass('shown');
+            // theBottle.find("[data-bottleposition='" + bottlePos + "']").addClass('shown');
+
           }
         }
 
@@ -236,9 +233,9 @@ $(window).resize(function(){
           // console.log('run change it');
           //$('.shown').removeClass('shown');
           theBottle.attr('class',
-               function(i, c){
-                  return c.replace(/(^|\s)img-\S+/g, '');
-               }).addClass('img-' + customRotation[origNum]);
+            function(i, c) {
+              return c.replace(/(^|\s)img-\S+/g, '');
+            }).addClass('img-' + customRotation[origNum]);
           // if not on starting position
           if (i !== 8) {
 
@@ -360,7 +357,7 @@ $(window).resize(function(){
           }
         });
 
-        $('form').submit(function(event){
+        $('form').submit(function(event) {
           event.preventDefault();
           console.log('submit');
 
@@ -631,21 +628,7 @@ $(window).resize(function(){
         });
       }
 
-      function makeShadows(section) {
-        // console.log(section)
-        // $.each($(section + ' .product'), function(){
-        // 	console.log(i);
-        // 	var self = $(this);
-
-        // 	console.log('main image width');
-        // 	console.log(self);
-
-        // 	console.log(self[0].clientWidth);
-        // 	var shadowWidth = self[0].clientWidth * 1.625;
-        // 	var shadowLeft = shadowWidth  / 2;
-        // 	self.find('.bottleShadow').css({'width':shadowWidth});
-        // });
-      }
+      
 
       // css3 transition event listener
       function whichTransitionEvent() {
@@ -673,11 +656,11 @@ $(window).resize(function(){
       //dlgtrigger.addEventListener('click', dlg.toggle.bind(dlg));
 
       // $('main').flowtype({
-      // 	minimum: 400,
-      // 	maximum: 1400,
-      // 	minFont: 32,
-      // 	maxFont: 32,
-      // 	fontRatio: 30
+      //  minimum: 400,
+      //  maximum: 1400,
+      //  minFont: 32,
+      //  maxFont: 32,
+      //  fontRatio: 30
       // });
 
       // Store Locatore / Find Page
@@ -695,24 +678,24 @@ $(window).resize(function(){
           longitude: -94.589048
         });
       }
-
+      transitionChange();
+      $(window).on('resize', function() {
+        transitionChange();
+      });
 
     }); // end ready
   })
 );
+var breakpoint = 767;
+function transitionChange(e) {
 
+  if (Modernizr.mq('(min-width:' + breakpoint + 'px)')) {
+    $('.cd-navigation-wrapper').removeClass("transition");
+    $('html').removeClass('navigation-is-open');
+    $('.headerMain').removeClass('makeBlack');
+  } 
+}
 
-// fade out on link click
-
-// $('a').click(function(event) {
-
-// 	event.preventDefault();
-
-// 	newLocation = this.href;
-
-// 	$('body').fadeOut(150, newpage);
-
-// });
 
 function newpage() {
 

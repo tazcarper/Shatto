@@ -182,6 +182,9 @@ main {
   width: 90%;
   margin: 0 auto;
   position: relative;
+  @include MQ(maxM) {
+    width:100%;
+  }
 }
 .container {
   @include MQ(L) {
@@ -407,11 +410,7 @@ img {
   
   img {
     // @include transform(scale(.75));
-    -webkit-transition: transform 0.3s ease-out, opacity 0.0s ease 0.0s;
-    -moz-transition: transform 0.3s ease-out, opacity 0.0s ease 0.0s;
-    -ms-transition: transform 0.3s ease-out, opacity 0.0s ease 0.0s; /* IE10 is actually unprefixed */
-    -o-transition: transform 0.3s ease-out, opacity 0.0s ease 0.0s;
-    transition: transform 0.3s ease-out, opacity 0.0s ease 0.0s;
+
     position: absolute;
     top: 0;
     margin: 0 auto;
