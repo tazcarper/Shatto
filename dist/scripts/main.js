@@ -53,17 +53,13 @@
 
     return this;
   };
-
-  $(window).resize(function () {
-    console.log($(window).width());
-  });
 })(window.jQuery || window.Zepto);
 
 (function (library) {
   // Calls the second IIFE and locally passes in the global jQuery, window, and document objects
   library(window, document, window.jQuery);
 })(function (window, document, $) {
-  var headerContainer = $('header');
+
   // lazy loader INIT
   //var layzr = new Layzr();
 
@@ -75,11 +71,7 @@
 
   // on ready
   $(function () {
-    // console.log('ready')
-    window.onbeforeunload = function () {
-      window.scrollTo(0, 0);
-    };
-    $('img').unveil(300);
+
     var maxHeight = 0,
         halfHeight = 0;
 
@@ -118,10 +110,10 @@
       // console.log($(window).height());
       // console.log(maxHeight);
       if (distanceY > shrinkOn) {
-        headerContainer.addClass('smaller');
+        $('body').addClass('smaller');
       } else {
-        if (headerContainer.hasClass('smaller')) {
-          headerContainer.removeClass('smaller');
+        if ($('body').hasClass('smaller')) {
+          $('body').removeClass('smaller');
         }
         var newH = 300 - distanceY;
         // $('#floatingBottle').css({
@@ -382,61 +374,37 @@
     // Product Page Animation
     if ($('.productPage')[0]) {
       var time;
-      var moving;
-      var moving;
-      var heightAdjusted;
+      var overlay, closeBttn, transEndEventNames, transitionProps, transEndEventName, support;
 
       (function () {
-        var productToggle = function productToggle(trigger, elem, switcher) {
-          var self = $(this);
-          moving = true;
-
-          // FALSE
-          if (switcher === false) {
-            $('.popUp_info__overlay').removeClass('active');
-            $('.popUp_info').removeClass('popUp_info--open');
-
-            trigger.one(transitionEvent, function (event) {
-              // console.log('done')
-              $('.popUp_info').detach().prependTo('body');
-              moving = false;
-            });
-          }
-          // TRUE
-          else {
-              if (Modernizr.mq('(max-width: 767px)')) {
-                $('.popUp_info').detach().appendTo(trigger);
-              } else {
-                $('.popUp_info').detach().appendTo(trigger.parent());
+        var overlayToggle = function overlayToggle() {
+          if (overlay.hasClass('open')) {
+            overlay.removeClass('open');
+            overlay.addClass('close');
+            var onEndTransitionFn = function onEndTransitionFn(ev) {
+              console.log('Close Done');
+              overlay.removeClass('close');
+              if (support.transitions) {
+                if (ev.propertyName !== 'visibility') return;
+                this.removeEventListener(transEndEventName, onEndTransitionFn);
               }
-
-              // AJAX to GET PRODUCT INFO
-              trigger.addClass('selected');
-
-              trigger.one(transitionEvent, function (event) {
-
-                $('.popUp_info').addClass('popUp_info--open');
-                $('.popUp_info__overlay').addClass('active');
-                moving = false;
-              });
+            };
+            if (support.transitions) {
+              // callback for when css transition finishes
+              overlay.one(transEndEventName, onEndTransitionFn);
+            } else {
+              onEndTransitionFn();
             }
+          } else if (!overlay.hasClass('open')) {
+            var onStartTransitionFn = function onStartTransitionFn(ev) {};
+            // callback for when css transition finishes
+            overlay.one(transEndEventName, onStartTransitionFn);
+            overlay.addClass('open');
+          }
         };
 
-        var setSectionHeight = function setSectionHeight(section) {
-          var self = $(this);
-          var largestHeight = 0;
-          $(section).children('.product').each(function (e, i) {
+        // listener
 
-            var titleHeight = 70;
-
-            var itsHeight = $(i).height() + titleHeight;
-
-            if (itsHeight > largestHeight) {
-              largestHeight = itsHeight;
-            }
-          });
-          return largestHeight;
-        };
 
         time = 0;
 
@@ -447,57 +415,61 @@
           time += 65;
         });
 
-        moving = false;
-        ;
-
-        $('.product').each(function (e) {
-          var productID = $(this).data('dialog');
+        // product image clicking
+        overlay = $('.overlay');
+        closeBttn = $('.overlay-close');
+        transEndEventNames = {
+          'WebkitTransition': 'webkitTransitionEnd',
+          'MozTransition': 'transitionend',
+          'OTransition': 'oTransitionEnd',
+          'msTransition': 'MSTransitionEnd',
+          'transition': 'transitionend'
+        };
+        transitionProps = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+        transEndEventName = transEndEventNames[Modernizr.prefixed('transition')];
+        support = {
+          transitions: Modernizr.csstransitions
+        };
+        $('.overlay').on('click', '.overlay-close', function () {
+          overlayToggle();
         });
-        moving = false;
+        $('.product').on('click', 'img', function (e) {
+          var product = $(this),
+              current = $(this).parent(),
+              theProduct = current.data('product');
+          console.log(product, current, theProduct);
+          overlayToggle();
 
-        $('.product img').on('click', function (e) {
-          var current = $(this).parent();
+          // if (Modernizr.mq('(min-width: 767px)')) {
 
-          var theProduct = current.data('product');
+          //   if (current.hasClass('selected') && moving === false) {
+          //     // console.log('img click close')
+          //     $('.selected').removeClass('selected');
 
-          if (Modernizr.mq('(min-width: 767px)')) {
+          //     productToggle(current, theProduct, false);
 
-            if (current.hasClass('selected') && moving === false) {
-              // console.log('img click close')
-              $('.selected').removeClass('selected');
+          //   } else {
+          //     if (!moving) {
+          //       $('.selected').removeClass('selected');
+          //       productToggle(current, theProduct, true);
+          //     }
+          //   }
 
-              productToggle(current, theProduct, false);
-            } else {
-              if (!moving) {
-                $('.selected').removeClass('selected');
-                productToggle(current, theProduct, true);
-              }
-            }
-          } else {
+          // } else {
 
-            if (!current.hasClass('selected')) {
+          //   if (!current.hasClass('selected')) {
 
-              // console.log('product clicked');
-              $('.selected').removeClass('selected');
-              productToggle(current, theProduct, true);
-            }
-          }
-        });
-        $('.popUp_info__overlay, .popUp_close').on('click', function (e) {
+          //     // console.log('product clicked');
+          //     $('.selected').removeClass('selected');
+          //     productToggle(current, theProduct, true);
 
-          $('.selected').removeClass('selected');
-          $('.popUp_info__overlay').removeClass('active');
-          $('.popUp_info').removeClass('popUp_info--open');
-          moving = false;
-          e.stopPropagation();
+          //   }
+          // }
         });
 
         $(window).load(function () {
           var waypointOffset = 200;
-          $('.productImages').each(function (e) {
-            var self = $(this);
-            self.height(setSectionHeight(self));
-          });
+
           var milk = $('#milk').waypoint(function (direction) {
 
             if (direction === 'down') {
@@ -580,46 +552,40 @@
           });
         });
 
-        heightAdjusted = false;
+        // function setSectionHeight(section) {
+        //   var self = $(this);
+        //   var largestHeight = 0;
+        //   $(section).children('.product').each(function(e, i) {
 
-        $(window).resize(function () {
-          if (Modernizr.mq('(min-width: 767px)')) {
-            if (!heightAdjusted) {
-              $('.productImages').each(function (e) {
-                var self = $(this);
-                self.height(setSectionHeight(self));
-              });
-              heightAdjusted = true;
-            }
-          } else {
-            if (heightAdjusted) {
-              heightAdjusted = false;
-            }
-          }
-        });
+        //     var titleHeight = 70;
+
+        //     var itsHeight = $(i).height() + titleHeight;
+
+        //     if (itsHeight > largestHeight) {
+        //       largestHeight = itsHeight;
+        //     }
+        //   });
+        //   return largestHeight;
+        // }
+        // var heightAdjusted = false;
+        // $(window).resize(function() {
+        //   if (Modernizr.mq('(min-width: 767px)')) {
+        //     if (!heightAdjusted) {
+        //       $('.productImages').each(function(e) {
+        //         var self = $(this);
+        //         self.height(setSectionHeight(self));
+        //       });
+        //       heightAdjusted = true;
+        //     }
+        //   } else {
+        //     if (heightAdjusted) {
+        //       heightAdjusted = false;
+        //     }
+
+        //   }
+        // });
       })();
     }
-
-    // css3 transition event listener
-    function whichTransitionEvent() {
-      var t,
-          el = document.createElement("fakeelement");
-
-      var transitions = {
-        "transition": "transitionend",
-        "OTransition": "oTransitionEnd",
-        "MozTransition": "transitionend",
-        "WebkitTransition": "webkitTransitionEnd"
-      };
-
-      for (t in transitions) {
-        if (el.style[t] !== undefined) {
-          return transitions[t];
-        }
-      }
-    }
-
-    var transitionEvent = whichTransitionEvent();
 
     //dlgtrigger.addEventListener('click', dlg.toggle.bind(dlg));
 
@@ -653,6 +619,7 @@
   }); // end ready
 });
 var breakpoint = 767;
+
 function transitionChange(e) {
 
   if (Modernizr.mq('(min-width:' + breakpoint + 'px)')) {

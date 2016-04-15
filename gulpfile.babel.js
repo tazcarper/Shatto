@@ -196,14 +196,14 @@ gulp.task('serve:php', function() {
   browserSync({
     notify: false,
     ui: false,
-    proxy: 'localhost:8888/shatto-website/',
+    proxy: 'localhost:8888/shatto-wordpress/',
     port: 9005,
     injectChanges: true
   });
 
   gulp.watch('app/**/*.html', ['views', reload]);
   gulp.watch('**/*.php', reload);
-  // gulp.watch('app/images/**/*', ['imageCopy', reload]);
+  gulp.watch('app/images/**/*', ['imageCopy', reload]);
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/scripts/**/*.js', ['scripts']);
   gulp.watch('app/fonts/**/*', ['fonts']);

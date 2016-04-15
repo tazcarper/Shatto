@@ -1,0 +1,288 @@
+/* Overlay style */
+
+/* Overlay closing cross */
+
+/* Menu style */
+
+/* Effects */
+
+$overlayDelay: .35s;
+.smaller {
+	.overlay {
+		top:60px;
+	}
+}
+.overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 100px;
+	left: 0;
+	background: rgba(255, 255, 255, 0.98);
+	z-index: 999;
+	
+	@include MQ(maxML) {
+	}
+	.overlay-close {
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		overflow: hidden;
+		border: none;
+		color: transparent;
+		outline: none;
+		z-index: 999;
+		color: red;
+		font-size: 16px;
+		display: block;
+	}
+}
+.overlay {
+	visibility: hidden;
+	width: 0;
+	left: 50%;
+	@include transform(translate(-50%,0));
+	@include transition(all .35s ease $overlayDelay);
+	
+	.overlay-close {
+		opacity: 0;
+		-webkit-transition: opacity 0.3s 0.5s;
+		transition: opacity 0.3s 0.5s;
+	}
+}
+.overlay.open {
+	visibility: visible;
+	width: 100%;
+	@include transition(all .35s ease);
+
+	.productInfo {
+		opacity: 1;
+	}
+	.overlay-close {
+		opacity: 1;
+		-webkit-transition-delay: 0.5s;
+		transition-delay: 0.5s;
+	}
+}
+.overlay.close {
+	.productInfo {
+		opacity: 0;
+		-webkit-transition-delay: 0s;
+		transition-delay: 0s;
+	}
+	.overlay-close {
+		@include transition-delay($overlayDelay);
+	}
+}
+
+// Info in overlay
+.productInfo {
+	opacity: 0;
+	@include transition(all .35s ease-out $overlayDelay);
+	ul {
+		list-style: none;
+		padding: 0;
+		padding-bottom: 15px;
+		
+		li {
+			font-size: 50px;
+			margin: 0;
+			padding: 0;
+			text-align: left;
+			line-height: 45px;
+			@include MQ(maxM) {
+				font-size:24px;
+				line-height: 26px;
+			}
+		}
+	}
+	.flavors {
+		margin-top: 35px;
+	}
+}
+.nutritionFacts {
+	padding: 5px;
+	border: 2px solid black;
+	
+	p, h1, h2, h3, h4, h5 {
+		margin: 0;
+		padding: 0;
+	}
+	span {
+		font-weight: 400;
+
+		&.bold {
+			font-weight: 700;
+		}
+	}
+	p {
+		font-size: 10px;
+		font-weight: 400;
+	}
+	h2 {
+		font-weight: 700;
+		font-size: 33px;
+	}
+	h3 {
+		font-size: 26px;
+	}
+	.reducedPadding {
+		padding-left: 7.5px;
+		padding-right: 7.5px;
+
+		@include MQ(maxM) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+	.border {
+		border-bottom: 2px solid black;
+
+		&.smaller {
+			border-width: 1px;
+		}
+	}
+	.top {
+		//border-bottom: 4px solid black;
+		margin-top: 3px;
+		margin-bottom: 5px;
+
+		.tableRow {
+			display: table;
+			margin-bottom: 5px;
+		}
+		.nutFacts, .servingSize, .calories {
+			@include MQ(M) {
+				float: none;
+				display: table-cell;
+				vertical-align: top;
+			}
+		}
+		.nutFacts {
+			border-right: 1px solid black;
+
+			h2 {
+				font-size: 30px;
+			}
+			@include MQ(maxM) {
+				border: none;
+			}
+			@include MQ(maxML) {
+				h2 {
+					font-size: 26px;
+				}
+			}
+		}
+		.servingSize {
+			padding-top: 3px;
+
+			@include MQ(maxML) {
+				padding-top: 0;
+			}
+		}
+		.calories {
+			padding-top: 3px;
+			text-align: center;
+			border-left: 1px solid black;
+
+			h3 {
+				font-size: 24px;
+			}
+			@include MQ(maxM) {
+				text-align: left;
+				border: none;
+				padding-top: 0;
+			}
+			@include MQ(maxML) {
+				padding-top: 0;
+
+				h3 {
+					font-size: 18px;
+					padding-top: 5px;
+				}
+			}
+		}
+	}
+	.middle {
+		border-right: 1px solid black;
+
+		@include MQ(maxML) {
+			border-right: none;
+		}
+		.dailyValue {
+			margin-right: 10px;
+		}
+		.title {
+			margin-right: 3px;
+		}
+		.column {
+			@include MQ(maxM) {
+				p {
+					&:last-child {
+						border-bottom: 1px solid black;
+						padding: 0px 0 3px 0;
+						margin-bottom: 3px;
+					}
+				}
+			}
+			&:last-child {
+				p {
+					border-bottom: none;
+				}
+				margin-bottom: 5px;
+			}
+		}
+		p {
+			font-size: 10px;
+
+			span {
+				&.bold {
+					font-weight: 700;
+				}
+			}
+		}
+	}
+	.attributes {
+		margin-top: 5px;
+
+		ul {
+			padding: 0;
+			margin: 0;
+			list-style: inherit;
+			list-style-position: inside;
+
+			li {
+				padding: 0;
+				margin: 0 6% 3px 0;
+				float: left;
+				font-size: 10px;
+				line-height: inherit;
+
+				&:first-child {
+					list-style: none;
+				}
+			}
+		}
+	}
+	.footnotes {
+		padding-left: 0;
+		p {
+			padding: 0 10px;
+		}
+		@include MQ(maxL) {
+			padding-left: 7.5px;
+		}
+		@include MQ(maxML) {
+			padding-left: 15px;
+			padding-top: 10px;
+		}
+	}
+	.verticalBorder {
+		height: 100%;
+		width: 1px;
+		background: black;
+	}
+}
+.ingredients {
+	margin-top: 15px;
+}
