@@ -1,0 +1,12 @@
+{
+	"products": {
+		"skim" : {
+			"name" : "HG_skim",
+			"flavors" : ["Flavor one", "Flavor two", "Flavor three"],
+			"image" : "half-gallons/ShattoMilk_HalfGallon_Skim.png",
+			"nutrition" : {
+
+			}
+		}
+	}
+}

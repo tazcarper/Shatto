@@ -1,26 +1,26 @@
 <div class="footer container-fluid">
   <div class="container">
     <div class="row">
-      <div class="col-md-3 hidden-sm hidden-xs">
+      <div class="col-sm-3  hidden-xs">
         <a href="/">
           <?php get_template_part(THEME_PARTS.'footer-logo'); ?>
         </a>
       </div>
-      <div class="col-md-2 col-md-offset-1 hidden-sm hidden-xs">
+      <div class="col-sm-2 col-sm-offset-1 hidden-xs">
         <ul>
           <li><a href="products">Products</a>
-            <ul>
+            <!-- <ul>
               <li><a href="/products">Milk</a></li>
               <li><a href="/products">Flavored Milks</a></li>
               <li><a href="/products">Cheeses</a></li>
               <li><a href="/products">Butter</a></li>
               <li><a href="/products">Ice Crean</a></li>
               <li><a href="/products">Non-Dairy</a></li>
-            </ul>
+            </ul> -->
           </li>
         </ul>
       </div>
-      <div class="col-md-2 hidden-sm hidden-xs">
+      <div class="col-sm-2 hidden-xs">
         <ul>
           <li><a href="/events-tours">Events/Tours</a>
             <ul>
@@ -35,7 +35,7 @@
           <li><a href="/merchandise">Merchandise</a></li>
         </ul>
       </div>
-      <div class="col-md-2 hidden-sm hidden-xs">
+      <div class="col-sm-2  hidden-xs">
         <ul>
           <li><a href="about">About Shatto</a>
             <ul>
@@ -55,7 +55,7 @@
           </li>
         </ul>
       </div>
-      <div class="col-md-2">
+      <div class="col-sm-2">
         <div class="icons">
         </div>
         <div class="address">
@@ -83,7 +83,7 @@
 <script src="<?php echo get_template_directory_uri(); ?>/app/scripts/main.js"></script>-->
 
 <script src="<?php echo get_template_directory_uri(); ?>/app/scripts/plugins/layzr.js"></script>
-
+<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/plugins/sticky.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>

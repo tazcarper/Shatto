@@ -1,6 +1,7 @@
 @import "_overlay.scss";
 
 #mobileCollapse {
+	padding-bottom: 50px;
 	// Mobile Category Links
 	@include MQ(maxM) {
 		//padding-bottom: 15px;
@@ -51,6 +52,58 @@
 	//padding-top: 50px;
 	//padding-bottom: 50px;
 }
+.subMenu {
+	z-index: 99;
+	position: relative;
+	
+}
+.subNav {
+		position: relative;
+		top: 0px;
+		width: 100%;
+		z-index: 99;
+		top:-95px;
+		@include MQ(maxL) {
+			bottom: 75px;
+		}
+		@include MQ(maxM) {
+			bottom: 85px;
+			display: none;
+		}
+		.table {
+			display: table;
+			margin: 0 auto;
+		}
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			text-align: center;
+
+			li {
+				white-space: nowrap;
+				margin-right: em(4);
+				margin-left: em(4);
+				display: inline;
+
+				a {
+					color: white;
+					background: black;
+					font-size: 1.1em;
+					display: inline;
+					text-transform: uppercase;
+					text-decoration: none;
+
+					@include MQ(maxL) {
+						font-size: .85em;
+					}
+					@include MQ(maxML) {
+						font-size: .65em;
+					}
+				}
+			}
+		}
+	}
 .productPage, .products {
 	position: relative;
 	//margin-bottom: 1.5em;
@@ -73,6 +126,7 @@
 			width: 1200px;
 		}
 	}
+
 	&.hero {
 		background: url('../images/products/woodPlank.jpg') bottom center no-repeat;
 		height: 600px;
@@ -80,7 +134,7 @@
 		position: relative;
 		min-height: auto;
 		padding-bottom: 0;
-		//margin-bottom: -60px;
+		
 
 		@include MQ(maxM) {
 			background: white;
@@ -93,6 +147,13 @@
 		h1 {
 			font-size: 4em;
 			margin-bottom: 0;
+		}
+		.logo {
+			@include transition(all .45s ease-out .45s);
+			opacity:0;
+			&.shown {
+				opacity: 1;
+			}
 		}
 	}
 	.caps {
@@ -247,53 +308,7 @@
 			}
 		}
 	}
-	.subMenu {
-		position: absolute;
-		bottom: 70px;
-		width: 100%;
-		z-index: 1;
-
-		@include MQ(maxL) {
-			bottom: 75px;
-		}
-		@include MQ(maxM) {
-			bottom: 85px;
-			display: none;
-		}
-		.table {
-			display: table;
-			margin: 0 auto;
-		}
-		ul {
-			list-style: none;
-			padding: 0;
-			margin: 0;
-			text-align: center;
-
-			li {
-				white-space: nowrap;
-				margin-right: em(4);
-				margin-left: em(4);
-				display: inline;
-
-				a {
-					color: white;
-					background: black;
-					font-size: 1.1em;
-					display: inline;
-					text-transform: uppercase;
-					text-decoration: none;
-
-					@include MQ(maxL) {
-						font-size: .85em;
-					}
-					@include MQ(maxML) {
-						font-size: .65em;
-					}
-				}
-			}
-		}
-	}
+	
 	.productTitle {
 		position: relative;
 
@@ -704,8 +719,11 @@
 			height: auto !important;
 		}
 		.productName {
-			padding: 0 20%;
-
+			width:80%;
+			max-width:200px;
+			min-width:125px;
+			text-align: center;
+			margin:0 auto;
 			@include MQ(maxML) {
 				padding: 0 10%;
 			}

@@ -69,6 +69,31 @@
     $(faq).next('.answer').toggleClass('open');
   };
 
+  // TEMP JSON
+  var productJson = {
+    "products": {
+      "HG_skim": {
+        "title": "Skim",
+        "category": "half-gallon",
+        "sizes": ["half gallon", "Quart"],
+        "image": "/half-gallons/final/large/ShattoMilk_HalfGallon_Skim.png",
+        "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+      },
+      "HG_onePercent": {
+        "title": "One Percent",
+        "category": "half-gallon",
+        "sizes": {
+          'half-gallon': 8,
+          'quart': 4,
+          'pint': 2
+        },
+        "image": "/half-gallons/final/large/ShattoMilk_HalfGallon_1Percent.png",
+        "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+      }
+
+    }
+  };
+
   // on ready
   $(function () {
 
@@ -202,11 +227,12 @@
           }
         };
 
+        // bottle turn function
+
+
         var changeIt = function changeIt(i) {
           var origNum = i;
 
-          // console.log('run change it');
-          //$('.shown').removeClass('shown');
           theBottle.attr('class', function (i, c) {
             return c.replace(/(^|\s)img-\S+/g, '');
           }).addClass('img-' + customRotation[origNum]);
@@ -232,10 +258,11 @@
         };
 
         var rotateBack = function rotateBack() {
-
           changeIt(arrayIndex);
         };
+
         // if desktop
+
 
         var onResize = function onResize() {
           screenWidth = theBottle.width();
@@ -371,18 +398,42 @@
       })();
     }
 
+    $(document).on('click', 'a[href*="#"]:not([href="#"])', function (e) {
+
+      if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
+
+        var target = $(this.hash);
+
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+
+        if (target.length) {
+
+          $('html, body').animate({
+
+            scrollTop: target.offset().top - 90
+
+          }, 1000);
+
+          e.preventDefault();
+        }
+      }
+    });
+
     // Product Page Animation
     if ($('.productPage')[0]) {
       var time;
+      var cap;
       var overlay, closeBttn, transEndEventNames, transitionProps, transEndEventName, support;
+      var imagePath;
 
       (function () {
+        var loadImage = function loadImage(img) {};
+
         var overlayToggle = function overlayToggle() {
           if (overlay.hasClass('open')) {
             overlay.removeClass('open');
             overlay.addClass('close');
             var onEndTransitionFn = function onEndTransitionFn(ev) {
-              console.log('Close Done');
               overlay.removeClass('close');
               if (support.transitions) {
                 if (ev.propertyName !== 'visibility') return;
@@ -396,9 +447,8 @@
               onEndTransitionFn();
             }
           } else if (!overlay.hasClass('open')) {
-            var onStartTransitionFn = function onStartTransitionFn(ev) {};
             // callback for when css transition finishes
-            overlay.one(transEndEventName, onStartTransitionFn);
+
             overlay.addClass('open');
           }
         };
@@ -407,12 +457,20 @@
 
 
         time = 0;
+        cap = $('.cap');
 
-        $('.cap').each(function (i, v) {
+        cap.each(function (i, v) {
           setTimeout(function () {
             $(v).addClass('shown');
+            if (i == cap.length - 1) {
+              $(' .logo').addClass('shown');
+            }
           }, time);
           time += 65;
+        });
+
+        $('.subMenu').stick_in_parent({
+          'offset_top': 175
         });
 
         // product image clicking
@@ -433,38 +491,59 @@
         $('.overlay').on('click', '.overlay-close', function () {
           overlayToggle();
         });
+        imagePath = $('.product img').attr('src');
+
+
+        imagePath = imagePath.substring(0, imagePath.indexOf('products/')) + 'products';
+
         $('.product').on('click', 'img', function (e) {
           var product = $(this),
               current = $(this).parent(),
-              theProduct = current.data('product');
+              theProduct = current.data('product'),
+              gotData = false;
+
           console.log(product, current, theProduct);
+
+          // Load image for overlay
+          if (!gotData) {
+
+            console.log(theProductImage);
+            if (productJson['products'].hasOwnProperty(theProduct)) {
+              var theProductImage = productJson['products'][theProduct].image;
+              var productCategory = productJson['products'][theProduct].category;
+              console.log(imagePath);
+              var combinedPath = imagePath + theProductImage;
+              var retinaPath = imagePath + '/2x' + theProductImage;
+              console.log(retinaPath);
+              var srcSetData = combinedPath + " 1x, " + retinaPath + " 2x";
+              console.log(combinedPath);
+              $('#overlay_image').attr({
+                'srcset': srcSetData,
+                'src': combinedPath
+              }).removeClass().addClass(productCategory);
+            } else {
+              $('#overlay_image').attr({
+                'src': imagePath + '/missingImage.png',
+                'srcset': ''
+              }).removeClass().addClass('missing');
+            }
+
+            // var jqxhr = $.getJSON("../products.json", function(data) {
+            //     console.log("success");
+            //     console.log(data);
+            //   })
+            //   .done(function() {
+            //     console.log("second success");
+            //   })
+            //   .fail(function() {
+            //     console.log("error");
+            //   })
+            //   .always(function() {
+            //     console.log("complete");
+            //   });
+          } else {}
+
           overlayToggle();
-
-          // if (Modernizr.mq('(min-width: 767px)')) {
-
-          //   if (current.hasClass('selected') && moving === false) {
-          //     // console.log('img click close')
-          //     $('.selected').removeClass('selected');
-
-          //     productToggle(current, theProduct, false);
-
-          //   } else {
-          //     if (!moving) {
-          //       $('.selected').removeClass('selected');
-          //       productToggle(current, theProduct, true);
-          //     }
-          //   }
-
-          // } else {
-
-          //   if (!current.hasClass('selected')) {
-
-          //     // console.log('product clicked');
-          //     $('.selected').removeClass('selected');
-          //     productToggle(current, theProduct, true);
-
-          //   }
-          // }
         });
 
         $(window).load(function () {
@@ -551,51 +630,8 @@
             offset: waypointOffset
           });
         });
-
-        // function setSectionHeight(section) {
-        //   var self = $(this);
-        //   var largestHeight = 0;
-        //   $(section).children('.product').each(function(e, i) {
-
-        //     var titleHeight = 70;
-
-        //     var itsHeight = $(i).height() + titleHeight;
-
-        //     if (itsHeight > largestHeight) {
-        //       largestHeight = itsHeight;
-        //     }
-        //   });
-        //   return largestHeight;
-        // }
-        // var heightAdjusted = false;
-        // $(window).resize(function() {
-        //   if (Modernizr.mq('(min-width: 767px)')) {
-        //     if (!heightAdjusted) {
-        //       $('.productImages').each(function(e) {
-        //         var self = $(this);
-        //         self.height(setSectionHeight(self));
-        //       });
-        //       heightAdjusted = true;
-        //     }
-        //   } else {
-        //     if (heightAdjusted) {
-        //       heightAdjusted = false;
-        //     }
-
-        //   }
-        // });
       })();
     }
-
-    //dlgtrigger.addEventListener('click', dlg.toggle.bind(dlg));
-
-    // $('main').flowtype({
-    //  minimum: 400,
-    //  maximum: 1400,
-    //  minFont: 32,
-    //  maxFont: 32,
-    //  fontRatio: 30
-    // });
 
     // Store Locatore / Find Page
     if ($('.mapContainer')[0]) {

@@ -33,8 +33,12 @@ $overlayDelay: .35s;
 		outline: none;
 		z-index: 999;
 		color: red;
-		font-size: 16px;
+		font-size: 36px;
 		display: block;
+		color: black;
+		font-family: "futura-pt-condensed", sans-serif;
+		cursor: pointer;
+		padding: 15px;
 	}
 }
 .overlay {
@@ -43,11 +47,31 @@ $overlayDelay: .35s;
 	left: 50%;
 	@include transform(translate(-50%,0));
 	@include transition(all .35s ease $overlayDelay);
-	
+	.row {
+		position: relative;
+	}
 	.overlay-close {
 		opacity: 0;
 		-webkit-transition: opacity 0.3s 0.5s;
 		transition: opacity 0.3s 0.5s;
+	}
+	#overlay_image {
+		position:absolute;
+		left:-25px;
+		top:50px;
+		width:55%;
+		@include MQ(maxM) {
+			display: none;
+		}
+		&.half-gallon {
+			max-width:600px;
+		}
+		&.missing {
+			max-width:300px;
+			left:8%;
+			top:50px;
+			width:30%;
+		}
 	}
 }
 .overlay.open {
@@ -101,7 +125,7 @@ $overlayDelay: .35s;
 	}
 }
 .nutritionFacts {
-	padding: 5px;
+	padding: 15px;
 	border: 2px solid black;
 	
 	p, h1, h2, h3, h4, h5 {
@@ -116,15 +140,24 @@ $overlayDelay: .35s;
 		}
 	}
 	p {
-		font-size: 10px;
-		font-weight: 400;
+		font-size: 15px;
+	
 	}
 	h2 {
 		font-weight: 700;
-		font-size: 33px;
+		font-size: 42px;
+		line-height: .9em;
+		margin-top: 0px;
+		margin-bottom: 5px;
+		padding-bottom: 5px;
+		border-bottom:1px solid black;
+
 	}
 	h3 {
 		font-size: 26px;
+		line-height: .8em;
+		margin-top: 5px;
+
 	}
 	.reducedPadding {
 		padding-left: 7.5px;
@@ -142,28 +175,23 @@ $overlayDelay: .35s;
 			border-width: 1px;
 		}
 	}
-	.top {
-		//border-bottom: 4px solid black;
-		margin-top: 3px;
-		margin-bottom: 5px;
-
+	
 		.tableRow {
 			display: table;
 			margin-bottom: 5px;
 		}
 		.nutFacts, .servingSize, .calories {
-			@include MQ(M) {
-				float: none;
-				display: table-cell;
-				vertical-align: top;
-			}
+			// @include MQ(M) {
+			// 	float: none;
+			// 	display: table-cell;
+			// 	vertical-align: top;
+			// }
 		}
 		.nutFacts {
-			border-right: 1px solid black;
+			// border-right: 1px solid black;
 
-			h2 {
-				font-size: 30px;
-			}
+			
+
 			@include MQ(maxM) {
 				border: none;
 			}
@@ -174,19 +202,37 @@ $overlayDelay: .35s;
 			}
 		}
 		.servingSize {
-			padding-top: 3px;
-
+			//padding-top: 3px;
+			p {
+				border-bottom:1px solid black;
+				padding-bottom: 5px;
+			}
 			@include MQ(maxML) {
 				padding-top: 0;
 			}
+			//border-bottom:1px solid black;
+			margin-bottom: 5px;
+			padding-bottom: 5px;
 		}
 		.calories {
-			padding-top: 3px;
-			text-align: center;
-			border-left: 1px solid black;
+			//padding-top: 3px;
+			
+			h2 {
+				border-bottom:0;
+				float: left; 
+				margin-right: 5px;
 
+			}
+			p {
+				border-bottom:0;
+				font-size:12px;
+			}
 			h3 {
 				font-size: 24px;
+				text-transform: none;
+			}
+			.closeUp {
+				float: left;
 			}
 			@include MQ(maxM) {
 				text-align: left;
@@ -202,7 +248,91 @@ $overlayDelay: .35s;
 				}
 			}
 		}
-	}
+
+		.topPart {
+			h5 {
+				font-size:18px;
+				//border-bottom:3px solid black;
+				padding-bottom: 3px;
+			}
+
+		}
+		.stats {
+			.col-sm-6 {
+				&:first-child {
+					border-right:1px solid black;
+					@include MQ(maxM) {
+						border:none;
+					}
+				}
+			}
+		}
+		.table {
+			margin-bottom: 0;
+			tr {
+				&:first-child {
+					border-top:3px solid black;
+				}
+				&:last-child {
+					border-bottom:3px solid black;
+				}
+			}
+			td {
+				border:1px solid black;
+				font-size:15px;
+				padding: 3px 2px 3px 8px;
+				font-weight:700;
+				&:first-child {
+					border-left:0;
+					text-align: center;
+				}
+				&:last-child {
+					border-right:0;
+				}
+				&.child {
+					padding-left: 18px;
+					font-size:14px;
+				}
+				span.lighter {
+					font-weight:300;
+					margin-left: 5px;
+					font-size:14px;
+				}
+			}
+		}
+		.bottomList {
+			ul {
+				margin:10px 0 0 0;
+				padding: 0;
+				li {
+					font-size:14px;
+					float: left;
+					list-style:disc;
+					margin:0 10px 5px 0;
+					padding: 0;
+					line-height: 1em;
+					list-style-position: inside;
+
+					&:first-child {
+						list-style:none;
+					}
+				}
+			}
+		}
+		.dailyValues {
+
+			p {
+				margin-bottom: 0;
+				line-height: 1em;
+				font-size:14px;
+				&:first-child {
+					border-top:1px solid black;
+					padding-top: 10px;
+				}
+
+			}
+		}
+	
 	.middle {
 		border-right: 1px solid black;
 

@@ -263,6 +263,7 @@ main {
   text-transform: uppercase;
   outline: none !important;
   height: auto;
+
   @include transition(background .4s ease, color .4s ease);
 
   @include MQ(maxM) {
@@ -277,10 +278,14 @@ main {
 .btn.invert {
   background-color: $black;
   color: $white;
+  &:active, &:focus {
+     background-color: $black;
+  color: $white;
+  }
 }
 .btn.invert:hover, .btn.invert:focus, .btn.invert:active {
-  background-color: $white;
-  color: $black;
+  background-color: $black;
+  color: $white;
 }
 button.form-control.btn {
 }
