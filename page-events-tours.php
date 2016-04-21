@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div class="events-tours">
-  <section class="container-fluid mainContent hero events-tours">
+  <section class="container-fluid mainContent hero viveVideo">
     <div class="container">
       <div class="row">
         <div class="col-md-12">

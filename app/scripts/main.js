@@ -348,6 +348,19 @@
 
       var eventTours = $('.events-tours');
       if (eventTours[0]){
+
+        $('.viveVideo').vide({
+          mp4: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/feedingBarn.mp4',
+          webm: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/feedingBarn.webm',
+          ogv: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/feedingBarn.ogv'
+        }, {
+        posterType: 'none',
+        autoplay: true,
+        position: '50% 100%',
+        volume: 1,
+        loop:true,
+        resizing: true
+        });
        
         $('.scheduleOverlay').stick_in_parent({
          'offset_top': 60,
@@ -376,14 +389,18 @@
         bigImageEl = $('.popUp .bigImage'),
         popUpDesc = $('.popUp .description');
 
+
         $('.slide').on('click', function(e){
-          e.preventDefault();
+          if (Modernizr.mq('(min-width: 767px)')) {
+            e.preventDefault();
           var largeImage = $(this).attr('data-largeImage'),
           description = $(this).attr('data-desc');
           bigImageEl.find('img').attr('src', largeImage);
           popUpDesc.html('').html(description);
 
           togglePopUp();
+          }
+          
         })
         $('.popUp').on('click', '.closePopUP', function(e){
           togglePopUp();

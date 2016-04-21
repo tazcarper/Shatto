@@ -85,14 +85,15 @@
 <script src="<?php echo get_template_directory_uri(); ?>/app/scripts/plugins/layzr.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/app/scripts/plugins/sticky.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/app/scripts/plugins/slick.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/plugins/jquery.vide.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
 
 <script src="<?php echo get_template_directory_uri(); ?>/app/scripts/plugins/jquery.waypoints.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/app/scripts/plugins/oldBrowser.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/plugins/grid.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/plugins/nlform.js"></script>
+
+<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/contact/nlform.js"></script>
 
 <script src="<?php echo get_template_directory_uri(); ?>/app/scripts/main.js"></script>
 

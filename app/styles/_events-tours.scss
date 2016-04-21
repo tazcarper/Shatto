@@ -18,17 +18,30 @@
     }
   }
   .hero {
-    background: url('../images/tours-hero-bg.jpg') 50% 0 no-repeat;
     background-size: auto 385px;
     color: $white;
     height: 385px;
     min-height: auto;
-
+    @include MQ(M) {
+      background:none;
+    }
+    @include MQ(maxM) {
+     background:none;
+     video {
+      display:none;
+     }
+    }
     h1 {
       text-align: center;
       padding-top: 175px;
       text-transform: uppercase;
+      @include MQ(maxM) {
+        color: black;
+        padding-top: 15px;
+
+      }
     }
+    height: auto;
     @media (min-width:$screen-sm-min) {
       background-size: auto 658px;
       height: 658px;
@@ -68,7 +81,10 @@
         margin-bottom: 35px;
       }
       p {
-        padding: 0 15%;
+        
+        @include MQ(M){
+          padding: 0 15%;
+        }
       }
     }
     .leftPod {
@@ -80,7 +96,9 @@
         margin-bottom: 35px;
       }
       p {
-        padding: 0 15%;
+       @include MQ(M){
+          padding: 0 15%;
+        }
       }
     }
   }
