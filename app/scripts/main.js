@@ -343,8 +343,74 @@
 
       }
       // Events page - Grid init
-      if ($('.og-grid')[0]) {
-        Grid.init();
+      
+
+
+      var eventTours = $('.events-tours');
+      if (eventTours[0]){
+       
+        $('.scheduleOverlay').stick_in_parent({
+         'offset_top': 60,
+         'parent' : eventTours
+        });
+
+
+        $('.gallerySlider').slick({
+          dots: false,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          centerMode: true,
+          variableWidth: true,
+          prevArrow: $('.left'),
+          nextArrow: $('.right'),
+          slide: '.slide',
+           focusOnSelect: true
+        });
+
+        // $('.gallery').on('click', '.slide', function(e){
+        //   console.log($(this).find('img'));
+        // })
+         var popUp = $('.popUp'),
+        grownElements = $('.slick-track, .galleryButtons'),
+        bigImageEl = $('.popUp .bigImage'),
+        popUpDesc = $('.popUp .description');
+
+        $('.slide').on('click', function(e){
+          e.preventDefault();
+          var largeImage = $(this).attr('data-largeImage'),
+          description = $(this).attr('data-desc');
+          bigImageEl.find('img').attr('src', largeImage);
+          popUpDesc.html('').html(description);
+
+          togglePopUp();
+        })
+        $('.popUp').on('click', '.closePopUP', function(e){
+          togglePopUp();
+        });
+
+
+        $('.gallerySlider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+
+          console.log(slick['$slides'][nextSlide]);
+          var nextImage = $(slick['$slides'][nextSlide]).attr('data-largeImage');
+          console.log(nextImage);
+          bigImageEl.find('img').attr('src', nextImage);
+        });
+
+       
+        togglePopUp = function(){
+          if (popUp.hasClass('shown')){
+            popUp.removeClass('shown');
+            grownElements.removeClass('grown');
+          }
+          else {
+
+            popUp.addClass('shown');
+            grownElements.addClass('grown');
+
+          }
+        }
       }
 
       // Contact

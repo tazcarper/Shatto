@@ -35,7 +35,7 @@ gulp.task('scripts', () => {
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe($.babel({
-      compact: false
+      compact: true
     }))
     .pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest('.tmp/scripts'))
@@ -60,10 +60,18 @@ function lint(files, options) {
 const testLintOptions = {
   env: {
     mocha: true
+  },
+  rules : {
+    'comma-spacing' : 0,
+    'semi-spacing': 0,
+    'space-infix-ops' : 0,
+    'camelcase' : 0,
+    'key-spacing' : 0
+
   }
 };
 
-gulp.task('lint', lint('app/scripts/**/*.js'));
+gulp.task('lint', lint('dist/scripts/**/*.js', testLintOptions));
 gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
 gulp.task('html', ['views', 'styles', 'scripts'], () => {
@@ -203,7 +211,7 @@ gulp.task('serve:php', function() {
 
   gulp.watch('app/**/*.html', ['views', reload]);
   gulp.watch('**/*.php', reload);
-  gulp.watch('app/images/**/*', ['imageCopy', reload]);
+  gulp.watch('app/images/**/*', ['imageCopy']);
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/scripts/**/*.js', ['scripts']);
   gulp.watch('app/fonts/**/*', ['fonts']);
@@ -244,7 +252,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app/layouts'));
 });
 
-gulp.task('build', ['html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['html', 'lint', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({
     title: 'build',
     gzip: true

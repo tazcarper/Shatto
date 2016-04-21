@@ -1,0 +1,29 @@
+extends layouts/default
+block vars
+	- var contact = true
+block content
+	section.container-fluid.mainContent.hero.contact
+		.container
+			.row
+				.col-lg-8.col-lg-offset-4.col-md-10.col-md-offset-2.formBG
+					form#nl-form.contactForm
+						.innerForm
+							p Dear Shatto,
+							p My name is
+								input(type="text", placeholder="________", value="").name#name
+								|<span>&nbsp;</span>and I wanted to send you a note about
+								select
+									option(value="1", selected) one of your products.
+									option(value="2" ) touring the farm.
+									option(value="3" ) a question I had.
+									option(value="4" ) something random.
+							p More specifically,&nbsp;
+								input(type="text", placeholder="___________________________________________________", value="").message
+							p Email me back at&nbsp;<br/>
+								input(type="email", placeholder="________________", value="").email
+							p Thanks for your time!
+							.submit.btn.invert SEND
+							.formOverlay
+						.sentSuccess
+							h1 We got your message.
+							h3 We'll be in touch!

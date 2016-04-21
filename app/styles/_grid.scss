@@ -57,6 +57,8 @@ $white: #fff;
 			@extend %grid1;
 			img {
 				@extend %grid1;
+				max-height: 250px;
+				width:auto;
 			}
 		}
 		&.og-expanded > a::after {

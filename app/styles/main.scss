@@ -13,7 +13,7 @@ $icon-font-path: '../fonts/';
 @import "_404.scss";
 @import "_faq.scss";
 @import "_products.scss";
-@import "_grid.scss";
+@import "_slider.scss";
 @import "_events-tours.scss";
 @import "_contact.scss";
 @import "_history.scss";
@@ -142,6 +142,11 @@ p a {
   .text-lg-justify {
     text-align: justify;
   }
+}
+
+.noPadding {
+  padding-left: 0;
+  padding-right: 0;
 }
 // Main
 main {
