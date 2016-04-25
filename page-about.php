@@ -9,14 +9,16 @@
         </div>
       </div>
     </section>
+
     <section class="container-fluid shattoStory">
-      <div class="container">
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-8 col-md-offset-2">
             <?php the_field('intro_copy'); ?>
           </div>
         </div>
         <div class="row pods">
+          <div class="col-md-10 col-md-offset-1">
+          <div class="row">
           <div class="col-md-3"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/no-rbst.png" class="center-block">
             <h4 class="center"><?php the_field('intro_column_1_title'); ?></h4>
             <p class="center"><?php the_field('intro_column_1_copy'); ?></p>
@@ -30,25 +32,27 @@
             <p class="center"><?php the_field('intro_column_3_copy'); ?></p>
           </div>
           <div class="col-md-3"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/clean-bottle.png" class="center-block">
-            <h4 class="center pad2"><?php the_field('intro_column_4_title'); ?></h4>
+            <h4 class="center "><?php the_field('intro_column_4_title'); ?></h4>
             <p class="center"><?php the_field('intro_column_4_copy'); ?></p>
           </div>
+          </div>
+        </div>
         </div>
         <div class="row">
           <div class="col-xs-12">
             <p class="small center"><i></i></p>
           </div>
         </div>
-      </div>
+     
     </section>
-    <section class="container-fluid scheduleTour"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/tours-mobile.jpg" class="mobile visible-xs">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6 col-sm-offset-6">
+    <section class="container-fluid scheduleTour viveVideo noPadding"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/tours-mobile.jpg" class="mobile visible-xs">
+     
+        <div class="row ">
+          <div class="col-sm-7 col-sm-offset-5 col-md-5 col-md-offset-6">
             <?php the_field('tours_copy'); ?>
             <a href="#" class="btn invert center">Schedule a tour</a>
           </div>
-        </div>
+        
       </div>
     </section>
     <section class="container-fluid findUs">

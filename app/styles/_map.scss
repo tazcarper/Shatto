@@ -45,6 +45,8 @@
 	width: 100%;
 	float: left;
 	height: 600px;
+	min-height: 600px;
+	height: 80vh;
 	@include MQ(maxM) {
 		height: 300px !important;
 	}

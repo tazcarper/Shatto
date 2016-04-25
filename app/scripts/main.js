@@ -121,12 +121,7 @@
       widthHandler(widthMatch);
 
       // browser check
-      outdatedBrowser({
-        bgColor: '#f25648',
-        color: '#ffffff',
-        lowerThan: 'transform',
-        languagePath: 'your_path/outdatedbrowser/lang/en.html'
-      })
+      
 
       // header scroll
       window.addEventListener('scroll', function(e) {
@@ -342,17 +337,48 @@
         })
 
       }
-      // Events page - Grid init
-      
 
+
+
+      if ($('.about')[0]){
+
+        var podAnim = $('.shattoStory .pods').waypoint(function(direction) {
+
+
+            if (direction === 'down') {
+              if (!$(this.element).hasClass('visible')) {
+                $(this.element).addClass('visible');                
+              }
+            }
+          }, {
+            offset: '325'
+          });
+
+        $('.viveVideo').vide({
+          mp4: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/bottlingWeb.mp4',
+          webm: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/bottlingWeb.webm',
+          ogv: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/bottlingWeb.ogv'
+        }, {
+        posterType: 'none',
+        autoplay: true,
+        position: '50% 50%',
+        volume: 1,
+        loop:true,
+        resizing: true
+        });
+      }
+
+
+
+      // Events page - Grid init
 
       var eventTours = $('.events-tours');
       if (eventTours[0]){
 
         $('.viveVideo').vide({
-          mp4: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/feedingBarn.mp4',
-          webm: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/feedingBarn.webm',
-          ogv: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/feedingBarn.ogv'
+          mp4: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/feedingBarn2.mp4',
+          webm: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/feedingBarn2.webm',
+          ogv: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/feedingBarn2.ogv'
         }, {
         posterType: 'none',
         autoplay: true,
@@ -378,7 +404,7 @@
           prevArrow: $('.left'),
           nextArrow: $('.right'),
           slide: '.slide',
-           focusOnSelect: true
+          focusOnSelect: true
         });
 
         // $('.gallery').on('click', '.slide', function(e){

@@ -17,7 +17,8 @@ h1 {
 }
 
 section.shattoStory {
-  padding: 2em 0 0;
+  padding-top: 2em;
+  padding-bottom: 2em;
 
   h4 {
     color: $blue;
@@ -36,7 +37,28 @@ section.shattoStory {
   }
 
   .pods {
-    margin-top: 2em;
+    margin-top: 3em;
+    opacity: 0;
+    
+    @include MQ(M) {
+      display: table;
+    vertical-align: top;
+    }
+    .col-md-3 {
+      
+      @include MQ(M){
+        display: table-cell;
+      height: 100%;
+      float: none;
+       border-right: 1px solid $lightGrey;
+      border-bottom: none;
+      }
+    }
+    @include transition(all .15s ease-out);
+    &.visible {
+      opacity: 1;
+
+    }
   }
 
   .col-md-3:last-of-type {
@@ -48,10 +70,7 @@ section.shattoStory {
   }
 
   @media (min-width:$screen-md-min) {
-    .col-md-3 {
-      border-right: 1px solid $lightGrey;
-      border-bottom: none;
-    }
+   
 
     .col-md-3:last-of-type {
       border: none;
@@ -60,15 +79,23 @@ section.shattoStory {
 }
 
 section.scheduleTour {
-  background: $white url('../images/tours2-bg-placeholder.jpg') center top no-repeat;
- background-size:cover;
   color: $black;
-  padding: 2em 0;
   
   text-align: center;
-  min-height:  693px;
+  // min-height:  693px;
+  .row {
+    padding: 4.5em 15px 4.5em 15px;
+    @include linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.95) 60%);
+    @include MQ(maxM) {
+      background:white;
+      padding: 1em 0 3em 0;
+    }
+  }
   @include MQ(maxM) {
     background:white;
+  }
+  @include MQ(maxML) {
+    @include linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.95) 55%);
   }
   h5 {
     margin-bottom: 25px;
@@ -85,9 +112,14 @@ section.scheduleTour {
       margin-top: 25px;
     }
   }
+  img {
+    max-width:480px;
+    margin:0 auto;
+  }
   .mobile {
     width:100%;
   }
+  
 }
 
 section.findUs {

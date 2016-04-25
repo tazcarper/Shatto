@@ -96,7 +96,7 @@
         margin-bottom: 35px;
       }
       p {
-       @include MQ(M){
+       @include MQ(M) {
           padding: 0 15%;
         }
       }
