@@ -50,21 +50,39 @@ $overlayDelay: .35s;
 	.row {
 		position: relative;
 	}
+	.overflow {
+		overflow:visible;
+	}
 	.overlay-close {
 		opacity: 0;
 		-webkit-transition: opacity 0.3s 0.5s;
 		transition: opacity 0.3s 0.5s;
 	}
-	#overlay_image {
-		position:absolute;
-		left:-25px;
+	.productShot {
+		text-align: center;
+		position: relative;
+		//left:10%;
 		top:50px;
-		width:55%;
+	}
+	#overlay_image {
+		// position:absolute;
+		// left:-25px;
+		// top:50px;
+		width:auto;
+		height: auto;
+
+		//max-height: 400px;
 		@include MQ(maxM) {
 			display: none;
 		}
 		&.half-gallon {
 			max-width:600px;
+			position: relative;
+			left:-50px;
+		}
+		&.Quart {
+			max-width:500px;
+			position: relative;
 		}
 		&.missing {
 			max-width:300px;

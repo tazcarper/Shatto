@@ -94,6 +94,220 @@
           },
           "image": "/half-gallons/final/large/ShattoMilk_HalfGallon_1Percent.png",
           "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        },
+        
+        "HG_twoPercent": {
+          "title": "2%",
+          "category": "half-gallon",
+          "sizes": {
+            'half-gallon': 8,
+            'quart': 4,
+            'pint': 2
+          },
+          "image": "/half-gallons/final/large/ShattoMilk_HalfGallon_2Percent.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        },
+        
+        "HG_whole": {
+          "title": "Whole",
+          "category": "half-gallon",
+          "sizes": {
+            'half-gallon': 8,
+            'quart': 4,
+            'pint': 2
+          },
+          "image": "/half-gallons/final/large/ShattoMilk_HalfGallon_Whole.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        },
+        "pint_half": {
+          "title": "Half-Half",
+          "category": "pint",
+          "sizes": {
+            'pint': 2
+          },
+          "image": "/pints/final/large/Half.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        },
+        
+        "pint_cream": {
+          "title": "Whole Cream",
+          "category": "pint",
+          "sizes": {
+            'pint': 2
+          },
+          "image": "/pints/final/large/Whole.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        },
+        // flavor
+        "chocolate": {
+          "title": "Chocolate",
+          "category": "Quart",
+          "sizes": {
+            'quart': 4,
+          },
+          "image": "/milkFlavored/final/large/ShattoMilk_Quart_ChocolateMilk.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        }
+        ,
+        "strawberry": {
+          "title": "Strawberry",
+          "category": "Quart",
+          "sizes": {
+            'quart': 4,
+          },
+          "image": "/milkFlavored/final/large/ShattoMilk_Quart_StrawberryMilk.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        }
+        ,
+        "cookies_N_Cream": {
+          "title": "Cookies & Cream",
+          "category": "Quart",
+          "sizes": {
+            'quart': 4,
+          },
+          "image": "/milkFlavored/final/large/ShattoMilk_Quart_CookiesNCreamMilk.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        }
+        ,
+        "banana": {
+          "title": "Banana Milk",
+          "category": "Quart",
+          "sizes": {
+            'quart': 4,
+          },
+          "image": "/milkFlavored/final/large/ShattoMilk_Quart_BananaMilk.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        }
+        ,
+        "cottonCandy": {
+          "title": "Cotton Candy Milk",
+          "category": "Quart",
+          "sizes": {
+           'quart': 4,
+          },
+          "image": "/milkFlavored/final/large/ShattoMilk_Quart_CottonCandyMilk.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        }
+        ,
+        "coffee": {
+          "title": "Coffe Milk",
+          "category": "Quart",
+          "sizes": {
+            'quart': 4,
+          },
+          "image": "/milkFlavored/final/large/ShattoMilk_Quart_CoffeeMilk.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        }
+        ,
+        "eggNog": {
+          "title": "Egg Nog Milk",
+          "category": "Quart",
+          "sizes": {
+            'quart': 4,
+          },
+          "image": "/milkFlavored/final/large/ShattoMilk_Quart_EggNog.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        }
+        ,
+        "rootBeer": {
+          "title": "Root Beer Milk",
+          "category": "Quart",
+          "sizes": {
+            'quart': 4,
+          },
+          "image": "/milkFlavored/final/large/ShattoMilk_Quart_RootBeerMilk.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        }
+        ,
+        "pumpkinSpiceEggNog": {
+          "title": "Pumpkin Spce Egg Nog Milk",
+          "category": "Quart",
+          "sizes": {
+            'quart': 4,
+          },
+          "image": "/milkFlavored/final/large/ShattoMilk_Quart_PumpkinSpiceEggNog.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        }
+        // Ice Cream
+        ,
+        "strawberry_iceCream": {
+          "title": "Strawberry Ice Cream",
+          "category": "Pint",
+          "sizes": {
+            'pint': 2
+          },
+          "image": "/icecream-pints/final/large/ShattoMilk_IceCream_Pint_Strawberry.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        }
+        ,
+        "vanilla_iceCream": {
+          "title": "Vanilla Ice Cream",
+          "category": "Pint",
+          "sizes": {
+            'pint': 2
+          },
+          "image": "/icecream-pints/final/large/ShattoMilk_IceCream_Pint_Vanilla.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        }
+        ,
+        "chocolate_iceCream": {
+          "title": "Chocolate Ice Cream",
+          "category": "Pint",
+          "sizes": {
+            'pint': 2
+          },
+          "image": "/icecream-pints/final/large/ShattoMilk_IceCream_Pint_Chocolate.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        }
+        ,
+        "caramelSeaSalt_iceCream": {
+          "title": "Caramel Sea Salt Ice Cream",
+          "category": "Pint",
+          "sizes": {
+            'pint': 2
+          },
+          "image": "/icecream-pints/final/large/ShattoMilk_IceCream_Pint_CaramelSeaSalt.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        }
+        ,
+        "oatmealRaisin": {
+          "title": "Oatmeal Raisin",
+          "category": "bar",
+          "sizes": {
+            'pint': 2
+          },
+          "image": "/icecream-bars/final/large/ShattoMilk_IceCream_Sammich_OatmealRaisinCaramelSeaSalt.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        }
+        ,
+        "sugarCookie": {
+          "title": "Sugar Cookie Strawberry",
+          "category": "bar",
+          "sizes": {
+            'pint': 2
+          },
+          "image": "/icecream-bars/final/large/ShattoMilk_IceCream_Sammich_SugarCookieStrawberry.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        }
+        ,
+        "chocolateChip_icecreamBar": {
+          "title": "Chocolate Chip Vanilla",
+          "category": "bar",
+          "sizes": {
+            'pint': 2
+          },
+          "image": "/icecream-bars/final/large/ShattoMilk_IceCream_Sammich_ChocChipVanilla.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        }
+        ,
+        "brownie": {
+          "title": "Brownie Choclate",
+          "category": "bar",
+          "sizes": {
+            'pint': 2
+          },
+          "image": "/icecream-bars/final/large/ShattoMilk_IceCream_Sammich_BrownieChocolate.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
         }
 
       }

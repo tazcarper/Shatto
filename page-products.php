@@ -107,6 +107,7 @@
     </div>
     <div class="row">
       <div class="col-md-12 productImages">
+
         <div data-product="chocolate" class="product trigger text-center chocolate"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/milkFlavored/Chocolate.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/products/milkFlavored/Chocolate.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/products/milkFlavored/Chocolate_2x.png 2x" class="main">
           <div class="bottleShadow"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/shadow.png"></div>
           <div class="productName">
@@ -187,14 +188,14 @@
     </div>
     <div class="row">
       <div class="col-md-12 productImages">
-        <div data-product="Strawberry" class="product trigger text-center strawberryIceCream"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/Strawberry.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/Strawberry.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/Strawberry_2x.png 2x" class="main">
+        <div data-product="strawberry_iceCream" class="product trigger text-center strawberryIceCream"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/Strawberry.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/Strawberry.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/Strawberry_2x.png 2x" class="main">
           <div class="bottleShadow iceCream"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/shadow.png"></div>
           <div class="productName">
             <h5>Strawberry</h5>
             <p class="factsLabel">Nutrition Facts </p>
           </div>
         </div>
-        <div data-product="Vanilla" class="product trigger text-center vanilla"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/Vanilla.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/Vanilla.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/Vanilla_2x.png 2x" class="main">
+        <div data-product="vanilla_iceCream" class="product trigger text-center vanilla"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/Vanilla.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/Vanilla.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/Vanilla_2x.png 2x" class="main">
           <div class="bottleShadow iceCream"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/shadow.png"></div>
           <div class="productName">
             <h5>Vanilla</h5>
@@ -202,14 +203,14 @@
           </div>
         </div>
         
-        <div data-product="Chocolate" class="product trigger text-center chocolateIceCream"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/Chocolate.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/Chocolate.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/Chocolate.png 2x" class="main">
+        <div data-product="chocolate_iceCream" class="product trigger text-center chocolateIceCream"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/Chocolate.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/Chocolate.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/Chocolate.png 2x" class="main">
           <div class="bottleShadow iceCream"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/shadow.png"></div>
           <div class="productName">
             <h5>Chocolate</h5>
             <p class="factsLabel">Nutrition Facts </p>
           </div>
         </div>
-        <div data-product="CaramelSeaSalt" class="product trigger text-center caramelSeaSalt"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/CaramelSeaSalt.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/CaramelSeaSalt.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/CaramelSeaSalt.png 2x" class="main">
+        <div data-product="caramelSeaSalt_iceCream" class="product trigger text-center caramelSeaSalt"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/CaramelSeaSalt.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/CaramelSeaSalt.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/CaramelSeaSalt.png 2x" class="main">
           <div class="bottleShadow iceCream"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/shadow.png"></div>
           <div class="productName">
             <h5>Caramel Sea Salt</h5>
@@ -235,14 +236,14 @@
             <p class="factsLabel">Nutrition Facts </p>
           </div>
         </div>
-        <div data-product="ChocolateChip" class="product trigger text-center bar chocolateChip"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-bars/ChocolateChip.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-bars/ChocolateChip.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-bars/ChocolateChip_2x.png 2x" class="main">
+        <div data-product="chocolateChip_icecreamBar" class="product trigger text-center bar chocolateChip"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-bars/ChocolateChip.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-bars/ChocolateChip.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-bars/ChocolateChip_2x.png 2x" class="main">
           <div class="bottleShadow iceCreamBar"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/shadow.png"></div>
           <div class="productName">
             <h5>Chocolate chip cookie and vanilla ice cream</h5>
             <p class="factsLabel">Nutrition Facts </p>
           </div>
         </div>
-        <div data-product="Brownie" class="product trigger text-center bar brownie"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-bars/Brownie.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-bars/Brownie.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-bars/Brownie_2x.png 2x" class="main">
+        <div data-product="brownie" class="product trigger text-center bar brownie"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-bars/Brownie.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-bars/Brownie.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-bars/Brownie_2x.png 2x" class="main">
           <div class="bottleShadow iceCreamBar"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/shadow.png"></div>
           <div class="productName">
             <h5>Chocolate brownie and vanilla ice cream</h5>
@@ -438,10 +439,11 @@
     <div class="overlay-close">X</div>
     <div class=" container">
       <div class="row">
-        <img src="" alt="" id="overlay_image">
-        <div class="col-sm-5">
+
+        
+        <div class="col-sm-5 overflow">
           <div class="productShot">
-            
+            <img src="" alt="" id="overlay_image">
           </div>
         </div>
         <div class="col-sm-7 ">

@@ -1,3 +1,16 @@
+section.bottleDetail {
+  p {
+    font-size:20px;
+    font-size:1.3vw;
+    @include MQ(maxL){
+      font-size:1.8vw;
+    }
+    @include MQ(maxML) {
+      font-size:2.3vw;
+    }
+  }
+}
+
 section.products {
   background: $white;
   color: $black;
