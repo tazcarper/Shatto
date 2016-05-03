@@ -1,61 +1,4 @@
-/**
- * jQuery Unveil
- * A very lightweight jQuery plugin to lazy load images
- * http://luis-almeida.github.com/unveil
- *
- * Licensed under the MIT license.
- * Copyright 2013 Luís Almeida
- * https://github.com/luis-almeida
- */
 
-(function($) {
-
-  $.fn.unveil = function(threshold, callback) {
-
-    var $w = $(window),
-      th = threshold || 0,
-      retina = window.devicePixelRatio > 1,
-      attrib = retina ? "data-src-retina" : "data-src",
-      images = this,
-      loaded;
-
-    this.one("unveil", function() {
-      var source = this.getAttribute(attrib);
-      source = source || this.getAttribute("data-src");
-      if (source) {
-        this.setAttribute("src", source);
-        if (typeof callback === "function") callback.call(this);
-      }
-    });
-
-    function unveil() {
-      var inview = images.filter(function() {
-        var $e = $(this);
-        if ($e.is(":hidden")) return;
-
-        var wt = $w.scrollTop(),
-          wb = wt + $w.height(),
-          et = $e.offset().top,
-          eb = et + $e.height();
-
-        return eb >= wt - th && et <= wb + th;
-      });
-
-      loaded = inview.trigger("unveil");
-      images = images.not(loaded);
-    }
-
-    $w.on("scroll.unveil resize.unveil lookup.unveil", unveil);
-
-    unveil();
-
-    return this;
-
-  };
-
-
-
-})(window.jQuery || window.Zepto);
 
 (function(library) {
     // Calls the second IIFE and locally passes in the global jQuery, window, and document objects
@@ -317,7 +260,7 @@
     // on ready
     $(function() {
 
-
+     
 
       var maxHeight = 0,
         halfHeight = 0;
@@ -538,7 +481,8 @@
             rotateBack();
             //$('#mainBottle').wrap('<a href="/products.html#milk"></a>');
             $('.product').each(function(e) {
-              $(this).addClass('productShown')
+              $(this).addClass('productShown');
+
             })
           } else {
             // $('#mainBottle').css({'max-width':'250px'});
@@ -568,6 +512,7 @@
             offset: '325'
           });
 
+        if (Modernizr.mq('(min-width: 767px)')) {
         $('.viveVideo').vide({
           mp4: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/bottlingWeb.mp4',
           webm: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/bottlingWeb.webm',
@@ -581,6 +526,7 @@
         resizing: true
         });
       }
+      }
 
 
 
@@ -588,7 +534,7 @@
 
       var eventTours = $('.events-tours');
       if (eventTours[0]){
-
+        if (Modernizr.mq('(min-width: 767px)')) {
         $('.viveVideo').vide({
           mp4: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/feedingBarn2.mp4',
           webm: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/feedingBarn2.webm',
@@ -601,7 +547,7 @@
         loop:true,
         resizing: true
         });
-       
+       }
         $('.scheduleOverlay').stick_in_parent({
          'offset_top': 60,
          'parent' : eventTours
@@ -763,6 +709,8 @@
       // Product Page Animation
       if ($('.productPage')[0]) {
 
+
+
         var time = 0;
         var cap = $('.cap');
         cap.each(function(i, v) {
@@ -901,82 +849,88 @@
         $(window).load(function() {
           var waypointOffset = 200;
 
-          var milk = $('#milk').waypoint(function(direction) {
+          // var milk = $('#milk').waypoint(function(direction) {
+
+          //   if (direction === 'down') {
+          //     if (!$(this.element).hasClass('visible')) {
+          //       $(this.element).addClass('visible');
+          //       $(this.element).find('.product').addClass('reveal');
+
+          //       // console.log(this.element.id)
+          //       // console.log(setSectionHeight(this.element));
+          //       // $(this.element).find('.productImages').height(setSectionHeight(this.element));
+          //     }
+          //   }
+          // }, {
+          //   offset: waypointOffset
+          // });
+          // var flavoredMilk = $('#flavoredMilk').waypoint(function(direction) {
+
+          //   if (direction === 'down') {
+          //     if (!$(this.element).hasClass('visible')) {
+          //       $(this.element).addClass('visible');
+          //       $(this.element).find('.product').addClass('reveal');
+          //       // console.log(this.element.id);
+          //       // $(this.element).find('.productImages').height(setSectionHeight(this.element));
+          //     }
+          //   }
+          // }, {
+          //   offset: '250'
+          // });
+          // var iceCream = $('#iceCream').waypoint(function(direction) {
+
+          //   if (direction === 'down') {
+          //     if (!$(this.element).hasClass('visible')) {
+          //       $(this.element).addClass('visible');
+          //       $(this.element).find('.product').addClass('reveal');
+          //       // console.log(this.element.id);
+          //       // $(this.element).find('.productImages').height(setSectionHeight(this.element));
+          //     }
+          //   }
+          // }, {
+          //   offset: waypointOffset
+          // });
+          // var cheese = $('#cheese').waypoint(function(direction) {
+
+
+          //   if (direction === 'down') {
+          //     if (!$(this.element).hasClass('visible')) {
+          //       $(this.element).addClass('visible');
+          //       $(this.element).find('.product').addClass('reveal');
+          //       // console.log(this.element.id);
+          //       // $(this.element).find('.productImages').height(setSectionHeight(this.element));
+          //     }
+          //   }
+          // }, {
+          //   offset: waypointOffset
+          // });
+          // var butter = $('#butter').waypoint(function(direction) {
+
+
+          //   if (direction === 'down') {
+          //     if (!$(this.element).hasClass('visible')) {
+          //       $(this.element).addClass('visible');
+          //       $(this.element).find('.product').addClass('reveal');
+          //       // console.log(this.element.id);
+          //       // $(this.element).find('.productImages').height(setSectionHeight(this.element));
+          //     }
+          //   }
+          // }, {
+          //   offset: waypointOffset
+          // });
+
+          var productsToShow = $('section.productSection').waypoint(function(direction) {
+
 
             if (direction === 'down') {
+              console.log('show section');
               if (!$(this.element).hasClass('visible')) {
                 $(this.element).addClass('visible');
                 $(this.element).find('.product').addClass('reveal');
-                // console.log(this.element.id)
-                // console.log(setSectionHeight(this.element));
-                // $(this.element).find('.productImages').height(setSectionHeight(this.element));
-              }
-            }
-          }, {
-            offset: waypointOffset
-          });
-          var flavoredMilk = $('#flavoredMilk').waypoint(function(direction) {
-
-            if (direction === 'down') {
-              if (!$(this.element).hasClass('visible')) {
-                $(this.element).addClass('visible');
-                $(this.element).find('.product').addClass('reveal');
-                // console.log(this.element.id);
-                // $(this.element).find('.productImages').height(setSectionHeight(this.element));
-              }
-            }
-          }, {
-            offset: '250'
-          });
-          var iceCream = $('#iceCream').waypoint(function(direction) {
-
-            if (direction === 'down') {
-              if (!$(this.element).hasClass('visible')) {
-                $(this.element).addClass('visible');
-                $(this.element).find('.product').addClass('reveal');
-                // console.log(this.element.id);
-                // $(this.element).find('.productImages').height(setSectionHeight(this.element));
-              }
-            }
-          }, {
-            offset: waypointOffset
-          });
-          var cheese = $('#cheese').waypoint(function(direction) {
-
-
-            if (direction === 'down') {
-              if (!$(this.element).hasClass('visible')) {
-                $(this.element).addClass('visible');
-                $(this.element).find('.product').addClass('reveal');
-                // console.log(this.element.id);
-                // $(this.element).find('.productImages').height(setSectionHeight(this.element));
-              }
-            }
-          }, {
-            offset: waypointOffset
-          });
-          var butter = $('#butter').waypoint(function(direction) {
-
-
-            if (direction === 'down') {
-              if (!$(this.element).hasClass('visible')) {
-                $(this.element).addClass('visible');
-                $(this.element).find('.product').addClass('reveal');
-                // console.log(this.element.id);
-                // $(this.element).find('.productImages').height(setSectionHeight(this.element));
-              }
-            }
-          }, {
-            offset: waypointOffset
-          });
-
-          var nonDairy = $('#nonDairy').waypoint(function(direction) {
-
-
-            if (direction === 'down') {
-              if (!$(this.element).hasClass('visible')) {
-                $(this.element).addClass('visible');
-                $(this.element).find('.product').addClass('reveal');
+                var theImg = $(this.element).find('.product').find('img.main');
+                     theImg.unveil(1, function(){
+                  console.log('load img');
+                });
                 // console.log(this.element.id);
                 // $(this.element).find('.productImages').height(setSectionHeight(this.element));
               }

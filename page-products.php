@@ -15,8 +15,15 @@
       <div class="cap blueCap"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/blue_cap.png"></div>
       <div class="cap brownCap visible-lg"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/brown_cap.png"></div>
     </div>
-    <div class="row">
+    <div class="row hidden-xs">
       <div class="col-md-12 text-center logo"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/shatto.svg" class="productLogo"></div>
+    </div>
+  </div>
+  <div class="row visible-xs">
+    <div class="col-xs-10 center-block">
+      <h2 class="visible-xs text-center">NEED A HEADLINE</h2>
+  <p class="visible-xs text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac tortor dolor. Phasellus cursus lacus ut mi tristique, non condimentum felis pretium. Suspendisse tempus leo sodales orci pulvinar, ac pellentesque est eleifend. Sed elementum orci lacus, in pellentesque dolor ultricie. </p>
+  <div class="mobileHeroImg"></div>
     </div>
   </div>
   
@@ -400,28 +407,28 @@
       </div>
       <div class="row">
         <div class="col-md-12 productImages">
-          <div data-product="unsweetenedTea" class="product trigger text-center unsweetenedTea"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/juices/SweetTea.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/products/juices/SweetTea.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/products/juices/SweetTea_2x.png 2x" class="main">
+          <div data-product="unsweetenedTea" class="product trigger text-center unsweetenedTea"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/missingImage" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/products/juices/SweetTea.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/products/juices/SweetTea_2x.png 2x" class="main">
             <div class="bottleShadow"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/butter/shadow.png"></div>
             <div class="productName">
               <h5>UNSWEETENED TEA</h5>
               <p class="factsLabel">Nutrition Facts</p>
             </div>
           </div>
-          <div data-product="fruitPunch" class="product trigger text-center fruitPunch"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/juices/FruitPunch.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/products/juices/FruitPunch.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/products/juices/FruitPunch_2x.png 2x" class="main">
+          <div data-product="fruitPunch" class="product trigger text-center fruitPunch"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/missingImage" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/products/juices/FruitPunch.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/products/juices/FruitPunch_2x.png 2x" class="main">
             <div class="bottleShadow"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/butter/shadow.png"></div>
             <div class="productName">
               <h5>FRUIT PUNCH</h5>
               <p class="factsLabel">Nutrition Facts </p>
             </div>
           </div>
-          <div data-product="lemonade" class="product trigger text-center lemonade"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/juices/Lemonade.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/products/juices/Lemonade.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/products/juices/Lemonade_2x.png 2x" class="main">
+          <div data-product="lemonade" class="product trigger text-center lemonade"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/missingImage" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/products/juices/Lemonade.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/products/juices/Lemonade_2x.png 2x" class="main">
             <div class="bottleShadow"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/butter/shadow.png"></div>
             <div class="productName">
               <h5>Lemonade</h5>
               <p class="factsLabel">Nutrition Facts </p>
             </div>
           </div>
-          <div data-product="orangeDrink" class="product trigger text-center orangeDrink"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/juices/OrangeDrink.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/products/juices/OrangeDrink.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/products/juices/OrangeDrink_2x.png 2x" class="main">
+          <div data-product="orangeDrink" class="product trigger text-center orangeDrink"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/missingImage.png" data-src="<?php echo get_template_directory_uri(); ?>/dist/images/products/juices/OrangeDrink.png" data-src-retina="<?php echo get_template_directory_uri(); ?>/dist/images/products/juices/OrangeDrink_2x.png"  class="main">
             <div class="bottleShadow"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/butter/shadow.png"></div>
             <div class="productName">
               <h5>Orange Drink</h5>

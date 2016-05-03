@@ -20,6 +20,14 @@
         loaded;
 
     this.one("unveil", function() {
+     
+      var regImg = $('img.main').attr('srcset').substring(0, $('img.main').attr('srcset').indexOf(','));
+      
+      regImg = regImg.substring(0, regImg.indexOf(' 1x'));
+
+      var retinaImg = $('img.main').attr('srcset').substring($('img.main').attr('srcset').indexOf(', ') + 2, $('img.main').attr('srcset').length);
+      retinaImg = retinaImg.substring(0, retinaImg.indexOf(' 2x'));
+      
       var source = this.getAttribute(attrib);
       source = source || this.getAttribute("data-src");
       if (source) {

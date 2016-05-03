@@ -17,16 +17,26 @@
       font-size: 2.2em;
     }
   }
+  
   .hero {
     background-size: auto 385px;
     color: $white;
-    height: 385px;
+    height: auto;
     min-height: auto;
+    &.viveVideo {
+      @include MQ(maxM) {
+        height:auto;
+        min-height: 0 ;
+        padding-bottom: 15px;
+      }
+    }
     @include MQ(M) {
       background:none;
     }
     @include MQ(maxM) {
      background:none;
+     height: auto;
+     min-height: auto;
      video {
       display:none;
      }
@@ -41,16 +51,17 @@
 
       }
     }
-    height: auto;
+    
     @media (min-width:$screen-sm-min) {
-      background-size: auto 658px;
-      height: 658px;
-      min-height: auto;
+     
+      height: 660px;
+      min-height: 0;
 
       h1 {
         padding-top: 400px;
       }
     }
+    
   }
   section.intro {
     padding: 2em 0;
@@ -162,8 +173,14 @@
     &.grown {
       margin-top: 150px;
     }
+    @include MQ(maxM) {
+      bottom:0;
+    }
     .left, .right {
-
+      @include MQ(maxM) {
+        bottom:-35px;
+        height: auto !important;
+      }
       &::after {
         @include transition(background-color .1s ease-out);
       }
@@ -198,6 +215,7 @@
         left:5px;
         z-index: 9;
         @include transition(left .1s ease-out);
+
       }
       &::after {
         content: '';
@@ -207,6 +225,9 @@
         position: absolute;
         top: 0;
         left:0;
+        @include MQ(maxM) {
+          display: none;
+        }
       }
     }
     .right {
@@ -234,6 +255,7 @@
         right:5px;
         z-index: 9;
         @include transition(left .1s ease-out);
+
       }
       &::after {
         content: '';
@@ -243,6 +265,9 @@
         position: absolute;
         top: 0;
         right:0;
+        @include MQ(maxM) {
+          display: none;
+        }
       }
     }
   }

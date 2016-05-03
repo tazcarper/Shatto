@@ -2,6 +2,7 @@
 
 #mobileCollapse {
 	padding-bottom: 50px;
+
 	// Mobile Category Links
 	@include MQ(maxM) {
 		//padding-bottom: 15px;
@@ -45,7 +46,8 @@
 		margin-top: 45px;
 	}
 	@include MQ(maxM) {
-		display: none;
+		//display: none;
+		margin-top: 0;
 	}
 }
 .productPage {
@@ -55,55 +57,55 @@
 .subMenu {
 	z-index: 99;
 	position: relative;
-	
 }
 .subNav {
-		position: relative;
-		top: 0px;
-		width: 100%;
-		z-index: 99;
-		top:-95px;
-		@include MQ(maxL) {
-			bottom: 75px;
-		}
-		@include MQ(maxM) {
-			bottom: 85px;
-			display: none;
-		}
-		.table {
-			display: table;
-			margin: 0 auto;
-		}
-		ul {
-			list-style: none;
-			padding: 0;
-			margin: 0;
-			text-align: center;
+	position: relative;
+	top: 0px;
+	width: 100%;
+	z-index: 99;
+	top: -95px;
 
-			li {
-				white-space: nowrap;
-				margin-right: em(4);
-				margin-left: em(4);
+	@include MQ(maxL) {
+		bottom: 75px;
+	}
+	@include MQ(maxM) {
+		bottom: 85px;
+		display: none;
+	}
+	.table {
+		display: table;
+		margin: 0 auto;
+	}
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+
+		li {
+			white-space: nowrap;
+			margin-right: em(4);
+			margin-left: em(4);
+			display: inline;
+
+			a {
+				color: white;
+				background: black;
+				font-size: 1.1em;
 				display: inline;
+				text-transform: uppercase;
+				text-decoration: none;
 
-				a {
-					color: white;
-					background: black;
-					font-size: 1.1em;
-					display: inline;
-					text-transform: uppercase;
-					text-decoration: none;
-
-					@include MQ(maxL) {
-						font-size: .85em;
-					}
-					@include MQ(maxML) {
-						font-size: .65em;
-					}
+				@include MQ(maxL) {
+					font-size: .85em;
+				}
+				@include MQ(maxML) {
+					font-size: .65em;
 				}
 			}
 		}
 	}
+}
 .productPage, .products {
 	position: relative;
 	//margin-bottom: 1.5em;
@@ -126,20 +128,41 @@
 			width: 1200px;
 		}
 	}
-
 	&.hero {
 		background: url('../images/products/woodPlank.jpg') bottom center no-repeat;
 		height: 600px;
 		padding-top: 175px;
 		position: relative;
-		min-height: auto;
+		min-height: 0;
 		padding-bottom: 0;
-		
 
 		@include MQ(maxM) {
 			background: white;
 			height: auto;
-			padding-top: em(60);
+			padding-top: em(35);
+			min-height: 0;
+
+			@include MQ(retina) {
+			}
+			p, h1 {
+				color: black;
+			}
+		}
+		.mobileHeroImg {
+			display: block;
+
+			@include MQ(maxM) {
+				background: url('../images/products/mobileHero.jpg') bottom center no-repeat;
+				width: 320px;
+				margin: 0 auto;
+				height: 300px;
+				display: block;
+				background-size: 100%;
+				@include MQ(retina) {
+					background: url('../images/products/mobileHero_2x.jpg') bottom center no-repeat;
+					background-size: 100%;
+				}
+			}
 		}
 		p {
 			margin-top: em(15);
@@ -150,7 +173,8 @@
 		}
 		.logo {
 			@include transition(all .45s ease-out .45s);
-			opacity:0;
+			opacity: 0;
+
 			&.shown {
 				opacity: 1;
 			}
@@ -308,7 +332,6 @@
 			}
 		}
 	}
-	
 	.productTitle {
 		position: relative;
 
@@ -423,14 +446,12 @@
 			}
 		}
 		&.butterShadow {
-			top:-3px;
+			top: -3px;
 		}
 		&.topButter {
-			top:-13px;
+			top: -13px;
 		}
 	}
-	
-	
 	// Visible scroll class animations
 	&.visible {
 		.lines {
@@ -441,18 +462,12 @@
 			&.home {
 				//min-height: 580px;
 
+				.productName {
+					padding: 0;
+				}
 				@include MQ(maxM) {
-					min-height: auto;
-					display: inline-block;
-					margin-bottom: 15px;
-
-					.product {
-						opacity: 1 !important;
-						float: left !important;
-						width: 50% !important;
-						max-width: none !important;
-						position: static !important;
-					}
+					margin-top: 5px;
+					margin-bottom: 25px;
 				}
 				a {
 					background: transparent !important;
@@ -460,6 +475,7 @@
 
 					@include MQ(maxM) {
 						margin-top: 0 !important;
+						margin-bottom: 0 !important;
 					}
 				}
 				@include transition(all 0s ease);
@@ -478,16 +494,17 @@
 						color: black;
 						opacity: 1;
 						max-width: none;
-						padding-bottom: 35px;
+						//padding-bottom: 35px;
+						margin-bottom: 5px;
 
 						h5 {
 							color: white;
 							background: black;
 							border-radius: 25px;
-							display: inline-block;
-							width: 95%;
-							padding: 7px 0;
+							display: block;
+							padding: 12px 10px;
 							opacity: 1;
+							font-size: 22px;
 						}
 					}
 				}
@@ -500,6 +517,16 @@
 					float: none;
 					display: inline-block;
 
+					&.productShown {
+						.productName {
+							@include transition(all, 0.35s, ease-out);
+						}
+						&:hover {
+							.productName {
+								@include transform(translate(0, -5px));
+							}
+						}
+					}
 					@include MQ(M) {
 						&.cheese {
 							left: 3%;
@@ -529,6 +556,9 @@
 							top: auto;
 							bottom: 0%;
 						}
+					}
+					@include MQ(maxM) {
+						position: static;
 					}
 				}
 			}
@@ -591,13 +621,13 @@
 				.product {
 					@include MQ(maxM) {
 						img {
-							max-width:190px;
+							max-width: 190px;
 						}
 					}
 				}
 			}
 		}
-		&#milk, &#nonDairy,  {
+		&#milk, &#nonDairy {
 			.productImages {
 				.product {
 					@include MQ(maxM) {
@@ -719,11 +749,12 @@
 			height: auto !important;
 		}
 		.productName {
-			width:80%;
-			max-width:200px;
-			min-width:125px;
+			width: 80%;
+			max-width: 200px;
+			min-width: 125px;
 			text-align: center;
-			margin:0 auto;
+			margin: 0 auto;
+
 			@include MQ(maxML) {
 				padding: 0 10%;
 			}
@@ -1499,7 +1530,6 @@
 					margin-left: -35px;
 					width: 366px * .70;
 				}
-				
 				@include MQ(maxM) {
 					width: 250px;
 					margin-top: 0;
@@ -1527,6 +1557,7 @@
 				width: 251px;
 				margin-top: 75px;
 				z-index: 3;
+
 				@include MQ(maxL) {
 					width: 251px * .85;
 					margin-left: -25px;

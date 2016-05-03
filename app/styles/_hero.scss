@@ -9,7 +9,9 @@
     text-transform: capitalize;
    
   }
-  
+  @include MQ(maxM) {
+    padding-top: 90px;
+  }
   .mobile {
   //margin-top: 25px;
   text-align: center;
@@ -39,6 +41,9 @@
     font-weight: 300;
     @media (min-width:$screen-md-min) {
       font-size: 100px;
+    }
+    @include MQ(maxM) {
+      font-size:15vw;
     }
   }
   p {

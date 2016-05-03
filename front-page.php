@@ -78,7 +78,7 @@
             </div></a>
             <a href="/products.html#flavoredMilk" class="product flavoredMilk text-center"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/home/flavored.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/home/flavored.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/home/flavored_2x.png 2x"/>
             <div class="productName">
-              <h5>Flavored Milk</h5>
+              <h5>Flavored <span class="hidden-xs">Milk</span></h5>
             </div></a><a href="/products.html#iceCream" class="product iceCream text-center"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/home/iceCream.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/home/iceCream.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/home/iceCream_2x.png 2x"/>
             <div class="productName">
               <h5>Ice Cream</h5>
@@ -100,7 +100,7 @@
             <input placeholder="ZIP Code" class="form-control"/>
             <button class="form-control btn invert">GO</button>
           </form><br class="hidden-xs"/>
-          <p class="mobile"><a href="#">Oh, just use my location. I'm not hiding.</a></p>
+          <!-- <p class="mobile"><a href="#">Oh, just use my location. I'm not hiding.</a></p> -->
         </div>
       </div>
     </div>
@@ -122,7 +122,7 @@
   <section data-speed="10" class="container-fluid tours parallax">
     <div class="container">
       <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-6">
           <h3 class="desktop"><?php the_field('tours_title'); ?></h3>
           <h3 class="mobile">Come Tour the Farm</h3>
           <?php the_field('tours_copy'); ?>

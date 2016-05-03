@@ -30,6 +30,11 @@ body, html {
   color: black;
   // height: 100%;
 }
+body {
+  @include MQ(maxM) {
+    padding-top: 70px;
+  }
+}
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -229,6 +234,7 @@ main {
     margin-bottom: 1px;
     margin-top: 1px;
     font-size: 4em;
+    line-height: .95em;
 
     @include MQ(maxML) {
       font-size: 3.3em;
@@ -398,16 +404,15 @@ img {
     a {
       background: transparent !important;
     }
-    &:hover {
-      
-        @include transform(translate3d(0, -5px, 0));
-      
-    }
+   &:hover {
+    @include transform(translate(0,-5px));
+   }
+   
     img {
       @include transform(scale(1));
 
       &.shadow {
-       opacity: 0;
+      display: none;
       }
     }
     .productName {
@@ -443,7 +448,7 @@ img {
     }
   }
   &.disableTransition {
-    @include transition(background-position 0s)
+    @include transition(background-position, 0s)
   }
   #mainBottle {
     // display: none;
@@ -453,6 +458,7 @@ img {
     background-size: 100%;
     width: 100%;
     height: 100%;
+    @include transition(background-position ,0s);
     outline:none;
     // Bottle Positions
     &.img-1 { background-position: 0 0%; background-size: 100%; }

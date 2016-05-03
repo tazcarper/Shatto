@@ -254,7 +254,9 @@ header {
       a {
         outline: none;
         display: inline-block;
-
+        @include MQ(maxM) {
+          width:100%;
+        }
         &::after {
           // display: block;
           // content: attr(title);
@@ -538,6 +540,9 @@ header {
       -webkit-transform: translate3d(0, 0, 0);
       -moz-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0);
+      @include MQ(maxM) {
+        right:0;
+      }
     }
   }
 }
