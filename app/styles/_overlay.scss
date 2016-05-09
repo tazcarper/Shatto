@@ -65,15 +65,18 @@ $overlayDelay: .35s;
 		top:50px;
 	}
 	#overlay_image {
-		// position:absolute;
-		// left:-25px;
-		// top:50px;
+		
 		width:auto;
 		height: auto;
 		position:relative;
+		opacity:1;
+		@include transition(opacity 0.25s ease-out);
 		//max-height: 400px;
 		@include MQ(maxM) {
 			display: none;
+		}
+		&.hideIt {
+			opacity:0;
 		}
 		&.half-gallon, &.non-dairy {
 			max-width:600px;

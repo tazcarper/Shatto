@@ -476,8 +476,7 @@
         //console.log(distanceY);
         maxHeight = $(window).height() - ($(window).height() * 0.15);
         halfHeight = maxHeight * 0.5;
-        // console.log($(window).height());
-        // console.log(maxHeight);
+       
         if (distanceY > shrinkOn) {
           $('body').addClass('smaller');
 
@@ -952,6 +951,7 @@
           if (overlay.hasClass('open')) {
             overlay.removeClass('open');
             overlay.addClass('close');
+            $('#overlay_image').addClass('hideIt');
             var onEndTransitionFn = function(ev) {
               overlay.removeClass('close');
               if (support.transitions) {
@@ -1000,20 +1000,25 @@
 
 
 
-            console.log(theProductImage);
+            
             if (productJson['products'].hasOwnProperty(theProduct)) {
-              var theProductImage = productJson['products'][theProduct].image;
-              var productCategory = productJson['products'][theProduct].category;
+              var theProductImage = productJson['products'][theProduct].image,
+              productCategory = productJson['products'][theProduct].category;
               console.log(imagePath);
               var combinedPath = imagePath + theProductImage;
-              var retinaPath = imagePath + '/2x' + theProductImage;
-              console.log(retinaPath);
+              var retinaPath = imagePath + theProductImage.replace('/large/', '/large/2x/');
+              console.log('sliced' , retinaPath);
               var srcSetData = combinedPath + " 1x, " + retinaPath + " 2x";
               console.log(combinedPath);
               $('#overlay_image').attr({
-                'srcset': srcSetData,
-                'src': combinedPath
-              }).removeClass().addClass(productCategory);
+                'src': imagePath + '/loading_spinner.gif',
+                'data-src': combinedPath,
+                'data-src-retina': retinaPath
+              }).removeClass().addClass(productCategory).unveil(50, function(){
+                $(this).removeClass('hideIt');
+              });
+             
+
             } else {
               $('#overlay_image').attr({
                 'src': imagePath + '/missingImage.png',
@@ -1021,19 +1026,6 @@
               }).removeClass().addClass('missing');
             }
 
-            // var jqxhr = $.getJSON("../products.json", function(data) {
-            //     console.log("success");
-            //     console.log(data);
-            //   })
-            //   .done(function() {
-            //     console.log("second success");
-            //   })
-            //   .fail(function() {
-            //     console.log("error");
-            //   })
-            //   .always(function() {
-            //     console.log("complete");
-            //   });
           } else {
 
           }
@@ -1047,75 +1039,6 @@
         $(window).load(function() {
           var waypointOffset = 200;
 
-          // var milk = $('#milk').waypoint(function(direction) {
-
-          //   if (direction === 'down') {
-          //     if (!$(this.element).hasClass('visible')) {
-          //       $(this.element).addClass('visible');
-          //       $(this.element).find('.product').addClass('reveal');
-
-          //       // console.log(this.element.id)
-          //       // console.log(setSectionHeight(this.element));
-          //       // $(this.element).find('.productImages').height(setSectionHeight(this.element));
-          //     }
-          //   }
-          // }, {
-          //   offset: waypointOffset
-          // });
-          // var flavoredMilk = $('#flavoredMilk').waypoint(function(direction) {
-
-          //   if (direction === 'down') {
-          //     if (!$(this.element).hasClass('visible')) {
-          //       $(this.element).addClass('visible');
-          //       $(this.element).find('.product').addClass('reveal');
-          //       // console.log(this.element.id);
-          //       // $(this.element).find('.productImages').height(setSectionHeight(this.element));
-          //     }
-          //   }
-          // }, {
-          //   offset: '250'
-          // });
-          // var iceCream = $('#iceCream').waypoint(function(direction) {
-
-          //   if (direction === 'down') {
-          //     if (!$(this.element).hasClass('visible')) {
-          //       $(this.element).addClass('visible');
-          //       $(this.element).find('.product').addClass('reveal');
-          //       // console.log(this.element.id);
-          //       // $(this.element).find('.productImages').height(setSectionHeight(this.element));
-          //     }
-          //   }
-          // }, {
-          //   offset: waypointOffset
-          // });
-          // var cheese = $('#cheese').waypoint(function(direction) {
-
-
-          //   if (direction === 'down') {
-          //     if (!$(this.element).hasClass('visible')) {
-          //       $(this.element).addClass('visible');
-          //       $(this.element).find('.product').addClass('reveal');
-          //       // console.log(this.element.id);
-          //       // $(this.element).find('.productImages').height(setSectionHeight(this.element));
-          //     }
-          //   }
-          // }, {
-          //   offset: waypointOffset
-          // });
-          // var butter = $('#butter').waypoint(function(direction) {
-
-
-          //   if (direction === 'down') {
-          //     if (!$(this.element).hasClass('visible')) {
-          //       $(this.element).addClass('visible');
-          //       $(this.element).find('.product').addClass('reveal');
-          //       // console.log(this.element.id);
-          //       // $(this.element).find('.productImages').height(setSectionHeight(this.element));
-          //     }
-          //   }
-          // }, {
-          //   offset: waypointOffset
-          // });
 
           var productsToShow = $('section.productSection').waypoint(function(direction) {
 
@@ -1127,7 +1050,7 @@
                 $(this.element).find('.product').addClass('reveal');
                 var theImg = $(this.element).find('.product').find('img.main');
                      theImg.unveil(1, function(){
-                  console.log('load img');
+             
                 });
                 // console.log(this.element.id);
                 // $(this.element).find('.productImages').height(setSectionHeight(this.element));
