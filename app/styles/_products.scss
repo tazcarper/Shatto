@@ -749,8 +749,8 @@
 			height: auto !important;
 		}
 		.productName {
-			width: 80%;
-			max-width: 200px;
+			width: 65%;
+			//max-width: 200px;
 			min-width: 125px;
 			text-align: center;
 			margin: 0 auto;
@@ -760,6 +760,7 @@
 			}
 			@include MQ(maxM) {
 				display: block;
+				padding:0;
 			}
 			opacity: 1;
 			@include transition(all 0.35s ease);

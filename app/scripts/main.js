@@ -252,7 +252,191 @@
           "image": "/icecream-bars/final/large/ShattoMilk_IceCream_Sammich_BrownieChocolate.png",
           "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
         }
-
+        ,
+        // Cheese Curds
+        "Cajun": {
+          "title": "Cajun",
+          "category": "cheese curds",
+          "sizes": {
+            'pint': 2
+          },
+          "image": "/cheese-curds/final/large/ShattoMilk_Cheese_Curds_Cajun.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        }
+        ,
+        "whiteCheddar": {
+          "title": "White Cheddar",
+          "category": "cheese curds",
+          "sizes": {
+            'pint': 2
+          },
+          "image": "/cheese-curds/final/large/ShattoMilk_Cheese_Curds_WhiteCheddar.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        }
+        ,
+        "Dill": {
+          "title": "Dill",
+          "category": "cheese curds",
+          "sizes": {
+            'pint': 2
+          },
+          "image": "/cheese-curds/final/large/ShattoMilk_Cheese_Curds_Dill.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        }
+        ,
+        "MushroomGarlic": {
+          "title": "Mushroom Garlic",
+          "category": "cheese curds",
+          "sizes": {
+            'pint': 2
+          },
+          "image": "/cheese-curds/final/large/ShattoMilk_Cheese_Curds_MushroomGarlic.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        }
+        // big cheese
+        ,
+        "platsburg": {
+          "title": "Platsburg",
+          "category": "artisan cheese",
+          "sizes": {
+            'pint': 2
+          },
+          "image": "/cheese/final/large/ShattoMilk_Cheese_Artisan_Plattsburg.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        }
+        ,
+        "smithFork": {
+          "title": "Smith Fork",
+          "category": "artisan cheese",
+          "sizes": {
+            'pint': 2
+          },
+          "image": "/cheese/final/large/ShattoMilk_Cheese_Artisan_SmithFork.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        }
+        ,
+        "winstead": {
+          "title": "Winstead Reserve",
+          "category": "artisan cheese",
+          "sizes": {
+            'pint': 2
+          },
+          "image": "/cheese/final/large/ShattoMilk_Cheese_Artisan_WinsteadReserve.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        }
+        ,
+        "wexford": {
+          "title": "Wexford",
+          "category": "artisan cheese",
+          "sizes": {
+            'pint': 2
+          },
+          "image": "/cheese/final/large/ShattoMilk_Cheese_Artisan_Wexford.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        }
+        ,
+        "lilly": {
+          "title": "Lilly",
+          "category": "artisan cheese",
+          "sizes": {
+            'pint': 2
+          },
+          "image": "/cheese/final/large/ShattoMilk_Cheese_Artisan_Lilly.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        }
+        ,
+        "perrin": {
+          "title": "Perrin",
+          "category": "artisan cheese",
+          "sizes": {
+            'pint': 2
+          },
+          "image": "/cheese/final/large/ShattoMilk_Cheese_Artisan_Perrin.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        }
+        ,
+        // butter
+        "garlicButter": {
+          "title": "Garlic Butter",
+          "category": "butter",
+          "sizes": {
+            'pint': 2
+          },
+          "image": "/butter/final/large/ShattoMilk_Butter_Garlic.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        }
+        ,
+        "honeyButter": {
+          "title": "Honey Butter",
+          "category": "butter",
+          "sizes": {
+            'pint': 2
+          },
+          "image": "/butter/final/large/ShattoMilk_Butter_Honey.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        }
+        ,
+        "plainButter": {
+          "title": "Plain Butter",
+          "category": "butter",
+          "sizes": {
+            'pint': 2
+          },
+          "image": "/butter/final/large/ShattoMilk_Butter_Plain.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        }
+        ,
+        "unsaltedButter": {
+          "title": "UnSalted Butter",
+          "category": "butter",
+          "sizes": {
+            'pint': 2
+          },
+          "image": "/butter/final/large/ShattoMilk_Butter_Unsalted.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        }
+        ,
+        // flavored
+        "unsweetenedTea": {
+          "title": "Unsweetened Tea",
+          "category": "non-dairy",
+          "sizes": {
+            'half-gallon': 8
+          },
+          "image": "/half-gallons/final/large/ShattoMilk_HalfGallon_SweetTea.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        }
+        ,
+        "fruitPunch": {
+          "title": "Fruit Punch",
+          "category": "non-dairy",
+          "sizes": {
+           'half-gallon': 8
+          },
+          "image": "/half-gallons/final/large/ShattoMilk_HalfGallon_FruitPunch.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        }
+        ,
+        "lemonade": {
+          "title": "Lemonade",
+          "category": "non-dairy",
+          "sizes": {
+           'half-gallon': 8
+          },
+          "image": "/half-gallons/final/large/ShattoMilk_HalfGallon_Lemonade.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        }
+        ,
+        "orangeDrink": {
+          "title": "Orange Drink",
+          "category": "non-dairy",
+          "sizes": {
+            'half-gallon': 8
+          },
+          "image": "/half-gallons/final/large/ShattoMilk_HalfGallon_OrangeDrink.png",
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+        }
+        ,
       }
     }
 
@@ -533,6 +717,7 @@
       // Events page - Grid init
 
       var eventTours = $('.events-tours');
+
       if (eventTours[0]){
         if (Modernizr.mq('(min-width: 767px)')) {
         $('.viveVideo').vide({
@@ -614,6 +799,19 @@
 
           }
         }
+
+
+        $('.intro').on('click', '.scheduleTour', function(e){
+          $('.schedulePopUp').fadeIn();
+          $('#schedule_date').dateDropper();
+
+        });
+
+        $('.schedulePopUp').on('click', '.closeSchedule, .cancelSchedule', function(e){
+          $('.schedulePopUp').fadeOut();
+        });
+        
+
       }
 
       // Contact
@@ -691,10 +889,10 @@
           target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 
           if (target.length) {
-
+            console.log($('.headerMain').height(), $(this).height());
             $('html, body').animate({
 
-              scrollTop: target.offset().top - 90
+              scrollTop: target.offset().top - ($('.headerMain').height() + $(this).height() + 5)
 
             }, 1000);
 
@@ -923,7 +1121,7 @@
 
 
             if (direction === 'down') {
-              console.log('show section');
+             
               if (!$(this.element).hasClass('visible')) {
                 $(this.element).addClass('visible');
                 $(this.element).find('.product').addClass('reveal');

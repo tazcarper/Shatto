@@ -87,7 +87,10 @@
 <script src="<?php echo get_template_directory_uri(); ?>/app/scripts/plugins/slick.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/app/scripts/plugins/jquery.vide.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/app/scripts/plugins/unveil.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/plugins/picturefill.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/plugins/datedropper.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/bower_components/bootstrap-sass/assets/javascript
+s/bootstrap/dropdown.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
 

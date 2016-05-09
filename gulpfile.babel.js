@@ -110,6 +110,8 @@ gulp.task('images', () => {
     .pipe(gulp.dest('dist/images'));
 });
 
+
+
 // Copy images from App to Dist without optimizing (used in serve:php)
 gulp.task('imageCopy', () => {
   return gulp.src('app/images/**/*.+(jpg|jpeg|png|gif|svg)')
@@ -203,7 +205,7 @@ gulp.task('serve:test', ['scripts'], () => {
   gulp.watch('test/spec/**/*.js', ['lint:test']);
 });
 
-gulp.task('serve:php', function() {
+gulp.task('serve:php', ['fonts'], function() {
   browserSync({
     notify: false,
     ui: false,

@@ -70,19 +70,39 @@ $overlayDelay: .35s;
 		// top:50px;
 		width:auto;
 		height: auto;
-
+		position:relative;
 		//max-height: 400px;
 		@include MQ(maxM) {
 			display: none;
 		}
-		&.half-gallon {
+		&.half-gallon, &.non-dairy {
 			max-width:600px;
 			position: relative;
 			left:-50px;
+			@include MQ(maxL){
+				left:-85px;
+			}
+			@include MQ(maxML){
+				max-width:550px;
+				left:-150px;
+			}
 		}
 		&.Quart {
-			max-width:500px;
+			max-width:400px;
 			position: relative;
+			@include MQ(maxML){
+				max-width:350px;
+			}
+		}
+		&.butter {
+			max-width:500px;
+			margin-top: 100px;
+			@include MQ(maxML){
+				left:-100px;
+			}
+		}
+		&.artisan_cheese {
+			max-width:500px;
 		}
 		&.missing {
 			max-width:300px;
@@ -145,7 +165,7 @@ $overlayDelay: .35s;
 .nutritionFacts {
 	padding: 15px;
 	border: 2px solid black;
-	
+	background:white;
 	p, h1, h2, h3, h4, h5 {
 		margin: 0;
 		padding: 0;
@@ -433,4 +453,8 @@ $overlayDelay: .35s;
 }
 .ingredients {
 	margin-top: 15px;
+	//background:white;
+	p {
+
+	}
 }

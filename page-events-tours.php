@@ -18,18 +18,50 @@
       </div>
       <div class="row images">
         <div class="scheduleOverlay">
-          <div class="btn">Go ahead and schedule a tour</div>
+          <div class="btn scheduleTour" id="scheduleTour">Go ahead and schedule a tour</div>
         </div>
         <div class="col-md-6 leftPod"><img src="<?php $image = get_field('intro_left_image'); echo $image['url']; ?>">
           <?php the_field('intro_left'); ?>
-          <a href="#" class="btn invert center">Schedule a Tour</a>
+          <a class="btn invert center scheduleTour">Schedule a Tour</a>
         </div>
         <div class="col-md-6 rightPod"><img src="<?php $image = get_field('intro_right_image'); echo $image['url']; ?>">
           <?php the_field('intro_right'); ?>
-          <a href="#" class="btn invert center">Sign up for Shatto News</a>
+          <a href="https://www.facebook.com/ShattoMilk" class="btn invert center">Check out our Facebook</a>
         </div>
       </div>
     </div>
+    <div class="schedulePopUp">
+    <div class="closeSchedule">X</div>
+<div class="container-fluid">
+<div class="row">
+<div class="col-sm-3 center-block">
+<h4>Schedule your tour</h4>
+  <form action="">
+    <div class="form-group">
+      <input type="text" id="schedule_name" class=""name="schedule_name" placeholder="Name" required>
+    </div>
+    <div class="form-group">
+    <input type="email" id="schedule_email" name="schedule_email" placeholder="Email" required>
+  </div>
+  <div class="form-group">
+    <input type="number" id="schedule_phone" name="schedule_phone" placeholder="Phone" required>
+  </div>
+  <div class="form-group">
+    <input type="number" id="schedule_groupSize" name="schedule_groupSize" placeholder="Estimated size of group">
+  </div>
+    <div class="form-group">
+    <input type="text" id="schedule_date" name="schedule_date" placeholder="Date" required readonly>
+  </div>
+  <div class="form-group">
+    <textarea name="schedule_comment" id="schedule_comment" cols="30" rows="10" placeholder="Have any questions or concerns you like to ask us?"></textarea>
+  </div>
+  <button class="btn submit invert">Request Tour</button>
+  <div class="cancelSchedule ">Cancel</div>
+  </form>
+</div>
+</div>
+</div>
+</div>
   </section>
   <section class="container-fluid farm-experience center">
     <div class="container">
@@ -72,35 +104,33 @@
 </section>
 <section class="container-fluid gallery noPadding">
 <div class="row">
-
 <div class="col-md-12 text-center">
 <h3><?php the_field('gallery_title'); ?></h3>
-
 <div class="gallerySlider">
-<div class="popUp">
-  <div class="row">
-    <div class="closePopUP">X</div>
-    <div class="col-sm-8 col-sm-offset-2 white">
-    <div class="bigImage">
-    <img src="<?php echo get_template_directory_uri(); ?>/dist/images/events/temp1_large.jpg" alt="">
+  <div class="popUp">
+    <div class="row">
+      <div class="closePopUP">X</div>
+      <div class="col-sm-8 col-sm-offset-2 white">
+        <div class="bigImage">
+          <img src="<?php echo get_template_directory_uri(); ?>/dist/images/events/temp1_large.jpg" alt="">
+        </div>
+        <div class="description">
+          <p>Libris pertinacia cu sea, qui ea omnes eirmod recteque. Ius ne viderer tacimates theophrastus. Mazim ridens aperiri ad mei, nec nobis epicurei ne. Cu quot aliquam adolescens per, no modus suavitate eam. Vix vivendo commune ad, convenire definitiones cu eos.</p>
+          <p>Libris pertinacia cu sea, qui ea omnes eirmod recteque. Ius ne viderer tacimates theophrastus. Mazim ridens aperiri ad mei, nec nobis epicurei ne. Cu quot aliquam adolescens per, no modus suavitate eam. Vix vivendo commune ad, convenire definitiones cu eos.</p>
+        </div>
+        
+      </div>
+      
     </div>
-    <div class="description">
-      <p>Libris pertinacia cu sea, qui ea omnes eirmod recteque. Ius ne viderer tacimates theophrastus. Mazim ridens aperiri ad mei, nec nobis epicurei ne. Cu quot aliquam adolescens per, no modus suavitate eam. Vix vivendo commune ad, convenire definitiones cu eos.</p>
-      <p>Libris pertinacia cu sea, qui ea omnes eirmod recteque. Ius ne viderer tacimates theophrastus. Mazim ridens aperiri ad mei, nec nobis epicurei ne. Cu quot aliquam adolescens per, no modus suavitate eam. Vix vivendo commune ad, convenire definitiones cu eos.</p>
+  </div>
+  <div class="galleryButtons">
+    <div class="left">
+      <div class="arrow"></div>
     </div>
-    
+    <div class="right">
+      <div class="arrow"></div>
     </div>
-   
   </div>
-</div>
-<div class="galleryButtons">
-  <div class="left">
-    <div class="arrow"></div>
-  </div>
-  <div class="right">
-     <div class="arrow"></div>
-  </div>
-</div>
   <div class="slide" data-desc="Libris pertinacia cu sea, qui ea omnes eirmod recteque. Ius ne viderer tacimates theophrastus. Mazim ridens aperiri ad mei, nec nobis epicurei ne. Cu quot aliquam adolescens per, no modus suavitate eam. Vix vivendo commune ad, convenire definitiones cu eos." data-largeImage="<?php echo get_template_directory_uri(); ?>/dist/images/events/temp1_large.jpg">
     <img src="<?php echo get_template_directory_uri(); ?>/dist/images/events/temp1.jpg" alt="">
   </div>
