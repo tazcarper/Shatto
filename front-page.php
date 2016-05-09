@@ -126,10 +126,11 @@
           <h3 class="desktop"><?php the_field('tours_title'); ?></h3>
           <h3 class="mobile">Come Tour the Farm</h3>
           <?php the_field('tours_copy'); ?>
-          <a href="#" class="btn">Schedule a tour</a>
+          <a href="events-tours" class="btn scheduleTour">Schedule a tour</a>
         </div>
       </div>
     </div>
+
   </section>
 </div>
 

@@ -9,7 +9,7 @@
       </div>
     </div>
   </section>
-  <section class="container-fluid intro">
+  <section class="container-fluid intro" id="tourSection">
     <div class="container center">
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
@@ -18,7 +18,7 @@
       </div>
       <div class="row images">
         <div class="scheduleOverlay">
-          <div class="btn scheduleTour" id="scheduleTour">Go ahead and schedule a tour</div>
+          <a href="#tourSection" class="btn scheduleTour" id="scheduleTour">Go ahead and schedule a tour</a>
         </div>
         <div class="col-md-6 leftPod"><img src="<?php $image = get_field('intro_left_image'); echo $image['url']; ?>">
           <?php the_field('intro_left'); ?>
@@ -31,37 +31,37 @@
       </div>
     </div>
     <div class="schedulePopUp">
-    <div class="closeSchedule">X</div>
-<div class="container-fluid">
-<div class="row">
-<div class="col-sm-3 center-block">
-<h4>Schedule your tour</h4>
-  <form action="">
-    <div class="form-group">
-      <input type="text" id="schedule_name" class=""name="schedule_name" placeholder="Name" required>
+      <div class="closeSchedule">X</div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-3 center-block">
+            <h4>Schedule your tour</h4>
+            <form action="">
+              <div class="form-group">
+                <input type="text" id="schedule_name" class=""name="schedule_name" placeholder="Name" required>
+              </div>
+              <div class="form-group">
+                <input type="email" id="schedule_email" name="schedule_email" placeholder="Email" required>
+              </div>
+              <div class="form-group">
+                <input type="number" id="schedule_phone" name="schedule_phone" placeholder="Phone" required>
+              </div>
+              <div class="form-group">
+                <input type="number" id="schedule_groupSize" name="schedule_groupSize" placeholder="Estimated size of group">
+              </div>
+              <div class="form-group">
+                <input type="text" id="schedule_date" name="schedule_date" placeholder="Date" required readonly>
+              </div>
+              <div class="form-group">
+                <textarea name="schedule_comment" id="schedule_comment" cols="30" rows="10" placeholder="Have any questions or concerns you like to ask us?"></textarea>
+              </div>
+              <button class="btn submit invert">Request Tour</button>
+              <div class="cancelSchedule ">Cancel</div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="form-group">
-    <input type="email" id="schedule_email" name="schedule_email" placeholder="Email" required>
-  </div>
-  <div class="form-group">
-    <input type="number" id="schedule_phone" name="schedule_phone" placeholder="Phone" required>
-  </div>
-  <div class="form-group">
-    <input type="number" id="schedule_groupSize" name="schedule_groupSize" placeholder="Estimated size of group">
-  </div>
-    <div class="form-group">
-    <input type="text" id="schedule_date" name="schedule_date" placeholder="Date" required readonly>
-  </div>
-  <div class="form-group">
-    <textarea name="schedule_comment" id="schedule_comment" cols="30" rows="10" placeholder="Have any questions or concerns you like to ask us?"></textarea>
-  </div>
-  <button class="btn submit invert">Request Tour</button>
-  <div class="cancelSchedule ">Cancel</div>
-  </form>
-</div>
-</div>
-</div>
-</div>
   </section>
   <section class="container-fluid farm-experience center">
     <div class="container">

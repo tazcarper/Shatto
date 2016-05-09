@@ -490,16 +490,13 @@
           <div class="col-sm-7 ">
             <div class="row">
               <div class="col-sm-12 flavors">
-                <ul>
-                  <li>Flavor One</li>
-                  <li>Flavor Two Name</li>
-                </ul>
+                <h3></h3>
               </div>
               
             </div>
             <div class="nutritionFacts">
               <div class="row">
-                <div class="col-sm-4">
+                <div class="col-lg-4">
                   <div class="row">
                     <div class="col-sm-12 nutFacts">
                       <h2>Nutrition Facts</h2>
@@ -521,7 +518,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-8 stats">
+                <div class="col-lg-8 stats">
                   <div class="row">
                     <div class="col-sm-6">
                       <div class="row">

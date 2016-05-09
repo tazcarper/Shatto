@@ -256,7 +256,7 @@
         // Cheese Curds
         "Cajun": {
           "title": "Cajun",
-          "category": "cheese curds",
+          "category": "cheese_curds",
           "sizes": {
             'pint': 2
           },
@@ -266,7 +266,7 @@
         ,
         "whiteCheddar": {
           "title": "White Cheddar",
-          "category": "cheese curds",
+          "category": "cheese_curds",
           "sizes": {
             'pint': 2
           },
@@ -276,7 +276,7 @@
         ,
         "Dill": {
           "title": "Dill",
-          "category": "cheese curds",
+          "category": "cheese_curds",
           "sizes": {
             'pint': 2
           },
@@ -286,7 +286,7 @@
         ,
         "MushroomGarlic": {
           "title": "Mushroom Garlic",
-          "category": "cheese curds",
+          "category": "cheese_curds",
           "sizes": {
             'pint': 2
           },
@@ -297,7 +297,7 @@
         ,
         "platsburg": {
           "title": "Platsburg",
-          "category": "artisan cheese",
+          "category": "artisan_cheese",
           "sizes": {
             'pint': 2
           },
@@ -307,7 +307,7 @@
         ,
         "smithFork": {
           "title": "Smith Fork",
-          "category": "artisan cheese",
+          "category": "artisan_cheese",
           "sizes": {
             'pint': 2
           },
@@ -317,7 +317,7 @@
         ,
         "winstead": {
           "title": "Winstead Reserve",
-          "category": "artisan cheese",
+          "category": "artisan_cheese",
           "sizes": {
             'pint': 2
           },
@@ -327,7 +327,7 @@
         ,
         "wexford": {
           "title": "Wexford",
-          "category": "artisan cheese",
+          "category": "artisan_cheese",
           "sizes": {
             'pint': 2
           },
@@ -337,7 +337,7 @@
         ,
         "lilly": {
           "title": "Lilly",
-          "category": "artisan cheese",
+          "category": "artisan_cheese",
           "sizes": {
             'pint': 2
           },
@@ -347,7 +347,7 @@
         ,
         "perrin": {
           "title": "Perrin",
-          "category": "artisan cheese",
+          "category": "artisan_cheese",
           "sizes": {
             'pint': 2
           },
@@ -387,7 +387,7 @@
         }
         ,
         "unsaltedButter": {
-          "title": "UnSalted Butter",
+          "title": "Unsalted Butter",
           "category": "butter",
           "sizes": {
             'pint': 2
@@ -751,10 +751,8 @@
           focusOnSelect: true
         });
 
-        // $('.gallery').on('click', '.slide', function(e){
-        //   console.log($(this).find('img'));
-        // })
-         var popUp = $('.popUp'),
+       
+        var popUp = $('.popUp'),
         grownElements = $('.slick-track, .galleryButtons'),
         bigImageEl = $('.popUp .bigImage'),
         popUpDesc = $('.popUp .description');
@@ -762,12 +760,11 @@
 
         $('.slide').on('click', function(e){
           if (Modernizr.mq('(min-width: 767px)')) {
-            e.preventDefault();
+          e.preventDefault();
           var largeImage = $(this).attr('data-largeImage'),
           description = $(this).attr('data-desc');
           bigImageEl.find('img').attr('src', largeImage);
           popUpDesc.html('').html(description);
-
           togglePopUp();
           }
           
@@ -778,10 +775,7 @@
 
 
         $('.gallerySlider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-
-          console.log(slick['$slides'][nextSlide]);
           var nextImage = $(slick['$slides'][nextSlide]).attr('data-largeImage');
-          console.log(nextImage);
           bigImageEl.find('img').attr('src', nextImage);
         });
 
@@ -792,7 +786,6 @@
             grownElements.removeClass('grown');
           }
           else {
-
             popUp.addClass('shown');
             grownElements.addClass('grown');
 
@@ -803,7 +796,6 @@
         $('.intro').on('click', '.scheduleTour', function(e){
           $('.schedulePopUp').fadeIn();
           $('#schedule_date').dateDropper();
-
         });
 
         $('.schedulePopUp').on('click', '.closeSchedule, .cancelSchedule', function(e){
@@ -1010,6 +1002,7 @@
               console.log('sliced' , retinaPath);
               var srcSetData = combinedPath + " 1x, " + retinaPath + " 2x";
               console.log(combinedPath);
+              $('.flavors h3').html(productJson['products'][theProduct].title);
               $('#overlay_image').attr({
                 'src': imagePath + '/loading_spinner.gif',
                 'data-src': combinedPath,
