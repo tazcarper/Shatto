@@ -16,7 +16,7 @@ control.$control.data('jplist-autocomplete',autocomplete);control.$control.data(
 	 * @param {jQuery.fn.jplist.view.PanelControl} control
 	 * @memberOf jQuery.fn.jplist.controls.Autocomplete
 	 */jQuery.fn.jplist.controls.Autocomplete.initEvents=function(control){ // Handle Enter on search location 
-$('.findInput input').focusin(function(){$(document).keypress(function(e){if(e.which==13){if($('.pac-container .pac-item-selected')[0]){selectFirstResult($('.pac-item-selected'));console.log('item selected after row');}else {selectFirstResult($('.pac-container .pac-item:first'));console.log('first item enter');}$('.mapOverlay').addClass('shrink');}});}); // $('.searchIt').on('click', function(e){
+$('.findInput input').focusin(function(){$(document).keypress(function(e){if(e.which==13){console.log('enter');if($('.pac-container .pac-item-selected')[0]){selectFirstResult($('.pac-item-selected'));console.log('item selected after row');}else {selectFirstResult($('.pac-container .pac-item:first'));console.log('first item enter');}$('.mapOverlay').addClass('shrink');}});}); // $('.searchIt').on('click', function(e){
 // 	selectFirstResult($('.pac-container .pac-item:first'));
 // });
 function selectFirstResult(result){$(".pac-container").hide();var firstResult=result.text();var geocoder=new google.maps.Geocoder();geocoder.geocode({"address":firstResult},function(results,status){if(status==google.maps.GeocoderStatus.OK){console.log(results);var lat=results[0].geometry.location.lat(),lng=results[0].geometry.location.lng(),placeName=results[0].address_components[0].long_name,formattedAddress=results[0].formatted_address;$(".findInput input").val(formattedAddress);control.$control.attr('data-latitude',lat);control.$control.attr('data-longitude',lng);control.$control.attr('data-name',placeName);control.$jplistBox.trigger('jumpEvent',[lat,lng,control.$control.data('jplist-autocomplete-zoom')]);control.$jplistBox.trigger(control.options.force_ask_event,[false]);}});}var autocomplete,listenerHandle=control.$control.data('jplist-handle'); //get autocomplete
@@ -24,7 +24,7 @@ autocomplete=control.$control.data('jplist-autocomplete'); //remove listener
 if(listenerHandle){google.maps.event.removeListener(listenerHandle);} //add listener
 listenerHandle=google.maps.event.addListener(autocomplete,'place_changed',function(){var place,lat,lng; //get choosen place
 place=autocomplete.getPlace(); //set latitude and longitude
-if(place.geometry){lat=place.geometry.location['lat']();lng=place.geometry.location['lng']();control.$control.attr('data-latitude',lat);control.$control.attr('data-longitude',lng);control.$control.attr('data-name',place.name);console.log(place.name); //trigger jump to map event
+if(place.geometry){lat=place.geometry.location['lat']();lng=place.geometry.location['lng']();control.$control.attr('data-latitude',lat);control.$control.attr('data-longitude',lng);control.$control.attr('data-name',place.name);console.log(place.name);$('.mapOverlay').addClass('shrink'); //trigger jump to map event
 control.$jplistBox.trigger('jumpEvent',[lat,lng,control.$control.data('jplist-autocomplete-zoom')]);} //send panel redraw event
 console.log('redraw');control.$jplistBox.trigger(control.options.force_ask_event,[false]);});control.$control.off('keyup').on('keyup',function(e){var val; //get val
 val=$.trim($(this).val());if(val===''){console.log('blank');control.$control.attr('data-latitude','');control.$control.attr('data-longitude',''); //send panel redraw event

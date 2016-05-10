@@ -25,6 +25,7 @@
   li, p {
     font-size: 14px;
     padding-bottom: 6px;
+    line-height: 1.30em;
     @include MQ(maxM) {
       font-size:18px;
     }
@@ -59,6 +60,39 @@
 
   .shattoLogo + p {
     margin-top:1em;
+  }
+
+  .social {
+    width:100%;
+    float:left;
+    margin-bottom: 20px;
+    @include MQ(maxM) {
+      text-align: center;
+    }
+    .icon {
+      width:20px;
+      height:20px;
+      display:inline-block;
+      margin:0 10px 0 0;
+      float:left;
+      @include MQ(maxM) {
+        text-align: center;
+        float:none;
+
+      }
+      &.email {
+         background: url('../images/social-email.svg') 0 0 no-repeat;
+      }
+      &.facebook {
+         background: url('../images/social-facebook.svg') 0 0 no-repeat;
+      }
+      &.twitter {
+         background: url('../images/social-twitter.svg') 0 0 no-repeat;
+      }
+      &.instagram {
+         background: url('../images/social-instagram.svg') 0 0 no-repeat;
+      }
+    }
   }
 
   

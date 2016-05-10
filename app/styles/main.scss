@@ -174,17 +174,12 @@ main {
   -moz-transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
   transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
 
-  @media (min-width:$screen-sm-min) {
-    // -webkit-transform: translateZ(0) !important;
-    // -moz-transform: translateZ(0) !important;
-    // -ms-transform: translateZ(0) !important;
-    // -o-transform: translateZ(0) !important;
-    // transform: translateZ(0) !important;
-  }
+  
   @include MQ(maxM) {
     -webkit-transition: -webkit-transform 0.5s;
     -moz-transition: -moz-transform 0.5s;
     transition: transform 0.5s;
+    border-top:0;
   }
 }
 .productContainer {

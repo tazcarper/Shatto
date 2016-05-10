@@ -4,6 +4,8 @@
  *  Functions file for shatto theme
  */
 
+show_admin_bar(false);
+
 if (!isset($content_width))
 {
   $content_width = 1280;
@@ -413,3 +415,4 @@ class Shatto_Walker_Menu extends Walker_Nav_Menu
     $output .= '<ul class="sub-menu">';
   }
 }
+

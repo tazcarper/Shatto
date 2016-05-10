@@ -10,10 +10,13 @@
 	width: 100%;
 	height: 100%;
 	@include MQ(maxM) {
-		
+		top:0px;
 		background:none;
+		position:relative;
+		height:auto;
+		float: left;
 		.findInput {
-			top:100%;
+			top:-335px;
 			input {
 				font-size:16px;
 			}
@@ -22,9 +25,10 @@
 	@include transition(all .35s ease-out);
 	&.shrink {
 		background: none;
-		height: 115px;
-		.findInput {
-			top:100%;
+		height:225px;
+		top:0;
+		@include MQ(maxM){
+			top:0;
 		}
 	}
 	.findInput {
@@ -38,6 +42,17 @@
 		width: 35%;
 		position: absolute;
 		@include transition(all .35s ease-out);
+		@include MQ(maxM){
+			top:-335px;
+			max-width:100%;
+			width:100%;
+			border-radius: 0;
+			input {
+				border-radius: 0;
+				border-left:0;
+				border-right:0;
+			}
+		}
 
 	}
 }
@@ -46,8 +61,11 @@
 	float: left;
 	height: 600px;
 	min-height: 600px;
-	height: 80vh;
+	height: 85vh;
 	@include MQ(maxM) {
+		min-height: 0;
+		margin-top: 0px;
+		height:auto;
 		min-height: 0;
 		
 	}
@@ -57,6 +75,10 @@
 		position: absolute;
 		float: right;
 		background-color: #a5bfdd;
+		@include MQ(maxM){
+			position:relative;
+			margin-top: 35px;
+		}
 	}
 	.hidden {
 		display: none;
@@ -70,6 +92,10 @@
 		border-bottom: 1px solid #e3e3e3;
 		//Instead of the line below you could use @include box-sizing($bs)
 		box-sizing: border-box;
+		@include MQ(maxM){
+			width:100%;
+			//margin-top:35px;
+		}
 	}
 	.autocomplete {
 		display: block;
@@ -84,6 +110,11 @@
 		overflow: auto;
 		//height: 550px;
 		display: none;
+		@include MQ(maxM) {
+			display:block;
+			float: left;
+			height:auto;
+		}
 	}
 	.store {
 		cursor: pointer;
@@ -94,9 +125,13 @@
 			border-bottom: 1px dashed #ccc;
 			//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
 			text-shadow: 1px 1px 1px #fff;
+			span {
+				display:block;
+				padding:3px 0;
+			}
 		}
 		&:hover {
-			background-color: #dfe5ff;
+			background-color: lighten(#d1d1d1,15%);
 		}
 	}
 	.active {
@@ -166,7 +201,7 @@
 		float: left;
 	}
 }
-@media only screen and(max-width:600px) {
+@include MQ(maxM){
 	#jlocator {
 		font-size: 13px;
 		line-height: 18px;
@@ -176,15 +211,16 @@
 			height: 300px;
 		}
 		.controls {
-			padding-top: 10px;
-			padding-bottom: 10px;
+			// padding-top: 10px;
+			// padding-bottom: 10px;
 
 			.box {
 				width: auto;
 			}
 		}
 		.stores {
-			height: 240px;
+			max-height: 300px;
+			width:100%;
 		}
 		> .panel {
 			width: 100%;

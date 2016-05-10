@@ -56,7 +56,11 @@
         </ul>
       </div>
       <div class="col-sm-2">
-        <div class="icons">
+        <div class="social">
+       <!--  <a class="icon email" href="https://www.facebook.com/ShattoMilk" target="_blank"></a> -->
+        <a class="icon twitter" href="https://twitter.com/shattomilk" target="_blank"></a>
+        <a class="icon facebook" href="https://www.facebook.com/ShattoMilk" target="_blank"></a>
+        <a class="icon instagram" href="https://www.instagram.com/shattomilk/" target="_blank"></a>
         </div>
         <div class="address">
           <p class="hidden-sm hidden-xs">9406 N. HWY. 33 <br> Osborn, MO 64474 <br> 816-930-3862</p>
@@ -81,7 +85,17 @@
 <script src="http://maps.google.com/maps/api/js?libraries=places,geometry"></script>
 <!--<script src="<?php echo get_template_directory_uri(); ?>/dist/scripts/plugins.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/app/scripts/main.js"></script>-->
-<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/map.js"></script>
+
+<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/map/jplist.min.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/map/jlocator/jlocator.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/map/jlocator/controller/controller.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/map/jlocator/view/panel.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/map/jlocator/view/map.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/map/jlocator/models/store.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/map/jlocator/controls/autocomplete.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/map/jlocator/controls/autocomplete-radius.js"></script>
+
+
 <script src="<?php echo get_template_directory_uri(); ?>/app/scripts/plugins/layzr.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/app/scripts/plugins/sticky.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/app/scripts/plugins/slick.js"></script>

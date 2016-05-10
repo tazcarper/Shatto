@@ -45,10 +45,14 @@
 	 */
 	jQuery.fn.jplist.controls.Autocomplete.initEvents = function(control) {
 
+		
+
 		// Handle Enter on search location 
 		$('.findInput input').focusin(function() {
+
 			$(document).keypress(function(e) {
 				if (e.which == 13) {
+					console.log('enter');
 					if ($('.pac-container .pac-item-selected')[0]) {
 						selectFirstResult($('.pac-item-selected'));
 						console.log('item selected after row')
@@ -119,6 +123,7 @@
 				control.$control.attr('data-longitude', lng);
 				control.$control.attr('data-name', place.name);
 				console.log(place.name);
+				$('.mapOverlay').addClass('shrink');
 
 				//trigger jump to map event
 				control.$jplistBox.trigger('jumpEvent', [lat, lng, control.$control.data('jplist-autocomplete-zoom')]);
@@ -202,6 +207,7 @@
 
 		return status;
 	};
+
 
 
 

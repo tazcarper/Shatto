@@ -120,6 +120,12 @@ section.mapFinder {
     }
   }
   form {
+    input {
+      border:2px solid white;
+      &.error {
+      border:2px solid red;
+    }
+    }
     @include MQ(maxM) {
       width:100%;
       max-width:300px;

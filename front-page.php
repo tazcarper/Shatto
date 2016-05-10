@@ -63,26 +63,29 @@
           <img src="<?php echo get_template_directory_uri(); ?>/dist/images/rotation/reflection.png" class="shadow"/>
               <div class="productName hidden-xs">
                 <h5>Milk</h5>
-              </div></a></div><a href="/products.html#milk" class="product milkButton text-center visible-xs">
+              </div></a></div>
+              <a href="products/#milk" class="product milkButton text-center visible-xs">
             <div class="productName">
               <h5>Milk</h5>
             </div></a>
             <div class="productContainer">
-            <a href="/products.html#cheese" class="product cheese text-center"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/home/cheese.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/home/cheese.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/home/cheese_2x.png 2x"/>
+            <a href="products/#cheese" class="product cheese text-center"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/home/cheese.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/home/cheese.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/home/cheese_2x.png 2x"/>
             <div class="productName">
               <h5>Cheese</h5>
             </div></a>
-            <a href="/products.html#juice" class="product juice text-center"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/home/juice.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/home/juice.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/home/juice_2x.png 2x"/>
+            <a href="products/#nonDairy" class="product juice text-center"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/home/juice.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/home/juice.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/home/juice_2x.png 2x"/>
             <div class="productName">
               <h5>Non-Dairy</h5>
             </div></a>
-            <a href="/products.html#flavoredMilk" class="product flavoredMilk text-center"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/home/flavored.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/home/flavored.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/home/flavored_2x.png 2x"/>
+            <a href="products/#flavoredMilk" class="product flavoredMilk text-center"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/home/flavored.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/home/flavored.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/home/flavored_2x.png 2x"/>
             <div class="productName">
               <h5>Flavored <span class="hidden-xs">Milk</span></h5>
-            </div></a><a href="/products.html#iceCream" class="product iceCream text-center"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/home/iceCream.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/home/iceCream.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/home/iceCream_2x.png 2x"/>
+            </div></a>
+            <a href="products/#iceCream" class="product iceCream text-center"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/home/iceCream.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/home/iceCream.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/home/iceCream_2x.png 2x"/>
             <div class="productName">
               <h5>Ice Cream</h5>
-            </div></a><a href="/products.html#butter" class="product butter text-center"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/home/butter.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/home/butter.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/home/butter_2x.png 2x"/>
+            </div></a>
+            <a href="products/#butter" class="product butter text-center"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/home/butter.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/home/butter.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/home/butter_2x.png 2x"/>
             <div class="productName">
               <h5>Butter</h5>
             </div></a>
@@ -97,8 +100,8 @@
           <h3 class="desktop"><?php the_field('map_title'); ?></h3>
           <h3 class="mobile">Find Shatto Near You</h3>
           <form class="form-inline">
-            <input placeholder="ZIP Code" class="form-control"/>
-            <button class="form-control btn invert">GO</button>
+            <input placeholder="ZIP Code" class="form-control" type="number" />
+            <button class="form-control btn invert zipFind">GO</button>
           </form><br class="hidden-xs"/>
           <!-- <p class="mobile"><a href="#">Oh, just use my location. I'm not hiding.</a></p> -->
         </div>

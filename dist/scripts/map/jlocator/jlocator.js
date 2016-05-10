@@ -30,7 +30,7 @@
 	* @constructor 
 	*/var Init=function Init(userOptions,$root){var self={options:userOptions,$root:$root,controller:null}; //init user options
 self.options=$.extend(true,{ //map defauls
-startZoom:2,storeZoom:13,latitude:0,longitude:90,geolocation:true,markerIcon:'' //'' for default
+startZoom:2,storeZoom:13,latitude:0,longitude:90,geolocation:false,markerIcon:'' //'' for default
 ,markerText:'Click to Zoom',directionsType:'DRIVING' //BICYCLING, TRANSIT, WALKING
 ,mapTypeId:'ROADMAP' //ROADMAP, SATELLITE, HYBRID, TERRAIN
 //jplist options: http://jplist.no81no.com/

@@ -21,14 +21,14 @@
     var productJson = {
       "products": {
         "HG_skim": {
-          "title": "Skim",
+          "title": "Skim Milk",
           "category": "half-gallon",
           "sizes": ["half gallon", "Quart"],
           "image": "/half-gallons/final/large/ShattoMilk_HalfGallon_Skim.png",
           "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
         },
         "HG_onePercent": {
-          "title": "One Percent",
+          "title": "1% Milk",
           "category": "half-gallon",
           "sizes": {
             'half-gallon': 8,
@@ -40,7 +40,7 @@
         },
         
         "HG_twoPercent": {
-          "title": "2%",
+          "title": "2% Milk",
           "category": "half-gallon",
           "sizes": {
             'half-gallon': 8,
@@ -52,7 +52,7 @@
         },
         
         "HG_whole": {
-          "title": "Whole",
+          "title": "Whole Milk",
           "category": "half-gallon",
           "sizes": {
             'half-gallon': 8,
@@ -63,7 +63,7 @@
           "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
         },
         "pint_half": {
-          "title": "Half-Half",
+          "title": "Half-Half Cream",
           "category": "pint",
           "sizes": {
             'pint': 2
@@ -73,7 +73,7 @@
         },
         
         "pint_cream": {
-          "title": "Whole Cream",
+          "title": "Whole Cream Milk",
           "category": "pint",
           "sizes": {
             'pint': 2
@@ -83,7 +83,7 @@
         },
         // flavor
         "chocolate": {
-          "title": "Chocolate",
+          "title": "Chocolate Milk",
           "category": "Quart",
           "sizes": {
             'quart': 4,
@@ -93,7 +93,7 @@
         }
         ,
         "strawberry": {
-          "title": "Strawberry",
+          "title": "Strawberry Milk",
           "category": "Quart",
           "sizes": {
             'quart': 4,
@@ -103,7 +103,7 @@
         }
         ,
         "cookies_N_Cream": {
-          "title": "Cookies & Cream",
+          "title": "Cookies & Cream Milk",
           "category": "Quart",
           "sizes": {
             'quart': 4,
@@ -214,7 +214,7 @@
         }
         ,
         "oatmealRaisin": {
-          "title": "Oatmeal Raisin",
+          "title": "Oatmeal Raisin Ice Cream Bar",
           "category": "bar",
           "sizes": {
             'pint': 2
@@ -224,7 +224,7 @@
         }
         ,
         "sugarCookie": {
-          "title": "Sugar Cookie Strawberry",
+          "title": "Sugar Cookie Strawberry Ice Cream Bar",
           "category": "bar",
           "sizes": {
             'pint': 2
@@ -234,7 +234,7 @@
         }
         ,
         "chocolateChip_icecreamBar": {
-          "title": "Chocolate Chip Vanilla",
+          "title": "Chocolate Chip Vanilla Ice Cream Bar",
           "category": "bar",
           "sizes": {
             'pint': 2
@@ -244,7 +244,7 @@
         }
         ,
         "brownie": {
-          "title": "Brownie Choclate",
+          "title": "Brownie Choclate Ice Cream Bar",
           "category": "bar",
           "sizes": {
             'pint': 2
@@ -255,7 +255,7 @@
         ,
         // Cheese Curds
         "Cajun": {
-          "title": "Cajun",
+          "title": "Cajun Cheese Curds",
           "category": "cheese_curds",
           "sizes": {
             'pint': 2
@@ -265,7 +265,7 @@
         }
         ,
         "whiteCheddar": {
-          "title": "White Cheddar",
+          "title": "White Cheddar Cheese Curds",
           "category": "cheese_curds",
           "sizes": {
             'pint': 2
@@ -275,8 +275,8 @@
         }
         ,
         "Dill": {
-          "title": "Dill",
-          "category": "cheese_curds",
+          "title": "Dill Cheese Curds",
+          "category": "cheese_curds ",
           "sizes": {
             'pint': 2
           },
@@ -285,7 +285,7 @@
         }
         ,
         "MushroomGarlic": {
-          "title": "Mushroom Garlic",
+          "title": "Mushroom Garlic Cheese Curds",
           "category": "cheese_curds",
           "sizes": {
             'pint': 2
@@ -296,7 +296,7 @@
         // big cheese
         ,
         "platsburg": {
-          "title": "Platsburg",
+          "title": "Platsburg Artisan Cheese",
           "category": "artisan_cheese",
           "sizes": {
             'pint': 2
@@ -306,7 +306,7 @@
         }
         ,
         "smithFork": {
-          "title": "Smith Fork",
+          "title": "Smith Fork Artisan Cheese",
           "category": "artisan_cheese",
           "sizes": {
             'pint': 2
@@ -316,7 +316,7 @@
         }
         ,
         "winstead": {
-          "title": "Winstead Reserve",
+          "title": "Winstead Reserve Artisan Cheese",
           "category": "artisan_cheese",
           "sizes": {
             'pint': 2
@@ -326,7 +326,7 @@
         }
         ,
         "wexford": {
-          "title": "Wexford",
+          "title": "Wexford Artisan Cheese",
           "category": "artisan_cheese",
           "sizes": {
             'pint': 2
@@ -336,7 +336,7 @@
         }
         ,
         "lilly": {
-          "title": "Lilly",
+          "title": "Lilly Artisan Cheese",
           "category": "artisan_cheese",
           "sizes": {
             'pint': 2
@@ -346,7 +346,7 @@
         }
         ,
         "perrin": {
-          "title": "Perrin",
+          "title": "Perrin Artisan Cheese",
           "category": "artisan_cheese",
           "sizes": {
             'pint': 2
@@ -527,7 +527,7 @@
         toggleFAQ(event.target);
       });
 
-      // homepage scripts
+      // homepage scripts / .home
       if ($('#floatingBottle')[0]) {
 
         var theH = 0,
@@ -558,17 +558,19 @@
             console.log(bottlePos);
             arrayIndex = parseInt(x / screenWidth * customRotation.length);
             console.log('arrayindex ', arrayIndex);
-            $('.pod').removeClass('visible');
-            if (arrayIndex === 8) {
-              $('.pod').removeClass('visible');
-            } else if (arrayIndex <= 3) {
-
+            var textPod = $('.pod');
+            textPod.removeClass('visible');
+            console.log(arrayIndex);
+            if (arrayIndex === 11 || arrayIndex === 12){
+              textPod.removeClass('visible');
+            }
+             else if (arrayIndex <= 5) {
               $('.pod1').addClass('visible');
-            } else if (arrayIndex <= 7) {
+            } else if (arrayIndex <= 10) {
               $('.pod2').addClass('visible');
-            } else if (arrayIndex <= 12) {
+            } else if (arrayIndex <= 18) {
               $('.pod3').addClass('visible');
-            } else if (arrayIndex <= 16) {
+            } else if (arrayIndex <= 23) {
               $('.pod4').addClass('visible');
             }
 
@@ -669,13 +671,50 @@
             })
           } else {
             // $('#mainBottle').css({'max-width':'250px'});
-            floatingBottle.addClass('start').removeClass('stop').find('a').attr('href', '');
+            floatingBottle.addClass('start').removeClass('stop').find('a').removeAttr('href');
             //$('#mainBottle').unwrap('<a href="/products.html#milk"></a>');
 
           }
         }, {
           offset: '-650'
         })
+
+        var max_chars = 10,
+        zipField = $('.findText form input');
+
+        $('.findText form').submit(function(e) {
+          e.preventDefault();
+          goToLocate();
+        });
+
+        $('.mapFinder').on('click', '.zipFind', function(e){
+          e.preventDefault();
+          goToLocate();
+        });
+
+        var goToLocate = function(e){
+          var zip = zipField.val();
+          console.log(zip.length);
+          zipField.removeClass('error');
+          if (zip !== '' && zip.length >= 5){
+            window.location.href = ('locate/?zip=' + zip);
+          }
+          else {
+            zipField.addClass('error');
+          }
+        }
+
+        zipField.keydown( function(e){
+            if ($(this).val().length >= max_chars) { 
+                $(this).val($(this).val().substr(0, max_chars));
+            }
+        });
+
+        zipField.keyup( function(e){
+            if ($(this).val().length >= max_chars) { 
+                $(this).val($(this).val().substr(0, max_chars));
+            }
+        });
 
       }
 
@@ -1069,11 +1108,67 @@
         //   $('#jlocator').height($(window).height()-$('.headerMain').height());
         // }).resize();
 
+        var lat, lng;
+        var QueryString = function () {
+  // This function is anonymous, is executed immediately and 
+  // the return value is assigned to QueryString!
+  var query_string = {};
+  var query = window.location.search.substring(1);
+  var vars = query.split("&");
+  for (var i=0;i<vars.length;i++) {
+    var pair = vars[i].split("=");
+        // If first entry with this name
+    if (typeof query_string[pair[0]] === "undefined") {
+      query_string[pair[0]] = decodeURIComponent(pair[1]);
+        // If second entry with this name
+    } else if (typeof query_string[pair[0]] === "string") {
+      var arr = [ query_string[pair[0]],decodeURIComponent(pair[1]) ];
+      query_string[pair[0]] = arr;
+        // If third or later entry with this name
+    } else {
+      query_string[pair[0]].push(decodeURIComponent(pair[1]));
+    }
+  } 
+  return query_string;
+}();
+    console.log(QueryString.zip);
+
+
+    if (QueryString.zip !== '' && QueryString.zip !== undefined){
+
+     
+      var geocoder = new google.maps.Geocoder();
+      geocoder.geocode({
+        "address": QueryString.zip
+      }, function(results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+          console.log(results);
+           lat = results[0].geometry.location.lat(),
+            lng = results[0].geometry.location.lng();
+            var placeName = results[0].address_components[0].long_name,
+            formattedAddress = results[0].formatted_address;
+          $(".findInput input").val(formattedAddress);
+          console.log(lat,lng);
+          $('.mapOverlay').addClass('shrink');
+        $('#jlocator').jlocator({
+          startZoom: 13,
+          latitude: lat,
+          longitude: lng
+        });
+        }
+      });
+      }
+      else {
+       console.log('else run');
         $('#jlocator').jlocator({
           startZoom: 13,
           latitude: 39.0936738,
           longitude: -94.589048
         });
+      }
+
+
+        
       }
       transitionChange();
       $(window).on('resize', function() {

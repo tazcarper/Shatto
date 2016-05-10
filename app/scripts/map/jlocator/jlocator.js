@@ -59,7 +59,7 @@
 			,latitude: 0
 			,longitude: 90	
 			
-			,geolocation: true
+			,geolocation: false
 			,markerIcon: '' //'' for default
 			,markerText: 'Click to Zoom'
 			,directionsType: 'DRIVING' //BICYCLING, TRANSIT, WALKING
