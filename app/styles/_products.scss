@@ -2,11 +2,17 @@
 
 #mobileCollapse {
 	padding-bottom: 50px;
-
+	
 	// Mobile Category Links
 	@include MQ(maxM) {
 		//padding-bottom: 15px;
+
 		padding-top: 35px;
+		.collapse {
+			&.collapsing {
+				@include transition(height .15s ease-out);
+			}
+		}
 	}
 	.mobileCategory {
 		display: none;
@@ -21,7 +27,7 @@
 			background: black;
 			color: white;
 			@include transition(all .15s ease-out);
-
+	
 			&.collapsed {
 				background: white;
 				color: black;
@@ -108,6 +114,7 @@
 }
 .productPage, .products {
 	position: relative;
+
 	//margin-bottom: 1.5em;
 
 	@include MQ(maxM) {
@@ -116,12 +123,18 @@
 	@include MQ(M) {
 		display: block !important;
 		//height: auto !important;
+		
 	}
 	@include MQ(maxM) {
 		padding-top: 50px;
 	}
 	&section {
 		background: white;
+	}
+	&.productSection {
+		@include MQ(M){
+			height:auto !important;
+		}
 	}
 	.container {
 		@include MQ(L) {
@@ -381,7 +394,7 @@
 		@include MQ(maxM) {
 			width: 100%;
 			left: 0;
-
+			
 			img {
 				max-width: none !important;
 				width: 250px;

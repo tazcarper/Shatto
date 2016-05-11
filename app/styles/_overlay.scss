@@ -52,6 +52,9 @@ $overlayDelay: .35s;
 		font-family: "futura-pt-condensed", sans-serif;
 		cursor: pointer;
 		padding: 15px;
+		@include MQ(maxM) {
+			top:0px;
+		}
 	}
 	.productShot {
 		text-align: center;
@@ -133,9 +136,10 @@ $overlayDelay: .35s;
 	visibility: visible;
 	width: 100%;
 	@include transition(all .35s ease);
+	overflow-y:scroll;
 	@include MQ(maxM) {
 		padding-bottom:50px;
-		overflow-y:scroll;
+		
 		background:white;
 	}
 	.productInfo {
@@ -182,6 +186,9 @@ $overlayDelay: .35s;
 	.flavors {
 		margin-top: 35px;
 		margin-bottom: 15px;
+		@include MQ(maxM) {
+			margin-top: 55px;
+		}
 	}
 }
 .nutritionFacts {
