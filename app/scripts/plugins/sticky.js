@@ -5,6 +5,7 @@
  */
 
 (function() {
+  
   var $, win;
 
   $ = this.jQuery || window.jQuery;

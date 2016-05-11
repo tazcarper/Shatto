@@ -3,7 +3,11 @@ import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import del from 'del';
-import {stream as wiredep} from 'wiredep';
+import {
+  stream as wiredep
+} from 'wiredep';
+
+var concatJS = require('gulp-concat');
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -35,9 +39,13 @@ gulp.task('scripts', () => {
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe($.babel({
-      compact: false
+      compact: true
     }))
     .pipe($.sourcemaps.write('.'))
+    .on('error', function(err) {
+      console.log(err);
+      this.end();
+    })
     .pipe(gulp.dest('.tmp/scripts'))
     .pipe(gulp.dest('dist/scripts'))
     .pipe(reload({
@@ -61,12 +69,12 @@ const testLintOptions = {
   env: {
     mocha: true
   },
-  rules : {
-    'comma-spacing' : 0,
+  rules: {
+    'comma-spacing': 0,
     'semi-spacing': 0,
-    'space-infix-ops' : 0,
-    'camelcase' : 0,
-    'key-spacing' : 0
+    'space-infix-ops': 0,
+    'camelcase': 0,
+    'key-spacing': 0
 
   }
 };
@@ -76,11 +84,15 @@ gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
 
 gulp.task('html', ['views', 'styles', 'scripts'], () => {
-  return gulp.src(['app/*.html', '.tmp/*.html'])
+  return gulp.src(['app/*.html', '.tmp/*.html', 'app/*.jade'])
     .pipe($.useref({
       searchPath: ['.tmp', 'app', '.']
     }))
-    .pipe($.if('*.js', $.uglify()))
+    .pipe($.if('*.js', $.uglify({
+      mangle: false,
+      compress: false,
+      preserveComments: 'all'
+    })))
     .pipe($.if('*.css', $.cssnano({
       autoprefixer: false
     })))
@@ -91,6 +103,39 @@ gulp.task('html', ['views', 'styles', 'scripts'], () => {
     .pipe(gulp.dest('dist'));
 });
 
+gulp.task('concatScripts', function() {
+  return gulp.src(
+      [
+        'app/scripts/map/jplist.min.js',
+        'app/scripts/map/jlocator/jlocator.js',
+        'app/scripts/map/jlocator/controller/controller.js',
+        'app/scripts/map/jlocator/view/panel.js',
+        'app/scripts/map/jlocator/view/map.js',
+        'app/scripts/map/jlocator/models/store.js',
+        'app/scripts/map/jlocator/controls/autocomplete.js',
+        'app/scripts/map/jlocator/controls/autocomplete-radius.js',
+        'app/scripts/plugins/sticky.js',
+        'app/scripts/plugins/slick.js',
+        'app/scripts/plugins/jquery.vide.js',
+        'app/scripts/plugins/unveil.js',
+        'app/scripts/plugins/picturefill.js',
+        'app/scripts/plugins/datedropper.js',
+        'bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js',
+        'bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js',
+        'bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js',
+        'app/scripts/plugins/jquery.waypoints.js',
+        'app/scripts/plugins/oldBrowser.js',
+        'app/scripts/contact/nlform.js',
+        'app/scripts/main.js'
+      ]
+    )
+    .pipe(concatJS('all.js'))
+    .pipe($.uglify({
+      mangle: true
+    }))
+    .pipe(gulp.dest('dist/scripts'));
+});
+
 
 gulp.task('images', () => {
   return gulp.src('app/images/**/*.+(jpg|jpeg|png|gif|svg)')
@@ -98,6 +143,7 @@ gulp.task('images', () => {
       progressive: true,
       svgoPlugins: [{
         removeViewBox: false,
+
         removeDoctype: true
       }],
       use: [pngquant()],
@@ -138,9 +184,13 @@ gulp.task('extras', () => {
 gulp.task('views', () => {
   return gulp.src('app/*.jade')
     .pipe($.plumber())
-    .pipe($.jade({pretty: true}))
+    .pipe($.jade({
+      pretty: true
+    }))
     .pipe(gulp.dest('.tmp'))
-    .pipe(reload({stream: true}));
+    .pipe(reload({
+      stream: true
+    }));
 });
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
@@ -215,6 +265,7 @@ gulp.task('serve:php', ['fonts'], function() {
   });
 
   gulp.watch('app/**/*.html', ['views', reload]);
+  gulp.watch('app/**/*.jade', ['views', 'scripts']);
   gulp.watch('**/*.php', reload);
   gulp.watch('app/images/**/*', ['imageCopy']);
   gulp.watch('app/styles/**/*.scss', ['styles']);
@@ -257,7 +308,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app/layouts'));
 });
 
-gulp.task('build', ['html',  'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({
     title: 'build',
     gzip: true

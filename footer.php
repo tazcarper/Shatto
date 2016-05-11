@@ -84,39 +84,5 @@
 </script>-->
 
 <script src="http://maps.google.com/maps/api/js?libraries=places,geometry"></script>
-<!--<script src="<?php echo get_template_directory_uri(); ?>/dist/scripts/plugins.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/main.js"></script>-->
 
-<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/map/jplist.min.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/map/jlocator/jlocator.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/map/jlocator/controller/controller.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/map/jlocator/view/panel.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/map/jlocator/view/map.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/map/jlocator/models/store.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/map/jlocator/controls/autocomplete.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/map/jlocator/controls/autocomplete-radius.js"></script>
-
-
-
-<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/plugins/sticky.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/plugins/slick.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/plugins/jquery.vide.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/plugins/unveil.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/plugins/picturefill.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/plugins/datedropper.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/bower_components/bootstrap-sass/assets/javascript
-s/bootstrap/dropdown.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
-
-<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/plugins/jquery.waypoints.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/plugins/oldBrowser.js"></script>
-
-<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/contact/nlform.js"></script>
-
-<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/main.js"></script> 
-
-<!-- 
-<script src="<?php echo get_template_directory_uri(); ?>/dist/scripts/map.js"></script> 
-<script src="<?php echo get_template_directory_uri(); ?>/dist/scripts/plugins.js"></script> 
-<script src="<?php echo get_template_directory_uri(); ?>/dist/scripts/main.js"></script>  -->
+<script src="<?php echo get_template_directory_uri(); ?>/dist/scripts/all.js"></script> 

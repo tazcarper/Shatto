@@ -5,8 +5,7 @@
 
   (function(window, document, $) {
 
-    // lazy loader INIT
-    //var layzr = new Layzr();
+   
 
     var isLateralNavAnimating = false;
 
@@ -502,7 +501,7 @@
           theBottle = $('#mainBottle'),
           bottles = 16,
           arrayIndex = 8,
-          currentUrl = stylesheet_directory_uri,
+         // currentUrl = stylesheet_directory_uri,
           // Custom rotation order
           customRotation = [9, 10, 11, 12, 13, 14, 15, 16, 1, 2, 3, 4, 5, 6, 7, 8, 9],
           screenWidth,
@@ -599,7 +598,7 @@
         onResize();
 
 
-        var waypoints = $('#floatingTrigger').waypoint(function(direction) {
+        var floatTrigger = $('#floatingTrigger').waypoint(function(direction) {
           if (direction === 'down') {
             //$('#mainBottle').css({'max-width':'400px'});
             floatingBottle.addClass('start');
@@ -870,7 +869,7 @@
           // });
 
         });
-      }
+      }   
 
       $(document).on('click', 'a[href*="#"]:not([href="#"])', function(e) {
         e.preventDefault();
@@ -966,7 +965,7 @@
 
           }
         }
-
+  
 
         // listener
         $('.overlay').on('click', '.overlay-close', function() {
@@ -982,7 +981,7 @@
             theProduct = product.data('product'),
             gotData = false;
 
-         // console.log(product, current, theProduct);
+        
 
 
 
@@ -1026,9 +1025,7 @@
 
         });
 
-        // $('.productImages img.main').each(function(e){
-        //   $(this).unveil(200);
-        // });
+         
 
 
         $(window).load(function() {
