@@ -116,5 +116,5 @@ s/bootstrap/dropdown.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/app/scripts/main.js"></script> -->
 
 <script src="<?php echo get_template_directory_uri(); ?>/dist/scripts/plugins.js"></script> 
-<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/map.js"></script> 
-<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/main.js"></script> 
+<script src="<?php echo get_template_directory_uri(); ?>/dist/scripts/map.js"></script> 
+<script src="<?php echo get_template_directory_uri(); ?>/dist/scripts/main.js"></script> 
