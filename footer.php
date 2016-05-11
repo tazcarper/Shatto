@@ -82,7 +82,7 @@
   r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
   ga('create','UA-XXXXX-X');ga('send','pageview');
 </script>-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
 <script src="http://maps.google.com/maps/api/js?libraries=places,geometry"></script>
 <!--<script src="<?php echo get_template_directory_uri(); ?>/dist/scripts/plugins.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/app/scripts/main.js"></script>-->

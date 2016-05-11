@@ -35,7 +35,7 @@ gulp.task('scripts', () => {
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe($.babel({
-      compact: true
+      compact: false
     }))
     .pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest('.tmp/scripts'))
