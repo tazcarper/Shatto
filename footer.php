@@ -85,7 +85,7 @@
 <script src="http://maps.google.com/maps/api/js?libraries=places,geometry"></script>
 <!--<script src="<?php echo get_template_directory_uri(); ?>/dist/scripts/plugins.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/app/scripts/main.js"></script>-->
-
+<!-- 
 <script src="<?php echo get_template_directory_uri(); ?>/app/scripts/map/jplist.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/app/scripts/map/jlocator/jlocator.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/app/scripts/map/jlocator/controller/controller.js"></script>
@@ -96,7 +96,7 @@
 <script src="<?php echo get_template_directory_uri(); ?>/app/scripts/map/jlocator/controls/autocomplete-radius.js"></script>
 
 
-<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/plugins/layzr.js"></script>
+
 <script src="<?php echo get_template_directory_uri(); ?>/app/scripts/plugins/sticky.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/app/scripts/plugins/slick.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/app/scripts/plugins/jquery.vide.js"></script>
@@ -113,6 +113,8 @@ s/bootstrap/dropdown.js"></script>
 
 <script src="<?php echo get_template_directory_uri(); ?>/app/scripts/contact/nlform.js"></script>
 
-<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/main.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/main.js"></script> -->
 
-
+<script src="<?php echo get_template_directory_uri(); ?>/dist/scripts/plugins.js"></script> 
+<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/map.js"></script> 
+<script src="<?php echo get_template_directory_uri(); ?>/app/scripts/main.js"></script> 
