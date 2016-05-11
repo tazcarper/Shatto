@@ -269,7 +269,7 @@ gulp.task('serve:php', ['fonts'], function() {
   gulp.watch('**/*.php', reload);
   gulp.watch('app/images/**/*', ['imageCopy']);
   gulp.watch('app/styles/**/*.scss', ['styles']);
-  gulp.watch('app/scripts/**/*.js', ['scripts']);
+  gulp.watch('app/scripts/**/*.js', ['scripts', 'concatScripts']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
 });

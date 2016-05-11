@@ -513,7 +513,7 @@
         // }
 
         function bottleMouseMove(e) {
-          //console.log('screenwidth ',screenWidth);
+          
           if (floatingBottle.hasClass('start')) {
             floatingBottle.addClass('disableTransition');
             var x = e.pageX - theBottle.offset().left;

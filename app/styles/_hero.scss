@@ -33,12 +33,14 @@
     background: url('../images/hero-bg.jpg')  50% 53% repeat-x;
   }
   
-  h1, p {
+  h1 {
   font-weight:500;
+  font-family: "futura-pt", sans-serif;
   }
   h1 {
     font-size: 60px;
     font-weight: 300;
+    margin-bottom: 25px;
     @media (min-width:$screen-md-min) {
       font-size: 100px;
     }

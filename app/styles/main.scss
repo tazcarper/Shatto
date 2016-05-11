@@ -85,7 +85,7 @@ h6 {
 p {
   font-family: "futura-pt", sans-serif;
   font-size: 18px;
-
+  font-weight:300;
   @include MQ(maxM) {
     font-size: 18px;
   }
@@ -93,6 +93,10 @@ p {
 p a {
   color: inherit;
   text-decoration: underline;
+  &:hover, &:focus, &:active {
+    color:inherit;
+   
+  }
 }
 // Text align helper
 .text-xs-left {
