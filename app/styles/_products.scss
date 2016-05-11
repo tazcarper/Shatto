@@ -134,6 +134,7 @@
 	&.productSection {
 		@include MQ(M){
 			height:auto !important;
+			margin-bottom: 35px;
 		}
 	}
 	.container {
@@ -355,15 +356,21 @@
 			position: relative;
 			z-index: 9;
 			display: inline-block;
-
+			font-weight:500;
+			@include MQ(maxL){
+				font-size:6em;
+			}
+			@include MQ(maxML){
+				font-size:em(75);
+			}
 			@include MQ(maxM) {
 				font-size: em(40);
 			}
 		}
 		.lines {
 			height: 3px;
-			width: 0%;
-			opacity: 0;
+			width: 100%;
+			opacity: 1;
 			position: absolute;
 			top: 50%;
 			border-top: 1px solid black;
@@ -371,7 +378,7 @@
 			left: 0;
 			right: 0;
 			margin: 0 auto;
-			@include transition(width .3s ease-out, opacity .5s ease-out);
+			
 		}
 	}
 	// prudcts
@@ -428,14 +435,14 @@
 			}
 		}
 		&.icecreamBar {
-			top: -6px;
+			top: 0px;
 
 			@include MQ(maxM) {
-				top: -8px;
+				top: -5px;
 			}
 		}
 		&.cheeseCurds {
-			top: -6px;
+			top: 1px;
 
 			@include MQ(maxM) {
 				left: 0;
@@ -447,7 +454,7 @@
 			}
 		}
 		&.cheese {
-			top: -8px;
+			top: -2px;
 
 			@include MQ(maxM) {
 				left: 0;
@@ -459,10 +466,10 @@
 			}
 		}
 		&.butterShadow {
-			top: -3px;
+			top: -2px;
 		}
 		&.topButter {
-			top: -13px;
+			top: -8px;
 		}
 	}
 	// Visible scroll class animations
@@ -529,7 +536,7 @@
 					top: 0;
 					float: none;
 					display: inline-block;
-
+					
 					&.productShown {
 						.productName {
 							@include transition(all, 0.35s, ease-out);
@@ -578,7 +585,12 @@
 			.product {
 				opacity: 1;
 				// MILK
-
+				&:hover {
+					.factsLabel {
+						background:black;
+						color:white;
+					}
+				}
 				@include transform(translate(0, 0px));
 
 				// ITEM SELECTED
@@ -760,6 +772,7 @@
 
 		@include MQ(maxM) {
 			height: auto !important;
+
 		}
 		.productName {
 			width: 65%;
@@ -802,7 +815,7 @@
 				padding: 1px 7px;
 				margin-top: 8px;
 				font-size: 12px;
-
+				@include transition(all .25s ease-out);
 				@include MQ(maxM) {
 					font-size: 16px;
 					color: white;
