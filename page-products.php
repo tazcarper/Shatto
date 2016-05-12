@@ -342,21 +342,21 @@
           <div data-product="platsburg" class="product trigger text-center plattsburg"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/loading_spinner.gif" data-src="<?php echo get_template_directory_uri(); ?>/dist/images/products/cheese/Plattsburg.png " data-src-retina="<?php echo get_template_directory_uri(); ?>/dist/images/products/cheese/Plattsburg_2x.png" class="main">
             <div class="bottleShadow cheese"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/shadow.png"></div>
             <div class="productName">
-              <h5>Plattsburg <span class="smaller">(A gouda style cheese)</span></h5>
+              <h5>Plattsburg <span class="smaller">(A Gouda-style cheese)</span></h5>
               <p class="factsLabel">nutrition facts</p>
             </div>
           </div>
           <div data-product="smithFork" class="product trigger text-center smithFork"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/loading_spinner.gif" data-src="<?php echo get_template_directory_uri(); ?>/dist/images/products/cheese/SmithFork.png " data-src-retina="<?php echo get_template_directory_uri(); ?>/dist/images/products/cheese/SmithFork_2x.png" class="main">
             <div class="bottleShadow cheese"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/shadow.png"></div>
             <div class="productName">
-              <h5>Smith Fork<br/><span class="smaller">(A cheddar style cheese)</span></h5>
+              <h5>Smith Fork<br/><span class="smaller">(A Cheddar-style cheese)</span></h5>
               <p class="factsLabel">nutrition facts </p>
             </div>
           </div>
           <div data-product="winstead" class="product trigger text-center winstead"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/loading_spinner.gif" data-src="<?php echo get_template_directory_uri(); ?>/dist/images/products/cheese/WinsteadReserve.png" data-src-retina="<?php echo get_template_directory_uri(); ?>/dist/images/products/cheese/WinsteadReserve_2x.png" class="main">
             <div class="bottleShadow cheese"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/shadow.png"></div>
             <div class="productName">
-              <h5>Winstead Reserve <span class="smaller">(A havarti style cheese)</span></h5>
+              <h5>Winstead Reserve <span class="smaller">(A Havarti-style cheese)</span></h5>
               <p class="factsLabel">nutrition facts</p>
             </div>
           </div>
@@ -478,7 +478,7 @@
   <div class="overlay">
     
     <div class="productInfo">
-      <div class="overlay-close">X</div>
+      
       <div class=" container">
         <div class="row">
           
@@ -489,8 +489,11 @@
           </div>
           <div class="col-sm-7 ">
             <div class="row">
-              <div class="col-sm-12 flavors">
+              <div class="col-xs-9 flavors">
                 <h3></h3>
+              </div>
+              <div class="col-xs-3">
+                <div class="overlay-close">X</div>
               </div>
               
             </div>
@@ -583,10 +586,12 @@
                     <div class="col-sm-12">
                       <ul>
                         <li>0% <span class="title">Vitamin A</span> 0mg</li>
-                        <li>0% <span class="title">Vitamin A</span> 0mg</li>
-                        <li>0% <span class="title">Vitamin A</span> 0mg</li>
-                        <li>0% <span class="title">Vitamin A</span> 0mg</li>
-                        <li>0% <span class="title">Vitamin A</span> 0mg</li>
+                        <li>0% <span class="title">Vitamin C</span> 0mg</li>
+                        <li>0% <span class="title">Vitamin D</span> 0mg</li>
+                      </ul>
+                      <ul>
+                        <li>0% <span class="title">Iron</span> 0mg</li>
+                        <li>0% <span class="title">Calcium</span> 0mg</li>
                       </ul>
                     </div>
                   </div>

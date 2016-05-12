@@ -123,7 +123,9 @@
 			,markerSettings;
 		
 		//init info window
-		infowindow = new google.maps.InfoWindow();
+		infowindow = new google.maps.InfoWindow({
+			"borderRadius": 25
+		});
 		
 		//set info window html
 		if($.isFunction(self.options.infoWindow)){

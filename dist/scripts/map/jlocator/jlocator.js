@@ -35,7 +35,11 @@ startZoom:2,storeZoom:13,latitude:0,longitude:90,geolocation:false,markerIcon:''
 ,mapTypeId:'ROADMAP' //ROADMAP, SATELLITE, HYBRID, TERRAIN
 //jplist options: http://jplist.no81no.com/
 ,jplist:{items_box:'[data-type="stores"]',item_path:'[data-type="store"]',panel_path:'[data-type="controls"]',no_results:'[data-type="no-results"]',redraw_callback:function redraw_callback(){} //panel controls
-,control_types:{'autocomplete':{class_name:'Autocomplete',options:{}},'autocomplete-radius':{class_name:'AutocompleteRadius',options:{}}}} //if info window should be opened on store click
+,control_types:{'autocomplete':{class_name:'Autocomplete',options:{}} // ,'autocomplete-radius':{
+// 	class_name: 'AutocompleteRadius' 
+// 	,options: {}
+// }
+}} //if info window should be opened on store click
 ,openInfoWindowOnStoreClick:false //info window content
 ,infoWindow:function infoWindow(html,title,address,city,state,zipcode,country){return '<div class="info-window">'+html+'</div>';} //events
 ,storeClickEvent:'storeClickEvent',pinClickEvent:'pinClickEvent',sendStoreListEvent:'sendStoreListEvent',getStoresListEvent:'getStoresListEvent',setDirectionsEvent:'setDirectionsEvent',jumpEvent:'jumpEvent',initZoomEvent:'initZoomEvent'},userOptions); //init controller		

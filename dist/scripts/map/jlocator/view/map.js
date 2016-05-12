@@ -33,7 +33,7 @@ markerStore=marker['store'];if(markerStore&&markerStore.latitude===store.latitud
 	* @param {Object} self - this object
 	* @param {jQuery.fn.jlocator.store} store
 	*/var setMarker=function setMarker(self,store){var infowindow,marker,markerSettings; //init info window
-infowindow=new google.maps.InfoWindow(); //set info window html
+infowindow=new google.maps.InfoWindow({"borderRadius":25}); //set info window html
 if($.isFunction(self.options.infoWindow)){infowindow.setContent(self.options.infoWindow(store['html'],store.title,store.address,store.city,store.state,store.zipcode,store.country));} //init marker settings
 markerSettings={position:store.latlng,map:self.mapCanvas,title:self.options.markerText}; //marker icon
 if(store.customMarkerIcon!==''){markerSettings.icon=store.customMarkerIcon;}else {if(self.options.markerIcon!==''){markerSettings.icon=self.options.markerIcon;}} //create marker

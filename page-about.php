@@ -66,7 +66,7 @@
             <h2 class="hidden-xs">Come Visit Us.</h2>
             <h3 class="hidden-xs">(And milk a cow and stuff.)</h3>
             <?php the_field('maps_copy'); ?>
-            <a href="#" class="btn invert center">Find Shatto Near You</a>
+            <a href="../locate" class="btn invert center">Find Shatto Near You</a>
           </div>
         </div>
       </div>

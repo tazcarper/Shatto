@@ -8,6 +8,9 @@
             <div data-type="controls" class="controls">
               <div class="findInput">
                 <input type="text" placeholder="City, State or ZIP" data-zoom="13" data-control-name="autocomplete" data-control-type="autocomplete" autocompelte="on" class="form-control">
+                <div class="btn invert search">GO</div>
+                <span class="geoCode">Or, you can just use my location. I'm not hiding.</span>
+                <span class="resetGeo">Looks like you denied us using your location. <br/>You have to <a href="https://support.google.com/chrome/answer/142065?hl=en">reset it yourself</a>.</span>
               </div>
             </div>
             

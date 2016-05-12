@@ -22,25 +22,25 @@
       </div>
       <div class="col-sm-2 hidden-xs">
         <ul>
-          <li><a href="/events-tours">Events/Tours</a>
+          <li><a href="events-tours">Events/Tours</a>
             <ul>
-              <li><a href="/events-tours">Photos</a></li>
+              <!-- <li><a href="/events-tours">Photos</a></li> -->
             </ul>
           </li>
         </ul>
         <ul>
-          <li><a href="/locate">Store Locator</a></li>
+          <li><a href="locate">Store Locator</a></li>
         </ul>
         <ul>
-          <li><a href="/merchandise">Merchandise</a></li>
+          <!-- <li><a href="/merchandise">Merchandise</a></li> -->
         </ul>
       </div>
       <div class="col-sm-2  hidden-xs">
         <ul>
           <li><a href="about">About Shatto</a>
             <ul>
-              <li><a href="/faq">FAQs</a></li>
-              <li><a href="/history">History</a></li>
+              <!-- <li><a href="/faq">FAQs</a></li>
+              <li><a href="/history">History</a></li> -->
             </ul>
           </li>
         </ul>
@@ -48,9 +48,9 @@
           <li><a href="#">News</a></li>
         </ul>
         <ul>
-          <li><a href="/contact">Contact</a>
+          <li><a href="contact">Contact</a>
             <ul>
-              <li><a href="#">Directions to the farm</a></li>
+             <!--  <li><a href="#">Directions to the farm</a></li> -->
             </ul>
           </li>
         </ul>

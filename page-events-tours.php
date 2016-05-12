@@ -18,7 +18,7 @@
       </div>
       <div class="row images">
         <div class="scheduleOverlay">
-          <a href="#tourSection" class="btn scheduleTour" id="scheduleTour">Go ahead and schedule a tour</a>
+          <a href="#tourSection" class="btn scheduleTour" id="scheduleTour">GET TO SCHEDULIN’ A TOUR</a>
         </div>
         <div class="col-md-6 leftPod"><img src="<?php $image = get_field('intro_left_image'); echo $image['url']; ?>">
           <?php the_field('intro_left'); ?>
@@ -35,7 +35,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-sm-3 center-block">
-            <h4>Schedule your tour</h4>
+            <h4>GET TO SCHEDULIN’ A TOUR</h4>
             <form action="">
               <div class="form-group">
                 <input type="text" id="schedule_name" class=""name="schedule_name" placeholder="Name" required>

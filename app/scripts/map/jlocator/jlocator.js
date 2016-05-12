@@ -86,10 +86,10 @@
 						}
 					}
 					
-					,'autocomplete-radius':{
-						class_name: 'AutocompleteRadius' 
-						,options: {}
-					}
+					// ,'autocomplete-radius':{
+					// 	class_name: 'AutocompleteRadius' 
+					// 	,options: {}
+					// }
 					
 				}
 			}

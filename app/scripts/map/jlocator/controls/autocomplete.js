@@ -17,6 +17,36 @@
 	 */
 	jQuery.fn.jplist.controls.Autocomplete.render = function(control) {
 
+		$('.geoCode').on('click', function(e) { 
+			var button = $(this);
+			console.log('geo clicked');
+			if (Modernizr.geolocation) {
+					navigator.geolocation.watchPosition(function(position) {
+						var geocoder = new google.maps.Geocoder();
+						geocoder.geocode({
+						"location": {lat: position.coords.latitude, lng: position.coords.longitude}
+						}, function(results, status) {
+							$(".findInput input").val(results[3].formatted_address);
+						});
+						control.$jplistBox.trigger('jumpEvent', [position.coords.latitude, position.coords.longitude, control.$control.data('jplist-autocomplete-zoom')]);
+						control.$jplistBox.trigger(control.options.force_ask_event, [false]);
+						
+						button.hide();
+						$('.mapOverlay').addClass('shrink');
+					},
+					function(error) {
+						if (error.code == error.PERMISSION_DENIED)
+							console.log("you denied me :-(");
+						$('.resetGeo').css({'display':'inline-block'});
+					});
+				
+			} else {
+				alert('Your browser does not support geolocation.');
+			}
+
+			
+		});
+
 		var autocomplete, zoom, options = {};
 
 		if (control.controlTypeOptions) {
@@ -38,6 +68,7 @@
 		control.$control.data('jplist-autocomplete-zoom', zoom);
 	};
 
+
 	/**
 	 * init events
 	 * @param {jQuery.fn.jplist.view.PanelControl} control
@@ -47,18 +78,29 @@
 
 		
 
+		
+		$('.search').on('click', function(e){
+			if ($('.findInput input').val() !== ''){
+			if ($('.pac-container .pac-item-selected')[0]) {
+						selectFirstResult($('.pac-item-selected'));
+					} else {
+						selectFirstResult($('.pac-container .pac-item:first'));
+					}
+					$('.mapOverlay').addClass('shrink');	
+			}
+			
+		});
+
+
 		// Handle Enter on search location 
 		$('.findInput input').focusin(function() {
 
 			$(document).keypress(function(e) {
 				if (e.which == 13) {
-					console.log('enter');
 					if ($('.pac-container .pac-item-selected')[0]) {
 						selectFirstResult($('.pac-item-selected'));
-						console.log('item selected after row')
 					} else {
 						selectFirstResult($('.pac-container .pac-item:first'));
-						console.log('first item enter')
 					}
 					$('.mapOverlay').addClass('shrink');
 
@@ -80,7 +122,6 @@
 				"address": firstResult
 			}, function(results, status) {
 				if (status == google.maps.GeocoderStatus.OK) {
-					console.log(results);
 					var lat = results[0].geometry.location.lat(),
 						lng = results[0].geometry.location.lng(),
 						placeName = results[0].address_components[0].long_name,
@@ -207,7 +248,6 @@
 
 		return status;
 	};
-
 
 
 

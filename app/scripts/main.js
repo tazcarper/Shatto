@@ -22,7 +22,7 @@
           "category": "half-gallon",
           "sizes": ["half gallon", "Quart"],
           "image": "/half-gallons/final/large/ShattoMilk_HalfGallon_Skim.png",
-          "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+          "nutrition": "Ingredients: MILK, CREAM, SUGAR , CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
         },
         "HG_onePercent": {
           "title": "1% Milk",
@@ -98,7 +98,7 @@
           "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
         },
         "cookies_N_Cream": {
-          "title": "Cookies & Cream Milk",
+          "title": "Cookies and Cream Milk",
           "category": "Quart",
           "sizes": {
             'quart': 4,
@@ -867,7 +867,7 @@
           //     // handle errors
           //   }
           // });
-
+ 
         });
       }   
 
@@ -968,6 +968,9 @@
   
 
         // listener
+        $(document).keyup(function(e) {
+          if (e.keyCode === 27) overlayToggle();   
+        });
         $('.overlay').on('click', '.overlay-close', function() {
           overlayToggle();
         });
