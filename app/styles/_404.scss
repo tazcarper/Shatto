@@ -2,9 +2,14 @@
   color: $black;
   padding-bottom: 4em;
   text-align: center;
- p {
- 	line-height: 1.2em;
- }
+  h1 {
+    text-transform: none;
+  }
+
+  p {
+   	line-height: 1.2em;
+  }
+
   @media (min-width:$screen-sm-min) {
     background: url('../images/404-bg-placeholder.jpg') center top no-repeat;
     color: $white;
