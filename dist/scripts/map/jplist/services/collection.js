@@ -149,4 +149,4 @@ self.$jplistBox.trigger(self.options.add_item_event,[dataItem,self.dataitems]);}
 self=new Init($jplistBox,options); //properties
 this.$jplistBox=$jplistBox;this.options=options;this.dataitems=self['dataitems'];this.dataview=self['dataview']; //methods
 this.resetDataview=self['resetDataview'];this.modifyDataview=self['modifyDataview'];this.addDataItem=self['addDataItem'];this.addDataItems=self['addDataItems'];this.empty=self['empty'];this.delDataitem=self['delDataitem'];this.delDataitems=self['delDataitems'];this.indexOf=self['indexOf'];this.dataviewToString=self['dataviewToString'];this.dataviewToJqueryObject=self['dataviewToJqueryObject'];this.dataitemsToJqueryObject=self['dataitemsToJqueryObject'];};})(jQuery);
-//# sourceMappingURL=collection.js.map
+//# sourceMappingURL=../../../map/jplist/services/collection.js.map

@@ -12,4 +12,4 @@
 	* @property {string} html - path item html
 	*/jQuery.fn.jplist.models.Pathitem=function(jqElement,path){ //properties
 this.path=path;this.text=jqElement.text();this.html=jqElement.html();};})(jQuery);
-//# sourceMappingURL=pathitem.js.map
+//# sourceMappingURL=../../../map/jplist/models/pathitem.js.map

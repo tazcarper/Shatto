@@ -59,4 +59,4 @@ self.controller=new $.fn.jlocator.controller($root,self.options);return jQuery.e
 	*/jQuery.fn.jlocator=function(userOptions){return this.each(function(){var self; //init constructor
 self=new Init(userOptions,$(this)); //save in data
 $(this).data('jlocator',self);});};})(jQuery);
-//# sourceMappingURL=jlocator.js.map
+//# sourceMappingURL=../../map/jlocator/jlocator.js.map

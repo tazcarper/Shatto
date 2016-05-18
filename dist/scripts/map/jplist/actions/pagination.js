@@ -81,4 +81,4 @@ this.nextPage=getNextPage(this.currentPage,this.pagesNumber); /*
 			}
 		}
 		*/};})(jQuery);
-//# sourceMappingURL=pagination.js.map
+//# sourceMappingURL=../../../map/jplist/actions/pagination.js.map

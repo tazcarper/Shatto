@@ -12,4 +12,4 @@
 	*/jQuery.fn.jplist.models.Path=function(jqPath,dataType){ //properties
 this.jqPath=jqPath;this.dataType=dataType; //string, number, datetime
 };})(jQuery);
-//# sourceMappingURL=path.js.map
+//# sourceMappingURL=../../../map/jplist/models/path.js.map

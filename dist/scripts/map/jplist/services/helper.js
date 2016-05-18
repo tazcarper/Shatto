@@ -11,4 +11,4 @@
 	* replace hash in url
 	* @param {string} hash
 	*/jQuery.fn.jplist.services.Helper.replaceHash=function(hash){var hashStr=$.trim(hash.replace('#','')),href,index;if(hashStr===''){hashStr='#';}else {hashStr='#'+hashStr;}if(window.location.hash!==hashStr){if('replaceState' in window.history){window.history.replaceState('','',hashStr);}else {index=window.location.href.indexOf('#');if(index==-1){href=window.location.href+hashStr;}else {href=window.location.href.substring(0,index)+hashStr;}window.location.replace(href);}}};})(jQuery);
-//# sourceMappingURL=helper.js.map
+//# sourceMappingURL=../../../map/jplist/services/helper.js.map

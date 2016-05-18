@@ -21,4 +21,4 @@ self.panel=new jQuery.fn.jlocator.panel(self.$root,self.options);self.map=new jQ
 	* @property {jQuery.fn.jlocator.map} map - jlocator map
 	*/jQuery.fn.jlocator.controller=function($root,options){ //call constructor
 return new Init($root,options);};})(jQuery);
-//# sourceMappingURL=controller.js.map
+//# sourceMappingURL=../../../map/jlocator/controller/controller.js.map

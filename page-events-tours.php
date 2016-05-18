@@ -38,7 +38,7 @@
             <h4>GET TO SCHEDULIN’ A TOUR</h4>
             <form action="">
               <div class="form-group">
-                <input type="text" id="schedule_name" class=""name="schedule_name" placeholder="Name" required>
+                <input type="text" id="schedule_name" class="" name="schedule_name" placeholder="Name" required>
               </div>
               <div class="form-group">
                 <input type="email" id="schedule_email" name="schedule_email" placeholder="Email" required>
@@ -56,7 +56,7 @@
                 <textarea name="schedule_comment" id="schedule_comment" cols="30" rows="10" placeholder="Have any questions or concerns you like to ask us?"></textarea>
               </div>
               <button class="btn submit invert">Request Tour</button>
-              <div class="cancelSchedule ">Cancel</div>
+              <div class="cancelSchedule">Cancel</div>
             </form>
           </div>
         </div>
@@ -118,9 +118,9 @@
           <p>Libris pertinacia cu sea, qui ea omnes eirmod recteque. Ius ne viderer tacimates theophrastus. Mazim ridens aperiri ad mei, nec nobis epicurei ne. Cu quot aliquam adolescens per, no modus suavitate eam. Vix vivendo commune ad, convenire definitiones cu eos.</p>
           <p>Libris pertinacia cu sea, qui ea omnes eirmod recteque. Ius ne viderer tacimates theophrastus. Mazim ridens aperiri ad mei, nec nobis epicurei ne. Cu quot aliquam adolescens per, no modus suavitate eam. Vix vivendo commune ad, convenire definitiones cu eos.</p>
         </div>
-        
+
       </div>
-      
+
     </div>
   </div>
   <div class="galleryButtons">

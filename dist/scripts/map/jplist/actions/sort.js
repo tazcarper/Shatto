@@ -103,4 +103,4 @@ if(!year||isNaN(year)){year=1900;}if(!month||isNaN(month)){month=0;}if(!day||isN
 	* @param {string} dateTimeFormat
 	* @memberOf jQuery.fn.jplist.actions.Sort
 	*/jQuery.fn.jplist.actions.Sort.datetime=function(order,path,dataview,dateTimeFormat){dataview.sort(function(dataitem1,dataitem2){return sortDatetime(dataitem1,dataitem2,order,path,dateTimeFormat);});};})(jQuery);
-//# sourceMappingURL=sort.js.map
+//# sourceMappingURL=../../../map/jplist/actions/sort.js.map

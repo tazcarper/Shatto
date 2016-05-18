@@ -8,8 +8,8 @@
               <div class="innerForm">
                 <p>Dear Shatto,</p>
                 <p>My name is
-                  <input type="text" placeholder="________" value="" id="name" class="name"><span>&nbsp;</span>and I wanted to send you a note about
-                  <select>
+                  <input type="text" placeholder="________" value="" id="name" class="name" name="name"><span>&nbsp;</span>and I wanted to send you a note about
+                  <select id="subject" name="subject">
                     <option value="1" selected>one of your products.</option>
                     <option value="2">touring the farm.</option>
                     <option value="3">a question I had.</option>
@@ -17,10 +17,10 @@
                   </select>
                 </p>
                 <p>More specifically,&nbsp;
-                  <input type="text" placeholder="___________________________________________________" value="" class="message">
+                  <input type="text" placeholder="___________________________________________________" value="" id="message" name="message" class="message">
                 </p>
                 <p>Email me back at&nbsp;<br/>
-                  <input type="email" placeholder="________________" value="" class="email">
+                  <input type="text" id="email" name="email" placeholder="________________" value="" class="email">
                 </p>
                 <p>Thanks for your time!</p>
                 <button class="submit btn invert">SEND</button>

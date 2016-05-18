@@ -62,4 +62,4 @@ path=status.data.pathGroup[i];$button=$buttons.filter('[data-path="'+path+'"]');
 $button=$(this); //get selected value
 selected=$button.data('selected'); //toggle value
 $button.data('selected',!selected);control.events.lastStatus=jQuery.fn.jplist.controls.ButtonFilterGroup.getStatus(false,control);control.$jplistBox.trigger(control.options.force_ask_event,[false]);});}};})(jQuery);
-//# sourceMappingURL=button-filter-group.js.map
+//# sourceMappingURL=../../../../map/jplist/controls/toggle-filters/button-filter-group.js.map

@@ -28,4 +28,4 @@ status=statuses[i]; //get category name
 if(status.category){categoryName=status.category;}else {categoryName='nocategory';} //init array if needed
 if(!$.isArray(categories[categoryName])){categories[categoryName]=[];} //add status to array
 categories[categoryName].push(status);}return categories;};})(jQuery);
-//# sourceMappingURL=status.js.map
+//# sourceMappingURL=../../../map/jplist/services/status.js.map

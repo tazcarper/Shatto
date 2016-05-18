@@ -36,4 +36,4 @@ if(node.hasAttribute(this._optionsAttr)){ // check if node in viewport
 if(this._inViewport(node)){ // reveal node
 this._reveal(node);}}} // allow for more animation frames
 this._ticking=false;};return Layzr;});
-//# sourceMappingURL=layzr.js.map
+//# sourceMappingURL=../plugins/layzr.js.map

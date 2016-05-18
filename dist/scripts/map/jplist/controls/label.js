@@ -13,4 +13,4 @@
 infoType=control.$control.attr('data-type'); //replace
 infoType=infoType.replace('{current}',pagingObj.currentPage+1);infoType=infoType.replace('{pages}',pagingObj.pagesNumber);infoType=infoType.replace('{start}',pagingObj.start+1);infoType=infoType.replace('{end}',pagingObj.end);infoType=infoType.replace('{all}',pagingObj.itemsNumber); //set html
 control.$control.html(infoType);}}};})(jQuery);
-//# sourceMappingURL=label.js.map
+//# sourceMappingURL=../../../map/jplist/controls/label.js.map
