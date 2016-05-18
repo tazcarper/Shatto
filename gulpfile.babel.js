@@ -278,7 +278,7 @@ gulp.task('serve:rob', function() {
   browserSync({
     notify: false,
     ui: false,
-    proxy: 'quest.local',
+    proxy: 'shatto.local',
     port: 9005,
     injectChanges: true
   });
