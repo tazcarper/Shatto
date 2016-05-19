@@ -83,7 +83,7 @@ gulp.task('lint', lint('dist/scripts/**/*.js', testLintOptions));
 gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
 
-gulp.task('html', ['views', 'styles', 'scripts'], () => {
+gulp.task('html', ['views', 'styles', 'scripts','concatScripts'], () => {
   return gulp.src(['app/*.html', '.tmp/*.html', 'app/*.jade'])
     .pipe($.useref({
       searchPath: ['.tmp', 'app', '.']
@@ -195,7 +195,7 @@ gulp.task('views', () => {
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['html', 'views', 'styles', 'scripts', 'fonts'], () => {
+gulp.task('serve', ['html', 'views', 'styles', 'scripts', 'concatScripts', 'fonts'], () => {
   browserSync({
     notify: false,
     port: 9000,
@@ -221,7 +221,7 @@ gulp.task('serve', ['html', 'views', 'styles', 'scripts', 'fonts'], () => {
   gulp.watch('app/**/*.jade', ['views']);
   gulp.watch('app/images/**/*', ['imageCopy', reload]);
   gulp.watch('app/styles/**/*.scss', ['styles']);
-  gulp.watch('app/scripts/**/*.js', ['scripts']);
+  gulp.watch('app/scripts/**/*.js', ['scripts','concatScripts']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
 });
@@ -278,7 +278,7 @@ gulp.task('serve:rob', function() {
   browserSync({
     notify: false,
     ui: false,
-    proxy: 'quest.local',
+    proxy: 'shatto.local',
     port: 9005,
     injectChanges: true
   });
@@ -287,7 +287,7 @@ gulp.task('serve:rob', function() {
   gulp.watch('**/*.php', reload);
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/images/**/*', ['imageCopy', reload]);
-  gulp.watch('app/scripts/**/*.js', ['scripts']);
+  gulp.watch('app/scripts/**/*.js', ['scripts', 'concatScripts']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
 });

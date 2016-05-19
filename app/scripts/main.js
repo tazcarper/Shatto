@@ -2,18 +2,11 @@
     // Calls the second IIFE and locally passes in the global jQuery, window, and document objects
     library(window, document, window.jQuery);
   }
-
   (function(window, document, $) {
-
-   
-
     var isLateralNavAnimating = false;
-
     var toggleFAQ = function(faq) {
       $(faq).next('.answer').toggleClass('open');
     };
-
-
     // TEMP JSON
     var productJson = {
       "products": {
@@ -35,7 +28,6 @@
           "image": "/half-gallons/final/large/ShattoMilk_HalfGallon_1Percent.png",
           "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
         },
-
         "HG_twoPercent": {
           "title": "2% Milk",
           "category": "half-gallon",
@@ -47,7 +39,6 @@
           "image": "/half-gallons/final/large/ShattoMilk_HalfGallon_2Percent.png",
           "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
         },
-
         "HG_whole": {
           "title": "Whole Milk",
           "category": "half-gallon",
@@ -68,7 +59,6 @@
           "image": "/pints/final/large/Half.png",
           "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
         },
-
         "pint_cream": {
           "title": "Whole Cream Milk",
           "category": "pint",
@@ -403,16 +393,10 @@
         },
       }
     }
-
-
     // on ready
     $(function() {
-
-
-
       var maxHeight = 0,
         halfHeight = 0;
-
       var widthMatch = matchMedia("all and (max-width: 767px)");
       var widthHandler = function(matchList) {
         if (matchList.matches) {
@@ -421,29 +405,20 @@
           // Do stuff for larger screens
         }
       };
-
       widthMatch.addListener(widthHandler);
       widthHandler(widthMatch);
-
       // browser check
-
-
       // header scroll
       window.addEventListener('scroll', function(e) {
         // distance from top
         var distanceY = window.pageYOffset || document.documentElement.scrollTop,
           //parallax image
-
-
           shrinkOn = 200;
-
         //console.log(distanceY);
         maxHeight = $(window).height() - ($(window).height() * 0.15);
         halfHeight = maxHeight * 0.5;
-
         if (distanceY > shrinkOn) {
           $('body').addClass('smaller');
-
         } else {
           if ($('body').hasClass('smaller')) {
             $('body').removeClass('smaller');
@@ -456,7 +431,6 @@
         // adjust bg of parallax
         if ($('.parallax')[0]) {
           $('.parallax').each(function() {
-
             var yPos = (($(window).scrollTop() - $(this).offset().top) / $(this).data('speed')),
               coords = '50% ' + yPos + 'px';
             $(this).css({
@@ -465,9 +439,6 @@
           });
         }
       });
-
-
-
       //open/close lateral navigation
       $('.cd-nav-trigger').on('click', function(event) {
         event.preventDefault();
@@ -486,22 +457,18 @@
           });
         }
       });
-
       $('.faqContainer .question').on('click', function(event) {
         toggleFAQ(event.target);
       });
-
       // homepage scripts / .home
       if ($('#floatingBottle')[0]) {
-
         var theH = 0,
           floatingBottle = $('#floatingBottle');
-
         var bottleWidth = $('#floatingBottle').width(),
           theBottle = $('#mainBottle'),
           bottles = 16,
           arrayIndex = 8,
-         // currentUrl = stylesheet_directory_uri,
+          // currentUrl = stylesheet_directory_uri,
           // Custom rotation order
           customRotation = [9, 10, 11, 12, 13, 14, 15, 16, 1, 2, 3, 4, 5, 6, 7, 8, 9],
           screenWidth,
@@ -511,9 +478,7 @@
         // for (var i = 2; i <= bottlesArray.length; i++) {
         //   theBottle.append('<img src="'+currentUrl+'/dist/images/rotation/' + i + '.png" data-bottleposition="' + i + '">');
         // }
-
         function bottleMouseMove(e) {
-          
           if (floatingBottle.hasClass('start')) {
             floatingBottle.addClass('disableTransition');
             var x = e.pageX - theBottle.offset().left;
@@ -536,32 +501,25 @@
             } else if (arrayIndex <= 23) {
               $('.pod4').addClass('visible');
             }
-
             var bottleBgPos = 'img-' + bottlePos;
             theBottle.attr('class',
                 function(i, c) {
                   return c.replace(/(^|\s)img-\S+/g, '');
                 })
               .addClass(bottleBgPos);
-
             // $('.shown').removeClass('shown');
             // theBottle.find("[data-bottleposition='" + bottlePos + "']").addClass('shown');
-
           }
         }
-
         // bottle turn function
         function changeIt(i) {
           var origNum = i;
-
-
           theBottle.attr('class',
             function(i, c) {
               return c.replace(/(^|\s)img-\S+/g, '');
             }).addClass('img-' + customRotation[origNum]);
           // if not on starting position
           if (i !== 8) {
-
             if (arrayIndex !== 8 && arrayIndex < 8) {
               origNum++;
               setTimeout(function() {
@@ -573,7 +531,6 @@
                 changeIt(origNum)
               }, 25);
             }
-
           }
           // if center frame, reset base array index to starting position (8)
           if (i === 8) {
@@ -584,77 +541,56 @@
         function rotateBack() {
           changeIt(arrayIndex);
         }
-
         // if desktop
         function onResize() {
           screenWidth = theBottle.width();
         }
-
-
         theBottle.on('mousemove', bottleMouseMove);
-
-
         $(window).resize(onResize);
         onResize();
-
-
         var floatTrigger = $('#floatingTrigger').waypoint(function(direction) {
           if (direction === 'down') {
             //$('#mainBottle').css({'max-width':'400px'});
             floatingBottle.addClass('start');
             $('#mainBottle').addClass('shown');
-
-
-
             $('.shadow').addClass('hideIt');
-
           } else {
             floatingBottle.removeClass('start disableTransition');
             rotateBack();
-
             if (!floatingBottle.hasClass('stop')) {
               $('.shadow').removeClass('hideIt');
             }
           }
-
-
         }, {
           offset: '-600'
         });
         var stopWay = $('.bottleDetail').waypoint(function(direction) {
           if (direction === 'down' && !floatingBottle.hasClass('stop')) {
             // $('#mainBottle').css({'max-width':'300px'});
-
             floatingBottle.addClass('stop').removeClass('start disableTransition').find('a').attr('href', '/products.html#milk');
             rotateBack();
             //$('#mainBottle').wrap('<a href="/products.html#milk"></a>');
             $('.product').each(function(e) {
               $(this).addClass('productShown');
-
             })
           } else {
             // $('#mainBottle').css({'max-width':'250px'});
             floatingBottle.addClass('start').removeClass('stop').find('a').removeAttr('href');
             //$('#mainBottle').unwrap('<a href="/products.html#milk"></a>');
-
           }
         }, {
           offset: '-650'
         })
-
         var max_chars = 10,
           zipField = $('.findText form input');
-
         $('.findText form').submit(function(e) {
           e.preventDefault();
           goToLocate();
         });
-
         $('.mapFinder').on('click', '.zipFind', function(e) {
           e.preventDefault();
           goToLocate();
         });
-
         var goToLocate = function(e) {
           var zip = zipField.val();
           console.log(zip.length);
@@ -665,28 +601,19 @@
             zipField.addClass('error');
           }
         }
-
         zipField.keydown(function(e) {
           if ($(this).val().length >= max_chars) {
             $(this).val($(this).val().substr(0, max_chars));
           }
         });
-
         zipField.keyup(function(e) {
           if ($(this).val().length >= max_chars) {
             $(this).val($(this).val().substr(0, max_chars));
           }
         });
-
       }
-
-
-
       if ($('.about')[0]) {
-
         var podAnim = $('.shattoStory .pods').waypoint(function(direction) {
-
-
           if (direction === 'down') {
             if (!$(this.element).hasClass('visible')) {
               $(this.element).addClass('visible');
@@ -695,7 +622,6 @@
         }, {
           offset: '325'
         });
-
         if (Modernizr.mq('(min-width: 767px)')) {
           $('.viveVideo').vide({
             mp4: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/bottlingWeb.mp4',
@@ -711,13 +637,8 @@
           });
         }
       }
-
-
-
       // Events page - Grid init
-
       var eventTours = $('.events-tours');
-
       if (eventTours[0]) {
         if (Modernizr.mq('(min-width: 767px)')) {
           $('.viveVideo').vide({
@@ -737,8 +658,6 @@
           'offset_top': 60,
           'parent': eventTours
         });
-
-
         $('.gallerySlider').slick({
           dots: false,
           infinite: true,
@@ -751,14 +670,10 @@
           slide: '.slide',
           focusOnSelect: true
         });
-
-
         var popUp = $('.popUp'),
           grownElements = $('.slick-track, .galleryButtons'),
           bigImageEl = $('.popUp .bigImage'),
           popUpDesc = $('.popUp .description');
-
-
         $('.slide').on('click', function(e) {
           if (Modernizr.mq('(min-width: 767px)')) {
             e.preventDefault();
@@ -768,19 +683,14 @@
             popUpDesc.html('').html(description);
             togglePopUp();
           }
-
         })
         $('.popUp').on('click', '.closePopUP', function(e) {
           togglePopUp();
         });
-
-
         $('.gallerySlider').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
           var nextImage = $(slick['$slides'][nextSlide]).attr('data-largeImage');
           bigImageEl.find('img').attr('src', nextImage);
         });
-
-
         togglePopUp = function() {
           if (popUp.hasClass('shown')) {
             popUp.removeClass('shown');
@@ -788,23 +698,53 @@
           } else {
             popUp.addClass('shown');
             grownElements.addClass('grown');
-
           }
         }
-
-
         $('.intro').on('click', '.scheduleTour', function(e) {
           $('.schedulePopUp').fadeIn();
           $('#schedule_date').dateDropper();
         });
-
         $('.schedulePopUp').on('click', '.closeSchedule, .cancelSchedule', function(e) {
           $('.schedulePopUp').fadeOut();
         });
+        $('.schedulePopUp form').submit(function(event){
+          event.preventDefault();
 
+          var stuffToSend = {'input_values':{}}, myForm = $(this);
+          // find form values and assign for gravity forms
+          stuffToSend.input_values.input_1 = myForm.find('input#schedule_name').val();
+          stuffToSend.input_values.input_2 = myForm.find('input#schedule_email').val();
+          stuffToSend.input_values.input_3 = myForm.find('input#schedule_phone').val();
+          stuffToSend.input_values.input_4 = myForm.find('input#schedule_groupSize').val();
+          stuffToSend.input_values.input_5 = myForm.find('input#schedule_date').val();
+          stuffToSend.input_values.input_6 = myForm.find('textarea#schedule_comment').val();
+          $.ajax({
+            url: "/gravityformsapi/forms/2/submissions",
+            method: "POST",
+            data: JSON.stringify(stuffToSend),
+            dataType: "json",
+            processData: false,
+            headers: {"Content-Type":"application/json"}
+          }).success(function(data) {
+            if ( data.response.is_valid ) {
+              // hide form
+              $('.schedulePopUp form').hide();
+              // show thank you
+              alert('success');
+              // fire analytics event
+              // ga();
 
+              // hide the overlay
+              setTimeout(function(){
+                $('.schedulePopUp').fadeOut();
+              },5000);
+            } else {
+              // handle errors from gravity forms
+              alert(JSON.stringify(data.response.validation_messages));
+            }
+          });
+        });
       }
-
       // Contact
       if ($('.contact')[0]) {
         if (Modernizr.mq('(min-width: 767px)')) {
@@ -833,74 +773,55 @@
             if (e.which == 13) e.preventDefault();
           }
         });
-
         $('form').submit(function(event) {
           event.preventDefault();
           console.log('submit');
+          var stuffToSend = {'input_values':{}}, myForm = $(this);
+          // find form values and assign for gravity forms
+          stuffToSend.input_values.input_1 = myForm.find('input#name').val();
+          stuffToSend.input_values.input_2 = myForm.find('select#subject').val();
+          stuffToSend.input_values.input_3 = myForm.find('input#message').val();
+          stuffToSend.input_values.input_4 = myForm.find('input#email').val();
+          $.ajax({
+            url: "/gravityformsapi/forms/1/submissions",
+            method: "POST",
+            data: JSON.stringify(stuffToSend),
+            dataType: "json",
+            processData: false,
+            headers: {"Content-Type":"application/json"}
+          }).success(function(data) {
+            if ( data.response.is_valid ) {
+              // hide form
+              $('.innerForm').addClass('sent');
 
-          // var stuffToSend = {'input_values':{}}, myForm = $(this);
+              // show thank you
+              $('.sentSuccess').addClass('sent');
 
-          // // find form values and assign for gravity forms
-          // stuffToSend.input_values.input_1 = myForm.find('input#name').val();
-          // stuffToSend.input_values.input_2 = myForm.find('select#subject').val();
-          // stuffToSend.input_values.input_3 = myForm.find('input#message').val();
-          // stuffToSend.input_values.input_4 = myForm.find('input#email').val();
-
-
-          // $.ajax({
-          //   url: "/gravityformsapi/forms/1/submissions",
-          //   method: "POST",
-          //   data: JSON.stringify(stuffToSend),
-          //   dataType: "json",
-          //   processData: false,
-          //   headers: {"Content-Type":"application/json"}
-          // }).success(function(data) {
-          //   if ( data.response.is_valid ) {
-          //     // hide form
-          //     contactForm.hide();
-          //     // show thank you
-          //     $('.thankYou').html($(data.response.confirmation_message).find('.gform_confirmation_message').text());
-          //     $('.thankYou').show();
-          //     // fire analytics event
-          //     // ga();
-          //   } else {
-          //     // handle errors
-          //   }
-          // });
- 
+              // fire analytics event
+              // ga();
+            } else {
+              // handle errors from gravity forms
+              alert(JSON.stringify(data.response.validation_messages));
+            }
+          });
         });
-      }   
-
+      }
       $(document).on('click', 'a[href*="#"]:not([href="#"])', function(e) {
         e.preventDefault();
-
-        if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname && Modernizr.mq('(min-width: 767px)') ) {
-
+        if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname && Modernizr.mq('(min-width: 767px)')) {
           var target = $(this.hash);
-
           target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-
           if (target.length) {
             console.log($('.headerMain').height(), $(this).height());
             $('html, body').animate({
-
               scrollTop: target.offset().top - ($('.headerMain').height() + $(this).height() + 5)
-
             }, 1000);
-
             e.preventDefault();
-
           }
-
         }
-
       });
-
       // Product Page Animation
       if ($('.productPage')[0]) {
-
-
-
         var time = 0;
         var cap = $('.cap');
         cap.each(function(i, v) {
@@ -912,13 +833,9 @@
           }, time);
           time += 65;
         });
-
-
         $('.subMenu').stick_in_parent({
           'offset_top': 175
         });
-
-
         // product image clicking
         var overlay = $('.overlay'),
           closeBttn = $('.overlay-close'),
@@ -935,8 +852,6 @@
             transitions: Modernizr.csstransitions
           };
 
-
-
         function overlayToggle() {
           if (overlay.hasClass('open')) {
             overlay.removeClass('open');
@@ -948,7 +863,6 @@
                 if (ev.propertyName !== 'visibility') return;
                 this.removeEventListener(transEndEventName, onEndTransitionFn);
               }
-
             };
             if (support.transitions) {
               // callback for when css transition finishes
@@ -958,41 +872,24 @@
             }
           } else if (!overlay.hasClass('open')) {
             // callback for when css transition finishes
-
             overlay.addClass('open');
-
-
-
           }
         }
-  
-
         // listener
         $(document).keyup(function(e) {
-          if (e.keyCode === 27) overlayToggle();   
+          if (e.keyCode === 27) overlayToggle();
         });
         $('.overlay').on('click', '.overlay-close', function() {
           overlayToggle();
         });
         var imagePath = $('.product img').attr('src');
-
         imagePath = imagePath.substring(0, imagePath.indexOf('products/')) + 'products';
-
         $('.productImages').on('click', '.product', function(e) {
           var product = $(this),
-           
             theProduct = product.data('product'),
             gotData = false;
-
-        
-
-
-
           // Load image for overlay
           if (!gotData) {
-
-
-
             if (productJson['products'].hasOwnProperty(theProduct)) {
               var theProductImage = productJson['products'][theProduct].image,
                 productCategory = productJson['products'][theProduct].category;
@@ -1010,67 +907,41 @@
               }).removeClass().addClass(productCategory).unveil(5, function() {
                 $(this).removeClass('hideIt');
               });
-
-
             } else {
               $('#overlay_image').attr({
                 'src': imagePath + '/missingImage.png',
                 'srcset': ''
               }).removeClass().addClass('missing');
             }
-
           } else {
-
           }
-
           overlayToggle();
-
-
         });
-
-         
-
-
         $(window).load(function() {
           var waypointOffset = 200;
-
-
           var productsToShow = $('section.productSection').waypoint(function(direction) {
-
-
             if (direction === 'down') {
-
               if (!$(this.element).hasClass('visible')) {
                 $(this.element).addClass('visible');
                 $(this.element).find('.product').addClass('reveal');
                 var theImg = $(this.element).find('.product').find('img.main');
                 theImg.unveil();
-                
               }
             }
           }, {
             offset: waypointOffset
           });
-
         });
-
-
       }
-
-
-
       // Store Locatore / Find Page
       if ($('.mapContainer')[0]) {
-
         // $('#jlocator').height($(window).height()-$('.headerMain').height());
-
         // $(window).resize(function() {
         //   $('#jlocator').height($(window).height()-$('.headerMain').height());
         // }).resize();
-
         var lat, lng;
         var QueryString = function() {
-          // This function is anonymous, is executed immediately and 
+          // This function is anonymous, is executed immediately and
           // the return value is assigned to QueryString!
           var query_string = {};
           var query = window.location.search.substring(1);
@@ -1092,11 +963,7 @@
           return query_string;
         }();
         console.log(QueryString.zip);
-
-
         if (QueryString.zip !== '' && QueryString.zip !== undefined) {
-
-
           var geocoder = new google.maps.Geocoder();
           geocoder.geocode({
             "address": QueryString.zip
@@ -1125,22 +992,17 @@
             longitude: -94.589048
           });
         }
-
-
-
       }
       transitionChange();
       $(window).on('resize', function() {
         transitionChange();
       });
-
     }); // end ready
   })
 );
 var breakpoint = 767;
 
 function transitionChange(e) {
-
   if (Modernizr.mq('(min-width:' + breakpoint + 'px)')) {
     $('.cd-navigation-wrapper').removeClass("transition");
     $('html').removeClass('navigation-is-open');
@@ -1148,9 +1010,6 @@ function transitionChange(e) {
   }
 }
 
-
 function newpage() {
-
   window.location = newLocation;
-
 }

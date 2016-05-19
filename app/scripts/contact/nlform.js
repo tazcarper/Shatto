@@ -212,7 +212,7 @@
 			this.form.fldOpen = this.pos;
 			var self = this;
 			console.log(this);
-			
+
 			console.log(this.elOriginal.type);
 			if (this.elOriginal.type === 'select-one') {
 				console.log('its dropdown')
@@ -240,12 +240,12 @@
 			}
 			this.open = false;
 			this.form.fldOpen = -1;
-			
+
 			$('.formOverlay').removeClass('open');
 			if (this.type === 'dropdown') {
 				$('.selection').removeClass('open');
 				if (opt) {
-					
+
 					var selectedopt = this.optionsList.children[this.selectedIdx];
 					selectedopt.className = '';
 					opt.className = 'checked';
