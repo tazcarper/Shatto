@@ -43,6 +43,16 @@ function shatto_nav()
   );
 }
 
+add_filter( 'wp_nav_menu_items', 'add_social_to_nav', 10, 2 );
+
+function add_social_to_nav( $items, $args )
+{
+  ob_start();
+  include THEME_PARTS.'socialNav.php';
+  $items .= ob_get_clean();;
+  return $items;
+}
+
 function shatto_styles()
 {
     // wp_register_style('normalize', get_template_directory_uri() . '/normalize.css', array(), '1.0', 'all');

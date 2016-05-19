@@ -56,16 +56,34 @@ $headerHeight: 70px;
   }
 }
 header {
-  background: rgba(255, 255, 255, .98);
+  background: rgba(255, 255, 255, .8);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 999;
   padding: 0 !important;
-  border-bottom: 1px solid black;
-  
+  //border-bottom: 1px solid black;
+  .socialIcons {
+    list-style:none;
+  }
+  .social {
+
+    .icon {
+      width:25px;
+      float: left;
+      margin-right: 12px;
+      display:block;
+      path, line {
+        fill:black;
+      }
+      &.facebook {
+        width:21px;
+      }
+    }
+  }
 }
+
 .headerContainer {
   padding: 0;
   overflow: hidden;
