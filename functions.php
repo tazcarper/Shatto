@@ -6,6 +6,8 @@
 
 show_admin_bar(false);
 
+$social =  get_template_part(THEME_PARTS.'socialNav');
+
 if (!isset($content_width))
 {
   $content_width = 1280;
