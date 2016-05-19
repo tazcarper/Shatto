@@ -64,4 +64,4 @@ prevDate=prev['datepicker']('getDate');nextDate=next['datepicker']('getDate');}d
 	*/jQuery.fn.jplist.controls.DatePickerRangeFilter.setStatus=function(status,control,isCookie){var prevDate,nextDate,$prev,$next; //get prev/next controls
 $prev=control.$control.data('jplist-datepicker-range-prev');$next=control.$control.data('jplist-datepicker-range-next');if($.isNumeric(status.data.prev_year)&&$.isNumeric(status.data.prev_month)&&$.isNumeric(status.data.prev_day)){ //init dates
 prevDate=new Date(status.data.prev_year,status.data.prev_month,status.data.prev_day);$prev['datepicker']('setDate',prevDate);}else {$prev.val('');}if($.isNumeric(status.data.next_year)&&$.isNumeric(status.data.next_month)&&$.isNumeric(status.data.next_day)){nextDate=new Date(status.data.next_year,status.data.next_month,status.data.next_day);$next['datepicker']('setDate',nextDate);}else {$next.val('');}};})(jQuery);
-//# sourceMappingURL=../../../../map/jplist/controls/jquery-ui-controls/date-picker-range-filter.js.map
+//# sourceMappingURL=date-picker-range-filter.js.map

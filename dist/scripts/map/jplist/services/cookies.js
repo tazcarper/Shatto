@@ -31,4 +31,4 @@ jQuery.fn.jplist.services.Cookies.setCookie(cookieName,json,expiration);}; /**
 	*/jQuery.fn.jplist.services.Cookies.restoreCookies=function(cookieName){var json,statuses; //get json from cookies
 json=jQuery.fn.jplist.services.Cookies.getCookie(cookieName); //get statuses from json
 statuses=$.parseJSON(json);if(!statuses){statuses=[];}return statuses;};})(jQuery);
-//# sourceMappingURL=../../../map/jplist/services/cookies.js.map
+//# sourceMappingURL=cookies.js.map

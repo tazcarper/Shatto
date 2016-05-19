@@ -27,4 +27,4 @@ cpath=pathsList[i];if(jQuery.fn.jplist.services.Path.isPathsEqual(path,cpath,PAT
 	* @return {boolean}
 	* @memberOf jQuery.fn.jplist.services.Path
 	*/jQuery.fn.jplist.services.Path.isPathsEqual=function(path1,path2,pathOnly){var isEqual=false;if(pathOnly){if(path1.jqPath===path2.jqPath){isEqual=true;}}else {if(path1.jqPath===path2.jqPath&&path1.dataType===path2.dataType){isEqual=true;}}return isEqual;};})(jQuery);
-//# sourceMappingURL=../../../map/jplist/services/path.js.map
+//# sourceMappingURL=path.js.map

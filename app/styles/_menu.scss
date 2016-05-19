@@ -71,7 +71,7 @@ header {
   float:left;
   position:relative;
   top:-3px;
-  
+
     .icon {
       width:25px;
       float: left;
@@ -251,6 +251,12 @@ header {
       background: black;
       z-index: 9999;
       position: relative;
+      &.menu-item {
+        .sub-menu {
+          display:none;
+         
+        }
+      }
       &.current-menu-item {
         &:after {
             background:url('../images/navArrow.png') 0 0 no-repeat;

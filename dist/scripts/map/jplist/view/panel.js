@@ -118,4 +118,4 @@ initEvents(self);return $.extend(this,self);}; /**
 	*/jQuery.fn.jplist.view.Panel=function($jplistBox,options,events){var self; //call constructor
 self=new Init($jplistBox,options,events); //properties
 this.paths=self['paths'];this.controls=self['controls'];};})(jQuery);
-//# sourceMappingURL=../../../map/jplist/view/panel.js.map
+//# sourceMappingURL=panel.js.map

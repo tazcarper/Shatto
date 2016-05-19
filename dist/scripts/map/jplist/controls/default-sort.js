@@ -28,4 +28,4 @@ path=new jQuery.fn.jplist.models.Path(jqPath,dataType);if(!jQuery.fn.jplist.serv
 	* @memberOf jQuery.fn.jplist.controls.DefaultSort
 	* @static
 	*/jQuery.fn.jplist.controls.DefaultSort.getStatus=function(isDefault,control){var data,status;data=new jQuery.fn.jplist.controls.DefaultSort.statusRelatedDataSort(control.$control.attr('data-path'),control.$control.attr('data-type'),control.$control.attr('data-order'),control.$control.attr('data-datetime-format'),control.$control.attr('data-ignore'));status=new jQuery.fn.jplist.models.Status(control.name,control.action,control.type,data,control.cookies,control.category);return status;};})(jQuery);
-//# sourceMappingURL=../../../map/jplist/controls/default-sort.js.map
+//# sourceMappingURL=default-sort.js.map

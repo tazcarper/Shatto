@@ -115,4 +115,4 @@ buildPager(control,pagingObj);initPagerClickEvents(control);}}}}; /**
 	* @param {jQuery.fn.jplist.view.PanelControl} control
 	* @memberOf jQuery.fn.jplist.controls.Placeholder
 	*/jQuery.fn.jplist.controls.Placeholder.initEvents=function(control){initPagerClickEvents(control);};})(jQuery);
-//# sourceMappingURL=../../../map/jplist/controls/placeholder.js.map
+//# sourceMappingURL=placeholder.js.map

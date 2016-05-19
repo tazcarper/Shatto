@@ -223,4 +223,4 @@ j=eval('('+text+')'); // In the optional fourth stage, we recursively walk the n
 // each name/value pair to a reviver function for possible transformation.
 return typeof reviver==='function'?walk({'':j},''):j;} // If the text is not JSON parseable, then a SyntaxError is thrown.
 throw new SyntaxError('JSON.parse');};}})();
-//# sourceMappingURL=../../map/jplist/json2.js.map
+//# sourceMappingURL=json2.js.map

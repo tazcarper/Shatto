@@ -79,4 +79,4 @@ _options.queue=_dataID+"_queue";}var checkDuration=function checkDuration(){if(S
 		 * @returns {Scene} Parent object for chaining.
 		 */Scene.removeVelocity=function(reset){if(_elems){ // stop running animations
 if(_options.queue!==undefined){velocity(_elems,"stop",_options.queue);}if(reset){reverse(_elems,{duration:0});}_elems.forEach(function(elem){velocity.Utilities.removeData(elem,_dataID);});_elems=_properties=_options=_dataID=undefined;}return Scene;};});});
-//# sourceMappingURL=../../plugins/plugins/animation.velocity.js.map
+//# sourceMappingURL=animation.velocity.js.map

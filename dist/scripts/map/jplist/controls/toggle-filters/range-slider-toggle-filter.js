@@ -55,4 +55,4 @@ selected=control.$control.data('selected'); //toggle value
 control.$control.data('selected',!selected); //update class
 if(selected){control.$control.removeClass('selected');}else {control.$control.addClass('selected');} //trigger force ask event
 control.$jplistBox.trigger(control.options.force_ask_event,[false]);});};})(jQuery);
-//# sourceMappingURL=../../../../map/jplist/controls/toggle-filters/range-slider-toggle-filter.js.map
+//# sourceMappingURL=range-slider-toggle-filter.js.map

@@ -613,15 +613,7 @@
         });
       }
       if ($('.about')[0]) {
-        var podAnim = $('.shattoStory .pods').waypoint(function(direction) {
-          if (direction === 'down') {
-            if (!$(this.element).hasClass('visible')) {
-              $(this.element).addClass('visible');
-            }
-          }
-        }, {
-          offset: '325'
-        });
+        
         if (Modernizr.mq('(min-width: 767px)')) {
           $('.viveVideo').vide({
             mp4: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/bottlingWeb.mp4',

@@ -8,4 +8,4 @@ console.log(this.value);this.value=this.value.replace(/(?:\r\n|\r|\n)/g,'<br>');
 this.selectedIdx=idx; // update original select element´s value
 this.elOriginal.value=this.elOriginal.children[this.selectedIdx].value;}}else if(this.type==='input'){this.fld.className=this.fld.className.replace(/\b formField-open\b/,'');this.getinput.blur();this.toggle.innerHTML=this.getinput.value.trim()!==''?this.getinput.value:this.getinput.getAttribute('placeholder');this.elOriginal.value=this.getinput.value;console.log(this.elOriginal.value);if(this.elOriginal.value===''){console.log('its blank');$('.textarea .formField-toggle').text('___________________________________________________');}}}}; // add to global namespace
 window.NLForm=NLForm;function getCaret(el){if(el.selectionStart){return el.selectionStart;}else if(document.selection){el.focus();var r=document.selection.createRange();if(r==null){return 0;}var re=el.createTextRange(),rc=re.duplicate();re.moveToBookmark(r.getBookmark());rc.setEndPoint('EndToStart',re);return rc.text.length;}return 0;}})(window);
-//# sourceMappingURL=../contact/nlform.js.map
+//# sourceMappingURL=nlform.js.map
