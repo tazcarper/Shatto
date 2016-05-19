@@ -17,6 +17,7 @@ $icon-font-path: '../fonts/';
 @import "_events-tours.scss";
 @import "_contact.scss";
 @import "_history.scss";
+@import "_news.scss";
 @import "_modal.scss";
 @import "_map.scss";
 @import "_datepicker.scss";
@@ -95,7 +96,7 @@ p a {
   text-decoration: underline;
   &:hover, &:focus, &:active {
     color:inherit;
-   
+
   }
 }
 // Text align helper
@@ -178,7 +179,7 @@ main {
   -moz-transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
   transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
 
-  
+
   @include MQ(maxM) {
     -webkit-transition: -webkit-transform 0.5s;
     -moz-transition: -moz-transform 0.5s;
@@ -585,4 +586,7 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   margin: -100px 0 0 -100px; /* is width and height divided by two */
+}
+.belowNavigation {
+  padding-top: 120px;
 }
