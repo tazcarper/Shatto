@@ -231,11 +231,11 @@ main {
     text-align: center;
     margin-bottom: 1px;
     margin-top: 1px;
-    font-size: 4em;
+    font-size: 3.5em;
     line-height: .95em;
 
-    @include MQ(maxML) {
-      font-size: 3.3em;
+    @include MQ(maxL) {
+      font-size: 3em;
     }
   }
   .pod {
@@ -347,7 +347,9 @@ img {
   outline: none;
   position: absolute;
   margin: 0 auto;
-
+  @include MQ(maxL){
+     @include transform(translate3d(0, -1940px, 0));
+  }
   @include MQ(maxM) {
     position: relative !important;
     @include transform(translate3d(0, 0, 0));
@@ -387,6 +389,7 @@ img {
     .shadow, .callOut {
       opacity: 0;
     }
+
   }
   &.stop {
     // @include transition(all 0.5s ease-out);
@@ -412,6 +415,9 @@ img {
     .productName {
       opacity: 1;
       @include transition(all 0.5s 0.5s ease);
+    }
+    .callout {
+      display:none;
     }
   }
   img {
@@ -553,40 +559,7 @@ img {
     @include transition(all 0.25s ease);
   }
 }
-.callOut {
-  background: rgba(255, 255, 255, .90);
-  padding: 20px 30px 20px 90px;
-  color: black;
-  border: 1px dotted $lightGrey;
-  width: 420px;
-  position: absolute;
-  top: 20%;
-  left: 70%;
-  z-index: -1;
-  margin-left: -175px;
-  display: none;
 
-  @media (min-width:$screen-sm-min) {
-    padding: 20px 30px 20px 90px;
-    left: 67%;
-    display: block;
-  }
-  @media (min-width:$screen-md-min) {
-    left: 74%;
-  }
-  @media (min-width:$screen-lg-min) {
-    left: 70%;
-  }
-  h2, p {
-    text-align: left;
-    margin: 0;
-    padding: 0;
-  }
-  p {
-    font-size: 14px;
-    padding: 0;
-  }
-}
 .stopPoint {
   width: 100%;
   // background: red;

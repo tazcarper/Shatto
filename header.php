@@ -28,7 +28,7 @@
       <div class="container-fluid headerContainer">
         <div class="row">
           <div class="headerMain">
-            <a href="/">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
               <?php get_template_part(THEME_PARTS.'header-logo'); ?>
             </a>
           </div>

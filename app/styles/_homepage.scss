@@ -24,8 +24,9 @@ section.products {
   h2 { 
     margin-bottom: 1em;
     font-size: 4em;
-    @include MQ(maxML) {
-      font-size:3.2em;
+    @include MQ(maxL) {
+      font-size:50px;
+      // font-size:6vw;
     }
   }
   h2.mobile {
@@ -34,6 +35,47 @@ section.products {
     margin: 15px auto 15px;
     //width: 80%;
   }
+  .callOut {
+  background: rgba(255, 255, 255, .65);
+  padding: 20px 30px 20px 90px;
+  color: black;
+  border: 1px dotted $lightGrey;
+  width: 420px;
+  position: absolute;
+  top: 200px;
+  z-index: -1;
+  display: none;
+  left:200px;
+  right:0;
+  margin:0 auto;
+  @media (min-width:$screen-md-min) {
+    padding: 20px 30px 20px 90px;
+  
+    display: block;
+  }
+  
+  h2 {
+    font-size:2em;
+    margin-bottom: 0;
+  }
+  h2, p {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+  }
+  p {
+    font-size: 14px;
+    padding: 0;
+  }
+  // .closeCallout {
+  //   width:30px;
+  //   position:absolute;
+  //   top:0;
+  //   right:0;
+  //   padding:5px;
+    
+  // }
+}
   a {
     background-color: $black;
     border-radius: 2em;
