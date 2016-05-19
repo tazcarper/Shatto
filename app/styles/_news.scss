@@ -1,0 +1,22 @@
+.news {
+  @media (min-width:$screen-sm-min) {
+    background: url('../images/news/hero-bg.jpg')  50% 100px repeat-x;
+  }
+
+  hr {
+    border-color: $lightGrey;
+  }
+
+  h6 {
+    color: $midGrey;
+    font-size: 0.889em;
+  }
+
+  .col-md-5 h1 {
+    font-size: 2em;
+  }
+
+  .col-md-4 h1 {
+    font-size: 1.667em;
+  }
+}

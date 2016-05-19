@@ -6,8 +6,6 @@
 
 show_admin_bar(false);
 
-$social =  get_template_part(THEME_PARTS.'socialNav');
-
 if (!isset($content_width))
 {
   $content_width = 1280;
@@ -43,6 +41,16 @@ function shatto_nav()
     'walker'          => new Shatto_Walker_Menu()
     )
   );
+}
+
+add_filter( 'wp_nav_menu_items', 'add_social_to_nav', 10, 2 );
+
+function add_social_to_nav( $items, $args )
+{
+  ob_start();
+  include THEME_PARTS.'socialNav.php';
+  $items .= ob_get_clean();;
+  return $items;
 }
 
 function shatto_styles()

@@ -25,10 +25,9 @@
               $i = 0;
               while ( have_posts() ) :
                 the_post();
-                $i++;
-                $columns_this_row = $i % 3; ?>
-            <?php if ( $i === 1 || $i === 3 ) : ?>
+                $i++; ?>
             <div class="row">
+              <?php if ( $i === 1 || $i === 3 ) : ?>
               <div class="col-md-7">
                 img
               </div>
@@ -39,9 +38,10 @@
                 <p><?php echo get_the_excerpt(); ?></p>
                 <hr>
               </div>
-            </div>
               <?php elseif ( $i === 2 ) : ?>
-            <div class="row">
+              <div class="col-md-7">
+                img
+              </div>
               <div class="col-md-5">
                 <hr>
                 <h6><?php the_time('M j, Y'); ?></h6>
@@ -49,32 +49,11 @@
                 <p><?php echo get_the_excerpt(); ?></p>
                 <hr>
               </div>
-              <div class="col-md-7">
-                img
-              </div>
-            </div>
               <?php else : ?>
-                <?php if ( $columns_this_row === 1 ) : $row_open = true; ?>
-            <div class="row">
-                <?php endif; ?>
-              <div class="col-md-4">
-                img
-                <hr>
-                <h6><?php the_time('M j, Y'); ?></h6>
-                <h1><?php the_title(); ?></h1>
-                <p><?php echo get_the_excerpt(); ?></p>
-                <hr>
-              </div>
-                <?php if ( $columns_this_row === 0 && $row_open === true ) : $row_open = false; ?>
-            </div>
-                <?php endif; ?>
 
               <?php endif; ?>
-
-              <?php endwhile;
-              if ( $row_open ) : ?>
             </div>
-              <?php endif;
+              <?php endwhile;
             endif;
             ?>
           </div>
@@ -82,5 +61,4 @@
       </div>
     </section>
 
-<?php get_footer(); ?>
 <?php get_footer(); ?>
