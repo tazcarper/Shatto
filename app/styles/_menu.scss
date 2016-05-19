@@ -68,12 +68,20 @@ header {
     list-style:none;
   }
   .social {
-
+  float:left;
+  position:relative;
+  top:-3px;
+  
     .icon {
       width:25px;
       float: left;
       margin-right: 12px;
       display:block;
+      &:hover {
+       path, line {
+        fill:$lightGrey;
+      } 
+      }
       path, line {
         fill:black;
       }

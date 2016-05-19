@@ -75,22 +75,31 @@
       display:inline-block;
       margin:0 10px 0 0;
       float:left;
+      &:hover {
+        path {
+          fill:white;
+        }
+      }
       @include MQ(maxM) {
         text-align: center;
         float:none;
 
       }
       &.email {
-         background: url('../images/social-email.svg') 0 0 no-repeat;
+        // background: url('../images/social-email.svg') 0 0 no-repeat;
+
+         width:27px;
       }
       &.facebook {
-         background: url('../images/social-facebook.svg') 0 0 no-repeat;
+         //background: url('../images/social-facebook.svg') 0 0 no-repeat;
+
       }
       &.twitter {
-         background: url('../images/social-twitter.svg') 0 0 no-repeat;
+        // background: url('../images/social-twitter.svg') 0 0 no-repeat;
+         width:23px;
       }
       &.instagram {
-         background: url('../images/social-instagram.svg') 0 0 no-repeat;
+        // background: url('../images/social-instagram.svg') 0 0 no-repeat;
       }
     }
   }
