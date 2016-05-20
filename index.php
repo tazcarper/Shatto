@@ -12,9 +12,24 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12 center">
+          <div class="col-md-12 center categoryFilter">
             <hr>
-            <h4>Filter Posts <a class="btn center invert">All</a> <a class="btn center">At The Farm</a> <a class="btn center">Events</a> <a class="btn center">Products</a> <a class="btn center">Misc</a></h4>
+
+            <h4>Filter Posts <ul><?php $cat = get_the_category();
+            $args = array(
+              'show_option_all'=>'All',
+              'title_li'=>'',
+              'separator'=>' ',
+              'current_category'=>$cat->cat_ID,
+              'echo'=>false
+            );
+            $cats = wp_list_categories($args);
+
+            if(strpos($cats,'current-cat') == false) {
+              $cats = str_replace('cat-item-all', 'cat-item-all current-cat', $cats);
+            }
+
+            echo $cats; ?></ul></h4>
             <hr>
           </div>
         </div>
@@ -29,8 +44,9 @@
                 $columns_this_row = $i % 3; ?>
             <?php if ( $i === 1 || $i === 3 ) : ?>
             <div class="row">
+              <a href="<?php the_permalink(); ?>">
               <div class="col-md-7">
-                img
+                <img src="xxx" />
               </div>
               <div class="col-md-5">
                 <hr>
@@ -39,9 +55,11 @@
                 <p><?php echo get_the_excerpt(); ?></p>
                 <hr>
               </div>
+              </a>
             </div>
               <?php elseif ( $i === 2 ) : ?>
             <div class="row">
+              <a href="<?php the_permalink(); ?>">
               <div class="col-md-5">
                 <hr>
                 <h6><?php the_time('M j, Y'); ?></h6>
@@ -50,21 +68,24 @@
                 <hr>
               </div>
               <div class="col-md-7">
-                img
+                <img src="xxx" />
               </div>
+              </a>
             </div>
               <?php else : ?>
                 <?php if ( $columns_this_row === 1 ) : $row_open = true; ?>
             <div class="row">
                 <?php endif; ?>
+              <a href="<?php the_permalink(); ?>">
               <div class="col-md-4">
-                img
+                <img src="xxx" />
                 <hr>
                 <h6><?php the_time('M j, Y'); ?></h6>
                 <h1><?php the_title(); ?></h1>
                 <p><?php echo get_the_excerpt(); ?></p>
                 <hr>
               </div>
+              </a>
                 <?php if ( $columns_this_row === 0 && $row_open === true ) : $row_open = false; ?>
             </div>
                 <?php endif; ?>

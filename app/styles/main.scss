@@ -614,6 +614,9 @@ img {
   background-position: center;
   margin: -100px 0 0 -100px; /* is width and height divided by two */
 }
+
 .belowNavigation {
-  padding-top: 120px;
+  @media (min-width:$screen-sm-min) {
+    padding-top: 120px;
+  }
 }

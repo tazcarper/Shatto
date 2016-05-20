@@ -19,4 +19,55 @@
   .col-md-4 h1 {
     font-size: 1.667em;
   }
+
+  a {
+    color: inherit;
+  }
+
+  .categoryFilter {
+
+    h4 {
+      font-size: 1.778em;
+    }
+
+    ul {
+      display: inline;
+      list-style: none;
+    }
+
+    li {
+      display: inline;
+    }
+
+    li.current-cat a {
+      @extend .invert;
+    }
+
+    li a {
+      @extend .btn;
+      display: inline !important;
+    }
+  }
+
+  .col-md-10 {
+    background-color: $white;
+    @media (min-width:$screen-sm-min) {
+      padding: 50px 100px;
+    }
+
+    &.overlapPhoto {
+      @media (min-width:$screen-sm-min) {
+        margin-top:-75px;
+      }
+    }
+
+    h1,h6 {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3.333em;
+    }
+  }
 }
+
