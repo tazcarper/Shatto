@@ -44,6 +44,11 @@
     @media (min-width:$screen-md-min) {
       font-size: 100px;
     }
+    @include MQ(maxL){
+      font-size:60px;
+      font-size:7vw;
+
+    }
     @include MQ(maxM) {
       font-size:15vw;
     }

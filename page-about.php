@@ -36,6 +36,11 @@
             <p class="center"><?php the_field('intro_column_4_copy'); ?></p>
           </div>
           </div>
+          <div class="row smallLegal">
+            <div class="col-sm-12 text-center">
+              <p>*No significant difference has been shown between milk derived from rbST-treated and non-rbST-treated cows.</p>
+            </div>
+          </div>
         </div>
         </div>
         <div class="row">

@@ -35,10 +35,16 @@ section.shattoStory {
     border-bottom: 1px solid $lightGrey;
     margin-bottom: 1em;
   }
-
+  .smallLegal {
+    margin-top: 75px;
+    margin-bottom: -75px;
+    p {
+      font-size:11px;
+    }
+  }
   .pods {
     margin-top: 3em;
-    opacity: 0;
+    opacity: 1;
     
     @include MQ(M) {
       display: table;

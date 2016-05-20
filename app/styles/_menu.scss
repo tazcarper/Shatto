@@ -50,7 +50,7 @@ $headerHeight: 70px;
       height: 60px;
 
       .cd-navigation-wrapper {
-        margin-top: 25px;
+        margin-top: 21px;
       }
     }
   }
@@ -68,12 +68,20 @@ header {
     list-style:none;
   }
   .social {
+  float:left;
+  position:relative;
+  top:-3px;
 
     .icon {
       width:25px;
       float: left;
       margin-right: 12px;
       display:block;
+      &:hover {
+       path, line {
+        fill:$lightGrey;
+      } 
+      }
       path, line {
         fill:black;
       }
@@ -141,6 +149,9 @@ header {
     position: absolute;
     left: 105px;
     top: 10px;
+    path {
+      fill-rule:evenodd;clip-rule:evenodd;
+    }
     @include transition(all .35s ease-out);
 
     @include MQ(maxML) {
@@ -240,7 +251,28 @@ header {
       background: black;
       z-index: 9999;
       position: relative;
+      &.menu-item {
+        .sub-menu {
+          display:none;
+         
+        }
+      }
+      &.current-menu-item {
+        &:after {
+            background:url('../images/navArrow.png') 0 0 no-repeat;
+            width:10px;
+            height:6px;
+            content:'';
+            position:absolute;
+            bottom:-10px;
+            left:0;
+            right:25px;
+            margin:0 auto;
+          }
+        a {
 
+        }
+      }
       &.home {
         display: none;
 
@@ -344,7 +376,7 @@ header {
     @include transform(translateX(0));
     visibility: visible;
     height: auto;
-    margin-top: 70px;
+    margin-top: 60px;
     // margin-left: 15%;
     @include transition(margin .2s ease);
 
