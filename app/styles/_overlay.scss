@@ -261,355 +261,418 @@ $overlayDelay: .35s;
 			// 	display: table-cell;
 			// 	vertical-align: top;
 			//
-		
-	}
-	.nutFacts {
-		// border-right: 1px solid black;
+		}
+		.nutFacts {
+			// border-right: 1px solid black;
 
-		@include MQ(maxML) {
-			h2 {
-				font-size: 26px;
+			@include MQ(maxML) {
+				h2 {
+					font-size: 26px;
+				}
+			}
+			@include MQ(maxM) {
+				border: none;
+
+				h2 {
+					font-size: 30px;
+				}
 			}
 		}
-		@include MQ(maxM) {
-			border: none;
+		.servingSize {
+			//padding-top: 3px;
 
-			h2 {
-				font-size: 30px;
+			p {
+				border-bottom: 1px solid black;
+				padding-bottom: 5px;
+
+				@include MQ(maxM) {
+					padding-bottom: 8px;
+					border-width: 8px;
+					margin-top: 5px;
+
+					span {
+						float: right;
+					}
+				}
 			}
-		}
-	}
-	.servingSize {
-		//padding-top: 3px;
-
-		p {
-			border-bottom: 1px solid black;
+			@include MQ(maxL) {
+				margin-top: 5px;
+			}
+			@include MQ(maxML) {
+				padding-top: 0;
+			}
+			@include MQ(maxM) {
+				padding-top: 7px;
+			}
+			//border-bottom: 1px solid black;
+			margin-bottom: 5px;
 			padding-bottom: 5px;
 
 			@include MQ(maxM) {
-				padding-bottom: 8px;
-				border-width: 8px;
-				margin-top: 5px;
-
-				span {
-					float: right;
-				}
-			}
-		}
-		@include MQ(maxL) {
-			margin-top: 5px;
-		}
-		@include MQ(maxML) {
-			padding-top: 0;
-		}
-		@include MQ(maxM) {
-			padding-top: 7px;
-		}
-		//border-bottom: 1px solid black;
-		margin-bottom: 5px;
-		padding-bottom: 5px;
-
-		@include MQ(maxM) {
-			padding-bottom: 0;
-			margin-bottom: 0;
-		}
-		h3 {
-			span {
-				display: none;
-			}
-			@include MQ(maxM) {
-				font-size: 20px;
-				font-weight: 500;
-
-				span {
-					display: inline;
-				}
-			}
-		}
-	}
-	.calories {
-		//padding-top: 3px;
-
-		@include MQ(maxL) {
-			margin-bottom: 10px;
-		}
-		@include MQ(maxM) {
-			margin-top: 5px;
-			margin-bottom: 5px;
-		}
-		h2 {
-			border-bottom: 0;
-			float: left;
-			margin-right: 5px;
-
-			@include MQ(maxM) {
-				float: right;
-				font-size: 60px;
-				margin-top: 0;
+				padding-bottom: 0;
 				margin-bottom: 0;
 			}
-		}
-		p {
-			border-bottom: 0;
-			font-size: 12px;
-		}
-		h3 {
-			font-size: 24px;
-			text-transform: none;
-		}
-		.closeUp {
-			float: left;
-
 			h3 {
+				span {
+					display: none;
+				}
 				@include MQ(maxM) {
-					font-size: 36px;
-					margin-top: 5px;
-					padding-top: 0;
+					font-size: 20px;
+					font-weight: 500;
+
+					span {
+						display: inline;
+					}
+				}
+			}
+		}
+		.calories {
+			//padding-top: 3px;
+
+			@include MQ(maxL) {
+				margin-bottom: 10px;
+			}
+			@include MQ(maxM) {
+				margin-top: 5px;
+				margin-bottom: 5px;
+			}
+			h2 {
+				border-bottom: 0;
+				float: left;
+				margin-right: 5px;
+
+				@include MQ(maxM) {
+					float: right;
+					font-size: 60px;
+					margin-top: 0;
+					margin-bottom: 0;
 				}
 			}
 			p {
-				@include MQ(maxM) {
-					font-size: 16px;
-				}
+				border-bottom: 0;
+				font-size: 12px;
 			}
-		}
-		@include MQ(maxM) {
-			text-align: left;
-			border: none;
-			padding-top: 0;
-		}
-		@include MQ(maxML) {
-			padding-top: 0;
-
 			h3 {
-				font-size: 18px;
-				padding-top: 5px;
+				font-size: 24px;
+				text-transform: none;
 			}
-		}
-	}
-	.topPart {
-		h5 {
-			font-size: 18px;
-			//border-bottom: 3px solid black;
-			padding-bottom: 3px;
-		}
-		@include MQ(maxM) {
-			margin-top: 0px;
-			margin-bottom: 8px;
-
-			h5 {
-				font-size: 16px;
-				border-top: 5px solid black;
-				padding-top: 8px;
-				font-weight: 500;
-			}
-		}
-	}
-	.stats {
-		.col-sm-6 {
-			&:first-child {
-				border-right: 1px solid black;
-
-				@include MQ(maxM) {
-					border: none;
-				}
-			}
-			&:last-child {
-				@include MQ(maxM) {
-					.topPart {
-						display: none;
-						border-top: none;
-					}
-				}
-			}
-		}
-	}
-	.table {
-		margin-bottom: 0;
-
-		tr {
-			&:first-child {
-				border-top: 3px solid black;
-
-				@include MQ(maxL) {
-					border-top: none;
-					border-bottom: none;
-				}
-			}
-			&:last-child {
-				border-bottom: 3px solid black;
-
-				@include MQ(maxL) {
-					border-bottom: none;
-					border-top: none;
-
-					td {
-						border-bottom: 0;
-					}
-				}
-			}
-		}
-		td {
-			border: 1px solid black;
-			font-size: 15px;
-			padding: 3px 2px 3px 8px;
-			font-weight: 700;
-
-			&:first-child {
-				border-left: 0;
-				text-align: center;
-
-				@include MQ(maxML) {
-					width: 60px;
-				}
-			}
-			&:last-child {
-				border-right: 0;
-			}
-			&.child {
-				padding-left: 18px;
-				font-size: 14px;
-				font-weight: 100;
-			}
-			span.lighter {
-				font-weight: 300;
-				margin-left: 5px;
-				font-size: 14px;
-			}
-		}
-	}
-	.bottomList {
-		@include MQ(maxML) {
-			margin-top: 15px;
-			margin-bottom: 15px;
-		}
-		ul {
-			margin: 10px 0 0 0;
-			padding: 0;
-
-			li {
-				font-size: 14px;
+			.closeUp {
 				float: left;
-				list-style: disc;
-				margin: 0 10px 5px 0;
-				padding: 0;
-				line-height: 1em;
-				list-style-position: inside;
 
-				&:first-child {
-					list-style: none;
+				h3 {
+					@include MQ(maxM) {
+						font-size: 36px;
+						margin-top: 5px;
+						padding-top: 0;
+					}
+				}
+				p {
+					@include MQ(maxM) {
+						font-size: 16px;
+					}
 				}
 			}
-		}
-	}
-	.dailyValues {
-		p {
-			margin-bottom: 0;
-			line-height: 1em;
-			font-size: 14px;
-
-			&:first-child {
-				border-top: 1px solid black;
-				padding-top: 10px;
-				@include MQ(maxM) {
-					border-width:3px;
-				}
+			@include MQ(maxM) {
+				text-align: left;
+				border: none;
+				padding-top: 0;
 			}
 			@include MQ(maxML) {
-				text-align: left;
+				padding-top: 0;
+
+				h3 {
+					font-size: 18px;
+					padding-top: 5px;
+				}
 			}
 		}
-	}
-	.middle {
-		border-right: 1px solid black;
-
-		@include MQ(maxML) {
-			border-right: none;
-		}
-		.dailyValue {
-			margin-right: 10px;
-		}
-		.title {
-			margin-right: 3px;
-		}
-		.column {
+		.topPart {
+			h5 {
+				font-size: 18px;
+				//border-bottom: 3px solid black;
+				padding-bottom: 3px;
+			}
 			@include MQ(maxM) {
-				p {
-					&:last-child {
-						border-bottom: 1px solid black;
-						padding: 0px 0 3px 0;
-						margin-bottom: 3px;
+				margin-top: 0px;
+				margin-bottom: 8px;
+
+				h5 {
+					font-size: 16px;
+					border-top: 5px solid black;
+					padding-top: 8px;
+					font-weight: 500;
+				}
+			}
+		}
+		.stats {
+			.col-sm-6 {
+				&:first-child {
+					border-right: 1px solid black;
+
+					@include MQ(maxM) {
+						border: none;
+					}
+				}
+				&:last-child {
+					@include MQ(maxM) {
+						.topPart {
+							display: none;
+							border-top: none;
+						}
 					}
 				}
 			}
-			&:last-child {
-				p {
-					border-bottom: none;
-				}
-				margin-bottom: 5px;
-			}
 		}
-		p {
-			font-size: 10px;
+		.table {
+			margin-bottom: 0;
 
-			span {
-				&.bold {
-					font-weight: 700;
+			tr {
+				&:first-child {
+					border-top: 3px solid black;
+
+					@include MQ(maxL) {
+						border-top: none;
+						border-bottom: none;
+					}
+				}
+				&:last-child {
+					border-bottom: 3px solid black;
+
+					@include MQ(maxL) {
+						border-bottom: none;
+						border-top: none;
+
+						td {
+							border-bottom: 0;
+						}
+					}
 				}
 			}
-		}
-	}
-	.attributes {
-		margin-top: 5px;
-
-		ul {
-			padding: 0;
-			margin: 0;
-			list-style: inherit;
-			list-style-position: inside;
-
-			li {
-				padding: 0;
-				margin: 0 6% 3px 0;
-				float: left;
-				font-size: 10px;
-				line-height: inherit;
+			td {
+				border: 1px solid black;
+				font-size: 15px;
+				padding: 3px 2px 3px 8px;
+				font-weight: 700;
 
 				&:first-child {
-					list-style: none;
+					border-left: 0;
+					text-align: center;
+
+					@include MQ(maxML) {
+						width: 60px;
+					}
+				}
+				&:last-child {
+					border-right: 0;
+				}
+				&.child {
+					padding-left: 18px;
+					font-size: 14px;
+					font-weight: 100;
+				}
+				span.lighter {
+					font-weight: 300;
+					margin-left: 5px;
+					font-size: 14px;
 				}
 			}
 		}
-	}
-	.footnotes {
-		padding-left: 0;
+		.bottomList {
+			@include MQ(maxML) {
+				margin-top: 15px;
+				margin-bottom: 15px;
+			}
+			ul {
+				margin: 10px 0 0 0;
+				padding: 0;
 
+				li {
+					font-size: 14px;
+					float: left;
+					list-style: disc;
+					margin: 0 10px 5px 0;
+					padding: 0;
+					line-height: 1em;
+					list-style-position: inside;
+
+					&:first-child {
+						list-style: none;
+					}
+				}
+			}
+		}
+		.dailyValues {
+			p {
+				margin-bottom: 0;
+				line-height: 1em;
+				font-size: 14px;
+
+				&:first-child {
+					border-top: 1px solid black;
+					padding-top: 10px;
+
+					@include MQ(maxM) {
+						border-width: 3px;
+					}
+				}
+				@include MQ(maxML) {
+					text-align: left;
+				}
+			}
+		}
+		.middle {
+			border-right: 1px solid black;
+
+			@include MQ(maxML) {
+				border-right: none;
+			}
+			.dailyValue {
+				margin-right: 10px;
+			}
+			.title {
+				margin-right: 3px;
+			}
+			.column {
+				@include MQ(maxM) {
+					p {
+						&:last-child {
+							border-bottom: 1px solid black;
+							padding: 0px 0 3px 0;
+							margin-bottom: 3px;
+						}
+					}
+				}
+				&:last-child {
+					p {
+						border-bottom: none;
+					}
+					margin-bottom: 5px;
+				}
+			}
+			p {
+				font-size: 10px;
+
+				span {
+					&.bold {
+						font-weight: 700;
+					}
+				}
+			}
+		}
+		.attributes {
+			margin-top: 5px;
+
+			ul {
+				padding: 0;
+				margin: 0;
+				list-style: inherit;
+				list-style-position: inside;
+
+				li {
+					padding: 0;
+					margin: 0 6% 3px 0;
+					float: left;
+					font-size: 10px;
+					line-height: inherit;
+
+					&:first-child {
+						list-style: none;
+					}
+				}
+			}
+		}
+		.footnotes {
+			padding-left: 0;
+
+			p {
+				padding: 0 10px;
+			}
+			@include MQ(maxL) {
+				padding-left: 7.5px;
+			}
+			@include MQ(maxML) {
+				padding-left: 15px;
+				padding-top: 10px;
+			}
+		}
+		.verticalBorder {
+			height: 100%;
+			width: 1px;
+			background: black;
+		}
+	}
+	.ingredients {
+		margin-top: 15px;
+		//background: white;
+
+		@include MQ(maxM) {
+			padding-bottom: 100px;
+
+			p {
+				font-size: 14px;
+			}
+		}
+	}
+	.sizes {
+		margin: 0px 0 20px 0;
+		padding-right: 15px;
+		text-align: right;
+		@include MQ(maxML){
+			position:absolute;
+		}
+		@include MQ(maxM){
+			position:relative;
+		}
 		p {
-			padding: 0 10px;
+			position:relative;
+			font-size:14px;
 		}
-		@include MQ(maxL) {
-			padding-left: 7.5px;
+		h5 {
+			font-size:16px;
+			text-align:center;
+			margin-bottom: 15px;
 		}
-		@include MQ(maxML) {
-			padding-left: 15px;
-			padding-top: 10px;
-		}
-	}
-	.verticalBorder {
-		height: 100%;
-		width: 1px;
-		background: black;
-	}
-}
-.ingredients {
-	margin-top: 15px;
-	//background: white;
-
-	@include MQ(maxM) {
-		padding-bottom: 100px;
-
-		p {
-			font-size: 14px;
+		.size {
+			position:relative;
+			text-align:center;
 		}
 	}
-}
+	.shatto-bottlesilhouette-halfgallon, .shatto-cheesesilhouette-wedge, .shatto-cheesesilhouette-wheel, .shatto-bottlesilhouette-quart, .shatto-bottlesilhouette-pint {
+		width: 100%;
+		background-size: 100%;
+		background-image: url('../images/products/sizes.png');
+		text-align:center;
+		margin:0 auto;
+		@include MQ(M){
+		margin:15px auto 5px auto;	
+		}
+	}
+	.shatto-bottlesilhouette-halfgallon {
+		background-position: 0 0%;
+		background-size: 100%;
+		max-width:110px;
+	}
+	.shatto-cheesesilhouette-wedge {
+		background-position: 0 36.009045%;
+		background-size: 100%;
+		max-width:110px;
+	}
+	.shatto-cheesesilhouette-wheel {
+		background-position: 0 47.673782%;
+		background-size: 100%;
+		max-width:110px;
+	}
+	.shatto-bottlesilhouette-quart {
+		background-position: 0 78.959276%;
+		background-size: 120%;
+		max-width:40px;
+		//position:relative;
+		left:-10px;
+	}
+	.shatto-bottlesilhouette-pint {
+		background-position: 0 100%;
+		background-size: 200%;
+		max-width:40px;
+		//position:relative;
+		left:-15px;
+	}

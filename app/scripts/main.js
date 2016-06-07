@@ -838,6 +838,7 @@
 
       // Product Page Animation
       if ($('.productPage')[0]) {
+
         var time = 0;
         var cap = $('.cap');
         cap.each(function(i, v) {
@@ -859,29 +860,14 @@
             if (target.length) {
               console.log($('.headerMain').height(), $(this).height());
               $('html, body').animate({
-                scrollTop: target.offset().top - ($('.headerMain').height() + 85)
+                scrollTop: target.offset().top - ($('.headerMain').height() + 95)
               }, 1000);
+              //$(document).scrollTop( target.offset().top - ($('.headerMain').height() + 95) ); 
               e.preventDefault();
             }
           }
         });
 
-
-        if (window.location.hash.substr(1) !== null) {
-          var theHash = '#' + window.location.hash.substr(1);
-          var target = $(theHash);
-          if (target.length) {
-            target.addClass('visible').find('.product').find('img.main').unveil();
-            setTimeout(function() {
-              $('html, body').animate({
-                scrollTop: target.offset().top - ($('.headerMain').height() + 85)
-              }, 1000);
-            }, 2500)
-
-
-            // e.preventDefault();
-          }
-        }
 
 
         $('.subMenu').stick_in_parent({
@@ -928,7 +914,7 @@
         }
         // listener
         $(document).keyup(function(e) {
-          if (e.keyCode === 27) overlayToggle();
+          if (e.keyCode === 27) {overlayToggle();}
         });
         $('.overlay').on('click', '.overlay-close', function() {
           overlayToggle();
@@ -944,12 +930,9 @@
             if (productJson['products'].hasOwnProperty(theProduct)) {
               var theProductImage = productJson['products'][theProduct].image,
                 productCategory = productJson['products'][theProduct].category;
-              console.log(imagePath);
               var combinedPath = imagePath + theProductImage;
               var retinaPath = imagePath + theProductImage.replace('/large/', '/large/2x/');
-              console.log('sliced', retinaPath);
               var srcSetData = combinedPath + " 1x, " + retinaPath + " 2x";
-              console.log(combinedPath);
               $('.flavors h3').html(productJson['products'][theProduct].title);
               $('#overlay_image').attr({
                 'src': imagePath + '/loading_spinner.gif',
@@ -967,23 +950,65 @@
           } else {}
           overlayToggle();
         });
-        $(window).load(function() {
-          var subNavMenu = $('.subNav');
+
+        function activateWaypoint() {
           var waypointOffset = 200;
           var productsToShow = $('section.productSection').waypoint(function(direction) {
-            // subNavMenu.find('a.current').removeClass('current');
-            // subNavMenu.find('a[href="#'+$(this.element).attr('id')+'"]').addClass('current'); 
-            if (direction === 'down') {
-              if (!$(this.element).hasClass('visible')) {
-                $(this.element).addClass('visible');
-                $(this.element).find('.product').addClass('reveal');
-                var theImg = $(this.element).find('.product').find('img.main');
-                theImg.unveil();
-              }
+            if (!$(this.element).hasClass('visible')) {
+              $(this.element).addClass('visible');
+              $(this.element).find('.product').addClass('reveal');
+              var theImg = $(this.element).find('.product').find('img.main');
+              theImg.unveil(200, function() {
+                $(this).load(function() {
+                  this.style.opacity = 1;
+
+                });
+              });
             }
           }, {
             offset: waypointOffset
           });
+        }
+
+        $(window).load(function() {
+          var subNavMenu = $('.subNav'),
+          scrolledAlready = false;
+console.log(window.location.hash.substr(1));
+          if (window.location.hash.substr(1) !== null && window.location.hash.substr(1) !== '') {
+            var theHash = '#' + window.location.hash.substr(1);
+            var target = $(theHash);
+            if (target.length) {
+              var len = target.find('img.main').length;
+              target.addClass('visible').find('.product').find('img.main').each(function(i, e) {
+
+               // console.log(i);
+                if (i === len -1) {
+                  $(this).unveil(200, function() {
+                    $(this).load(function() {
+                      this.style.opacity = 1;
+                     $(document).scrollTop( target.offset().top - ($('.headerMain').height() + 105));
+                     activateWaypoint()
+                    });
+                  });
+                }
+                else {
+                  $(this).unveil(200, function() {
+                    $(this).load(function() {
+                      this.style.opacity = 1;
+                      
+                    });
+                  });
+                }
+              });
+            }
+
+
+
+          } else {
+            activateWaypoint()
+          }
+
+
         });
       }
       // Store Locatore / Find Page
@@ -1058,8 +1083,7 @@
         transitionChange();
       });
     }); // end ready
-  })
-);
+  }));
 var breakpoint = 767;
 
 function transitionChange(e) {

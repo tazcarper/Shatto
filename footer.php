@@ -12,12 +12,12 @@
         <ul>
           <li><a href="products">Products</a>
             <ul>
-              <li><a href="<?php echo esc_url( home_url( '/products?section=milk' ) ); ?>">Milk</a></li>
-              <li><a href="<?php echo esc_url( home_url( '/products?section=flavoredMilk' ) ); ?>">Flavored Milks</a></li>
-              <li><a href="<?php echo esc_url( home_url( '/products?section=cheese' ) ); ?>">Cheeses</a></li>
-              <li><a href="<?php echo esc_url( home_url( '/products?section=butter' ) ); ?>">Butter</a></li>
-              <li><a href="<?php echo esc_url( home_url( '/products?section=iceCream' ) ); ?>">Ice Cream</a></li>
-              <li><a href="<?php echo esc_url( home_url( '/products?section=nonDairy' ) ); ?>">Non-Dairy</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/products/#milk' ) ); ?>">Milk</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/products/#flavoredMilk' ) ); ?>">Flavored Milks</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/products/#cheese' ) ); ?>">Cheeses</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/products/#butter' ) ); ?>">Butter</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/products/#iceCream' ) ); ?>">Ice Cream</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/products/#nonDairy' ) ); ?>">Non-Dairy</a></li>
             </ul>
           </li>
         </ul>

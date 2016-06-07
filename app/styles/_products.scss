@@ -2,12 +2,12 @@
 
 #mobileCollapse {
 	padding-bottom: 50px;
-	
+
 	// Mobile Category Links
 	@include MQ(maxM) {
 		//padding-bottom: 15px;
-
 		padding-top: 35px;
+
 		.collapse {
 			&.collapsing {
 				@include transition(height .15s ease-out);
@@ -27,7 +27,7 @@
 			background: black;
 			color: white;
 			@include transition(all .15s ease-out);
-	
+
 			&.collapsed {
 				background: white;
 				color: black;
@@ -63,9 +63,10 @@
 .subMenu {
 	z-index: 99;
 	position: relative;
+
 	&.is_stuck {
 		.subNav {
-			top:-85px;
+			top: -85px;
 		}
 	}
 }
@@ -76,6 +77,7 @@
 	z-index: 99;
 	top: -95px;
 	@include transition(all .15s ease-out);
+
 	@include MQ(maxL) {
 		bottom: 75px;
 	}
@@ -117,9 +119,76 @@
 		}
 	}
 }
+.productPage {
+	&#milk {
+		@include MQ(M) {
+			height: 722px;
+		}
+		@include MQ(ML) {
+			height: 864px
+		}
+		@include MQ(L) {
+			height: 951px;
+		}
+	}
+	&#flavoredMilk {
+		@include MQ(M) {
+			height: 1095px;
+		}
+		@include MQ(ML) {
+			height: 682px
+		}
+		@include MQ(L) {
+			height: 766px;
+		}
+	}
+	&#iceCream {
+		@include MQ(M) {
+			height: 1042px;
+		}
+		@include MQ(ML) {
+			height: 1184px
+		}
+		@include MQ(L) {
+			height:  1312px;
+		}
+	}
+	&#cheese {
+		@include MQ(M) {
+			height: 1453px;
+		}
+		@include MQ(ML) {
+			height: 1658px
+		}
+		@include MQ(L) {
+			height: 1714px;
+		}
+	}
+	&#butter {
+		@include MQ(M) {
+			height: 404px;
+		}
+		@include MQ(ML) {
+			height: 482px
+		}
+		@include MQ(L) {
+			height: 539px;
+		}
+	}
+	&#nonDairy {
+		@include MQ(M) {
+			height: 770px;
+		}
+		@include MQ(ML) {
+			height: 910px
+		}
+		@include MQ(L) {
+			height: 1043px;
+		}
+	}
+}
 .productPage, .products {
 	position: relative;
-
 	//margin-bottom: 1.5em;
 
 	@include MQ(maxM) {
@@ -128,7 +197,6 @@
 	@include MQ(M) {
 		display: block !important;
 		//height: auto !important;
-		
 	}
 	@include MQ(maxM) {
 		padding-top: 50px;
@@ -137,8 +205,8 @@
 		background: white;
 	}
 	&.productSection {
-		@include MQ(M){
-			height:auto !important;
+		@include MQ(M) {
+			//height: auto !important;
 			margin-bottom: 35px;
 		}
 	}
@@ -177,6 +245,7 @@
 				height: 300px;
 				display: block;
 				background-size: 100%;
+
 				@include MQ(retina) {
 					background: url('../images/products/mobileHero_2x.jpg') bottom center no-repeat;
 					background-size: 100%;
@@ -185,6 +254,7 @@
 		}
 		p {
 			margin-top: em(15);
+
 			@include MQ(maxM) {
 				margin-bottom: 0;
 			}
@@ -364,12 +434,13 @@
 			position: relative;
 			z-index: 9;
 			display: inline-block;
-			font-weight:500;
-			@include MQ(maxL){
-				font-size:6em;
+			font-weight: 500;
+
+			@include MQ(maxL) {
+				font-size: 6em;
 			}
-			@include MQ(maxML){
-				font-size:em(75);
+			@include MQ(maxML) {
+				font-size: em(75);
 			}
 			@include MQ(maxM) {
 				font-size: em(40);
@@ -386,7 +457,6 @@
 			left: 0;
 			right: 0;
 			margin: 0 auto;
-			
 		}
 	}
 	// prudcts
@@ -409,7 +479,7 @@
 		@include MQ(maxM) {
 			width: 100%;
 			left: 0;
-			
+
 			img {
 				max-width: none !important;
 				width: 250px;
@@ -544,7 +614,7 @@
 					top: 0;
 					float: none;
 					display: inline-block;
-					
+
 					&.productShown {
 						.productName {
 							@include transition(all, 0.35s, ease-out);
@@ -592,11 +662,12 @@
 			}
 			.product {
 				opacity: 1;
+
 				// MILK
 				&:hover {
 					.factsLabel {
-						background:black;
-						color:white;
+						background: black;
+						color: white;
 					}
 				}
 				@include transform(translate(0, 0px));
@@ -780,7 +851,6 @@
 
 		@include MQ(maxM) {
 			height: auto !important;
-
 		}
 		.productName {
 			width: 65%;
@@ -794,7 +864,7 @@
 			}
 			@include MQ(maxM) {
 				display: block;
-				padding:0;
+				padding: 0;
 			}
 			opacity: 1;
 			@include transition(all 0.35s ease);
@@ -824,6 +894,7 @@
 				margin-top: 8px;
 				font-size: 12px;
 				@include transition(all .25s ease-out);
+
 				@include MQ(maxM) {
 					font-size: 16px;
 					color: white;
@@ -861,6 +932,7 @@
 			img {
 				@include transform(translate3d(0, 0, 0));
 				@include transition(all 0.35s ease-out);
+				opacity: 0;
 			}
 			@include MQ(maxM) {
 				position: relative;

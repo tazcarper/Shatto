@@ -443,7 +443,7 @@
         <div class="row">
           <div class="col-md-12 productImages">
             <div data-product="unsweetenedTea" class="product trigger text-center unsweetenedTea"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/loading_spinner.gif" data-src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/SweetTea.png" data-src-retina="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/SweetTea_2x.png" class="main">
-             <div class="bottleShadow"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/shadow.png"></div>
+              <div class="bottleShadow"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/shadow.png"></div>
               <div class="productName">
                 <h5>UNSWEETENED TEA</h5>
                 <p class="factsLabel">nutrition facts</p>
@@ -457,14 +457,14 @@
               </div>
             </div>
             <div data-product="lemonade" class="product trigger text-center lemonade"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/loading_spinner.gif" data-src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/Lemonade.png" data-src-retina="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/Lemonade_2x.png" class="main">
-             <div class="bottleShadow"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/shadow.png"></div>
+              <div class="bottleShadow"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/shadow.png"></div>
               <div class="productName">
                 <h5>Lemonade</h5>
                 <p class="factsLabel">nutrition facts </p>
               </div>
             </div>
             <div data-product="orangeDrink" class="product trigger text-center orangeDrink"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/loading_spinner.gif" data-src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/OrangeDrink.png" data-src-retina="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/OrangeDrink_2x.png"  class="main">
-             <div class="bottleShadow"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/shadow.png"></div>
+              <div class="bottleShadow"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/shadow.png"></div>
               <div class="productName">
                 <h5>Orange Drink</h5>
                 <p class="factsLabel">nutrition facts</p>
@@ -497,125 +497,155 @@
               </div>
               
             </div>
-            <div class="nutritionFacts">
-              <div class="row">
-                <div class="col-lg-4">
+            <div class="row">
+              <div class="col-sm-10">
+                <div class="nutritionFacts">
                   <div class="row">
-                    <div class="col-sm-12 nutFacts">
-                      <h2>nutrition facts</h2>
-                    </div>
-                    <div class="col-sm-12 servingSize">
-                      <h3>10 Servings <span>per container</span></h3>
-                      <p>Serving Size <span>2 slices</span></p>
-                    </div>
-                    <div class="col-sm-12 calories">
+                    <div class="col-lg-4">
                       <div class="row">
-                        <div class="col-sm-12">
-                          <h2 class="calories">170</h2>
-                          <div class="closeUp">
-                            <h3>Calories</h3>
-                            <p>Per Serving</p>
+                        <div class="col-sm-12 nutFacts">
+                          <h2>nutrition facts</h2>
+                        </div>
+                        <div class="col-sm-12 servingSize">
+                          <h3>10 Servings <span>per container</span></h3>
+                          <p>Serving Size <span>2 slices</span></p>
+                        </div>
+                        <div class="col-sm-12 calories">
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <h2 class="calories">170</h2>
+                              <div class="closeUp">
+                                <h3>Calories</h3>
+                                <p>Per Serving</p>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div class="col-lg-8 stats">
-                  <div class="row">
-                    <div class="col-sm-6">
+                    <div class="col-lg-8 stats">
                       <div class="row">
-                        <div class="col-sm-12 topPart">
-                          <h5>% DV* amount per serving</h5>
+                        <div class="col-sm-6">
+                          <div class="row">
+                            <div class="col-sm-12 topPart">
+                              <h5>% DV* amount per serving</h5>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <table class="table">
+                                <tr>
+                                  <td>2%</td>
+                                  <td>Total Fat <span class="lighter">1.5g</span></td>
+                                </tr>
+                                <tr>
+                                  <td>2%</td>
+                                  <td class="child">Saturated Fat <span class="lighter">1.5g</span></td>
+                                </tr>
+                                <tr>
+                                  <td>0%</td>
+                                  <td>Cholesterol <span class="lighter">0mg</span></td>
+                                </tr>
+                                <tr>
+                                  <td>12%</td>
+                                  <td>Sodium <span class="lighter">260mg</span></td>
+                                </tr>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="row">
+                            <div class="col-sm-12 topPart">
+                              <h5>% DV* amount per serving</h5>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <table class="table">
+                                <tr>
+                                  <td>2%</td>
+                                  <td>Total Carbs <span class="lighter">36g</span></td>
+                                </tr>
+                                <tr>
+                                  <td>3%</td>
+                                  <td class="child">Dietary Fiber <span class="lighter">1.5g</span></td>
+                                </tr>
+                                <tr>
+                                  <td>0%</td>
+                                  <td class="child">Sugars <span class="lighter">2g</span></td>
+                                </tr>
+                                <tr>
+                                  <td>12%</td>
+                                  <td>Protein <span class="lighter">4g</span></td>
+                                </tr>
+                              </table>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                      <div class="row">
+                      <div class="row bottomList">
                         <div class="col-sm-12">
-                          <table class="table">
-                            <tr>
-                              <td>2%</td>
-                              <td>Total Fat <span class="lighter">1.5g</span></td>
-                            </tr>
-                            <tr>
-                              <td>2%</td>
-                              <td class="child">Saturated Fat <span class="lighter">1.5g</span></td>
-                            </tr>
-                            <tr>
-                              <td>0%</td>
-                              <td>Cholesterol <span class="lighter">0mg</span></td>
-                            </tr>
-                            <tr>
-                              <td>12%</td>
-                              <td>Sodium <span class="lighter">260mg</span></td>
-                            </tr>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="row">
-                        <div class="col-sm-12 topPart">
-                          <h5>% DV* amount per serving</h5>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-sm-12">
-                          <table class="table">
-                            <tr>
-                              <td>2%</td>
-                              <td>Total Carbs <span class="lighter">36g</span></td>
-                            </tr>
-                            <tr>
-                              <td>3%</td>
-                              <td class="child">Dietary Fiber <span class="lighter">1.5g</span></td>
-                            </tr>
-                            <tr>
-                              <td>0%</td>
-                              <td class="child">Sugars <span class="lighter">2g</span></td>
-                            </tr>
-                            <tr>
-                              <td>12%</td>
-                              <td>Protein <span class="lighter">4g</span></td>
-                            </tr>
-                          </table>
+                          <ul>
+                            <li>0% <span class="title">Vitamin A</span> 0mg</li>
+                            <li>0% <span class="title">Vitamin C</span> 0mg</li>
+                            <li>0% <span class="title">Vitamin D</span> 0mg</li>
+                          </ul>
+                          <ul>
+                            <li>0% <span class="title">Iron</span> 0mg</li>
+                            <li>0% <span class="title">Calcium</span> 0mg</li>
+                          </ul>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="row bottomList">
-                    <div class="col-sm-12">
-                      <ul>
-                        <li>0% <span class="title">Vitamin A</span> 0mg</li>
-                        <li>0% <span class="title">Vitamin C</span> 0mg</li>
-                        <li>0% <span class="title">Vitamin D</span> 0mg</li>
-                      </ul>
-                      <ul>
-                        <li>0% <span class="title">Iron</span> 0mg</li>
-                        <li>0% <span class="title">Calcium</span> 0mg</li>
-                      </ul>
+                  <div class="row dailyValues">
+                    <div class="col-sm-12 text-center">
+                      <p>*Percent Daily Values are based on a 2000 calorie diet.</p> <p>Your daily values may be higher or lower depending on your calorie needs.</p>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="row dailyValues">
-                <div class="col-sm-12 text-center">
-                  <p>*Percent Daily Values are based on a 2000 calorie diet.</p> <p>Your daily values may be higher or lower depending on your calorie needs.</p>
+                <div class="row ingredients">
+                  <div class="col-sm-12">
+                    <p><span style="font-weight:500">Ingredients:</span> MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and nutrition facts are current as of 2/11/15. Please see shelf packaging for any changes.</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="row ingredients">
-              <div class="col-sm-12">
-                <p><span style="font-weight:500">Ingredients:</span> MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and nutrition facts are current as of 2/11/15. Please see shelf packaging for any changes.</p>
+              <div class="col-sm-2">
+                
+                
+                <div class="sizes">
+                <h5>Available Sizes:</h5>
+                  <div class="halfGallon size">
+                    <img class="shatto-bottlesilhouette-halfgallon" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAJpAQMAAAAtzp10AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAC5JREFUeNrtwTEBAAAAwqD1T20JT6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgYXf8AAa2jyRwAAAAASUVORK5CYII=">
+                    <p>half-gallon</p>
+                  </div>
+                  <div class="wedge size">
+                    <img class="shatto-cheesesilhouette-wedge" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADWAQMAAABRzS39AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB9JREFUeNrtwTEBAAAAwqD1T20KP6AAAAAAAAAAAF4GIJoAAR69ZdYAAAAASUVORK5CYII=">
+                    <p>wedge</p>
+                  </div>
+                  <div class="wheel size">
+                    <img class="shatto-cheesesilhouette-wheel" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACcAQMAAAD/DgT3AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB1JREFUeNrtwTEBAAAAwqD1T20ND6AAAAAAAIBHAxfEAAH/jDFxAAAAAElFTkSuQmCC">
+                    <p>wheel</p>
+                  </div>
+                  <div class="quart size">
+                    <img class="shatto-bottlesilhouette-quart" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPoAAAKRAQMAAABHjibOAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACtJREFUeNrtwTEBAAAAwqD1T+1jDKAAAAAAAAAAAAAAAAAAAAAAAAAAAABuVLEAAdlonicAAAAASUVORK5CYII=">
+                    <p>quart</p>
+                  </div>
+                  <div class="pint size">
+                    <img class="shatto-bottlesilhouette-pint" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAAEDAQMAAADtE2/lAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABxJREFUeNrtwYEAAAAAw6D5Ux/gClUBAAAAALwBFDwAAUv06uYAAAAASUVORK5CYII=">
+                    <p>pint</p>
+                  </div>
+                  </div>
+                  
+                </div>
               </div>
+              
             </div>
-            
-            
           </div>
+          
         </div>
         
       </div>
-      
     </div>
-  </div>
-  
-  <?php get_footer(); ?>
+    <?php get_footer(); ?>
