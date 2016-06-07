@@ -146,6 +146,12 @@ section.mapFinder {
   a {
     color: inherit;
   }
+  &.footerLocate {
+    @include MQ(maxM) {
+      padding-top: 2em;
+      padding-bottom: 1em;
+    }
+  }
   .form-control {
     @include MQ(maxM) {
       width: 48%;

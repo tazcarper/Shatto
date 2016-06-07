@@ -318,7 +318,7 @@
                 var waypointOffset = 200;
                 $(".productImages").each(function(e) {
                     var self = $(this);
-                    self.height(setSectionHeight(self));
+                    
                 });
                 var milk = $("#milk").waypoint(function(direction) {
                     if (direction === "down") {

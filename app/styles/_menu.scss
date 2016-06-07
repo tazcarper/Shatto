@@ -3,23 +3,26 @@ $headerHeight: 70px;
 // When nav gets small
 .smaller {
   @include MQ(S) {
+    header {
+
+    }
     .headerMain {
-      height: 60px;
+      //height: 60px;
 
       .cowHead {
         width: 70px;
         left: 95px;
-        top: 5px;
+        top: 10px;
 
         @include MQ(maxML) {
-          left: 6 px;
-          top: 5px;
+          left: 10px;
+          top: 10px;
           width: 70px;
         }
         @include MQ(maxM) {
           left: 0;
           top: 5px;
-          width: 60px;
+          width: 70px;
         }
       }
       .shattoLogo {
@@ -47,7 +50,7 @@ $headerHeight: 70px;
       top: 4px;
     }
     .cd-nav {
-      height: 60px;
+      // height: 60px;
 
       .cd-navigation-wrapper {
         margin-top: 21px;
@@ -56,53 +59,74 @@ $headerHeight: 70px;
   }
 }
 header {
-  background: rgba(255, 255, 255, .8);
+  background: rgba(255, 255, 255, .9);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 999;
-  padding: 0 !important;
+ 
   //border-bottom: 1px solid black;
+
   .socialIcons {
-    list-style:none;
+    list-style: none;
+    @include MQ(maxM) {
+      border:none !important;
+      margin-top: 10px;
+    }
   }
   .social {
-  float:left;
-  position:relative;
-  top:-3px;
-
+    float: left;
+    position: relative;
+    top: -3px;
+    @include MQ(maxM) {
+      float:right;
+    }
     .icon {
-      width:25px;
+      width: 25px;
       float: left;
       margin-right: 12px;
-      display:block;
-      &:hover {
-       path, line {
-        fill:$lightGrey;
-      } 
-      }
-      path, line {
-        fill:black;
-      }
+      display: block;
       &.facebook {
-        width:21px;
+        &:hover {
+          path, line {
+          fill: #3664a2;
+          }
+        }
+      }
+      &.twitter {
+        &:hover {
+          path, line {
+          fill: #5ea9dd;
+          }
+        }
+      }
+      
+      path, line {
+        fill: black;
+        @include MQ(maxM) {
+          fill:$lightGrey;
+        }
+      }
+      &.facebook, &.twitter {
+        width: 21px;
       }
     }
   }
 }
-
 .headerContainer {
   padding: 0;
-  overflow: hidden;
 
+  @include MQ(maxM) {
+    overflow: hidden;
+  }
   @include MQ(M) {
     max-width: 1170px;
   }
 }
 .headerMain {
   background: white;
-  height: $headerHeight;
+  //height: $headerHeight;
   position: relative;
   // width: 250px;
   float: left;
@@ -133,7 +157,7 @@ header {
     position: fixed;
     background: white;
     top: 0;
-    border-bottom:1px solid black;
+    border-bottom: 1px solid black;
   }
   &.makeBlack {
     background-color: black;
@@ -150,17 +174,18 @@ header {
     left: 105px;
     top: 10px;
     path {
-      fill-rule:evenodd;clip-rule:evenodd;
+      fill-rule: evenodd;
+      clip-rule: evenodd;
     }
     @include transition(all .35s ease-out);
 
     @include MQ(maxML) {
-      width: 100px;
-      top: 15px;
-      left: 75px;
+      width: 70px;
+      top: 50px;
+      left: 10px;
     }
     @include MQ(maxM) {
-      width: 85px;
+      width: 70px;
       margin: auto;
       position: absolute;
       top: 0;
@@ -202,9 +227,9 @@ header {
     width: 100%;
   }
   @media (min-width:$screen-sm-min) {
-    height: 100px;
+    padding-bottom: 15px;
     background: white;
-    overflow: hidden;
+    // overflow: hidden;
     z-index: 10;
     position: relative;
     padding-right: 15px;
@@ -243,34 +268,104 @@ header {
       }
     }
     li {
-      padding: 0em 25px 0em 0;
-      padding-right: 25px;
+      padding: 0;
       border-bottom: 1px solid $lightGrey;
       width: 100%;
       text-align: right;
       background: black;
       z-index: 9999;
       position: relative;
+      //margin-right: 5px;
+      padding: 15px 10px;
+      @include MQ(maxML){
+        padding: 5px 1px;
+      }
+
+      &.menu-item-has-children {
+        &:hover {
+          background: white;
+          border-radius: 8px;
+          @include MQ(maxM) {
+            background:transparent;
+          }
+          span {
+            @include transform(translateY(-100%))
+          }
+          .sub-menu {
+            display: block;
+          }
+        }
+      }
       &.menu-item {
         .sub-menu {
-          display:none;
-         
+          display: none;
+          width: 100%;
+          overflow: visibile;
+          padding-left: 0;
+          left: 0px;
+          margin-left: 0;
+          position: absolute;
+          padding-top: 15px;
+          padding-bottom: 10px;
+          border-radius: 8px;
+          background: white;
+          z-index:6;
+          @include MQ(maxM){
+            display:none !important;
+            background:transparent;
+          }
+          &:after {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 6px 5px 0 5px;
+            border-color: #000000 transparent transparent transparent;
+            position: absolute;
+            left: -4px;
+            right: 0;
+            top: 4px;
+            margin: auto;
+            content: '';
+           // display:none;
+          }
+          li {
+            float: left;
+            padding: 0;
+            background: white;
+            padding-top: 7.5px;
+            width: 100%;
+            text-align: center;
+            margin: 0;
+            padding-bottom: 7.5px;
+            border-radius: 8px;
+
+            span {
+              font-size: 12px;
+              @include transform(translateY(0));
+
+              &:hover {
+                @include transform(translateY(0));
+                text-decoration: underline;
+              }
+            }
+          }
         }
       }
       &.current-menu-item {
         &:after {
-            background:url('../images/navArrow.png') 0 0 no-repeat;
-            width:10px;
-            height:6px;
-            content:'';
-            position:absolute;
-            bottom:-10px;
-            left:0;
-            right:25px;
-            margin:0 auto;
-          }
+         width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 6px 5px 0 5px;
+            border-color: #000000 transparent transparent transparent;
+          content: '';
+          position: absolute;
+          bottom: 5px;
+          left: 21px;
+          right: 25px;
+          margin: 0 auto;
+        }
         a {
-
         }
       }
       &.home {
@@ -299,14 +394,15 @@ header {
         width: auto;
         background: transparent;
         border-bottom: none;
-        margin: 0;
+        margin: 0 0px 0 0;
         display: inline-block;
       }
       a {
         outline: none;
         display: inline-block;
+
         @include MQ(maxM) {
-          width:100%;
+          width: 100%;
         }
         &::after {
           // display: block;
@@ -451,12 +547,12 @@ header {
       }
       &::before {
         margin-top: 1px;
-        right:-2px;
+        right: -2px;
         @include transform(rotate(45deg));
       }
       &::after {
         margin-top: -1px;
-         right:-2px;
+        right: -2px;
         @include transform(rotate(-45deg));
       }
     }
@@ -589,13 +685,34 @@ header {
       position: absolute;
       top: 100%;
       content: attr(data-hover);
+      font-family: "futura-pt", sans-serif;
       font-weight: 500;
+      letter-spacing: 2.7px;
       -webkit-transform: translate3d(0, 0, 0);
       -moz-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0);
+
       @include MQ(maxM) {
-        right:0;
+        right: 0;
       }
+    }
+  }
+}
+
+.storeLocate {
+  display:none;
+  @include MQ(maxM) {
+    display:block;
+    position:absolute;
+    top:20px;
+    left:4%;
+    text-align:center;
+    line-height:.95em;
+    text-transform:uppercase;
+    color:black !important;
+    font-size:.9em;
+    &:hover, &:focus, &:active {
+      text-decoration:none;
     }
   }
 }

@@ -28,6 +28,7 @@
       <div class="container-fluid headerContainer">
         <div class="row">
           <div class="headerMain">
+          <a href="<?php echo esc_url( home_url( '/locate' ) ); ?>" class="storeLocate">Store<br/>Locator</a>
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
               <?php get_template_part(THEME_PARTS.'header-logo'); ?>
             </a>

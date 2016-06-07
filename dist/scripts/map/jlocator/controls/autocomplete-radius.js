@@ -40,4 +40,4 @@ $select=control.$control.data('jlocator-autocomplete-with-radius-select');if($se
 distanceValue=parseFloat($select.val());if(!isNaN(distanceValue)){if(units&&units.toString()==='km'){distanceInMeters=distanceValue*1000;}else { //miles
 //get distance in meters: 1 Mile = 1609.34 meters
 distanceInMeters=distanceValue*1609.34;}data={name:control.$control.attr('data-name'),radius:distanceInMeters,filterType:'autocomplete'};if(isDefault){data.latitude='';data.longitude='';status=new jQuery.fn.jplist.models.Status(control.name,control.action,control.type,data,true);}else {if($.isNumeric(latitude)&&$.isNumeric(longitude)){data.latitude=latitude;data.longitude=longitude;status=new jQuery.fn.jplist.models.Status(control.name,control.action,control.type,data,true);}}}}return status;};})(jQuery);
-//# sourceMappingURL=../../../map/jlocator/controls/autocomplete-radius.js.map
+//# sourceMappingURL=autocomplete-radius.js.map

@@ -73,4 +73,4 @@ cbVal=status.data.textGroup[i];$cb=$checkboxes.filter('[value="'+cbVal+'"]');if(
 	* @param {jQuery.fn.jplist.view.PanelControl} control
 	* @memberOf jQuery.fn.jplist.controls.CheckboxTextFilter
 	*/jQuery.fn.jplist.controls.CheckboxTextFilter.initEvents=function(control){var $control=control.$control,checkboxes=$control.data('checkboxes');checkboxes.off('change').change(function(){control.events.lastStatus=jQuery.fn.jplist.controls.CheckboxTextFilter.getStatus(false,control);control.$jplistBox.trigger(control.options.force_ask_event,[false]);});};})(jQuery);
-//# sourceMappingURL=../../../../map/jplist/controls/toggle-filters/checkbox-text-filter.js.map
+//# sourceMappingURL=checkbox-text-filter.js.map

@@ -10,21 +10,25 @@
     </div>
   </section>
   <section class="container-fluid intro" id="tourSection">
-    <div class="container center">
-      <div class="row">
+    <div class=" center">
+      <div class="row images firstText">
         <div class="col-md-10 col-md-offset-1">
           <?php the_field('intro_copy'); ?>
         </div>
       </div>
       <div class="row images">
         <div class="scheduleOverlay">
-          <a href="#tourSection" class="btn scheduleTour" id="scheduleTour">GET TO SCHEDULIN’ A TOUR</a>
+          <a  class="btn scheduleTour" id="scheduleTour">GET TO SCHEDULIN’ A TOUR</a>
         </div>
-        <div class="col-md-6 leftPod"><img src="<?php $image = get_field('intro_left_image'); echo $image['url']; ?>">
+        <img src="<?php $image = get_field('intro_left_image'); echo $image['url']; ?>" class="visible-xs mobileImage">
+        <div class="col-md-6 leftPod">
+        <img src="<?php $image = get_field('intro_left_image'); echo $image['url']; ?>" class="hidden-xs ">
           <?php the_field('intro_left'); ?>
           <a class="btn invert center scheduleTour">Schedule a Tour</a>
         </div>
-        <div class="col-md-6 rightPod"><img src="<?php $image = get_field('intro_right_image'); echo $image['url']; ?>">
+        <img src="<?php $image = get_field('intro_right_image'); echo $image['url']; ?>" class="visible-xs mobileImage">
+        <div class="col-md-6 rightPod">
+        <img src="<?php $image = get_field('intro_right_image'); echo $image['url']; ?>" class="hidden-xs ">
           <?php the_field('intro_right'); ?>
           <a href="https://www.facebook.com/ShattoMilk" class="btn invert center">Check out our Facebook</a>
         </div>
@@ -58,12 +62,19 @@
               <button class="btn submit invert">Request Tour</button>
               <div class="cancelSchedule">Cancel</div>
             </form>
+            <div class="successThanks">
+              <h2>We got your reservation!</h2>
+              <p>We will confirm with you as soon as possible.</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
   <section class="container-fluid farm-experience center">
+  <div class="row text-center">
+  <img src='<?php echo get_template_directory_uri(); ?>/dist/images/events/demonstration_mobile.jpg' class="visible-xs" style="margin-bottom:45px; margin:0 auto;">
+</div>
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -93,9 +104,12 @@
 </div>
 </section>
 <section class="container-fluid country-store">
+<div class="row text-center">
+  <img src='<?php echo get_template_directory_uri(); ?>/dist/images/events/kid_mobile.jpg' class="kidImage visible-xs" >
+</div>
 <div class="container">
 <div class="row">
-<div class="col-md-8 col-md-offset-2 text-center">
+<div class="col-lg-10 col-lg-offset-1 text-center">
   <h2><?php the_field('store_title'); ?></h2>
   <?php the_field('store_copy'); ?>
 </div>
@@ -155,4 +169,5 @@
 </section>
 
 </div>
+<?php get_template_part(THEME_PARTS.'footer-locate'); ?>
 <?php get_footer(); ?>

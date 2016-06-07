@@ -9,4 +9,4 @@
 	* @memberOf jQuery.fn.jplist.controls.Reset
 	*/jQuery.fn.jplist.controls.Reset.initEvents=function(control){control.$control.off().click(function(){ //force ask event			
 control.$jplistBox.trigger(control.options.force_ask_event,[true]);});};})(jQuery);
-//# sourceMappingURL=../../../map/jplist/controls/reset-btn.js.map
+//# sourceMappingURL=reset-btn.js.map

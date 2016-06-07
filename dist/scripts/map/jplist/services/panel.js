@@ -70,4 +70,4 @@ control=controls[i]; //get control type paths
 paths=control.getPaths();for(var k=0;k<paths.length;k++){ //get path
 path=paths[k];if(!jQuery.fn.jplist.services.Path.isPathInList(path,generalPathsList)){ //add path to the list
 generalPathsList.push(path);}}}return generalPathsList;};})(jQuery);
-//# sourceMappingURL=../../../map/jplist/services/panel.js.map
+//# sourceMappingURL=panel.js.map

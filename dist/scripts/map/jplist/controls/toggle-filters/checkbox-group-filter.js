@@ -69,4 +69,4 @@ path=status.data.pathGroup[i];$cb=$checkboxes.filter('[data-path="'+path+'"]');i
 	* @param {jQuery.fn.jplist.view.PanelControl} control
 	* @memberOf jQuery.fn.jplist.controls.CheckboxGroupFilter
 	*/jQuery.fn.jplist.controls.CheckboxGroupFilter.initEvents=function(control){var $control=control.$control,checkboxes=$control.data('checkboxes');checkboxes.off('change').change(function(){control.events.lastStatus=jQuery.fn.jplist.controls.CheckboxGroupFilter.getStatus(false,control);control.$jplistBox.trigger(control.options.force_ask_event,[false]);});};})(jQuery);
-//# sourceMappingURL=../../../../map/jplist/controls/toggle-filters/checkbox-group-filter.js.map
+//# sourceMappingURL=checkbox-group-filter.js.map

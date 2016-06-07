@@ -7,12 +7,12 @@
 /* Effects */
 
 $overlayDelay: .35s;
+
 .smaller {
 	.overlay {
-		top:60px;
+		top: 60px;
 	}
 }
-
 .overlay {
 	position: fixed;
 	height: 100%;
@@ -22,16 +22,17 @@ $overlayDelay: .35s;
 	visibility: hidden;
 	width: 0;
 	left: 50%;
-	@include transform(translate(-50%,0));
+	@include transform(translate(-50%, 0));
 	@include transition(all .35s ease $overlayDelay);
-	@include MQ(maxM){
-		top:70px;
+
+	@include MQ(maxM) {
+		top: 70px;
 	}
 	.row {
 		position: relative;
 	}
 	.overflow {
-		overflow:visible;
+		overflow: visible;
 	}
 	.overlay-close {
 		opacity: 0;
@@ -46,89 +47,92 @@ $overlayDelay: .35s;
 		outline: none;
 		z-index: 999;
 		color: red;
-		font-size:45px;
+		font-size: 45px;
 		display: block;
 		color: black;
 		font-family: "futura-pt", sans-serif;
 		cursor: pointer;
 		padding: 15px;
+
 		@include MQ(maxM) {
-			top:0px;
+			top: 0px;
 		}
 	}
 	.productShot {
 		text-align: center;
 		position: relative;
-		//left:10%;
-		top:50px;
+		//left: 10%;
+		top: 50px;
 	}
 	#overlay_image {
-		
-		width:auto;
+		width: auto;
 		height: auto;
-		position:relative;
-		opacity:1;
+		position: relative;
+		opacity: 1;
 		@include transition(opacity 0.25s ease-out);
 		//max-height: 400px;
+
 		@include MQ(maxM) {
 			display: none;
 		}
 		&.hideIt {
-			opacity:0;
+			opacity: 0;
 		}
 		&.half-gallon, &.non-dairy {
-			max-width:600px;
+			max-width: 600px;
 			position: relative;
-			left:-50px;
-			@include MQ(maxL){
-				left:-85px;
+			left: -50px;
+
+			@include MQ(maxL) {
+				left: -85px;
 			}
-			@include MQ(maxML){
-				max-width:550px;
-				left:-150px;
+			@include MQ(maxML) {
+				max-width: 550px;
+				left: -150px;
 			}
 		}
 		&.Quart {
-			max-width:400px;
+			max-width: 400px;
 			position: relative;
-			@include MQ(maxML){
-				max-width:350px;
+
+			@include MQ(maxML) {
+				max-width: 350px;
 			}
 		}
 		&.butter {
-			max-width:500px;
+			max-width: 500px;
 			margin-top: 100px;
+
 			@include MQ(maxL) {
-				left:-50px;
+				left: -50px;
 			}
 			@include MQ(maxML) {
-				left:-100px;
+				left: -100px;
 			}
 		}
-		 
 		&.bar, &.Pint, &.cheese_curds {
-			max-width:550px;
+			max-width: 550px;
 			margin-top: 30px;
-			left:-35px;
+			left: -35px;
+
 			@include MQ(maxL) {
-				max-width:450px;
-				left:0;
+				max-width: 450px;
+				left: 0;
 			}
 			@include MQ(maxL) {
-				left:-100px;
+				left: -100px;
 				margin-top: 100px;
 			}
 		}
-		&.artisan_cheese,{
-			max-width:500px;
+		&.artisan_cheese {
+			max-width: 500px;
 			margin-top: 130px;
 		}
-		 
 		&.missing {
-			max-width:300px;
-			left:8%;
-			top:50px;
-			width:30%;
+			max-width: 300px;
+			left: 8%;
+			top: 50px;
+			width: 30%;
 		}
 	}
 }
@@ -136,11 +140,11 @@ $overlayDelay: .35s;
 	visibility: visible;
 	width: 100%;
 	@include transition(all .35s ease);
-	overflow-y:scroll;
+	overflow-y: scroll;
+
 	@include MQ(maxM) {
-		padding-bottom:50px;
-		
-		background:white;
+		padding-bottom: 50px;
+		background: white;
 	}
 	.productInfo {
 		opacity: 1;
@@ -161,24 +165,25 @@ $overlayDelay: .35s;
 		@include transition-delay($overlayDelay);
 	}
 }
-
 // Info in overlay
 .productInfo {
 	opacity: 0;
 	@include transition(all .35s ease-out $overlayDelay);
+
 	ul {
 		list-style: none;
 		padding: 0;
 		padding-bottom: 15px;
-		
+
 		li {
 			font-size: 50px;
 			margin: 0;
 			padding: 0;
 			text-align: left;
 			line-height: 45px;
+
 			@include MQ(maxM) {
-				font-size:24px;
+				font-size: 24px;
 				line-height: 26px;
 			}
 		}
@@ -187,6 +192,7 @@ $overlayDelay: .35s;
 		margin-top: 35px;
 		margin-bottom: 15px;
 		font-family: "futura-pt", sans-serif;
+
 		@include MQ(maxM) {
 			margin-top: 55px;
 		}
@@ -195,7 +201,7 @@ $overlayDelay: .35s;
 .nutritionFacts {
 	padding: 15px;
 	border: 2px solid black;
-	background:white;
+	background: white;
 
 	p, h1, h2, h3, h4, h5 {
 		margin: 0;
@@ -210,7 +216,6 @@ $overlayDelay: .35s;
 	}
 	p {
 		font-size: 15px;
-	
 	}
 	h2 {
 		font-weight: 700;
@@ -219,16 +224,16 @@ $overlayDelay: .35s;
 		margin-top: 0px;
 		margin-bottom: 5px;
 		padding-bottom: 5px;
-		border-bottom:1px solid black;
+		border-bottom: 1px solid black;
+
 		@include MQ(maxM) {
-			border-bottom:5px solid black;
+			border-bottom: 1px solid black;
 		}
 	}
 	h3 {
 		font-size: 26px;
 		line-height: .8em;
 		margin-top: 5px;
-
 	}
 	.reducedPadding {
 		padding-left: 7.5px;
@@ -246,217 +251,275 @@ $overlayDelay: .35s;
 			border-width: 1px;
 		}
 	}
-	
-		.tableRow {
-			display: table;
-			margin-bottom: 5px;
-		}
-		.nutFacts, .servingSize, .calories {
-			// @include MQ(M) {
+	.tableRow {
+		display: table;
+		margin-bottom: 5px;
+	}
+	.nutFacts, .servingSize, .calories {
+		// @include MQ(M) {
 			// 	float: none;
 			// 	display: table-cell;
 			// 	vertical-align: top;
-			// }
-		}
-		.nutFacts {
-			// border-right: 1px solid black;
+			//
+		
+	}
+	.nutFacts {
+		// border-right: 1px solid black;
 
-			
-
-			@include MQ(maxM) {
-				border: none;
-			}
-			@include MQ(maxML) {
-				h2 {
-					font-size: 26px;
-				}
-			}
-		}
-		.servingSize {
-			//padding-top: 3px;
-			p {
-				border-bottom:1px solid black;
-				padding-bottom: 5px;
-				@include MQ(maxM){
-					padding-bottom: 10px;
-				}
-			}
-			@include MQ(maxL) {
-				margin-top: 5px;
-			}
-			@include MQ(maxML) {
-				padding-top: 0;
-			}
-			@include MQ(maxM) {
-				padding-top: 7px;
-
-			}
-			//border-bottom:1px solid black;
-			margin-bottom: 5px;
-			padding-bottom: 5px;
-		}
-		.calories {
-			//padding-top: 3px;
-			@include MQ(maxL) {
-				margin-bottom: 10px;
-			}
-			@include MQ(maxM){
-				margin-top: 5px;
-				margin-bottom: 5px;
-			}
+		@include MQ(maxML) {
 			h2 {
-				border-bottom:0;
-				float: left; 
-				margin-right: 5px;
+				font-size: 26px;
+			}
+		}
+		@include MQ(maxM) {
+			border: none;
 
+			h2 {
+				font-size: 30px;
 			}
-			p {
-				border-bottom:0;
-				font-size:12px;
+		}
+	}
+	.servingSize {
+		//padding-top: 3px;
+
+		p {
+			border-bottom: 1px solid black;
+			padding-bottom: 5px;
+
+			@include MQ(maxM) {
+				padding-bottom: 8px;
+				border-width: 8px;
+				margin-top: 5px;
+
+				span {
+					float: right;
+				}
 			}
-			h3 {
-				font-size: 24px;
-				text-transform: none;
-			}
-			.closeUp {
-				float: left;
+		}
+		@include MQ(maxL) {
+			margin-top: 5px;
+		}
+		@include MQ(maxML) {
+			padding-top: 0;
+		}
+		@include MQ(maxM) {
+			padding-top: 7px;
+		}
+		//border-bottom: 1px solid black;
+		margin-bottom: 5px;
+		padding-bottom: 5px;
+
+		@include MQ(maxM) {
+			padding-bottom: 0;
+			margin-bottom: 0;
+		}
+		h3 {
+			span {
+				display: none;
 			}
 			@include MQ(maxM) {
-				text-align: left;
-				border: none;
-				padding-top: 0;
-			}
-			@include MQ(maxML) {
-				padding-top: 0;
+				font-size: 20px;
+				font-weight: 500;
 
-				h3 {
-					font-size: 18px;
-					padding-top: 5px;
+				span {
+					display: inline;
 				}
 			}
 		}
+	}
+	.calories {
+		//padding-top: 3px;
 
-		.topPart {
-			h5 {
-				font-size:18px;
-				//border-bottom:3px solid black;
-				padding-bottom: 3px;
-			}
-			@include MQ(maxM){
-				margin-top: 10px;
-				
-			}
-
+		@include MQ(maxL) {
+			margin-bottom: 10px;
 		}
-		.stats {
-			.col-sm-6 {
-				&:first-child {
-					border-right:1px solid black;
-					@include MQ(maxM) {
-						border:none;
-					}
-				}
-				&:last-child {
-					@include MQ(maxM){
-
-						.topPart {
-							display:none;
-							border-top:none;
-						}
-						
-					}
-				}
-			}
+		@include MQ(maxM) {
+			margin-top: 5px;
+			margin-bottom: 5px;
 		}
-		.table {
-			margin-bottom: 0;
-			tr {
-				&:first-child {
-					border-top:3px solid black;
-					@include MQ(maxL){
-						border-top:none;
-						border-bottom:none;
-					}
-				}
-				&:last-child {
-					border-bottom:3px solid black;
-					@include MQ(maxL){
-						border-bottom:none;
-						border-top:none;
-						td {
-						border-bottom:0;
-						}
-					}
+		h2 {
+			border-bottom: 0;
+			float: left;
+			margin-right: 5px;
 
-				}
-			}
-			td {
-				border:1px solid black;
-				font-size:15px;
-				padding: 3px 2px 3px 8px;
-				font-weight:700;
-
-				&:first-child {
-					border-left:0;
-					text-align: center;
-					@include MQ(maxML){
-					width:60px;
-				}
-				}
-				&:last-child {
-					border-right:0;
-				}
-				&.child {
-					padding-left: 18px;
-					font-size:14px;
-					font-weight:100;
-				}
-				span.lighter {
-					font-weight:300;
-					margin-left: 5px;
-					font-size:14px;
-				}
-			}
-		}
-		.bottomList {
-			@include MQ(maxML) {
-				margin-top: 15px;
-				margin-bottom: 15px;
-			}
-			ul {
-				margin:10px 0 0 0;
-				padding: 0;
-				li {
-					font-size:14px;
-					float: left;
-					list-style:disc;
-					margin:0 10px 5px 0;
-					padding: 0;
-					line-height: 1em;
-					list-style-position: inside;
-
-					&:first-child {
-						list-style:none;
-					}
-				}
-			}
-		}
-		.dailyValues {
-
-			p {
+			@include MQ(maxM) {
+				float: right;
+				font-size: 60px;
+				margin-top: 0;
 				margin-bottom: 0;
-				line-height: 1em;
-				font-size:14px;
-				&:first-child {
-					border-top:1px solid black;
-					padding-top: 10px;
+			}
+		}
+		p {
+			border-bottom: 0;
+			font-size: 12px;
+		}
+		h3 {
+			font-size: 24px;
+			text-transform: none;
+		}
+		.closeUp {
+			float: left;
+
+			h3 {
+				@include MQ(maxM) {
+					font-size: 36px;
+					margin-top: 5px;
+					padding-top: 0;
 				}
+			}
+			p {
+				@include MQ(maxM) {
+					font-size: 16px;
+				}
+			}
+		}
+		@include MQ(maxM) {
+			text-align: left;
+			border: none;
+			padding-top: 0;
+		}
+		@include MQ(maxML) {
+			padding-top: 0;
+
+			h3 {
+				font-size: 18px;
+				padding-top: 5px;
+			}
+		}
+	}
+	.topPart {
+		h5 {
+			font-size: 18px;
+			//border-bottom: 3px solid black;
+			padding-bottom: 3px;
+		}
+		@include MQ(maxM) {
+			margin-top: 0px;
+			margin-bottom: 8px;
+
+			h5 {
+				font-size: 16px;
+				border-top: 5px solid black;
+				padding-top: 8px;
+				font-weight: 500;
+			}
+		}
+	}
+	.stats {
+		.col-sm-6 {
+			&:first-child {
+				border-right: 1px solid black;
+
+				@include MQ(maxM) {
+					border: none;
+				}
+			}
+			&:last-child {
+				@include MQ(maxM) {
+					.topPart {
+						display: none;
+						border-top: none;
+					}
+				}
+			}
+		}
+	}
+	.table {
+		margin-bottom: 0;
+
+		tr {
+			&:first-child {
+				border-top: 3px solid black;
+
+				@include MQ(maxL) {
+					border-top: none;
+					border-bottom: none;
+				}
+			}
+			&:last-child {
+				border-bottom: 3px solid black;
+
+				@include MQ(maxL) {
+					border-bottom: none;
+					border-top: none;
+
+					td {
+						border-bottom: 0;
+					}
+				}
+			}
+		}
+		td {
+			border: 1px solid black;
+			font-size: 15px;
+			padding: 3px 2px 3px 8px;
+			font-weight: 700;
+
+			&:first-child {
+				border-left: 0;
+				text-align: center;
+
+				@include MQ(maxML) {
+					width: 60px;
+				}
+			}
+			&:last-child {
+				border-right: 0;
+			}
+			&.child {
+				padding-left: 18px;
+				font-size: 14px;
+				font-weight: 100;
+			}
+			span.lighter {
+				font-weight: 300;
+				margin-left: 5px;
+				font-size: 14px;
+			}
+		}
+	}
+	.bottomList {
+		@include MQ(maxML) {
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
+		ul {
+			margin: 10px 0 0 0;
+			padding: 0;
+
+			li {
+				font-size: 14px;
+				float: left;
+				list-style: disc;
+				margin: 0 10px 5px 0;
+				padding: 0;
+				line-height: 1em;
+				list-style-position: inside;
+
+				&:first-child {
+					list-style: none;
+				}
+			}
+		}
+	}
+	.dailyValues {
+		p {
+			margin-bottom: 0;
+			line-height: 1em;
+			font-size: 14px;
+
+			&:first-child {
+				border-top: 1px solid black;
+				padding-top: 10px;
+				@include MQ(maxM) {
+					border-width:3px;
+				}
+			}
 			@include MQ(maxML) {
 				text-align: left;
 			}
-			}
 		}
-	
+	}
 	.middle {
 		border-right: 1px solid black;
 
@@ -520,6 +583,7 @@ $overlayDelay: .35s;
 	}
 	.footnotes {
 		padding-left: 0;
+
 		p {
 			padding: 0 10px;
 		}
@@ -539,11 +603,13 @@ $overlayDelay: .35s;
 }
 .ingredients {
 	margin-top: 15px;
-	//background:white;
+	//background: white;
+
 	@include MQ(maxM) {
 		padding-bottom: 100px;
-	}
-	p {
 
+		p {
+			font-size: 14px;
+		}
 	}
 }

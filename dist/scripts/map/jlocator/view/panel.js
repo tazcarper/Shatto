@@ -80,4 +80,4 @@ initJPlist(self,self.$root);return $.extend(this,self);}; /**
 	*/jQuery.fn.jlocator.panel=function($root,options){ //call constructor
 var self=new Init($root,options); //init events
 initEvents(self);return self;};})(jQuery);
-//# sourceMappingURL=../../../map/jlocator/view/panel.js.map
+//# sourceMappingURL=panel.js.map

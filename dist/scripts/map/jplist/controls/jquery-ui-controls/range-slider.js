@@ -68,4 +68,4 @@ controlTypeOptions=control['controlTypeOptions'];if(controlTypeOptions){controlT
 $uiSlider=control.$control.data('jplist-ui-slider'); //on value change
 $uiSlider.on('slidechange',function(event,ui){ //forse ask event	
 control.events.lastStatus=jQuery.fn.jplist.controls.RangeSlider.getStatus(false,control);control.$jplistBox.trigger(control.options.force_ask_event,[false]);});};})(jQuery);
-//# sourceMappingURL=../../../../map/jplist/controls/jquery-ui-controls/range-slider.js.map
+//# sourceMappingURL=range-slider.js.map

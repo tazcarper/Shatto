@@ -102,4 +102,4 @@ self.controller=new jQuery.fn.jplist.controller.Controller($this,self.options);r
 	* @type {Object}
 	* @namespace
 	*/jQuery.fn.jplist.addons=jQuery.fn.jplist.addons||{};})(jQuery);
-//# sourceMappingURL=../../map/jplist/jplist.js.map
+//# sourceMappingURL=jplist.js.map

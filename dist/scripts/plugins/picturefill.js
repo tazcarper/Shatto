@@ -362,4 +362,4 @@ pf.fillImgs=picturefill;pf.teardownRun=noop; /* expose methods for testing */pic
 module.exports=picturefill;}else if(typeof define==="function"&&define.amd){ // AMD support
 define("picturefill",function(){return picturefill;});} // IE8 evals this sync, so it must be the last thing we do
 if(!pf.supPicture){types["image/webp"]=detectTypeSupport("image/webp","data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==");}})(window,document);
-//# sourceMappingURL=../plugins/picturefill.js.map
+//# sourceMappingURL=picturefill.js.map

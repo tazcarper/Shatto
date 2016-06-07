@@ -6,6 +6,7 @@
   @include MQ(maxM) {
     padding:3em 0;
     text-align: center;
+    color:white;
     li, p {
       font-size:16px;
     }
@@ -75,6 +76,9 @@
       display:inline-block;
       margin:0 10px 0 0;
       float:left;
+       path {
+            fill:white;
+         }
       &:hover {
         path {
           fill:white;
@@ -97,6 +101,7 @@
       &.twitter {
         // background: url('../images/social-twitter.svg') 0 0 no-repeat;
          width:23px;
+        
       }
       &.instagram {
         // background: url('../images/social-instagram.svg') 0 0 no-repeat;

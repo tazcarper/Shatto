@@ -63,6 +63,11 @@
 .subMenu {
 	z-index: 99;
 	position: relative;
+	&.is_stuck {
+		.subNav {
+			top:-85px;
+		}
+	}
 }
 .subNav {
 	position: relative;
@@ -70,7 +75,7 @@
 	width: 100%;
 	z-index: 99;
 	top: -95px;
-
+	@include transition(all .15s ease-out);
 	@include MQ(maxL) {
 		bottom: 75px;
 	}
@@ -180,6 +185,9 @@
 		}
 		p {
 			margin-top: em(15);
+			@include MQ(maxM) {
+				margin-bottom: 0;
+			}
 		}
 		h1 {
 			font-size: 4em;

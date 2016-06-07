@@ -581,39 +581,41 @@
         }, {
           offset: '-650'
         })
-        var max_chars = 10,
-          zipField = $('.findText form input');
-        $('.findText form').submit(function(e) {
-          e.preventDefault();
-          goToLocate();
-        });
-        $('.mapFinder').on('click', '.zipFind', function(e) {
-          e.preventDefault();
-          goToLocate();
-        });
-        var goToLocate = function(e) {
-          var zip = zipField.val();
-          console.log(zip.length);
-          zipField.removeClass('error');
-          if (zip !== '' && zip.length >= 5) {
-            window.location.href = ('locate/?zip=' + zip);
-          } else {
-            zipField.addClass('error');
-          }
-        }
-        zipField.keydown(function(e) {
-          if ($(this).val().length >= max_chars) {
-            $(this).val($(this).val().substr(0, max_chars));
-          }
-        });
-        zipField.keyup(function(e) {
-          if ($(this).val().length >= max_chars) {
-            $(this).val($(this).val().substr(0, max_chars));
-          }
-        });
+
       }
+
+      var max_chars = 10,
+        zipField = $('.findText form input');
+      $('.findText form').submit(function(e) {
+        e.preventDefault();
+        goToLocate();
+      });
+      $('.mapFinder').on('click', '.zipFind', function(e) {
+        e.preventDefault();
+        goToLocate();
+      });
+      var goToLocate = function(e) {
+        var zip = zipField.val();
+        console.log(zip.length);
+        zipField.removeClass('error');
+        if (zip !== '' && zip.length >= 5) {
+          window.location.href = ('locate/?zip=' + zip);
+        } else {
+          zipField.addClass('error');
+        }
+      }
+      zipField.keydown(function(e) {
+        if ($(this).val().length >= max_chars) {
+          $(this).val($(this).val().substr(0, max_chars));
+        }
+      });
+      zipField.keyup(function(e) {
+        if ($(this).val().length >= max_chars) {
+          $(this).val($(this).val().substr(0, max_chars));
+        }
+      });
       if ($('.about')[0]) {
-        
+
         if (Modernizr.mq('(min-width: 767px)')) {
           $('.viveVideo').vide({
             mp4: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/bottlingWeb.mp4',
@@ -632,19 +634,33 @@
       // Events page - Grid init
       var eventTours = $('.events-tours');
       if (eventTours[0]) {
+        var theVideo;
+
+        function eventBg(event) {
+          if (event === 'start') {
+            if (theVideo === undefined) {
+              theVideo = $('.viveVideo').vide({
+                mp4: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/feedingBarn2.mp4',
+                webm: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/feedingBarn2.webm',
+                ogv: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/feedingBarn2.ogv'
+              }, {
+                posterType: 'none',
+                autoplay: true,
+                position: '50% 100%',
+                volume: 1,
+                loop: true,
+                resizing: true
+              });
+            }
+          } else {
+            if (theVideo !== undefined) {
+              theVideo.destroy();
+              theVideo = undefined;
+            }
+          }
+        }
         if (Modernizr.mq('(min-width: 767px)')) {
-          $('.viveVideo').vide({
-            mp4: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/feedingBarn2.mp4',
-            webm: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/feedingBarn2.webm',
-            ogv: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/feedingBarn2.ogv'
-          }, {
-            posterType: 'none',
-            autoplay: true,
-            position: '50% 100%',
-            volume: 1,
-            loop: true,
-            resizing: true
-          });
+          eventBg('start');
         }
         $('.scheduleOverlay').stick_in_parent({
           'offset_top': 60,
@@ -662,6 +678,15 @@
           slide: '.slide',
           focusOnSelect: true
         });
+
+        $(window).on('resize', function() {
+          if (Modernizr.mq('(min-width: 767px)')) {
+            eventBg('start');
+          } else {
+            eventBg('end');
+          }
+        });
+
         var popUp = $('.popUp'),
           grownElements = $('.slick-track, .galleryButtons'),
           bigImageEl = $('.popUp .bigImage'),
@@ -727,14 +752,16 @@
               // hide form
               $('.schedulePopUp form').hide();
               // show thank you
-              alert('success');
+              $('.successThanks').show();
+
+
               // fire analytics event
               // ga();
 
               // hide the overlay
               setTimeout(function() {
                 $('.schedulePopUp').fadeOut();
-              }, 5000);
+              }, 10000);
             } else {
               // handle errors from gravity forms
               alert(JSON.stringify(data.response.validation_messages));
@@ -808,20 +835,7 @@
           });
         });
       }
-      $(document).on('click', 'a[href*="#"]:not([href="#"])', function(e) {
-        e.preventDefault();
-        if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname && Modernizr.mq('(min-width: 767px)')) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-          if (target.length) {
-            console.log($('.headerMain').height(), $(this).height());
-            $('html, body').animate({
-              scrollTop: target.offset().top - ($('.headerMain').height() + $(this).height() + 5)
-            }, 1000);
-            e.preventDefault();
-          }
-        }
-      });
+
       // Product Page Animation
       if ($('.productPage')[0]) {
         var time = 0;
@@ -836,25 +850,36 @@
           time += 65;
         });
 
-        var getQueryString = function(field, url) {
-          var href = url ? url : window.location.href;
-          var reg = new RegExp('[?&]' + field + '=([^&#]*)', 'i');
-          var string = reg.exec(href);
-          return string ? string[1] : null;
-        };
+        $(document).on('click', 'a[href*="#"]:not([href="#"])', function(e) {
+          e.preventDefault();
 
-        if(getQueryString('section') !== null){
-          var theHash = '#'+getQueryString('section');
-          console.log(theHash);
+          if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname && Modernizr.mq('(min-width: 767px)')) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+              console.log($('.headerMain').height(), $(this).height());
+              $('html, body').animate({
+                scrollTop: target.offset().top - ($('.headerMain').height() + 85)
+              }, 1000);
+              e.preventDefault();
+            }
+          }
+        });
+
+
+        if (window.location.hash.substr(1) !== null) {
+          var theHash = '#' + window.location.hash.substr(1);
           var target = $(theHash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
           if (target.length) {
-          setTimeout(function(){
-            $(window).scrollTop(target.offset().top - ($('.headerMain').height() + $('.subNav').height() + 5));
-          }, 2000)
-           
-            
-           // e.preventDefault();
+            target.addClass('visible').find('.product').find('img.main').unveil();
+            setTimeout(function() {
+              $('html, body').animate({
+                scrollTop: target.offset().top - ($('.headerMain').height() + 85)
+              }, 1000);
+            }, 2500)
+
+
+            // e.preventDefault();
           }
         }
 
@@ -943,8 +968,11 @@
           overlayToggle();
         });
         $(window).load(function() {
+          var subNavMenu = $('.subNav');
           var waypointOffset = 200;
           var productsToShow = $('section.productSection').waypoint(function(direction) {
+            // subNavMenu.find('a.current').removeClass('current');
+            // subNavMenu.find('a[href="#'+$(this.element).attr('id')+'"]').addClass('current'); 
             if (direction === 'down') {
               if (!$(this.element).hasClass('visible')) {
                 $(this.element).addClass('visible');
@@ -966,8 +994,7 @@
         // }).resize();
         var lat, lng;
         var QueryString = function() {
-          // This function is anonymous, is executed immediately and
-          // the return value is assigned to QueryString!
+
           var query_string = {};
           var query = window.location.search.substring(1);
           var vars = query.split("&");
@@ -987,12 +1014,13 @@
           }
           return query_string;
         }();
-        console.log(QueryString.zip);
+
         if (QueryString.zip !== '' && QueryString.zip !== undefined) {
           var geocoder = new google.maps.Geocoder();
           geocoder.geocode({
             "address": QueryString.zip
           }, function(results, status) {
+            console.log(results, status);
             if (status == google.maps.GeocoderStatus.OK) {
               console.log(results);
               lat = results[0].geometry.location.lat(),
@@ -1006,6 +1034,13 @@
                 startZoom: 13,
                 latitude: lat,
                 longitude: lng
+              });
+            } else {
+              alert('The zip code ' + QueryString.zip + ' has zero results.');
+              $('#jlocator').jlocator({
+                startZoom: 13,
+                latitude: 39.0936738,
+                longitude: -94.589048
               });
             }
           });

@@ -109,4 +109,4 @@ event.stopPropagation();dropdown=$(this).parents('[data-control-type]');ul=dropd
 $(document).trigger('jplist_dropdown_close',[dropdown]); //current dropdown			
 if(ul.is(':visible')){ul.hide();}else {ul.show();}});control.$control.find('li').off().click(function(){var status,data_path,data_number,span;status=jQuery.fn.jplist.controls.Dropdown.getStatus(false,control);span=$(this).find('span');data_path=span.attr('data-path');data_number=span.attr('data-number');if(data_path){status.data.path=data_path;status.data.type=span.attr('data-type');status.data.order=span.attr('data-order');}else {if(data_number){status.data.number=data_number;}} //send status event		
 control.events.lastStatus=status;control.$jplistBox.trigger(control.options.status_event,[status]);});};})(jQuery);
-//# sourceMappingURL=../../../map/jplist/controls/dropdown.js.map
+//# sourceMappingURL=dropdown.js.map

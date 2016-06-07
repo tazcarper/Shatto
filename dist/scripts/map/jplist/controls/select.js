@@ -83,4 +83,4 @@ if(status.data.path=='default'){$option=control.$control.find('option[data-path=
 selectedOption=$(this).find('option:selected'); //get data
 data_path=selectedOption.attr('data-path');data_number=selectedOption.attr('data-number');if(data_path){status.data.path=data_path;status.data.type=$(this).attr('data-type');status.data.order=$(this).attr('data-order');}else {if(data_number){status.data.number=data_number;}} //send status event			
 control.events.lastStatus=status;control.$jplistBox.trigger(control.options.status_event,[status]);});};})(jQuery);
-//# sourceMappingURL=../../../map/jplist/controls/select.js.map
+//# sourceMappingURL=select.js.map

@@ -44,4 +44,4 @@ self.pathitems=getPathitems(self,paths);return $.extend(this,self);}; //api ----
 self=new Init(jqElement,paths,index); //properties
 this.html=self['html'];this.jqElement=self['jqElement'];this.pathitems=self['pathitems']; //methods
 this.findPathitem=self['findPathitem'];};})(jQuery);
-//# sourceMappingURL=../../../map/jplist/models/dataitem.js.map
+//# sourceMappingURL=dataitem.js.map

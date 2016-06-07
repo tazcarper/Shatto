@@ -44,4 +44,4 @@ control.$control.data('jplist-handle',listenerHandle);}; /**
 	 * @memberOf jQuery.fn.jplist.controls.Autocomplete
 	 */jQuery.fn.jplist.controls.Autocomplete.getStatus=function(isDefault,control){var status=null,latitude,longitude,data; //get attributes
 latitude=control.$control.attr('data-latitude');longitude=control.$control.attr('data-longitude');data={name:control.$control.attr('data-name'),radius:control.$control.attr('data-radius'),filterType:'autocomplete'};if(isDefault){data.latitude='';data.longitude='';status=new jQuery.fn.jplist.models.Status(control.name,control.action,control.type,data,true);}else {if($.isNumeric(latitude)&&$.isNumeric(longitude)){data.latitude=latitude;data.longitude=longitude;status=new jQuery.fn.jplist.models.Status(control.name,control.action,control.type,data,true);}}return status;};})(jQuery);
-//# sourceMappingURL=../../../map/jlocator/controls/autocomplete.js.map
+//# sourceMappingURL=autocomplete.js.map

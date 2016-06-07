@@ -308,6 +308,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app/layouts'));
 });
 
+// gulp.task('build', ['html', 'fonts', 'extras'], () => {
 gulp.task('build', ['html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({
     title: 'build',
