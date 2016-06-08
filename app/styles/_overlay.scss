@@ -194,7 +194,7 @@ $overlayDelay: .35s;
 		font-family: "futura-pt", sans-serif;
 
 		@include MQ(maxM) {
-			margin-top: 55px;
+			margin-top: 25px;
 		}
 	}
 }
@@ -419,6 +419,10 @@ $overlayDelay: .35s;
 							display: none;
 							border-top: none;
 						}
+						table {
+						border-bottom:5px solid black;	
+						}
+						
 					}
 				}
 			}
@@ -482,6 +486,10 @@ $overlayDelay: .35s;
 				margin-top: 15px;
 				margin-bottom: 15px;
 			}
+			@include MQ(maxM) {
+				margin-top: 5px;
+				margin-bottom: 5px;
+			}
 			ul {
 				margin: 10px 0 0 0;
 				padding: 0;
@@ -494,7 +502,12 @@ $overlayDelay: .35s;
 					padding: 0;
 					line-height: 1em;
 					list-style-position: inside;
-
+					@include MQ(maxM) {
+						
+						list-style:none !important;
+						margin:3px 6% 3px 0;
+						float: left;
+					}
 					&:first-child {
 						list-style: none;
 					}
@@ -508,11 +521,12 @@ $overlayDelay: .35s;
 				font-size: 14px;
 
 				&:first-child {
-					border-top: 1px solid black;
-					padding-top: 10px;
+					//border-top: 1px solid black;
+					padding-top: 0px;
 
 					@include MQ(maxM) {
 						border-width: 3px;
+						margin-top: 5px;
 					}
 				}
 				@include MQ(maxML) {
