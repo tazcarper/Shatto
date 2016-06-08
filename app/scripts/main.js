@@ -468,6 +468,7 @@
           theBottle = $('#mainBottle'),
           bottles = 16,
           arrayIndex = 8,
+          bottlePos = 11,
           // currentUrl = stylesheet_directory_uri,
           // Custom rotation order
           customRotation = [9, 10, 11, 12, 13, 14, 15, 16, 1, 2, 3, 4, 5, 6, 7, 8, 9],
@@ -483,13 +484,13 @@
             floatingBottle.addClass('disableTransition');
             var x = e.pageX - theBottle.offset().left;
             // Find bottle pos
-            var bottlePos = customRotation[parseInt(x / 370 * customRotation.length)];
-            console.log(bottlePos);
+             bottlePos = customRotation[parseInt(x / 370 * customRotation.length)];
+           
             arrayIndex = parseInt(x / screenWidth * customRotation.length);
-            console.log('arrayindex ', arrayIndex);
+            
             var textPod = $('.pod');
             textPod.removeClass('visible');
-            console.log(arrayIndex);
+           
             if (arrayIndex === 11 || arrayIndex === 12) {
               textPod.removeClass('visible');
             } else if (arrayIndex <= 5) {
@@ -513,6 +514,10 @@
         }
         // bottle turn function
         function changeIt(i) {
+          // Quick fix for this. Fix later
+          if (i >= 16) {
+            i = 16;
+          }
           var origNum = i;
           theBottle.attr('class',
             function(i, c) {
@@ -520,12 +525,12 @@
             }).addClass('img-' + customRotation[origNum]);
           // if not on starting position
           if (i !== 8) {
-            if (arrayIndex !== 8 && arrayIndex < 8) {
+            if (arrayIndex < 8) {
               origNum++;
               setTimeout(function() {
                 changeIt(origNum)
               }, 25);
-            } else if (arrayIndex !== 8 && arrayIndex > 8) {
+            } else if (arrayIndex > 8) {
               origNum--;
               setTimeout(function() {
                 changeIt(origNum)
@@ -973,7 +978,7 @@
         $(window).load(function() {
           var subNavMenu = $('.subNav'),
           scrolledAlready = false;
-console.log(window.location.hash.substr(1));
+
           if (window.location.hash.substr(1) !== null && window.location.hash.substr(1) !== '') {
             var theHash = '#' + window.location.hash.substr(1);
             var target = $(theHash);
@@ -1045,15 +1050,15 @@ console.log(window.location.hash.substr(1));
           geocoder.geocode({
             "address": QueryString.zip
           }, function(results, status) {
-            console.log(results, status);
+            
             if (status == google.maps.GeocoderStatus.OK) {
-              console.log(results);
+             
               lat = results[0].geometry.location.lat(),
                 lng = results[0].geometry.location.lng();
               var placeName = results[0].address_components[0].long_name,
                 formattedAddress = results[0].formatted_address;
               $(".findInput input").val(formattedAddress);
-              console.log(lat, lng);
+             
               $('.mapOverlay').addClass('shrink');
               $('#jlocator').jlocator({
                 startZoom: 13,

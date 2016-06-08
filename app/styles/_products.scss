@@ -577,7 +577,11 @@
 					}
 				}
 				@include transition(all 0s ease);
-
+				.bottleShadow {
+					position:absolute;
+					
+					top:auto;
+				}
 				.productName {
 					@include transition(all .15s ease);
 
@@ -614,8 +618,11 @@
 					top: 0;
 					float: none;
 					display: inline-block;
-
+					opacity:1;
 					&.productShown {
+						img {
+							opacity:1;
+						}
 						.productName {
 							@include transition(all, 0.35s, ease-out);
 						}
@@ -629,28 +636,82 @@
 						&.cheese {
 							left: 3%;
 							top: 110px;
+							.bottleShadow {
+								bottom:30px;
+							}
+						}
+						&.milk {
+							z-index: 10;
+
+						}
+
+						&.juice {
+							z-index: 9;
+							left: -195px;
+							top: 35px;
+							position: relative;
+							.bottleShadow {
+								bottom:28px;
+							}
+						}
+						&.flavoredMilk {
+							right: 27%;
+							top: 105px;
+							z-index: 10;
+							.bottleShadow {
+								bottom:12.8%;
+							}
+						}
+						&.iceCream {
+							right: 12%;
+							top: 270px;
+							z-index: 9;
+							.bottleShadow {
+								bottom:30px;
+							}
+						}
+						&.butter {
+							right: 0%;
+							top: auto;
+							bottom: 0%;
+							.bottleShadow {
+								bottom:32px;
+							}
+						}
+					}
+					@include MQ(maxML){
+						@include transform(scale(.85));
+						&.cheese {
+							left: 3%;
+							top: 110px;
 						}
 						&.milk {
 							z-index: 10;
 						}
 						&.juice {
 							z-index: 9;
-							left: -195px;
+							left: -135px;
 							top: 35px;
 							position: relative;
 						}
 						&.flavoredMilk {
-							right: 25.5%;
+							right: 21.5%;
 							top: 105px;
 							z-index: 10;
+							.bottleShadow {
+								bottom:12%;
+							}
 						}
 						&.iceCream {
-							right: 11%;
+							right: 8%;
 							top: 270px;
 							z-index: 9;
+							.bottleShadow {
+								bottom:27px;
+							}
 						}
 						&.butter {
-							right: 0%;
+							right: -1%;
 							top: auto;
 							bottom: 0%;
 						}

@@ -41,6 +41,11 @@
           </div>
         </div>
       </div>
+      <div class="row instructions">
+        <div class="col-sm-12 text-center">
+          <p><object  class="leftArrow" type="image/svg+xml" data="<?php echo get_template_directory_uri(); ?>/dist/images/home/arrow.svg"></object><span class="strong">PSSST!</span> Move your mouse LEFT and RIGHT and watch the bottle!<object class="rightArrow" type="image/svg+xml" data="<?php echo get_template_directory_uri(); ?>/dist/images/home/arrow.svg"></object></p>
+        </div>
+      </div>
     </div>
   </section>
   <section class="container-fluid products visible">
@@ -57,10 +62,10 @@
           <div id="floatingBottle" class="img-1">
           <div class="popUp callOut">
           <div class="closeCallout">
-           <!--  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30.71 30.71" style="enable-background:new 0 0 30.71 30.71;" xml:space="preserve">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30.71 30.71" style="enable-background:new 0 0 30.71 30.71;" xml:space="preserve">
             <line class="st0" x1="0.35" y1="0.35" x2="30.35" y2="30.35"/>
             <line class="st0" x1="30.35" y1="0.35" x2="0.35" y2="30.35"/>
-            </svg> -->
+            </svg> 
           </div>
           <h2>EXTRA EXTRA</h2>
           <p>lakjfdsl kja;lsdkfj l;asdkj jf fakds jf</p>
@@ -68,31 +73,38 @@
           <a>
             <div id="mainBottle"></div>
           <img src="<?php echo get_template_directory_uri(); ?>/dist/images/rotation/reflection.png" class="shadow"/>
+          <div class="bottleShadow"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/shadow.png"></div>
               <div class="productName hidden-xs">
                 <h5>Milk</h5>
               </div></a></div>
               <a href="products/#milk" class="product milkButton text-center visible-xs">
+              <div class="bottleShadow"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/shadow.png"></div>
             <div class="productName">
               <h5>Milk</h5>
             </div></a>
             <div class="productContainer">
             <a href="<?php echo esc_url( home_url( '/products/#cheese' ) ); ?>" class="product cheese text-center"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/home/cheese.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/home/cheese.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/home/cheese_2x.png 2x"/>
+            <div class="bottleShadow"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/shadow.png"></div>
             <div class="productName">
               <h5>Cheese</h5>
             </div></a>
             <a href="<?php echo esc_url( home_url( '/products/#nonDairy' ) ); ?>" class="product juice text-center"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/home/juice.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/home/juice.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/home/juice_2x.png 2x"/>
+            <div class="bottleShadow"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/shadow.png"></div>
             <div class="productName">
               <h5>Non-Dairy</h5>
             </div></a>
             <a href="<?php echo esc_url( home_url( '/products/#flavoredMilk' ) ); ?>" class="product flavoredMilk text-center"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/home/flavored.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/home/flavored.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/home/flavored_2x.png 2x"/>
+            <div class="bottleShadow"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/shadow.png"></div>
             <div class="productName">
               <h5>Flavored <span class="hidden-xs">Milk</span></h5>
             </div></a>
             <a href="<?php echo esc_url( home_url( '/products/#iceCream' ) ); ?>" class="product iceCream text-center"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/home/iceCream.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/home/iceCream.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/home/iceCream_2x.png 2x"/>
+            <div class="bottleShadow"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/shadow.png"></div>
             <div class="productName">
               <h5>Ice Cream</h5>
             </div></a>
             <a href="<?php echo esc_url( home_url( '/products/#butter' ) ); ?>" class="product butter text-center"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/home/butter.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/home/butter.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/home/butter_2x.png 2x"/>
+             <div class="bottleShadow"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/shadow.png"></div>
             <div class="productName">
               <h5>Butter</h5>
             </div></a>

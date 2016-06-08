@@ -251,17 +251,17 @@ main {
   }
   .pod {
     position: absolute;
-    opacity: 0;
+    opacity: 1;
     @include transition(opacity, 0.5s, ease-out);
 
     &.visible {
       opacity: 1;
     }
     &.pod1 {
-      top: 50px;
+      top: 100px;
     }
     &.pod2 {
-      top: 365px;
+      top: 405px;
     }
     &.pod3 {
       top: 125px;
@@ -415,6 +415,10 @@ img {
     }
     &:hover {
       @include transform(translate(0, -5px));
+      .bottleShadow {
+                bottom:1px;
+                opacity:.25;
+              }
     }
     img {
       @include transform(scale(1));
@@ -430,6 +434,12 @@ img {
     .callout {
       display:none;
     }
+    .bottleShadow {
+                bottom:8px;
+                img {
+                  opacity: 1;
+                }
+              }
   }
   img {
     // @include transform(scale(.75));

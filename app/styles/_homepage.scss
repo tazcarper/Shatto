@@ -9,6 +9,35 @@ section.bottleDetail {
       font-size:2.3vw;
     }
   }
+  .instructions {
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:20px;
+    @include MQ(maxML){
+      display:none;
+    }
+    p {
+      font-size:17px;
+      position:relative;
+      display:inline-block;
+      .strong {
+        font-weight:500;
+      }
+    }
+    .leftArrow, .rightArrow {
+      position:absolute;
+      width:15px;
+      bottom:0;
+    }
+    .leftArrow {
+      left:-35px;
+      @include transform(rotate(180deg));
+    }
+    .rightArrow {
+      right:-35px;
+    }
+  }
 }
 
 section.products {
@@ -67,14 +96,18 @@ section.products {
     font-size: 14px;
     padding: 0;
   }
-  // .closeCallout {
-  //   width:30px;
-  //   position:absolute;
-  //   top:0;
-  //   right:0;
-  //   padding:5px;
-    
-  // }
+  .closeCallout {
+    width:10px;
+    position:absolute;
+    top:0;
+    right:0;
+    padding:5px;
+    svg {
+      line {
+        stroke:black;
+      }
+    }
+  }
 }
   a {
     background-color: $black;
