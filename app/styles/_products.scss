@@ -581,6 +581,9 @@
 					position:absolute;
 					
 					top:auto;
+					@include MQ(maxM) {
+						display:none;
+					}
 				}
 				.productName {
 					@include transition(all .15s ease);
@@ -692,7 +695,7 @@
 							z-index: 9;
 							left: -135px;
 							top: 35px;
-							position: relative;
+							
 						}
 						&.flavoredMilk {
 							right: 21.5%;

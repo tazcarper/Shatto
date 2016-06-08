@@ -463,8 +463,10 @@
       // homepage scripts / .home
       if ($('#floatingBottle')[0]) {
         var theH = 0,
-          floatingBottle = $('#floatingBottle');
-        var bottleWidth = $('#floatingBottle').width(),
+          callout = $('.callOut'),
+          closeCallOut = $('.closeCallout'),
+          floatingBottle = $('#floatingBottle'),
+          bottleWidth = $('#floatingBottle').width(),
           theBottle = $('#mainBottle'),
           bottles = 16,
           arrayIndex = 8,
@@ -484,13 +486,13 @@
             floatingBottle.addClass('disableTransition');
             var x = e.pageX - theBottle.offset().left;
             // Find bottle pos
-             bottlePos = customRotation[parseInt(x / 370 * customRotation.length)];
-           
+            bottlePos = customRotation[parseInt(x / 370 * customRotation.length)];
+
             arrayIndex = parseInt(x / screenWidth * customRotation.length);
-            
+
             var textPod = $('.pod');
             textPod.removeClass('visible');
-           
+
             if (arrayIndex === 11 || arrayIndex === 12) {
               textPod.removeClass('visible');
             } else if (arrayIndex <= 5) {
@@ -559,9 +561,14 @@
             floatingBottle.addClass('start');
             $('#mainBottle').addClass('shown');
             $('.shadow').addClass('hideIt');
+            callout.removeClass('active');
           } else {
             floatingBottle.removeClass('start disableTransition');
             rotateBack();
+            var quickDelay = window.setTimeout(function(e){
+              callout.addClass('active');
+            }, 501);
+            
             if (!floatingBottle.hasClass('stop')) {
               $('.shadow').removeClass('hideIt');
             }
@@ -585,8 +592,16 @@
           }
         }, {
           offset: '-650'
-        })
+        });
 
+        if(callout[0]){
+          callout.addClass('active');
+          closeCallOut.on('click', function(e){
+            callout.fadeOut();
+          })
+        }
+
+        // end homepage
       }
 
       var max_chars = 10,
@@ -919,7 +934,9 @@
         }
         // listener
         $(document).keyup(function(e) {
-          if (e.keyCode === 27) {overlayToggle();}
+          if (e.keyCode === 27) {
+            overlayToggle();
+          }
         });
         $('.overlay').on('click', '.overlay-close', function() {
           overlayToggle();
@@ -977,7 +994,7 @@
 
         $(window).load(function() {
           var subNavMenu = $('.subNav'),
-          scrolledAlready = false;
+            scrolledAlready = false;
 
           if (window.location.hash.substr(1) !== null && window.location.hash.substr(1) !== '') {
             var theHash = '#' + window.location.hash.substr(1);
@@ -986,21 +1003,20 @@
               var len = target.find('img.main').length;
               target.addClass('visible').find('.product').find('img.main').each(function(i, e) {
 
-               // console.log(i);
-                if (i === len -1) {
+                // console.log(i);
+                if (i === len - 1) {
                   $(this).unveil(200, function() {
                     $(this).load(function() {
                       this.style.opacity = 1;
-                     $(document).scrollTop( target.offset().top - ($('.headerMain').height() + 105));
-                     activateWaypoint()
+                      $(document).scrollTop(target.offset().top - ($('.headerMain').height() + 105));
+                      activateWaypoint()
                     });
                   });
-                }
-                else {
+                } else {
                   $(this).unveil(200, function() {
                     $(this).load(function() {
                       this.style.opacity = 1;
-                      
+
                     });
                   });
                 }
@@ -1050,15 +1066,15 @@
           geocoder.geocode({
             "address": QueryString.zip
           }, function(results, status) {
-            
+
             if (status == google.maps.GeocoderStatus.OK) {
-             
+
               lat = results[0].geometry.location.lat(),
                 lng = results[0].geometry.location.lng();
               var placeName = results[0].address_components[0].long_name,
                 formattedAddress = results[0].formatted_address;
               $(".findInput input").val(formattedAddress);
-             
+
               $('.mapOverlay').addClass('shrink');
               $('#jlocator').jlocator({
                 startZoom: 13,

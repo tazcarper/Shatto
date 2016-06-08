@@ -60,6 +60,10 @@
       <div class="row">
         <div class="col-md-12 productImages home">
           <div id="floatingBottle" class="img-1">
+          <?php 
+          if( get_field('alert_active') ) {
+            ?>
+          
           <div class="popUp callOut">
           <div class="closeCallout">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30.71 30.71" style="enable-background:new 0 0 30.71 30.71;" xml:space="preserve">
@@ -67,9 +71,11 @@
             <line class="st0" x1="30.35" y1="0.35" x2="0.35" y2="30.35"/>
             </svg> 
           </div>
-          <h2>EXTRA EXTRA</h2>
-          <p>lakjfdsl kja;lsdkfj l;asdkj jf fakds jf</p>
+
+          <h2> <?php the_field('alert_title'); ?></h2>
+          <p> <?php the_field('alert_message'); ?></p>
           </div>
+          <?php } ?>
           <a>
             <div id="mainBottle"></div>
           <img src="<?php echo get_template_directory_uri(); ?>/dist/images/rotation/reflection.png" class="shadow"/>
