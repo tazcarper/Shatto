@@ -274,7 +274,7 @@ main {
 // buttons
 .btn {
   background-color: $white;
-  border-radius: 24px;
+  border-radius: 50px;
   color: $black;
   display: block;
   font-size: em(12);
@@ -283,6 +283,7 @@ main {
   text-transform: uppercase;
   outline: none !important;
   height: auto;
+  border:1px solid white;
   @include transition(background .4s ease, color .4s ease);
 
   @include MQ(maxM) {
@@ -291,9 +292,10 @@ main {
   &.invert {
     background-color: $black;
     color: $white;
-    border-color: black;
+   border-color:black;
     &:active, &:focus, &:hover {
       background-color: white;
+      border-color:black;
       color: black;
     }
   }

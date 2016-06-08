@@ -139,6 +139,7 @@ section.findUs {
   }
   h3 {
     font-size:1em;
+    margin-bottom: 45px;
     @include MQ(maxM) {
       font-size:1em;
       margin-bottom: 15px;

@@ -24,18 +24,31 @@
         <div class="col-md-6 leftPod">
         <img src="<?php $image = get_field('intro_left_image'); echo $image['url']; ?>" class="hidden-xs ">
           <?php the_field('intro_left'); ?>
-          <a class="btn invert center scheduleTour">Schedule a Tour</a>
+          <a class="btn invert center scheduleTour visible-xs">Schedule a Tour</a>
         </div>
         <img src="<?php $image = get_field('intro_right_image'); echo $image['url']; ?>" class="visible-xs mobileImage">
         <div class="col-md-6 rightPod">
         <img src="<?php $image = get_field('intro_right_image'); echo $image['url']; ?>" class="hidden-xs ">
           <?php the_field('intro_right'); ?>
-          <a href="https://www.facebook.com/ShattoMilk" class="btn invert center">Check out our Facebook</a>
+          <a href="https://www.facebook.com/ShattoMilk" class="btn invert center visible-xs">Check out our Facebook</a>
+        </div>
+      </div>
+      <div class="row hidden-xs images" style="margin:35px auto">
+        <div class="col-sm-6 text-center">
+        <a class="btn invert center scheduleTour">Schedule a Tour</a>
+        </div>
+        <div class="col-sm-6 text-center">
+        <a href="https://www.facebook.com/ShattoMilk" class="btn invert center ">Check out our Facebook</a>
         </div>
       </div>
     </div>
     <div class="schedulePopUp">
-      <div class="closeSchedule">X</div>
+      <div class="closeSchedule">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30.71 30.71" style="enable-background:new 0 0 30.71 30.71;" xml:space="preserve">
+            <line class="st0" x1="0.35" y1="0.35" x2="30.35" y2="30.35"/>
+            <line class="st0" x1="30.35" y1="0.35" x2="0.35" y2="30.35"/>
+            </svg> 
+      </div>
       <div class="container-fluid">
         <div class="row">
           <div class="col-sm-3 center-block">
@@ -71,7 +84,7 @@
       </div>
     </div>
   </section>
-  <section class="container-fluid farm-experience center">
+  <section class="container-fluid farm-experience center " >
   <div class="row text-center">
   <img src='<?php echo get_template_directory_uri(); ?>/dist/images/events/demonstration_mobile.jpg' class="visible-xs" style="margin-bottom:45px; margin:0 auto;">
 </div>
@@ -103,7 +116,7 @@
 </div>
 </div>
 </section>
-<section class="container-fluid country-store">
+<section class="container-fluid country-store " >
 <div class="row text-center">
   <img src='<?php echo get_template_directory_uri(); ?>/dist/images/events/kid_mobile.jpg' class="kidImage visible-xs" >
 </div>
@@ -123,7 +136,12 @@
 <div class="gallerySlider">
   <div class="popUp">
     <div class="row">
-      <div class="closePopUP">X</div>
+      <div class="closePopUP">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30.71 30.71" style="enable-background:new 0 0 30.71 30.71;" xml:space="preserve">
+            <line class="st0" x1="0.35" y1="0.35" x2="30.35" y2="30.35"/>
+            <line class="st0" x1="30.35" y1="0.35" x2="0.35" y2="30.35"/>
+            </svg> 
+      </div>
       <div class="col-sm-8 col-sm-offset-2 white">
         <div class="bigImage">
           <img src="<?php echo get_template_directory_uri(); ?>/dist/images/events/temp1_large.jpg" alt="">

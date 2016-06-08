@@ -187,6 +187,18 @@
       font-size:45px;
       padding: 15px;
       cursor: pointer;
+      @include transition(all .2s ease-out);
+      &:hover {
+        @include transform(scale(1.1));
+
+      }
+      svg {
+        width:40px;
+        line {
+          stroke:black;
+          stroke-width:2px;
+        }
+      }
     }
   }
   
@@ -322,8 +334,9 @@
     @include MQ(maxM) {
       display: none;
     }
+    $blueBtnColor: #00aeef;
     .btn {
-      background: #00aeef;
+      background: $blueBtnColor;
       display: inline-block;
       padding: 6px 25px;
       margin: 0 auto;
@@ -332,14 +345,17 @@
       padding-bottom: 10px;
       font-size: 25px;
 
+      border:3px solid $blueBtnColor;
       &:hover {
-        background: lighten(#00aeef, 5%);
+        background: white;
+        border:3px solid $blueBtnColor;
+        color:$blueBtnColor;
       }
     }
   }
   section.farm-experience {
     background: url('../images/demonstration.jpg') 0 0 no-repeat;
-    background-size: auto 20em;
+    background-size: cover;
     color: $black;
     height: auto;
     padding: 4em 0;
@@ -498,12 +514,20 @@ section.sign-up {
     .closeSchedule {
       position: absolute;
       right:45px;
-      top:55px;
+      top:120px;
       color: white;
       font-size:80px;
       padding: 10px;
       z-index: 15;
       cursor: pointer;
+      svg {
+        width:40px;
+        line {
+          stroke:white;
+          stroke-width:2px;
+        }
+      } 
+
        @include transition(all .2s ease-out);
       &:hover {
         @include transform(scale(1.1));
