@@ -938,9 +938,11 @@
             overlayToggle();
           }
         });
+
         $('.overlay').on('click', '.overlay-close', function() {
           overlayToggle();
         });
+        
         var imagePath = $('.product img').attr('src');
         imagePath = imagePath.substring(0, imagePath.indexOf('products/')) + 'products';
         $('.productImages').on('click', '.product', function(e) {

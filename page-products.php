@@ -498,7 +498,35 @@
               
             </div>
             <div class="row">
-              <div class="col-sm-10">
+            <div class="col-sm-2 col-sm-push-10">
+                
+                
+                <div class="sizes">
+                <h5>Available Sizes:</h5>
+                  <div class="halfGallon size">
+                    <img class="shatto-bottlesilhouette-halfgallon" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAJpAQMAAAAtzp10AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAC5JREFUeNrtwTEBAAAAwqD1T20JT6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgYXf8AAa2jyRwAAAAASUVORK5CYII=">
+                    <p>half-gallon</p>
+                  </div>
+                  <div class="wedge size">
+                    <img class="shatto-cheesesilhouette-wedge" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADWAQMAAABRzS39AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB9JREFUeNrtwTEBAAAAwqD1T20KP6AAAAAAAAAAAF4GIJoAAR69ZdYAAAAASUVORK5CYII=">
+                    <p>wedge</p>
+                  </div>
+                  <div class="wheel size">
+                    <img class="shatto-cheesesilhouette-wheel" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACcAQMAAAD/DgT3AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB1JREFUeNrtwTEBAAAAwqD1T20ND6AAAAAAAIBHAxfEAAH/jDFxAAAAAElFTkSuQmCC">
+                    <p>wheel</p>
+                  </div>
+                  <div class="quart size">
+                    <img class="shatto-bottlesilhouette-quart" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPoAAAKRAQMAAABHjibOAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACtJREFUeNrtwTEBAAAAwqD1T+1jDKAAAAAAAAAAAAAAAAAAAAAAAAAAAABuVLEAAdlonicAAAAASUVORK5CYII=">
+                    <p>quart</p>
+                  </div>
+                  <div class="pint size">
+                    <img class="shatto-bottlesilhouette-pint" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAAEDAQMAAADtE2/lAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABxJREFUeNrtwYEAAAAAw6D5Ux/gClUBAAAAALwBFDwAAUv06uYAAAAASUVORK5CYII=">
+                    <p>pint</p>
+                  </div>
+                  </div>
+                  
+                </div>
+              <div class="col-sm-10 col-sm-pull-2">
                 <div class="nutritionFacts">
                   <div class="row">
                     <div class="col-lg-4">
@@ -611,34 +639,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-sm-2">
-                
-                
-                <div class="sizes">
-                <h5>Available Sizes:</h5>
-                  <div class="halfGallon size">
-                    <img class="shatto-bottlesilhouette-halfgallon" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAJpAQMAAAAtzp10AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAC5JREFUeNrtwTEBAAAAwqD1T20JT6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgYXf8AAa2jyRwAAAAASUVORK5CYII=">
-                    <p>half-gallon</p>
-                  </div>
-                  <div class="wedge size">
-                    <img class="shatto-cheesesilhouette-wedge" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADWAQMAAABRzS39AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB9JREFUeNrtwTEBAAAAwqD1T20KP6AAAAAAAAAAAF4GIJoAAR69ZdYAAAAASUVORK5CYII=">
-                    <p>wedge</p>
-                  </div>
-                  <div class="wheel size">
-                    <img class="shatto-cheesesilhouette-wheel" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACcAQMAAAD/DgT3AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB1JREFUeNrtwTEBAAAAwqD1T20ND6AAAAAAAIBHAxfEAAH/jDFxAAAAAElFTkSuQmCC">
-                    <p>wheel</p>
-                  </div>
-                  <div class="quart size">
-                    <img class="shatto-bottlesilhouette-quart" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPoAAAKRAQMAAABHjibOAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACtJREFUeNrtwTEBAAAAwqD1T+1jDKAAAAAAAAAAAAAAAAAAAAAAAAAAAABuVLEAAdlonicAAAAASUVORK5CYII=">
-                    <p>quart</p>
-                  </div>
-                  <div class="pint size">
-                    <img class="shatto-bottlesilhouette-pint" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAAEDAQMAAADtE2/lAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABxJREFUeNrtwYEAAAAAw6D5Ux/gClUBAAAAALwBFDwAAUv06uYAAAAASUVORK5CYII=">
-                    <p>pint</p>
-                  </div>
-                  </div>
-                  
-                </div>
+              
               </div>
               
             </div>

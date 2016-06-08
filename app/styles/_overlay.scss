@@ -620,8 +620,10 @@ $overlayDelay: .35s;
 		@include MQ(maxML){
 			position:absolute;
 		}
-		@include MQ(maxM){
+		@include MQ(maxM) {
 			position:relative;
+			text-align:left;
+			margin-bottom: 0;
 		}
 		p {
 			position:relative;
@@ -631,20 +633,36 @@ $overlayDelay: .35s;
 			font-size:16px;
 			text-align:center;
 			margin-bottom: 15px;
+			@include MQ(maxM) {
+				text-align:left;
+				margin-bottom: 0px;
+				font-weight:500;
+			}
 		}
 		.size {
 			position:relative;
 			text-align:center;
+			@include MQ(maxM) {
+				//float: left;
+				width:auto;
+				display:inline-block;
+				margin:0 3px;
+			}
 		}
 	}
 	.shatto-bottlesilhouette-halfgallon, .shatto-cheesesilhouette-wedge, .shatto-cheesesilhouette-wheel, .shatto-bottlesilhouette-quart, .shatto-bottlesilhouette-pint {
 		width: 100%;
 		background-size: 100%;
 		background-image: url('../images/products/sizes.png');
-		text-align:center;
+		text-align:left;
 		margin:0 auto;
 		@include MQ(M){
 		margin:15px auto 5px auto;	
+		text-align:center;
+		}
+		@include MQ(maxM) {
+			display:none;
+
 		}
 	}
 	.shatto-bottlesilhouette-halfgallon {
