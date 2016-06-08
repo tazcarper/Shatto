@@ -15,14 +15,18 @@ $headerHeight: 70px;
         top: 10px;
 
         @include MQ(maxML) {
-          left: 10px;
+          left: 25px;
           top: 10px;
-          width: 70px;
+          width: 50px;
         }
         @include MQ(maxM) {
-          left: 0;
-          top: 5px;
-          width: 70px;
+         width: 70px;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
         }
       }
       .shattoLogo {
@@ -47,7 +51,7 @@ $headerHeight: 70px;
       }
     }
     .cd-nav-trigger {
-      top: 4px;
+     // top: 4px;
     }
     .cd-nav {
       // height: 60px;
@@ -95,6 +99,7 @@ header {
         }
       }
       &.twitter {
+        margin-top: 3px;
         &:hover {
           path, line {
           fill: #5ea9dd;
@@ -181,8 +186,8 @@ header {
 
     @include MQ(maxML) {
       width: 70px;
-      top: 50px;
-      left: 10px;
+      top:35px;
+      left: 15px;
     }
     @include MQ(maxM) {
       width: 70px;
@@ -276,9 +281,12 @@ header {
       z-index: 9999;
       position: relative;
       //margin-right: 5px;
-      padding: 15px 10px;
+      padding: 10px 10px 15px 10px;
+      @include MQ(L){
+        padding:10px 15px 15px 15px;
+      }
       @include MQ(maxML){
-        padding: 5px 1px;
+        padding: 0px 1px 15px 1px;
       }
 
       &.menu-item-has-children {
