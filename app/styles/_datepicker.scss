@@ -199,6 +199,10 @@ $font-family_2: "futura-pt", sans-serif;
 	}
 }
 .dd-w {
+	@include MQ(maxM) {
+		position:absolute !important;
+		top:30% !important
+	}
 	.dd-icon-right {
 		color:#00aeef;
 		&:before {
@@ -320,6 +324,7 @@ $font-family_2: "futura-pt", sans-serif;
 			}
 		}
 		.dd-y {
+			display:none;
 			ul {
 				height: 46px;
 			}
@@ -415,7 +420,10 @@ $font-family_2: "futura-pt", sans-serif;
 		height: 100%;
 		top: 0;
 		left: 0;
-		background:rgba(0,0,0,.1);
+		background:rgba(0,0,0,0.1);
+		@include MQ(maxM) {
+			background:rgba(0,0,0,0.6);
+		}
 	}
 	.dd-n {
 		position: absolute;
@@ -635,6 +643,18 @@ $font-family_2: "futura-pt", sans-serif;
 	background: #FFFFFF;
 }
 .dd-c {
+	@include MQ(maxM) {
+		top:0 !important;
+		right:0 !important;
+		left:0 !important;
+		bottom:0 !important;
+		margin:auto !important;
+		width:124px;
+		height:218px;
+		&::after {
+			display:none;
+		}
+	}
 	&:after {
 		background: #FFFFFF;
 		border-left: 2px solid black;

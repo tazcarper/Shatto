@@ -59,7 +59,9 @@
     <div class="col-xs-10 center-block">
       <h2 class="visible-xs text-center">NEED A HEADLINE</h2>
       <p class="visible-xs text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac tortor dolor. Phasellus cursus lacus ut mi tristique, non condimentum felis pretium. Suspendisse tempus leo sodales orci pulvinar, ac pellentesque est eleifend. Sed elementum orci lacus, in pellentesque dolor ultricie. </p>
-      <div class="mobileHeroImg"></div>
+      <div class="mobileHeroImg">
+        <div class="inner"></div>
+      </div>
     </div>
   </div>
   

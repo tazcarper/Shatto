@@ -288,6 +288,9 @@ header {
       @include MQ(maxML){
         padding: 0px 1px 15px 1px;
       }
+      @include MQ(maxM){
+        padding:5px 0;
+      }
 
       &.menu-item-has-children {
         &:hover {
@@ -685,9 +688,12 @@ header {
     transition: transform 0.3s;
 
     &:hover, &:focus {
-      -webkit-transform: translateY(-100%);
+      
+      @include MQ(M){
+        -webkit-transform: translateY(-100%);
       -moz-transform: translateY(-100%);
       transform: translateY(-100%);
+      }
     }
     &::before {
       position: absolute;

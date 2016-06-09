@@ -55,22 +55,22 @@
             <h4>GET TO SCHEDULIN’ A TOUR</h4>
             <form action="">
               <div class="form-group">
-                <input type="text" id="schedule_name" class="" name="schedule_name" placeholder="Name" required>
+                <input type="text" id="schedule_name" class="" name="schedule_name" placeholder="Name" required tabindex=1>
               </div>
               <div class="form-group">
-                <input type="email" id="schedule_email" name="schedule_email" placeholder="Email" required>
+                <input type="email" id="schedule_email" name="schedule_email" placeholder="Email" required tabindex=2>
               </div>
               <div class="form-group">
-                <input type="number" id="schedule_phone" name="schedule_phone" placeholder="Phone" required>
+                <input type="number" id="schedule_phone" name="schedule_phone" placeholder="Phone" required tabindex=3>
               </div>
               <div class="form-group">
-                <input type="number" id="schedule_groupSize" name="schedule_groupSize" placeholder="Estimated size of group">
+                <input type="number" id="schedule_groupSize" name="schedule_groupSize" placeholder="Estimated size of group" tabindex=4>
               </div>
               <div class="form-group">
-                <input type="text" id="schedule_date" name="schedule_date" placeholder="Date" required readonly>
+                <input type="text" id="schedule_date" name="schedule_date" placeholder="Date" required readonly='true' tabindex=5>
               </div>
               <div class="form-group">
-                <textarea name="schedule_comment" id="schedule_comment" cols="30" rows="10" placeholder="Have any questions or concerns you like to ask us?"></textarea>
+                <textarea name="schedule_comment" id="schedule_comment" cols="30" rows="10" placeholder="Have any questions or concerns you like to ask us?" tabindex=6></textarea>
               </div>
               <button class="btn submit invert">Request Tour</button>
               <div class="cancelSchedule">Cancel</div>

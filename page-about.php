@@ -43,15 +43,15 @@
           </div>
         </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-xs-12">
             <p class="small center"><i></i></p>
           </div>
-        </div>
+        </div> -->
 
     </section>
     <section class="container-fluid scheduleTour viveVideo noPadding"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/tours-mobile.jpg" class="mobile visible-xs">
-
+      <div class="container">
         <div class="row ">
           <div class="col-sm-7 col-sm-offset-5 col-md-5 col-md-offset-6">
             <?php the_field('tours_copy'); ?>
@@ -74,6 +74,7 @@
             <a href="/locate" class="btn invert center">Find Shatto Near You</a>
           </div>
         </div>
+      </div>
       </div>
     </section>
 

@@ -24,14 +24,14 @@
       </div>
       <div class="col-sm-2 hidden-xs">
         <ul>
-          <li><a href="events-tours">Events/Tours</a>
+          <li><a href="<?php echo esc_url( home_url( '/events-tours' ) ); ?>">Events/Tours</a></li>
             <ul>
               <!-- <li><a href="/events-tours">Photos</a></li> -->
             </ul>
           </li>
         </ul>
         <ul>
-          <li><a href="locate">Store Locator</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/locate' ) ); ?>">Events/Tours</a></li>
         </ul>
         <ul>
           <!-- <li><a href="/merchandise">Merchandise</a></li> -->
@@ -39,7 +39,7 @@
       </div>
       <div class="col-sm-2  hidden-xs">
         <ul>
-          <li><a href="about">About Shatto</a>
+          <li><a href="<?php echo esc_url( home_url( '/about' ) ); ?>">About Shatto</a></li>
             <ul>
               <!-- <li><a href="/faq">FAQs</a></li>
               <li><a href="/history">History</a></li> -->
@@ -47,10 +47,10 @@
           </li>
         </ul>
         <ul>
-          <li><a href="#">News</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/news' ) ); ?>">News</a></li>
         </ul>
         <ul>
-          <li><a href="contact">Contact</a>
+          <li><a href="<?php echo esc_url( home_url( '/contact' ) ); ?>">Contact</a></li>
             <ul>
              <!--  <li><a href="#">Directions to the farm</a></li> -->
             </ul>

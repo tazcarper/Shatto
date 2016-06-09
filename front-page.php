@@ -83,7 +83,7 @@
               <div class="productName hidden-xs">
                 <h5>Milk</h5>
               </div></a></div>
-              <a href="products/#milk" class="product milkButton text-center visible-xs">
+              <a href="<?php echo esc_url( home_url( '/products/#milk' ) ); ?>" class="product milkButton text-center visible-xs">
               <div class="bottleShadow"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/shadow.png"></div>
             <div class="productName">
               <h5>Milk</h5>

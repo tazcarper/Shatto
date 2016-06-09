@@ -565,10 +565,10 @@
           } else {
             floatingBottle.removeClass('start disableTransition');
             rotateBack();
-            var quickDelay = window.setTimeout(function(e){
+            var quickDelay = window.setTimeout(function(e) {
               callout.addClass('active');
             }, 501);
-            
+
             if (!floatingBottle.hasClass('stop')) {
               $('.shadow').removeClass('hideIt');
             }
@@ -594,9 +594,9 @@
           offset: '-650'
         });
 
-        if(callout[0]){
+        if (callout[0]) {
           callout.addClass('active');
-          closeCallOut.on('click', function(e){
+          closeCallOut.on('click', function(e) {
             callout.fadeOut();
           })
         }
@@ -741,6 +741,10 @@
           $('.schedulePopUp').fadeIn();
           $('#schedule_date').dateDropper();
         });
+        $('#schedule_date').on('touchstart', function(e){
+        
+          $(this).blur();
+        })
         $('.schedulePopUp').on('click', '.closeSchedule, .cancelSchedule', function(e) {
           $('.schedulePopUp').fadeOut();
         });
@@ -942,7 +946,7 @@
         $('.overlay').on('click', '.overlay-close', function() {
           overlayToggle();
         });
-        
+
         var imagePath = $('.product img').attr('src');
         imagePath = imagePath.substring(0, imagePath.indexOf('products/')) + 'products';
         $('.productImages').on('click', '.product', function(e) {
@@ -986,21 +990,45 @@
                 $(this).load(function() {
                   this.style.opacity = 1;
 
+
                 });
               });
             }
           }, {
-            offset: waypointOffset
+            offset: '100%'
           });
+
         }
+        if (!Modernizr.mq('(min-width:' + breakpoint + 'px)')) {
+        $('#mobileCollapse').on('shown.bs.collapse', function(e) {
+          var id = $(e.target).attr('id');
+          console.log($(e.target));
+          console.log(id);
+          navigateToElement(id);
+        })
+
+        function navigateToElement(id) {
+          $('html, body').animate({
+            scrollTop: $( '#'+ id).offset().top - 128
+          }, 150);
+        }
+      }
 
         $(window).load(function() {
           var subNavMenu = $('.subNav'),
             scrolledAlready = false;
 
           if (window.location.hash.substr(1) !== null && window.location.hash.substr(1) !== '') {
+
             var theHash = '#' + window.location.hash.substr(1);
             var target = $(theHash);
+            if (!Modernizr.mq('(min-width:' + breakpoint + 'px)')) {
+              target.addClass('in');
+              $('a.mobileCategory[href="' + theHash + '"]').removeClass('collapsed');
+              window.location.href = theHash;
+              activateWaypoint();
+            }
+
             if (target.length) {
               var len = target.find('img.main').length;
               target.addClass('visible').find('.product').find('img.main').each(function(i, e) {
@@ -1033,6 +1061,7 @@
 
 
         });
+
       }
       // Store Locatore / Find Page
       if ($('.mapContainer')[0]) {

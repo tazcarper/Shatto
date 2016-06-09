@@ -800,7 +800,6 @@ jQuery.easing._dd_easing = function(x, t, b, c, d) {
                             .replace(/\b(M)\b/g, mn[_dd_m - 1].substr(0, 3))
                             .replace(/\b(n)\b/g, _dd_m)
                             .replace(/\b(j)\b/g, _dd_d);
-
                         _dd_input.val(str);
 
                         _dd.find('.dd-c')
@@ -1173,6 +1172,7 @@ jQuery.easing._dd_easing = function(x, t, b, c, d) {
 
                     },
                     _dd_set = function() {
+                        
 
 						clearInterval(_dd_event);
 

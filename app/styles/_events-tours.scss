@@ -25,6 +25,9 @@
     color: $white;
     height: auto;
     min-height: auto;
+    &:after {
+      display:none;
+    }
     &.viveVideo {
       @include MQ(maxM) {
         height:auto;
@@ -54,7 +57,7 @@
         color: black;
         padding-top: 15px;
         color:white;
-        font-size:11vw;
+        font-size:2em;
         margin-bottom: 5px;
 
       }
@@ -66,7 +69,7 @@
       min-height: 0;
 
       h1 {
-        padding-top: 400px;
+        padding-top: 350px;
       }
     }
     
@@ -482,8 +485,10 @@ section.sign-up {
     padding-top: 130px;
     text-align: center;
     display: none;
+    overflow:auto;
+    bottom:0;
     @include MQ(maxM) {
-      padding-top: 65px;
+      padding-top: 150px;
     }
     h4 {
       color:white;
@@ -496,7 +501,8 @@ section.sign-up {
         font-size:1.7em;
       }
       @include MQ(maxM) {
-        font-size:2.5em;
+        font-size:2.4em;
+        font-size:9.2vw;
       }
     }
     .successThanks {
@@ -520,6 +526,7 @@ section.sign-up {
       padding: 10px;
       z-index: 15;
       cursor: pointer;
+
       svg {
         width:40px;
         line {
@@ -535,7 +542,7 @@ section.sign-up {
       }
       @include MQ(maxM){
         font-size:44px;
-        top:0px;
+        top:80px;
         right:5px;
       }
     }
@@ -546,13 +553,15 @@ section.sign-up {
       }
     }
     form {
+       height:100%;
+       position:relative;
       input, textarea {
         padding: 8px 5px;
         border:2px solid white;
         padding-left: 15px;
         border-radius: 24px;
         width:100%;
-        font-size:15px;
+        font-size:16px;
         font-family: "futura-pt", sans-serif;
         font-weight: 500;
         &:focus {
