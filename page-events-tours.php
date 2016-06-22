@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1><?php the_field('hero_title'); ?></h1>
+          <h1>EVENTS/TOURS</h1>
         </div>
       </div>
     </div>
@@ -53,21 +53,24 @@
         <div class="row">
           <div class="col-sm-3 center-block">
             <h4>GET TO SCHEDULIN’ A TOUR</h4>
+            <div class="errorAlert">
+              <p>Sorry. Something went wrong. Please try again. If this doesn't work, give us a call to schedule a tour.</p>
+            </div>
             <form action="">
               <div class="form-group">
-                <input type="text" id="schedule_name" class="" name="schedule_name" placeholder="Name" required tabindex=1>
+                <input type="text" id="schedule_name" class="" name="schedule_name" placeholder="Name" required tabindex=1 class="form-control">
               </div>
               <div class="form-group">
-                <input type="email" id="schedule_email" name="schedule_email" placeholder="Email" required tabindex=2>
+                <input type="email" id="schedule_email" name="schedule_email" placeholder="Email"  tabindex=2 class="form-control">
               </div>
               <div class="form-group">
-                <input type="number" id="schedule_phone" name="schedule_phone" placeholder="Phone" required tabindex=3>
+                <input type="number" id="schedule_phone" name="schedule_phone" placeholder="Phone" required tabindex=3 class="form-control">
               </div>
               <div class="form-group">
-                <input type="number" id="schedule_groupSize" name="schedule_groupSize" placeholder="Estimated size of group" tabindex=4>
+                <input type="number" id="schedule_groupSize" name="schedule_groupSize" placeholder="Estimated size of group" tabindex=4 class="form-control">
               </div>
               <div class="form-group">
-                <input type="text" id="schedule_date" name="schedule_date" placeholder="Date" required readonly='true' tabindex=5>
+                <input type="text" id="schedule_date" name="schedule_date" placeholder="Date" required readonly='true' tabindex=5 class="form-control">
               </div>
               <div class="form-group">
                 <textarea name="schedule_comment" id="schedule_comment" cols="30" rows="10" placeholder="Have any questions or concerns you like to ask us?" tabindex=6></textarea>

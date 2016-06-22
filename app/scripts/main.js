@@ -741,14 +741,60 @@
           $('.schedulePopUp').fadeIn();
           $('#schedule_date').dateDropper();
         });
-        $('#schedule_date').on('touchstart', function(e){
-        
+        $('#schedule_date').on('touchstart', function(e) {
           $(this).blur();
         })
         $('.schedulePopUp').on('click', '.closeSchedule, .cancelSchedule', function(e) {
           $('.schedulePopUp').fadeOut();
         });
-        $('.schedulePopUp form').submit(function(event) {
+
+        var scheduleForm = $('.schedulePopUp form');
+
+        scheduleForm.formValidation({
+          framework: 'bootstrap',
+          fields: {
+            schedule_name: {
+              validators: {
+                notEmpty: {
+                  message: 'Forget your name?'
+                }
+              }
+            },
+            schedule_phone: {
+              validators: {
+                notEmpty: {
+                  message: 'We need your phone number.'
+                }
+              }
+            },
+            schedule_groupSize: {
+              validators: {
+                notEmpty: {
+                  message: 'How many people are coming?'
+                }
+              }
+            },
+            schedule_email: {
+              validators: {
+                notEmpty: {
+                  message: 'Please provide your email.'
+                },
+                emailAddress: {
+                  message: 'The input is not a valid email address.'
+                }
+              }
+            },
+            schedule_date: {
+              validators: {
+                notEmpty: {
+                  message: 'Let us know when you want to visit.'
+                }
+              }
+            }
+          }
+        });
+
+        scheduleForm.submit(function(event) {
           event.preventDefault();
 
           var stuffToSend = {
@@ -788,16 +834,177 @@
               }, 10000);
             } else {
               // handle errors from gravity forms
-              alert(JSON.stringify(data.response.validation_messages));
+              $('.errorAlert').show();
             }
           });
         });
       }
       // Contact
       if ($('.contact')[0]) {
-        if (Modernizr.mq('(min-width: 767px)')) {
-          var nlform = new NLForm(document.getElementById('nl-form'));
+
+        // $('input').on('focus', function(e){
+        //   $(this).parent().addClass('filled');
+        // });
+
+        // $('input').on('blur', function(e){
+        //   if ($(this).val().trim() === ''){
+        //     $(this).parent().removeClass('filled');
+        //   }
+
+        // });
+
+        if (Modernizr.mq('(max-width: 767px)')) {
+
+          $('#mobileContact').formValidation({
+            framework: 'bootstrap',
+            fields: {
+              mobileContact_name: {
+                validators: {
+                  notEmpty: {
+                    message: 'Forget your name?'
+                  }
+                }
+              },
+              mobileContact_subject: {
+                validators: {
+                  notEmpty: {
+                    message: 'Select a subject.'
+                  }
+                }
+              },
+              mobileContact_message: {
+                validators: {
+                  notEmpty: {
+                    message: 'Fill in a message.'
+                  }
+                }
+              },
+              mobileContact_email: {
+                validators: {
+                  notEmpty: {
+                    message: 'We will need your email.'
+                  },
+                  emailAddress: {
+                    message: 'The input is not a valid email address.'
+                  }
+                }
+              }
+
+            }
+
+          }).on('success.form.fv', function(e) {
+            e.preventDefault();
+            console.log('submit mobile');
+            var stuffToSend = {
+                'input_values': {}
+              },
+              myForm = $(this);
+            // find form values and assign for gravity forms
+            stuffToSend.input_values.input_1 = myForm.find('input#mobileContact_email').val();
+            stuffToSend.input_values.input_2 = myForm.find('select#mobileContact_subject').val();
+            stuffToSend.input_values.input_3 = myForm.find('input#mobileContact_message').val();
+            stuffToSend.input_values.input_4 = myForm.find('input#mobileContact_email').val();
+            $.ajax({
+              url: "/gravityformsapi/forms/1/submissions",
+              method: "POST",
+              data: JSON.stringify(stuffToSend),
+              dataType: "json",
+              processData: false,
+              headers: {
+                "Content-Type": "application/json"
+              }
+            }).success(function(data) {
+              if (data.response.is_valid) {
+                // hide form
+                $('#mobileContact').fadeOut();
+                $('.sentSuccess').fadeIn();
+
+                // fire analytics event
+                // ga();
+              } else {
+                // handle errors from gravity forms
+                alert(JSON.stringify(data.response.validation_messages));
+              }
+            });
+          })
+        } else {
+          $('#nl-form').formValidation({
+            framework: 'bootstrap',
+            fields: {
+             name: {
+              excluded: false,
+                validators: {
+                  notEmpty: {
+                    message: 'Forget your name?'
+                  }
+                }
+              },
+
+              message: {
+                excluded: false,
+                validators: {
+                  notEmpty: {
+                    message: 'Fill in a message.'
+                  }
+                }
+              },
+              email: {
+                excluded: false,
+                validators: {
+                  notEmpty: {
+                    message: 'We will need your email.'
+                  },
+                  emailAddress: {
+                    message: 'The input is not a valid email address.'
+                  }
+                }
+              }
+
+            }
+
+          }).on('success.form.fv', function(e) {
+            event.preventDefault();
+            console.log('submit');
+            var stuffToSend = {
+                'input_values': {}
+              },
+              myForm = $(this);
+            // find form values and assign for gravity forms
+            stuffToSend.input_values.input_1 = myForm.find('input#name').val();
+            stuffToSend.input_values.input_2 = myForm.find('select#subject').val();
+            stuffToSend.input_values.input_3 = myForm.find('input#message').val();
+            stuffToSend.input_values.input_4 = myForm.find('input#email').val();
+            $.ajax({
+              url: "/gravityformsapi/forms/1/submissions",
+              method: "POST",
+              data: JSON.stringify(stuffToSend),
+              dataType: "json",
+              processData: false,
+              headers: {
+                "Content-Type": "application/json"
+              }
+            }).success(function(data) {
+              if (data.response.is_valid) {
+                // hide form
+                $('#nl-form').fadeOut();
+                $('.sentSuccess').fadeIn();
+
+                // fire analytics event
+                // ga();
+              } else {
+                // handle errors from gravity forms
+                alert(JSON.stringify(data.response.validation_messages));
+              }
+            });
+          })
         }
+        var nlform = new NLForm(document.getElementById('nl-form'));
+
+
+        $('#mobileContact submit').on('click touchstart', function(e) {
+          $('#mobileContact').submit();
+        })
+
         var span = $('<span>').css('display', 'inline-block')
           .css('word-break', 'break-all').appendTo('body').css('visibility', 'hidden');
 
@@ -806,7 +1013,7 @@
             .width(textarea.width())
             .css('font', textarea.css('font'));
         }
-        $('textarea').on({
+        $('#nl-form textarea').on({
           input: function() {
             var text = $(this).val();
             if (text !== '') {
@@ -821,43 +1028,17 @@
             if (e.which == 13) e.preventDefault();
           }
         });
-        $('form').submit(function(event) {
-          event.preventDefault();
-          console.log('submit');
-          var stuffToSend = {
-              'input_values': {}
-            },
-            myForm = $(this);
-          // find form values and assign for gravity forms
-          stuffToSend.input_values.input_1 = myForm.find('input#name').val();
-          stuffToSend.input_values.input_2 = myForm.find('select#subject').val();
-          stuffToSend.input_values.input_3 = myForm.find('input#message').val();
-          stuffToSend.input_values.input_4 = myForm.find('input#email').val();
-          $.ajax({
-            url: "/gravityformsapi/forms/1/submissions",
-            method: "POST",
-            data: JSON.stringify(stuffToSend),
-            dataType: "json",
-            processData: false,
-            headers: {
-              "Content-Type": "application/json"
-            }
-          }).success(function(data) {
-            if (data.response.is_valid) {
-              // hide form
-              $('.innerForm').addClass('sent');
-
-              // show thank you
-              $('.sentSuccess').addClass('sent');
-
-              // fire analytics event
-              // ga();
-            } else {
-              // handle errors from gravity forms
-              alert(JSON.stringify(data.response.validation_messages));
-            }
-          });
+        $('.nl-ti-input input').on({
+          keypress: function(e) {
+            if (e.which == 13) e.preventDefault();
+          }
         });
+        // $('#mobileContact').submit(function(event) {
+
+        // });
+        // $('form#nl-form').submit(function(event) {
+
+        // });
       }
 
       // Product Page Animation
@@ -1000,19 +1181,19 @@
 
         }
         if (!Modernizr.mq('(min-width:' + breakpoint + 'px)')) {
-        $('#mobileCollapse').on('shown.bs.collapse', function(e) {
-          var id = $(e.target).attr('id');
-          console.log($(e.target));
-          console.log(id);
-          navigateToElement(id);
-        })
+          $('#mobileCollapse').on('shown.bs.collapse', function(e) {
+            var id = $(e.target).attr('id');
+            console.log($(e.target));
+            console.log(id);
+            navigateToElement(id);
+          })
 
-        function navigateToElement(id) {
-          $('html, body').animate({
-            scrollTop: $( '#'+ id).offset().top - 128
-          }, 150);
+          function navigateToElement(id) {
+            $('html, body').animate({
+              scrollTop: $('#' + id).offset().top - 128
+            }, 150);
+          }
         }
-      }
 
         $(window).load(function() {
           var subNavMenu = $('.subNav'),

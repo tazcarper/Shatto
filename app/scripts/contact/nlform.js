@@ -90,7 +90,7 @@
 		},
 		_createInput: function() {
 			var self = this;
-			console.log(this);
+			//console.log(this);
 
 			this.fld = document.createElement('div');
 			if (this.elOriginal.className === 'message') {
@@ -112,6 +112,8 @@
 			}
 
 			this.getinput.setAttribute('placeholder', this.elOriginal.getAttribute('placeholder'));
+			
+			this.getinput.setAttribute('required',true);
 			this.getinputWrapper = document.createElement('li');
 			this.getinputWrapper.className = 'nl-ti-input';
 			if (this.elOriginal.className === 'message') {
@@ -152,10 +154,10 @@
 				var opts = Array.prototype.slice.call(this.optionsList.querySelectorAll('li'));
 				opts.forEach(function(el, i) {
 					el.addEventListener('click', function(ev) {
-						console.log('clicked an item');
+						//console.log('clicked an item');
 						ev.preventDefault();
-						console.log(el);
-						console.log(opts.indexOf(el));
+						//console.log(el);
+						//console.log(opts.indexOf(el));
 						self.close(el, opts.indexOf(el));
 					});
 					el.addEventListener('touchstart', function(ev) {
@@ -173,7 +175,7 @@
 							ev.stopPropagation();
 						} else {
 							// this.value = content.substring(0, caret - 1) + content.substring(caret, content.length);
-							console.log(this.value);
+							//console.log(this.value);
 							this.value = this.value.replace(/(?:\r\n|\r|\n)/g, '<br>');
 							self.close();
 						}
@@ -211,9 +213,9 @@
 			this.open = true;
 			this.form.fldOpen = this.pos;
 			var self = this;
-			console.log(this);
+			//console.log(this);
 
-			console.log(this.elOriginal.type);
+			//console.log(this.elOriginal.type);
 			if (this.elOriginal.type === 'select-one') {
 				console.log('its dropdown')
 				$('.selection').addClass('open');
@@ -260,10 +262,23 @@
 				this.getinput.blur();
 				this.toggle.innerHTML = this.getinput.value.trim() !== '' ? this.getinput.value : this.getinput.getAttribute('placeholder');
 				this.elOriginal.value = this.getinput.value;
-				console.log(this.elOriginal.value)
+				
+				$('#nl-form').formValidation('revalidateField', this.elOriginal.id);
 				if (this.elOriginal.value === '') {
-					console.log('its blank');
-					$('.textarea .formField-toggle').text('___________________________________________________');
+					
+					if (this.getinput.localName == 'textarea'){
+						$('.textarea .formField-toggle').removeClass('active');
+						$('.textarea').removeClass('active');
+					}
+					 
+				}
+				else {
+					
+					if (this.getinput.localName == 'textarea'){
+						$('.textarea .formField-toggle').addClass('active');
+						$('.textarea').removeClass('active');
+					}
+					
 				}
 
 			}

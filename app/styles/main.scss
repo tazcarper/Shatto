@@ -158,6 +158,12 @@ p a {
   padding-left: 0;
   padding-right: 0;
 }
+.noPaddingMobile {
+  @include MQ(maxM) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 // Main
 main {
   border-top: 1px solid $darkGrey;

@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 
     <section class="container-fluid mainContent hero faq">
-      <div class="container">
+      <div class="container noPaddingMobile">
         <div class="row">
           <div class="col-md-12">
             <h1>Frequently Asked Questions</h1>
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-7">
+          <div class="col-sm-7 noPaddingMobile faqSlot">
           <?php // new query for all locations
           $args = array(
             'post_type'  => 'faqs',
@@ -26,6 +26,7 @@
             <div class="faqContainer">
               <p class="question"><?php the_title(); ?></p>
               <div class="answer"><?php the_content(); ?></div>
+              
             </div>
 
             <?php endwhile; ?>

@@ -482,7 +482,7 @@ section.sign-up {
     height:100%;
     z-index: 99;
     background:rgba(0,174,239,0.9);
-    padding-top: 130px;
+    padding-top: 150px;
     text-align: center;
     display: none;
     overflow:auto;
@@ -505,11 +505,23 @@ section.sign-up {
         font-size:9.2vw;
       }
     }
+    .errorAlert {
+      margin-bottom: 25px;
+      display:none;
+      p {
+        color:red;
+        background:white;
+        padding:15px;
+        font-weight:500;
+        font-size:100%;
+        margin-bottom: 10px;
+      }
+    }
     .successThanks {
      display:none;
       h2 {
-        font-size:3em;
-        margin-top: 15px;
+        font-size:2em;
+        margin-top: 25px;
         margin-bottom: 9px !important;
         line-height:1em;
       }
@@ -553,8 +565,12 @@ section.sign-up {
       }
     }
     form {
-       height:100%;
+       height:auto;
        position:relative;
+
+       @include MQ(maxM) {
+        height:100%;
+       }
       input, textarea {
         padding: 8px 5px;
         border:2px solid white;

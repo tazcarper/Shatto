@@ -572,13 +572,15 @@ $addedPadding: 35px;
 		.productImages {
 			&.home {
 				//min-height: 580px;
-
+				padding-top: 0;
 				.productName {
 					padding: 0;
 				}
 				@include MQ(maxM) {
 					margin-top: 5px;
 					margin-bottom: 25px;
+					padding:15px;
+					display:inline-block;
 				}
 				a {
 					background: transparent !important;
@@ -741,6 +743,7 @@ $addedPadding: 35px;
 					}
 					@include MQ(maxM) {
 						position: static;
+						float: left;
 					}
 				}
 			}
@@ -949,6 +952,7 @@ $addedPadding: 35px;
 			@include MQ(maxM) {
 				display: block;
 				padding: 0;
+				width:100%;
 			}
 			opacity: 1;
 			@include transition(all 0.35s ease);
@@ -1020,7 +1024,7 @@ $addedPadding: 35px;
 			}
 			@include MQ(maxM) {
 				position: relative;
-				width: 100% !important;
+				width: 50% !important;
 				margin: 15px auto !important;
 				float: left;
 
@@ -1029,6 +1033,9 @@ $addedPadding: 35px;
 					left: 0;
 					@include transition(all 0.35s ease-out);
 				}
+			}
+			@include MQ(maxXS){
+				width:100% !important;
 			}
 			&:hover {
 				img {

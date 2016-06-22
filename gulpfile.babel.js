@@ -120,6 +120,8 @@ gulp.task('concatScripts', function() {
         'app/scripts/plugins/unveil.js',
         'app/scripts/plugins/picturefill.js',
         'app/scripts/plugins/datedropper.js',
+        'app/scripts/plugins/formValidation.js',
+        'app/scripts/plugins/framework/bootstrap.js',
         'bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js',
         'bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js',
         'bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js',
@@ -308,8 +310,8 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app/layouts'));
 });
 
-// gulp.task('build', ['html', 'fonts', 'extras'], () => {
-gulp.task('build', ['html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['html', 'fonts', 'extras'], () => {
+// gulp.task('build', ['html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({
     title: 'build',
     gzip: true

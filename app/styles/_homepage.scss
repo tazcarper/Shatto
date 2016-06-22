@@ -62,7 +62,11 @@ section.products {
     border-top: 2.5px solid $black;
     border-bottom: 2.5px solid $black;
     margin: 15px auto 15px;
-    //width: 80%;
+    display:inline-block;
+    width:280px;
+    @include MQ(M){
+      display:none;
+    }
   }
   .callOut {
   background: rgba(255, 255, 255, .65);
@@ -195,13 +199,19 @@ section.mapFinder {
   }
   .form-control {
     @include MQ(maxM) {
-      width: 48%;
+      width: 70%;
       margin: em(8) 2.5px em(25) 2.5px;
       float: left;
       border:2px solid white;
       margin-bottom: 0;
     }
     &.btn {
+       width: 25%;
+       max-width:100px;
+       padding-top:6px;
+       padding-bottom: 6px;
+       padding-left: 0;
+       padding-right: 0;
       &:active{
         background:white;
         color: black;
@@ -211,6 +221,7 @@ section.mapFinder {
   form {
     input {
       border:2px solid white;
+
       &.error {
       border:2px solid red;
     }
@@ -272,7 +283,14 @@ section.mapFinder {
       @include transform(translate(0, 0));
 
       h3 {
-        font-size: 26px;
+        font-size: 32px;
+      }
+    }
+
+    @include MQ(maxXS){
+      
+      h3 {
+       font-size:24px; 
       }
     }
   }

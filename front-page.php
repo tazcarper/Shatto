@@ -52,7 +52,7 @@
    
       <div class="row">
         <div class="col-xs-12 visible-xs"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/rotation/1.png" alt="Shatto Milk" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/rotation/1.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/rotation/1_2x.png 2x" style="display:block; width:100%; max-width:270px; margin:0 auto; margin-bottom:25px;"/></div>
-        <div class="col-xs-12 title">
+        <div class="col-xs-11 col-sm-12 center-block title">
           <h2 class="desktop"><?php the_field('products_title'); ?></h2>
           <h2 class="mobile">Products</h2>
         </div>

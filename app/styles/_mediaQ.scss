@@ -1,10 +1,11 @@
-
+$XS: 280px;
 $S: 480px;
 $M: 768px;
 $ML: 992px;
 $L: 1201px;
 
 // tablet down
+$maxXS: $XS - 1px;
 $maxS: $S - 1px;
 $maxM: $M - 1px;
 $maxML: $ML - 1px;
@@ -13,7 +14,12 @@ $maxL: $L - 1px;
 // media queries
 
 @mixin MQ($canvas) {
-	@if $canvas == S {
+	@if $canvas == XS {
+		@media only screen and (min-width:$XS) {
+			@content;
+		}
+	}
+	@else if $canvas == S {
 		@media only screen and (min-width:$S) {
 			@content;
 		}
@@ -51,6 +57,11 @@ $maxL: $L - 1px;
 	}
 	@else if $canvas == maxS {
 		@media only screen and (max-width:$maxS) {
+			@content;
+		}
+	}
+	@else if $canvas == maxXS {
+		@media only screen and (max-width:$maxXS) {
 			@content;
 		}
 	}

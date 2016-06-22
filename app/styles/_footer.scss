@@ -28,7 +28,7 @@
     padding-bottom: 6px;
     line-height: 1.30em;
     @include MQ(maxM) {
-      font-size:18px;
+      font-size:16px;
     }
 
   }
@@ -87,12 +87,17 @@
       @include MQ(maxM) {
         text-align: center;
         float:none;
-
+        width:30px;
+        height:30px;
       }
       &.email {
         // background: url('../images/social-email.svg') 0 0 no-repeat;
 
          width:27px;
+         @include MQ(maxM){
+          width:45px;
+          height:30px;
+         }
       }
       &.facebook {
          //background: url('../images/social-facebook.svg') 0 0 no-repeat;
@@ -101,6 +106,10 @@
       &.twitter {
         // background: url('../images/social-twitter.svg') 0 0 no-repeat;
          width:23px;
+         @include MQ(maxM){
+          width:37px;
+          height:30px;
+         }
         
       }
       &.instagram {
