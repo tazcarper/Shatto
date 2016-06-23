@@ -63,6 +63,12 @@
                 <h1>We got your message.</h1>
                 <h3>We'll be in touch!</h3>
               </div>
+              <div class="row">
+                <div class="col-xs-12 text-center">
+                  <h6>If email isn't our thing, you can always call us at the office, too</h6>
+                 <h6> <a href="tel:18169303862" style="color:black; text-decoration:none;">816-930-3862</a></h6>
+                </div>
+              </div>
           </div>
         </div>
       </div>

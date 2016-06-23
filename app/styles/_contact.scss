@@ -23,6 +23,11 @@ section.contact {
 	textarea {
 		height: 100px;
 	}
+	h6 {
+		font-size:1.2em;
+		text-transform:capitalize;
+		margin-top: 15px;
+	}
 }
 .help-block {
 	@include MQ(M){

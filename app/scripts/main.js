@@ -5,6 +5,7 @@
   (function(window, document, $) {
     var isLateralNavAnimating = false;
     var toggleFAQ = function(faq) {
+      $(faq).parent('.faqContainer').toggleClass('open');
       $(faq).next('.answer').toggleClass('open');
     };
     // TEMP JSON

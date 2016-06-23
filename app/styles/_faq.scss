@@ -4,67 +4,82 @@
   }
   h1 {
     margin-bottom: 1em;
+
     @include MQ(maxM) {
-      text-align:center;
+      text-align: center;
     }
   }
-
   .faqContainer {
     border: 1px solid $lightGrey;
     border-radius: 1.5em;
     margin-bottom: 1em;
     padding: .75em 1.25em;
-    @include MQ(maxM) {
-      &:nth-child(odd){
-      background:#e5e5e5;
-    }
-    border-radius:0;
-    border:none;
-    width:100%;
-    // padding-left:0;
-     padding-right: 20%;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    margin:0;
-    }
-    
-  }
+    position: relative;
 
+    svg {
+      display: none;
+    }
+    @include MQ(maxM) {
+      svg {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 10px;
+        @include transition(all .15s ease-out);
+        @include transform(rotate(90deg));
+
+        * {
+          fill: $lightGrey;
+        }
+      }
+      &.open {
+        svg {
+          @include transform(rotate(-90deg));
+        }
+      }
+      &:nth-child(odd) {
+        background: #e5e5e5;
+      }
+      border-radius: 0;
+      border: none;
+      width: 100%;
+      // padding-left: 0;
+      padding-right: 20%;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      margin: 0;
+    }
+  }
   p {
     margin: 0;
     padding: 0;
     text-align: left;
-
   }
-
   p.question {
     cursor: pointer;
     font-weight: bold;
-    line-height:1.2em;
+    line-height: 1.2em;
   }
-
   .answer {
     margin-top: 0;
     max-height: 0;
     overflow: hidden;
-
-    @include transition(max-height .5s, margin-top .5s);
+   // @include transition(all .5s ease-out);
 
     p {
       font-size: 1em;
-      line-height:1.3em;
+      line-height: 1.3em;
     }
   }
-
   .answer.open {
     margin-top: .5em;
     max-height: 1000px;
   }
-
   @media (min-width:$screen-sm-min) {
     background-color: #f4f5f7;
     background: #f4f5f7 url('../images/faq-bg-placeholder.jpg') center top no-repeat;
   }
-
-
 }
