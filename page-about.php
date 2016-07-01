@@ -1,12 +1,14 @@
 <?php get_header(); ?>
 
-    <section class="container-fluid mainContent hero about">
+    <section class=" mainContent " style="overflow:hidden;">
+    <div class="hero about container-fluid" data-parallax="true" data-speed="0.4">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <h1><?php the_field('hero_title'); ?></h1>
           </div>
         </div>
+      </div>
       </div>
     </section>
 
@@ -77,5 +79,5 @@
       </div>
       </div>
     </section>
-
+<?php get_template_part(THEME_PARTS.'footer-locate'); ?>
 <?php get_footer(); ?>

@@ -1,12 +1,14 @@
 <?php get_header(); ?>
 <div class="events-tours">
-  <section class="container-fluid mainContent hero viveVideo">
+  <section class=" mainContent " >
+  <div class="hero viveVideo container-fluid" data-parallax="true" data-speed="0.4">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <h1>EVENTS/TOURS</h1>
         </div>
       </div>
+    </div>
     </div>
   </section>
   <section class="container-fluid intro" id="tourSection">
@@ -88,6 +90,8 @@
     </div>
   </section>
   <section class="container-fluid farm-experience center " >
+  
+  
   <div class="row text-center">
   <img src='<?php echo get_template_directory_uri(); ?>/dist/images/events/demonstration_mobile.jpg' class="visible-xs" style="margin-bottom:45px; margin:0 auto;">
 </div>

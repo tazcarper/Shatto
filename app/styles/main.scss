@@ -352,6 +352,9 @@ img {
   font-size: 1em;
   height: auto;
 }
+.mainContent {
+  overflow:hidden;
+}
 #floatingBottle {
   z-index: 999999;
   position: relative;

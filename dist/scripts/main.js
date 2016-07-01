@@ -10,8 +10,8 @@ $(function(){var maxHeight=0,halfHeight=0;var widthMatch=matchMedia("all and (ma
 window.addEventListener("scroll",function(e){// distance from top
 var distanceY=window.pageYOffset||document.documentElement.scrollTop,//parallax image
 shrinkOn=200;//console.log(distanceY);
-maxHeight=$(window).height()-$(window).height()*.15;halfHeight=maxHeight*.5;if(distanceY>shrinkOn){$("body").addClass("smaller")}else{if($("body").hasClass("smaller")){$("body").removeClass("smaller")}var newH=300-distanceY}// adjust bg of parallax
-if($(".parallax")[0]){$(".parallax").each(function(){var yPos=($(window).scrollTop()-$(this).offset().top)/$(this).data("speed"),coords="50% "+yPos+"px";$(this).css({backgroundPosition:coords})})}});//open/close lateral navigation
+maxHeight=$(window).height()-$(window).height()*.15;halfHeight=maxHeight*.5;if(distanceY>shrinkOn){$("body").addClass("smaller")}else{if($("body").hasClass("smaller")){$("body").removeClass("smaller")}var newH=300-distanceY}});function draw(){requestAnimationFrame(draw);// Drawing code goes here
+scrollEvent()}draw();function scrollEvent(){if(!is_touch_device()){viewportTop=$(window).scrollTop();windowHeight=$(window).height();viewportBottom=windowHeight+viewportTop;if($(window).width())$('[data-parallax="true"]').each(function(){distance=viewportTop*$(this).attr("data-speed");if($(this).attr("data-direction")==="up"){sym="-"}else{sym=""}$(this).css("transform","translate3d(0, "+sym+distance+"px,0)")})}}function is_touch_device(){return"ontouchstart"in window||"onmsgesturechange"in window}//open/close lateral navigation
 $(".cd-nav-trigger").on("click",function(event){event.preventDefault();$(".cd-navigation-wrapper").addClass("transition");// console.log('clicked')
 //stop if nav animation is running
 if(!isLateralNavAnimating){if($(this).parents(".csstransitions").length>0){isLateralNavAnimating=true}$("html").toggleClass("navigation-is-open");$(".headerMain").toggleClass("makeBlack");$(".cd-navigation-wrapper").one("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend",function(){//animation is over

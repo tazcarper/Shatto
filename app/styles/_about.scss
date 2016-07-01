@@ -1,17 +1,22 @@
 .hero.about {
-  background: url('../images/about-hero-bg-placeholder.jpg') top center no-repeat;
+  background: url('../images/about-hero-bg-placeholder.jpg') 50% 90% no-repeat;
   position:relative;
   color: $white;
-  height: 800px;
+  height: 900px;
   min-height: 0;
+  overflow:hidden;
+  &:after {
+    display:none;
+  }
   @include MQ(maxM) {
     height:400px;
       background: url('../images/about-hero-mobile.jpg') top center no-repeat;
   }
 h1 {
-  font-size:4.5em;
+  font-size:5.5em;
   text-transform: uppercase;
   text-align: center;
+  margin-top: .45em;
   @include fadeInUp();
   @include animation-delay(1s);
   @include MQ(maxM) {
