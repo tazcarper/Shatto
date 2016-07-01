@@ -14,42 +14,167 @@
           "HG_skim": {
             "title": "Skim Milk",
             "category": "half-gallon",
-            "sizes": ["half gallon", "Quart"],
+            "sizes": {
+              'half-gallon': 8,
+              'quart': 4
+            },
             "image": "/half-gallons/final/large/ShattoMilk_HalfGallon_Skim.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR , CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+              "Serving Size": "1 Cup (240 mL)",
+              "Servings Per Container": 8,
+              "Calories": 90,
+              "Calories from Fat": 0,
+              "Total Fat (grams)": 0,
+              "Total Fat (% of Daily Value)": 0,
+              "Saturated Fat (grams)": 0,
+              "Saturated Fat (% of Daily Value)": 0,
+              "Cholesterol (mg)": "<5",
+              "Cholesterol (% of Daily Value)": 2,
+              "Sodium (mg)": 130,
+              "Sodium (% of Daily Value)": 5,
+              "Total Carbohydrates (grams)": 13,
+              "Total Carbohydrates (% of Daily Value)": 4,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 12,
+              "Proteins (grams)": 9,
+              "Vitamin A": 10,
+              "Vitamin C": 4,
+              "Vitamin D": 25,
+              "Iron": 0,
+              "Calcium": 30,
+              "Total Fat": "65 g",
+              "Sat. Fat": "20 g",
+              "Cholesterol": "300 mg",
+              "Sodium": "2400 mg",
+              "Total Carbohydrates": "300 g",
+              "Dietary Fiber": "25 g",
+              "Ingredients": "Skim Milk, Vitamin A Palmitate, Vitamin D3"
+            }
           },
           "HG_onePercent": {
             "title": "1% Milk",
             "category": "half-gallon",
             "sizes": {
               'half-gallon': 8,
-              'quart': 4,
-              'pint': 2
+              'quart': 4
             },
             "image": "/half-gallons/final/large/ShattoMilk_HalfGallon_1Percent.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+              "Serving Size": "1 Cup (240 mL)",
+              "Servings Per Container": 8,
+              "Calories": 100,
+              "Calories from Fat": 20,
+              "Total Fat (grams)": 2.5,
+              "Total Fat (% of Daily Value)": 4,
+              "Saturated Fat (grams)": 1.5,
+              "Saturated Fat (% of Daily Value)": 8,
+              "Cholesterol (mg)": 15,
+              "Cholesterol (% of Daily Value)": 5,
+              "Sodium (mg)": 120,
+              "Sodium (% of Daily Value)": 5,
+              "Total Carbohydrates (grams)": 11,
+              "Total Carbohydrates (% of Daily Value)": 4,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 11,
+              "Proteins (grams)": 8,
+              "Vitamin A": 10,
+              "Vitamin C": 4,
+              "Vitamin D": 25,
+              "Iron": 0,
+              "Calcium": 30,
+              "Total Fat": "65 g",
+              "Sat. Fat": "20 g",
+              "Cholesterol": "300 mg",
+              "Sodium": "2400 mg",
+              "Total Carbohydrates": "300 g",
+              "Dietary Fiber": "25 g",
+              "Ingredients": "1% Milk, Vitamin A Palmitate, Vitamin D3"
+            }
           },
           "HG_twoPercent": {
             "title": "2% Milk",
             "category": "half-gallon",
             "sizes": {
               'half-gallon': 8,
-              'quart': 4,
-              'pint': 2
+              'quart': 4
             },
             "image": "/half-gallons/final/large/ShattoMilk_HalfGallon_2Percent.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+              "Serving Size": "1 Cup (240 mL)",
+              "Servings Per Container": 8,
+              "Calories": 130,
+              "Calories from Fat": 45,
+              "Total Fat (grams)": 5,
+              "Total Fat (% of Daily Value)": 8,
+              "Saturated Fat (grams)": 3,
+              "Saturated Fat (% of Daily Value)": 15,
+              "Cholesterol (mg)": 20,
+              "Cholesterol (% of Daily Value)": 7,
+              "Sodium (mg)": 125,
+              "Sodium (% of Daily Value)": 5,
+              "Total Carbohydrates (grams)": 13,
+              "Total Carbohydrates (% of Daily Value)": 4,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 12,
+              "Proteins (grams)": 8,
+              "Vitamin A": 10,
+              "Vitamin C": 4,
+              "Vitamin D": 25,
+              "Iron": 0,
+              "Calcium": 30,
+              "Total Fat": "65 g",
+              "Sat. Fat": "20 g",
+              "Cholesterol": "300 mg",
+              "Sodium": "2400 mg",
+              "Total Carbohydrates": "300 g",
+              "Dietary Fiber": "25 g",
+              "Ingredients": "Reduced Fat Milk, Vitamin A Palmitate, Vitamin D3"
+            }
           },
           "HG_whole": {
             "title": "Whole Milk",
             "category": "half-gallon",
             "sizes": {
               'half-gallon': 8,
-              'quart': 4,
-              'pint': 2
+              'quart': 4
             },
             "image": "/half-gallons/final/large/ShattoMilk_HalfGallon_Whole.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+              "Serving Size": "1 Cup (240 mL)",
+              "Servings Per Container": 4,
+              "Calories": 150,
+              "Calories from Fat": 70,
+              "Total Fat (grams)": 8,
+              "Total Fat (% of Daily Value)": 12,
+              "Saturated Fat (grams)": 5,
+              "Saturated Fat (% of Daily Value)": 25,
+              "Cholesterol (mg)": 35,
+              "Cholesterol (% of Daily Value)": 11,
+              "Sodium (mg)": 125,
+              "Sodium (% of Daily Value)": 5,
+              "Total Carbohydrates (grams)": 13,
+              "Total Carbohydrates (% of Daily Value)": 4,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 12,
+              "Proteins (grams)": 9,
+              "Vitamin A": 10,
+              "Vitamin C": 4,
+              "Vitamin D": 25,
+              "Iron": 0,
+              "Calcium": 30,
+              "Total Fat": "65 g",
+              "Sat. Fat": "20 g",
+              "Cholesterol": "300 mg",
+              "Sodium": "2400 mg",
+              "Total Carbohydrates": "300 g",
+              "Dietary Fiber": "25 g",
+              "Ingredients": "Milk, Vitamin D3"
+            }
+
           },
           "pint_half": {
             "title": "Half-Half Cream",
@@ -58,7 +183,38 @@
               'pint': 2
             },
             "image": "/pints/final/large/Half.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+              "Serving Size": "2 tbsp. (30 mL)",
+              "Servings Per Container": 16,
+              "Calories": 40,
+              "Calories from Fat": 30,
+              "Total Fat (grams)": 3,
+              "Total Fat (% of Daily Value)": 5,
+              "Saturated Fat (grams)": 2,
+              "Saturated Fat (% of Daily Value)": 10,
+              "Cholesterol (mg)": 10,
+              "Cholesterol (% of Daily Value)": 3,
+              "Sodium (mg)": 30,
+              "Sodium (% of Daily Value)": 1,
+              "Total Carbohydrates (grams)": 1,
+              "Total Carbohydrates (% of Daily Value)": 0,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 1,
+              "Proteins (grams)": 1,
+              "Vitamin A": 2,
+              "Vitamin C": 0,
+              "Vitamin D": 0,
+              "Iron": 0,
+              "Calcium": 4,
+              "Total Fat": "65 g",
+              "Sat. Fat": "20 g",
+              "Cholesterol": "300 mg",
+              "Sodium": "2400 mg",
+              "Total Carbohydrates": "300 g",
+              "Dietary Fiber": "25 g",
+              "Ingredients": "Cream and Milk"
+            }
           },
           "pint_cream": {
             "title": "Whole Cream Milk",
@@ -67,89 +223,409 @@
               'pint': 2
             },
             "image": "/pints/final/large/Whole.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+              "Serving Size": "1 tbsp. (15 mL)",
+              "Servings Per Container": "~31",
+              "Calories": 50,
+              "Calories from Fat": 50,
+              "Total Fat (grams)": 5,
+              "Total Fat (% of Daily Value)": 8,
+              "Saturated Fat (grams)": 3.5,
+              "Saturated Fat (% of Daily Value)": 17,
+              "Cholesterol (mg)": 20,
+              "Cholesterol (% of Daily Value)": 7,
+              "Sodium (mg)": 5,
+              "Sodium (% of Daily Value)": 0,
+              "Total Carbohydrates (grams)": 1,
+              "Total Carbohydrates (% of Daily Value)": 0,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 1,
+              "Proteins (grams)": 0,
+              "Vitamin A": 4,
+              "Vitamin C": 0,
+              "Vitamin D": 0,
+              "Iron": 0,
+              "Calcium": 0,
+              "Total Fat": "65 g",
+              "Sat. Fat": "20 g",
+              "Cholesterol": "300 mg",
+              "Sodium": "2400 mg",
+              "Total Carbohydrates": "300 g",
+              "Dietary Fiber": "25 g",
+              "Ingredients": "Cream"
+            }
           },
           // flavor
           "chocolate": {
             "title": "Chocolate Milk",
             "category": "Quart",
             "sizes": {
+              'half-gallon': 8,
               'quart': 4,
+              'pint': 2
             },
             "image": "/milkFlavored/final/large/ShattoMilk_Quart_ChocolateMilk.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+              "Serving Size": "1 Cup (240 mL)",
+              "Servings Per Container": 2,
+              "Calories": 220,
+              "Calories from Fat": 70,
+              "Total Fat (grams)": 8,
+              "Total Fat (% of Daily Value)": 13,
+              "Saturated Fat (grams)": 5,
+              "Saturated Fat (% of Daily Value)": 26,
+              "Cholesterol (mg)": 30,
+              "Cholesterol (% of Daily Value)": 10,
+              "Sodium (mg)": 230,
+              "Sodium (% of Daily Value)": 10,
+              "Total Carbohydrates (grams)": 28,
+              "Total Carbohydrates (% of Daily Value)": 9,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 17,
+              "Proteins (grams)": 8,
+              "Vitamin A": 6,
+              "Vitamin C": 6,
+              "Vitamin D": 25,
+              "Iron": 0,
+              "Calcium": 30,
+              "Total Fat": "65 g",
+              "Sat. Fat": "20 g",
+              "Cholesterol": "300 mg",
+              "Sodium": "2400 mg",
+              "Total Carbohydrates": "300 g",
+              "Dietary Fiber": "25 g",
+              "Ingredients": "Whole Milk, Sugar, Cocoa, Corn Starch, Dextrose, Carrageenan, Guar Gum, Vitamin D3"
+            }
           },
           "strawberry": {
             "title": "Strawberry Milk",
             "category": "Quart",
             "sizes": {
+              'half-gallon': 8,
               'quart': 4,
+              'pint': 2
             },
             "image": "/milkFlavored/final/large/ShattoMilk_Quart_StrawberryMilk.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+              "Servings Per Container": 8,
+              "Calories": 240,
+              "Calories from Fat": 80,
+              "Total Fat (grams)": 9,
+              "Total Fat (% of Daily Value)": 14,
+              "Saturated Fat (grams)": 5,
+              "Saturated Fat (% of Daily Value)": 27,
+              "Cholesterol (mg)": 35,
+              "Cholesterol (% of Daily Value)": 11,
+              "Sodium (mg)": 125,
+              "Sodium (% of Daily Value)": 5,
+              "Total Carbohydrates (grams)": 31,
+              "Total Carbohydrates (% of Daily Value)": 10,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 20,
+              "Proteins (grams)": 8,
+              "Vitamin A": 6,
+              "Vitamin C": 25,
+              "Vitamin D": 6,
+              "Iron": 0,
+              "Calcium": 30,
+              "Total Fat": "65 g",
+              "Sat. Fat": "20 g",
+              "Cholesterol": "300 mg",
+              "Sodium": "2400 mg",
+              "Total Carbohydrates": "300 g",
+              "Dietary Fiber": "25 g",
+              "Ingredients": "Whole Milk, Sucrose, Natural and Artificial Flavors, Propylene Glycol, FD&C Red #40 and FD&C Blue #1, Vitamin D3"
+            }
           },
           "cookies_N_Cream": {
             "title": "Cookies and Cream Milk",
             "category": "Quart",
             "sizes": {
-              'quart': 4,
+
+              'quart': 4
+
             },
             "image": "/milkFlavored/final/large/ShattoMilk_Quart_CookiesNCreamMilk.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+              "Serving Size": "1 Cup (240 mL)",
+              "Servings Per Container": 4,
+              "Calories": 230,
+              "Calories from Fat": 70,
+              "Total Fat (grams)": 7,
+              "Total Fat (% of Daily Value)": 11,
+              "Saturated Fat (grams)": 4,
+              "Saturated Fat (% of Daily Value)": 20,
+              "Cholesterol (mg)": 25,
+              "Cholesterol (% of Daily Value)": 8,
+              "Sodium (mg)": 180,
+              "Sodium (% of Daily Value)": 8,
+              "Total Carbohydrates (grams)": 34,
+              "Total Carbohydrates (% of Daily Value)": 11,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 34,
+              "Proteins (grams)": 7,
+              "Vitamin A": 4,
+              "Vitamin C": 0,
+              "Vitamin D": 25,
+              "Iron": 0,
+              "Calcium": 25,
+              "Total Fat": "65 g",
+              "Sat. Fat": "20 g",
+              "Cholesterol": "300 mg",
+              "Sodium": "2400 mg",
+              "Total Carbohydrates": "300 g",
+              "Dietary Fiber": "25 g",
+              "Ingredients": "Whole Milk, Sugar, Fructose, Cocoa (processed with Alkali), Salt, Carrageenan, Guar Gum, Vanillin, Vitamin D3"
+            }
           },
           "banana": {
             "title": "Banana Milk",
             "category": "Quart",
             "sizes": {
               'quart': 4,
+              'pint': 2
             },
             "image": "/milkFlavored/final/large/ShattoMilk_Quart_BananaMilk.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+              "Serving Size": "1 Cup (240 mL)",
+              "Servings Per Container": 4,
+              "Calories": 220,
+              "Calories from Fat": 70,
+              "Total Fat (grams)": 8,
+              "Total Fat (% of Daily Value)": 13,
+              "Saturated Fat (grams)": 5,
+              "Saturated Fat (% of Daily Value)": 26,
+              "Cholesterol (mg)": 30,
+              "Cholesterol (% of Daily Value)": 10,
+              "Sodium (mg)": 125,
+              "Sodium (% of Daily Value)": 5,
+              "Total Carbohydrates (grams)": 28,
+              "Total Carbohydrates (% of Daily Value)": 9,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 17,
+              "Proteins (grams)": 8,
+              "Vitamin A": 6,
+              "Vitamin C": 6,
+              "Vitamin D": 25,
+              "Iron": 4,
+              "Calcium": 30,
+              "Total Fat": "65 g",
+              "Sat. Fat": "20 g",
+              "Cholesterol": "300 mg",
+              "Sodium": "2400 mg",
+              "Total Carbohydrates": "300 g",
+              "Dietary Fiber": "25 g",
+              "Ingredients": "Whole Milk, Sugar, Annatto color, Natural Flavor, Propylene Glycol, Natural Turmeric Color, Sodium Benzoate, Polysorbate 80, Znthan Gum, Citric Acid, Vitamin D3"
+            }
           },
           "cottonCandy": {
             "title": "Cotton Candy Milk",
             "category": "Quart",
             "sizes": {
               'quart': 4,
+              'pint': 2
             },
             "image": "/milkFlavored/final/large/ShattoMilk_Quart_CottonCandyMilk.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+              "Serving Size": "1 Cup (240 mL)",
+              "Servings Per Container": 4,
+              "Calories": 200,
+              "Calories from Fat": 70,
+              "Total Fat (grams)": 7,
+              "Total Fat (% of Daily Value)": 11,
+              "Saturated Fat (grams)": 4.5,
+              "Saturated Fat (% of Daily Value)": 23,
+              "Cholesterol (mg)": 25,
+              "Cholesterol (% of Daily Value)": 8,
+              "Sodium (mg)": 95,
+              "Sodium (% of Daily Value)": 4,
+              "Total Carbohydrates (grams)": 30,
+              "Total Carbohydrates (% of Daily Value)": 10,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 30,
+              "Proteins (grams)": 7,
+              "Vitamin A": 4,
+              "Vitamin C": 0,
+              "Vitamin D": 25,
+              "Iron": 0,
+              "Calcium": 30,
+              "Total Fat": "65 g",
+              "Sat. Fat": "20 g",
+              "Cholesterol": "300 mg",
+              "Sodium": "2400 mg",
+              "Total Carbohydrates": "300 g",
+              "Dietary Fiber": "25 g",
+              "Ingredients": "Whole Milk, Sugar, Natural and Artificial Flavor, Blue #1, Vitamin D3"
+            }
           },
           "coffee": {
             "title": "Coffe Milk",
             "category": "Quart",
             "sizes": {
               'quart': 4,
+              'pint': 2
             },
             "image": "/milkFlavored/final/large/ShattoMilk_Quart_CoffeeMilk.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+              "Serving Size": "1 Cup (240 mL)",
+              "Servings Per Container": 4,
+              "Calories": 200,
+              "Calories from Fat": 70,
+              "Total Fat (grams)": 8,
+              "Total Fat (% of Daily Value)": 12,
+              "Saturated Fat (grams)": 4.5,
+              "Saturated Fat (% of Daily Value)": 23,
+              "Cholesterol (mg)": 25,
+              "Cholesterol (% of Daily Value)": 8,
+              "Sodium (mg)": 170,
+              "Sodium (% of Daily Value)": 7,
+              "Total Carbohydrates (grams)": 27,
+              "Total Carbohydrates (% of Daily Value)": 9,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 26,
+              "Proteins (grams)": 8,
+              "Vitamin A": 4,
+              "Vitamin C": 0,
+              "Vitamin D": 25,
+              "Iron": 0,
+              "Calcium": 30,
+              "Total Fat": "65 g",
+              "Sat. Fat": "20 g",
+              "Cholesterol": "300 mg",
+              "Sodium": "2400 mg",
+              "Total Carbohydrates": "300 g",
+              "Dietary Fiber": "25 g",
+              "Ingredients": "Whole Milk, Sugar, 100% Columbian Coffee, Salt, Vanilla, Carrageenan, Vitamin D3"
+            }
           },
           "eggNog": {
             "title": "Egg Nog Milk",
             "category": "Quart",
             "sizes": {
-              'quart': 4,
+              'quart': 4
             },
             "image": "/milkFlavored/final/large/ShattoMilk_Quart_EggNog.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+              "Serving Size": "1 Cup (240 mL)",
+              "Servings Per Container": 4,
+              "Calories": 230,
+              "Calories from Fat": 110,
+              "Total Fat (grams)": 12,
+              "Total Fat (% of Daily Value)": 18,
+              "Saturated Fat (grams)": 7,
+              "Saturated Fat (% of Daily Value)": 36,
+              "Cholesterol (mg)": 65,
+              "Cholesterol (% of Daily Value)": 22,
+              "Sodium (mg)": 105,
+              "Sodium (% of Daily Value)": 4,
+              "Total Carbohydrates (grams)": 28,
+              "Total Carbohydrates (% of Daily Value)": 9,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 28,
+              "Proteins (grams)": 4,
+              "Vitamin A": 10,
+              "Vitamin C": 2,
+              "Vitamin D": 25,
+              "Iron": 4,
+              "Calcium": 10,
+              "Total Fat": "65 g",
+              "Sat. Fat": "20 g",
+              "Cholesterol": "300 mg",
+              "Sodium": "2400 mg",
+              "Total Carbohydrates": "300 g",
+              "Dietary Fiber": "25 g",
+              "Ingredients": "Milk, Vitamin A, Sugar, Egg Yolks, Corn Starch, Whey Powder, Nu Tumeric, Propylene Glycol, Natural and Artificial Flavors, Guar Gum, Garrageen dextrose"
+            }
           },
           "rootBeer": {
             "title": "Root Beer Milk",
             "category": "Quart",
             "sizes": {
+              'half-gallon': 8,
               'quart': 4,
+              'pint': 2
             },
             "image": "/milkFlavored/final/large/ShattoMilk_Quart_RootBeerMilk.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+              "Serving Size": "1 Cup (240 mL)",
+              "Servings Per Container": 8,
+              "Calories": 220,
+              "Calories from Fat": 70,
+              "Total Fat (grams)": 8,
+              "Total Fat (% of Daily Value)": 13,
+              "Saturated Fat (grams)": 5,
+              "Saturated Fat (% of Daily Value)": 26,
+              "Cholesterol (mg)": 30,
+              "Cholesterol (% of Daily Value)": 10,
+              "Sodium (mg)": 230,
+              "Sodium (% of Daily Value)": 10,
+              "Total Carbohydrates (grams)": 28,
+              "Total Carbohydrates (% of Daily Value)": 9,
+              "Dietary Fiber (grams)": 4,
+              "Dietary Fiber (% of Daily Value)": 4,
+              "Sugars (grams)": 17,
+              "Proteins (grams)": 8,
+              "Vitamin A": 6,
+              "Vitamin C": 6,
+              "Vitamin D": 25,
+              "Iron": 4,
+              "Calcium": 30,
+              "Total Fat": "65 g",
+              "Sat. Fat": "20 g",
+              "Cholesterol": "300 mg",
+              "Sodium": "2400 mg",
+              "Total Carbohydrates": "300 g",
+              "Dietary Fiber": "25 g",
+              "Ingredients": "Whole Milk, Sugar, Water, Caramel Color, Propylene Glycol, Natural and Artificial Flavors, Gum Tragacanth"
+            }
           },
           "pumpkinSpiceEggNog": {
             "title": "Pumpkin Spce Egg Nog Milk",
             "category": "Quart",
             "sizes": {
-              'quart': 4,
+              'quart': 4
             },
             "image": "/milkFlavored/final/large/ShattoMilk_Quart_PumpkinSpiceEggNog.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+              "Serving Size": "1 Cup (240 mL)",
+              "Servings Per Container": 4,
+              "Calories": 230,
+              "Calories from Fat": 110,
+              "Total Fat (grams)": 12,
+              "Total Fat (% of Daily Value)": 18,
+              "Saturated Fat (grams)": 7,
+              "Saturated Fat (% of Daily Value)": 36,
+              "Cholesterol (mg)": 65,
+              "Cholesterol (% of Daily Value)": 22,
+              "Sodium (mg)": 105,
+              "Sodium (% of Daily Value)": 4,
+              "Total Carbohydrates (grams)": 28,
+              "Total Carbohydrates (% of Daily Value)": 9,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 28,
+              "Proteins (grams)": 4,
+              "Vitamin A": 10,
+              "Vitamin C": 2,
+              "Vitamin D": 25,
+              "Iron": 4,
+              "Calcium": 10,
+              "Total Fat": "65 g",
+              "Sat. Fat": "20 g",
+              "Cholesterol": "300 mg",
+              "Sodium": "2400 mg",
+              "Total Carbohydrates": "300 g",
+              "Dietary Fiber": "25 g",
+              "Ingredients": "Milk, Vitamin A, Sugar, Egg Yolks, Corn Starch, Whey Powder, Nu Tumeric, Propylene Glycol, Natural and Artificial Flavors, Guar Gum, Garrageen dextrose"
+            }
           }
           // Ice Cream
           ,
@@ -157,110 +633,482 @@
             "title": "Strawberry Ice Cream",
             "category": "Pint",
             "sizes": {
-              'pint': 2
+              'pint': 4
             },
             "image": "/icecream-pints/final/large/ShattoMilk_IceCream_Pint_Strawberry.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+              "Serving Size": "1 Pint (473 ml)",
+              "Servings Per Container": 4,
+              "Calories": 290,
+              "Calories from Fat": 180,
+              "Total Fat (grams)": 20,
+              "Total Fat (% of Daily Value)": 31,
+              "Saturated Fat (grams)": 12,
+              "Saturated Fat (% of Daily Value)": 60,
+              "Cholesterol (mg)": 95,
+              "Cholesterol (% of Daily Value)": 32,
+              "Sodium (mg)": 60,
+              "Sodium (% of Daily Value)": 3,
+              "Total Carbohydrates (grams)": 25,
+              "Total Carbohydrates (% of Daily Value)": 8,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 24,
+              "Proteins (grams)": 4,
+              "Vitamin A": 15,
+              "Vitamin C": 2,
+              "Vitamin D": 0,
+              "Iron": 0,
+              "Calcium": 15,
+              "Total Fat": "65 g",
+              "Sat. Fat": "20 g",
+              "Cholesterol": "300 mg",
+              "Sodium": "2400 mg",
+              "Total Carbohydrates": "300 g",
+              "Dietary Fiber": "25 g",
+              "Ingredients": "cream, milk, sugar, strawberries, nonfat dry milk, egg yolks"
+            }
           },
           "vanilla_iceCream": {
             "title": "Vanilla Ice Cream",
             "category": "Pint",
             "sizes": {
-              'pint': 2
+              'pint': 4
             },
             "image": "/icecream-pints/final/large/ShattoMilk_IceCream_Pint_Vanilla.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+              "Serving Size": "1 Pint (473 ml)",
+              "Servings Per Container": 4,
+              "Calories": 330,
+              "Calories from Fat": 210,
+              "Total Fat (grams)": 23,
+              "Total Fat (% of Daily Value)": 35,
+              "Saturated Fat (grams)": 14,
+              "Saturated Fat (% of Daily Value)": 70,
+              "Cholesterol (mg)": 110,
+              "Cholesterol (% of Daily Value)": 37,
+              "Sodium (mg)": 65,
+              "Sodium (% of Daily Value)": 3,
+              "Total Carbohydrates (grams)": 28,
+              "Total Carbohydrates (% of Daily Value)": 9,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 26,
+              "Proteins (grams)": 5,
+              "Vitamin A": 20,
+              "Vitamin C": 2,
+              "Vitamin D": 0,
+              "Iron": 0,
+              "Calcium": 15,
+              "Total Fat": "65 g",
+              "Sat. Fat": "20 g",
+              "Cholesterol": "300 mg",
+              "Sodium": "2400 mg",
+              "Total Carbohydrates": "300 g",
+              "Dietary Fiber": "25 g",
+              "Ingredients": "cream, milk, sugar, nonfat dry milk, egg yolks, vanilla extract"
+            }
           },
           "chocolate_iceCream": {
             "title": "Chocolate Ice Cream",
             "category": "Pint",
             "sizes": {
-              'pint': 2
+              'pint': 4
             },
             "image": "/icecream-pints/final/large/ShattoMilk_IceCream_Pint_Chocolate.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+              "Serving Size": "1 Pint (473 ml)",
+              "Servings Per Container": 4,
+              "Calories": 330,
+              "Calories from Fat": 200,
+              "Total Fat (grams)": 23,
+              "Total Fat (% of Daily Value)": 35,
+              "Saturated Fat (grams)": 14,
+              "Saturated Fat (% of Daily Value)": 70,
+              "Cholesterol (mg)": 105,
+              "Cholesterol (% of Daily Value)": 35,
+              "Sodium (mg)": 65,
+              "Sodium (% of Daily Value)": 3,
+              "Total Carbohydrates (grams)": 29,
+              "Total Carbohydrates (% of Daily Value)": 10,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 1,
+              "Sugars (grams)": 25,
+              "Proteins (grams)": 6,
+              "Vitamin A": 15,
+              "Vitamin C": 2,
+              "Vitamin D": 0,
+              "Iron": 0,
+              "Calcium": 15,
+              "Total Fat": "65 g",
+              "Sat. Fat": "20 g",
+              "Cholesterol": "300 mg",
+              "Sodium": "2400 mg",
+              "Total Carbohydrates": "300 g",
+              "Dietary Fiber": "25 g",
+              "Ingredients": "cream, milk, sugar, nonfat dry milk, cocoa, egg yolks"
+            }
           },
           "caramelSeaSalt_iceCream": {
             "title": "Caramel Sea Salt Ice Cream",
             "category": "Pint",
             "sizes": {
-              'pint': 2
+              'pint': 4
             },
             "image": "/icecream-pints/final/large/ShattoMilk_IceCream_Pint_CaramelSeaSalt.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+              "Serving Size": "1 Pint (473 ml)",
+              "Servings Per Container": 4,
+              "Calories": 330,
+              "Calories from Fat": 210,
+              "Total Fat (grams)": 23,
+              "Total Fat (% of Daily Value)": 35,
+              "Saturated Fat (grams)": 14,
+              "Saturated Fat (% of Daily Value)": 70,
+              "Cholesterol (mg)": 110,
+              "Cholesterol (% of Daily Value)": 37,
+              "Sodium (mg)": 65,
+              "Sodium (% of Daily Value)": 3,
+              "Total Carbohydrates (grams)": 28,
+              "Total Carbohydrates (% of Daily Value)": 9,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 26,
+              "Proteins (grams)": 5,
+              "Vitamin A": 20,
+              "Vitamin C": 2,
+              "Vitamin D": 0,
+              "Iron": 0,
+              "Calcium": 15,
+              "Total Fat": "65 g",
+              "Sat. Fat": "20 g",
+              "Cholesterol": "300 mg",
+              "Sodium": "2400 mg",
+              "Total Carbohydrates": "300 g",
+              "Dietary Fiber": "25 g",
+              "Ingredients": "Cream, milk, sugar, organic caramel variegate, nonfat dry milk, egg yolks, sea salt"
+            }
           },
           "oatmealRaisin": {
             "title": "Oatmeal Raisin Ice Cream Bar",
             "category": "bar",
             "sizes": {
-              'pint': 2
+              'container': 4
             },
             "image": "/icecream-bars/final/large/ShattoMilk_IceCream_Sammich_OatmealRaisinCaramelSeaSalt.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+              "Serving Size": 0,
+              "Servings Per Container": 2,
+              "Calories": 280,
+              "Calories from Fat": 120,
+              "Total Fat (grams)": 13,
+              "Total Fat (% of Daily Value)": 20,
+              "Saturated Fat (grams)": 8,
+              "Saturated Fat (% of Daily Value)": 40,
+              "Cholesterol (mg)": 25,
+              "Cholesterol (% of Daily Value)": 8,
+              "Sodium (mg)": 130,
+              "Sodium (% of Daily Value)": 5,
+              "Total Carbohydrates (grams)": 36,
+              "Total Carbohydrates (% of Daily Value)": 12,
+              "Dietary Fiber (grams)": 1,
+              "Dietary Fiber (% of Daily Value)": 4,
+              "Sugars (grams)": 23,
+              "Proteins (grams)": 4,
+              "Vitamin A": 8,
+              "Vitamin C": 0,
+              "Vitamin D": 0,
+              "Iron": 6,
+              "Calcium": 4,
+              "Total Fat": 0,
+              "Sat. Fat": 0,
+              "Cholesterol": 0,
+              "Sodium": 0,
+              "Total Carbohydrates": 0,
+              "Dietary Fiber": 0,
+              "Ingredients": "cream, milk, sugar, organic caramel variegate, nonfat dry milk, egg yolks, sea salt - granulated sugar, old-fashioned oats, all-purpose flour, unsalted butter, brown sugar, eggs, dark raisins, golden raisins, cinnamon, aged rum, vanilla extract, baking soda, sea salt"
+            }
           },
           "sugarCookie": {
             "title": "Sugar Cookie Strawberry Ice Cream Bar",
             "category": "bar",
             "sizes": {
-              'pint': 2
+              'container': 4
             },
             "image": "/icecream-bars/final/large/ShattoMilk_IceCream_Sammich_SugarCookieStrawberry.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+              "Serving Size": 0,
+              "Servings Per Container": 2,
+              "Calories": 280,
+              "Calories from Fat": 150,
+              "Total Fat (grams)": 17,
+              "Total Fat (% of Daily Value)": 26,
+              "Saturated Fat (grams)": 6,
+              "Saturated Fat (% of Daily Value)": 30,
+              "Cholesterol (mg)": 25,
+              "Cholesterol (% of Daily Value)": 8,
+              "Sodium (mg)": 210,
+              "Sodium (% of Daily Value)": 9,
+              "Total Carbohydrates (grams)": 30,
+              "Total Carbohydrates (% of Daily Value)": 10,
+              "Dietary Fiber (grams)": 1,
+              "Dietary Fiber (% of Daily Value)": 4,
+              "Sugars (grams)": 14,
+              "Proteins (grams)": 3,
+              "Vitamin A": 6,
+              "Vitamin C": 4,
+              "Vitamin D": 0,
+              "Iron": 6,
+              "Calcium": 4,
+              "Total Fat": 0,
+              "Sat. Fat": 0,
+              "Cholesterol": 0,
+              "Sodium": 0,
+              "Total Carbohydrates": 0,
+              "Dietary Fiber": 0,
+              "Ingredients": "cream, milk, sugar, strawberries, nonfat dry milk, egg yolks - all-purpose flour, granualted sugar, canola oil, unsalted butter, eggs, vanilla extract, baking soda, baking powder"
+            }
           },
           "chocolateChip_icecreamBar": {
             "title": "Chocolate Chip Vanilla Ice Cream Bar",
             "category": "bar",
             "sizes": {
-              'pint': 2
+              'container': 4
             },
             "image": "/icecream-bars/final/large/ShattoMilk_IceCream_Sammich_ChocChipVanilla.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+              "Serving Size": 0,
+              "Servings Per Container": 2,
+              "Calories": 330,
+              "Calories from Fat": 170,
+              "Total Fat (grams)": 19,
+              "Total Fat (% of Daily Value)": 29,
+              "Saturated Fat (grams)": 11,
+              "Saturated Fat (% of Daily Value)": 55,
+              "Cholesterol (mg)": 25,
+              "Cholesterol (% of Daily Value)": 8,
+              "Sodium (mg)": 210,
+              "Sodium (% of Daily Value)": 9,
+              "Total Carbohydrates (grams)": 39,
+              "Total Carbohydrates (% of Daily Value)": 13,
+              "Dietary Fiber (grams)": 1,
+              "Dietary Fiber (% of Daily Value)": 4,
+              "Sugars (grams)": 26,
+              "Proteins (grams)": 4,
+              "Vitamin A": 10,
+              "Vitamin C": 0,
+              "Vitamin D": 0,
+              "Iron": 6,
+              "Calcium": 6,
+              "Total Fat": 0,
+              "Sat. Fat": 0,
+              "Cholesterol": 0,
+              "Sodium": 0,
+              "Total Carbohydrates": 0,
+              "Dietary Fiber": 0,
+              "Ingredients": "cream, milk, sugar, nonfat dry milk, egg  yolks, vanilla extract - all-purpose flour, semi-sweet chocolate chunks, unsalted butter, grnaulated sugar, brown sugar, eggs, vanilla extract, baking soda, sea salt."
+            }
           },
           "brownie": {
             "title": "Brownie Choclate Ice Cream Bar",
             "category": "bar",
             "sizes": {
-              'pint': 2
+              'container': 4
             },
             "image": "/icecream-bars/final/large/ShattoMilk_IceCream_Sammich_BrownieChocolate.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+              "Serving Size": 0,
+              "Servings Per Container": 2,
+              "Calories": 220,
+              "Calories from Fat": 110,
+              "Total Fat (grams)": 13,
+              "Total Fat (% of Daily Value)": 20,
+              "Saturated Fat (grams)": 7,
+              "Saturated Fat (% of Daily Value)": 35,
+              "Cholesterol (mg)": 25,
+              "Cholesterol (% of Daily Value)": 8,
+              "Sodium (mg)": 55,
+              "Sodium (% of Daily Value)": 2,
+              "Total Carbohydrates (grams)": 26,
+              "Total Carbohydrates (% of Daily Value)": 9,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 20,
+              "Proteins (grams)": 2,
+              "Vitamin A": 8,
+              "Vitamin C": 0,
+              "Vitamin D": 0,
+              "Iron": 4,
+              "Calcium": 6,
+              "Total Fat": 0,
+              "Sat. Fat": 0,
+              "Cholesterol": 0,
+              "Sodium": 0,
+              "Total Carbohydrates": 0,
+              "Dietary Fiber": 0,
+              "Ingredients": "cream, milk, sugar, nonfat dry milk, egg yolks, vanilla extract - unsalted butter, bittersweet sugar, all-purpose flour, eggs, vanilla extract, sea salt."
+            }
           },
           // Cheese Curds
           "Cajun": {
             "title": "Cajun Cheese Curds",
             "category": "cheese_curds",
             "sizes": {
-              'pint': 2
+              'container': 12
             },
             "image": "/cheese-curds/final/large/ShattoMilk_Cheese_Curds_Cajun.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+              "Serving Size": "340.2g",
+              "Servings Per Container": 12,
+              "Calories": 110,
+              "Calories from Fat": 80,
+              "Total Fat (grams)": 9,
+              "Total Fat (% of Daily Value)": 14,
+              "Saturated Fat (grams)": 5,
+              "Saturated Fat (% of Daily Value)": 25,
+              "Cholesterol (mg)": 30,
+              "Cholesterol (% of Daily Value)": 10,
+              "Sodium (mg)": 180,
+              "Sodium (% of Daily Value)": 8,
+              "Total Carbohydrates (grams)": 0,
+              "Total Carbohydrates (% of Daily Value)": 0,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 0,
+              "Proteins (grams)": 7,
+              "Vitamin A": 6,
+              "Vitamin C": 0,
+              "Vitamin D": 0,
+              "Iron": 0,
+              "Calcium": 20,
+              "Total Fat": "65 g",
+              "Sat. Fat": "20 g",
+              "Cholesterol": "300 mg",
+              "Sodium": "2400 mg",
+              "Total Carbohydrates": "300 g",
+              "Dietary Fiber": "25 g",
+              "Ingredients": "Pasturized cow milk, culture, salt, vegetable rennet, organic paprika, organic onion, organic garlic, organic marjoram, organic thyme, organic fennel seed, organic cumin, organic cayene"
+            }
           },
           "whiteCheddar": {
             "title": "White Cheddar Cheese Curds",
             "category": "cheese_curds",
             "sizes": {
-              'pint': 2
+              'container': 12
             },
             "image": "/cheese-curds/final/large/ShattoMilk_Cheese_Curds_WhiteCheddar.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+              "Serving Size": "340.2g",
+              "Servings Per Container": 12,
+              "Calories": 110,
+              "Calories from Fat": 80,
+              "Total Fat (grams)": 9,
+              "Total Fat (% of Daily Value)": 14,
+              "Saturated Fat (grams)": 5,
+              "Saturated Fat (% of Daily Value)": 25,
+              "Cholesterol (mg)": 30,
+              "Cholesterol (% of Daily Value)": 10,
+              "Sodium (mg)": 180,
+              "Sodium (% of Daily Value)": 8,
+              "Total Carbohydrates (grams)": 0,
+              "Total Carbohydrates (% of Daily Value)": 0,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 0,
+              "Proteins (grams)": 7,
+              "Vitamin A": 6,
+              "Vitamin C": 0,
+              "Vitamin D": 0,
+              "Iron": 0,
+              "Calcium": 20,
+              "Total Fat": "65 g",
+              "Sat. Fat": "20 g",
+              "Cholesterol": "300 mg",
+              "Sodium": "2400 mg",
+              "Total Carbohydrates": "300 g",
+              "Dietary Fiber": "25 g",
+              "Ingredients": "Pasturized Cow Milk, culture, salt, vegetable rennet"
+            }
           },
           "Dill": {
             "title": "Dill Cheese Curds",
             "category": "cheese_curds ",
             "sizes": {
-              'pint': 2
+              'container': 12
             },
             "image": "/cheese-curds/final/large/ShattoMilk_Cheese_Curds_Dill.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+              "Serving Size": "340.2g",
+              "Servings Per Container": 12,
+              "Calories": 110,
+              "Calories from Fat": 80,
+              "Total Fat (grams)": 9,
+              "Total Fat (% of Daily Value)": 14,
+              "Saturated Fat (grams)": 5,
+              "Saturated Fat (% of Daily Value)": 25,
+              "Cholesterol (mg)": 30,
+              "Cholesterol (% of Daily Value)": 10,
+              "Sodium (mg)": 180,
+              "Sodium (% of Daily Value)": 8,
+              "Total Carbohydrates (grams)": 0,
+              "Total Carbohydrates (% of Daily Value)": 0,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 0,
+              "Proteins (grams)": 7,
+              "Vitamin A": 6,
+              "Vitamin C": 0,
+              "Vitamin D": 0,
+              "Iron": 0,
+              "Calcium": 20,
+              "Total Fat": "65 g",
+              "Sat. Fat": "20 g",
+              "Cholesterol": "300 mg",
+              "Sodium": "2400 mg",
+              "Total Carbohydrates": "300 g",
+              "Dietary Fiber": "25 g",
+              "Ingredients": "pasturized cow milk, culture, salt, vegetable rennet, orgnaic dill weed."
+            }
           },
           "MushroomGarlic": {
             "title": "Mushroom Garlic Cheese Curds",
             "category": "cheese_curds",
             "sizes": {
-              'pint': 2
+              'container': 12
             },
             "image": "/cheese-curds/final/large/ShattoMilk_Cheese_Curds_MushroomGarlic.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+              "Serving Size": "340.2g",
+              "Servings Per Container": 12,
+              "Calories": 110,
+              "Calories from Fat": 80,
+              "Total Fat (grams)": 9,
+              "Total Fat (% of Daily Value)": 14,
+              "Saturated Fat (grams)": 5,
+              "Saturated Fat (% of Daily Value)": 25,
+              "Cholesterol (mg)": 30,
+              "Cholesterol (% of Daily Value)": 10,
+              "Sodium (mg)": 180,
+              "Sodium (% of Daily Value)": 8,
+              "Total Carbohydrates (grams)": 0,
+              "Total Carbohydrates (% of Daily Value)": 0,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 0,
+              "Proteins (grams)": 7,
+              "Vitamin A": 6,
+              "Vitamin C": 0,
+              "Vitamin D": 0,
+              "Iron": 0,
+              "Calcium": 20,
+              "Total Fat": "65 g",
+              "Sat. Fat": "20 g",
+              "Cholesterol": "300 mg",
+              "Sodium": "2400 mg",
+              "Total Carbohydrates": "300 g",
+              "Dietary Fiber": "25 g",
+              "Ingredients": "Pasturized cow milk, culture, salt, vegetable rennet, organic portobellow mushrooms, organic garlic powder."
+            }
           }
           // big cheese
           ,
@@ -271,7 +1119,9 @@
               'pint': 2
             },
             "image": "/cheese/final/large/ShattoMilk_Cheese_Artisan_Plattsburg.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+
+            }
           },
           "smithFork": {
             "title": "Smith Fork Artisan Cheese",
@@ -280,7 +1130,9 @@
               'pint': 2
             },
             "image": "/cheese/final/large/ShattoMilk_Cheese_Artisan_SmithFork.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+
+            }
           },
           "winstead": {
             "title": "Winstead Reserve Artisan Cheese",
@@ -289,7 +1141,9 @@
               'pint': 2
             },
             "image": "/cheese/final/large/ShattoMilk_Cheese_Artisan_WinsteadReserve.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+
+            }
           },
           "wexford": {
             "title": "Wexford Artisan Cheese",
@@ -298,7 +1152,9 @@
               'pint': 2
             },
             "image": "/cheese/final/large/ShattoMilk_Cheese_Artisan_Wexford.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+
+            }
           },
           "lilly": {
             "title": "Lilly Artisan Cheese",
@@ -307,7 +1163,9 @@
               'pint': 2
             },
             "image": "/cheese/final/large/ShattoMilk_Cheese_Artisan_Lilly.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+
+            }
           },
           "perrin": {
             "title": "Perrin Artisan Cheese",
@@ -316,44 +1174,170 @@
               'pint': 2
             },
             "image": "/cheese/final/large/ShattoMilk_Cheese_Artisan_Perrin.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+
+            }
           },
           // butter
           "garlicButter": {
             "title": "Garlic Butter",
             "category": "butter",
             "sizes": {
-              'pint': 2
+              'container': 8
             },
             "image": "/butter/final/large/ShattoMilk_Butter_Garlic.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+              "Serving Size": "227g",
+              "Servings Per Container": 16,
+              "Calories": 90,
+              "Calories from Fat": 70,
+              "Total Fat (grams)": 8,
+              "Total Fat (% of Daily Value)": 12,
+              "Saturated Fat (grams)": 4,
+              "Saturated Fat (% of Daily Value)": 19,
+              "Cholesterol (mg)": 15,
+              "Cholesterol (% of Daily Value)": 4,
+              "Sodium (mg)": 40,
+              "Sodium (% of Daily Value)": 2,
+              "Total Carbohydrates (grams)": 4,
+              "Total Carbohydrates (% of Daily Value)": 1,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 0,
+              "Proteins (grams)": 0,
+              "Vitamin A": 4,
+              "Vitamin C": 0,
+              "Vitamin D": 0,
+              "Iron": 0,
+              "Calcium": 0,
+              "Total Fat": 0,
+              "Sat. Fat": 0,
+              "Cholesterol": 0,
+              "Sodium": 0,
+              "Total Carbohydrates": 0,
+              "Dietary Fiber": 0,
+              "Ingredients": 0
+            }
           },
           "honeyButter": {
             "title": "Honey Butter",
             "category": "butter",
             "sizes": {
-              'pint': 2
+              'container': 8
             },
             "image": "/butter/final/large/ShattoMilk_Butter_Honey.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+              "Serving Size": "227g",
+              "Servings Per Container": 16,
+              "Calories": 90,
+              "Calories from Fat": 90,
+              "Total Fat (grams)": 10,
+              "Total Fat (% of Daily Value)": 15,
+              "Saturated Fat (grams)": 5,
+              "Saturated Fat (% of Daily Value)": 25,
+              "Cholesterol (mg)": 20,
+              "Cholesterol (% of Daily Value)": 7,
+              "Sodium (mg)": 110,
+              "Sodium (% of Daily Value)": 5,
+              "Total Carbohydrates (grams)": 0,
+              "Total Carbohydrates (% of Daily Value)": 0,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 0,
+              "Proteins (grams)": 0,
+              "Vitamin A": 6,
+              "Vitamin C": 0,
+              "Vitamin D": 0,
+              "Iron": 0,
+              "Calcium": 0,
+              "Total Fat": 0,
+              "Sat. Fat": 0,
+              "Cholesterol": 0,
+              "Sodium": 0,
+              "Total Carbohydrates": 0,
+              "Dietary Fiber": 0,
+              "Ingredients": "cream, garlic, salt"
+            }
           },
           "plainButter": {
             "title": "Plain Butter",
             "category": "butter",
             "sizes": {
-              'pint': 2
+              'container': 8
             },
             "image": "/butter/final/large/ShattoMilk_Butter_Plain.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+              "Serving Size": "227g",
+              "Servings Per Container": 16,
+              "Calories": 100,
+              "Calories from Fat": 100,
+              "Total Fat (grams)": 11,
+              "Total Fat (% of Daily Value)": 17,
+              "Saturated Fat (grams)": 10,
+              "Saturated Fat (% of Daily Value)": 36,
+              "Cholesterol (mg)": 30,
+              "Cholesterol (% of Daily Value)": 10,
+              "Sodium (mg)": 100,
+              "Sodium (% of Daily Value)": 4,
+              "Total Carbohydrates (grams)": 0,
+              "Total Carbohydrates (% of Daily Value)": 0,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 0,
+              "Proteins (grams)": 0,
+              "Vitamin A": 8,
+              "Vitamin C": 0,
+              "Vitamin D": 0,
+              "Iron": 0,
+              "Calcium": 0,
+              "Total Fat": 0,
+              "Sat. Fat": 0,
+              "Cholesterol": 0,
+              "Sodium": 0,
+              "Total Carbohydrates": 0,
+              "Dietary Fiber": 0,
+              "Ingredients": 0
+            }
           },
           "unsaltedButter": {
             "title": "Unsalted Butter",
             "category": "butter",
             "sizes": {
-              'pint': 2
+              'container': 8
             },
             "image": "/butter/final/large/ShattoMilk_Butter_Unsalted.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {
+              "Serving Size": "227g",
+              "Servings Per Container": 16,
+              "Calories": 100,
+              "Calories from Fat": 100,
+              "Total Fat (grams)": 11,
+              "Total Fat (% of Daily Value)": 17,
+              "Saturated Fat (grams)": 10,
+              "Saturated Fat (% of Daily Value)": 36,
+              "Cholesterol (mg)": 30,
+              "Cholesterol (% of Daily Value)": 10,
+              "Sodium (mg)": 0,
+              "Sodium (% of Daily Value)": 0,
+              "Total Carbohydrates (grams)": 0,
+              "Total Carbohydrates (% of Daily Value)": 0,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 0,
+              "Proteins (grams)": 0,
+              "Vitamin A": 8,
+              "Vitamin C": 0,
+              "Vitamin D": 0,
+              "Iron": 0,
+              "Calcium": 0,
+              "Total Fat": 0,
+              "Sat. Fat": 0,
+              "Cholesterol": 0,
+              "Sodium": 0,
+              "Total Carbohydrates": 0,
+              "Dietary Fiber": 0,
+              "Ingredients": "cream"
+            }
           },
           // flavored
           "unsweetenedTea": {
@@ -363,7 +1347,7 @@
               'half-gallon': 8
             },
             "image": "/half-gallons/final/large/ShattoMilk_HalfGallon_SweetTea.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {}
           },
           "fruitPunch": {
             "title": "Fruit Punch",
@@ -372,7 +1356,7 @@
               'half-gallon': 8
             },
             "image": "/half-gallons/final/large/ShattoMilk_HalfGallon_FruitPunch.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {}
           },
           "lemonade": {
             "title": "Lemonade",
@@ -381,7 +1365,7 @@
               'half-gallon': 8
             },
             "image": "/half-gallons/final/large/ShattoMilk_HalfGallon_Lemonade.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {}
           },
           "orangeDrink": {
             "title": "Orange Drink",
@@ -390,7 +1374,7 @@
               'half-gallon': 8
             },
             "image": "/half-gallons/final/large/ShattoMilk_HalfGallon_OrangeDrink.png",
-            "nutrition": "Ingredients: MILK, CREAM, SUGAR, CORN SYRUP, EGG YOLKS, WHEY, CAROB BEAN GUM, MONO AND DIGLYCERIDES, VANILLA BEANS*, NATURAL FLAVOR, RUM, NATURAL VANILLA FLAVOR*, TARA GUM, ANNATTO (FOR COLOR), GUAR GUM, SALT. Ingredients and Nutrition Facts are current as of 2/11/15. Please see shelf packaging for any changes."
+            "nutrition": {}
           },
         }
       }
@@ -482,8 +1466,16 @@
         // for (var i = 2; i <= bottlesArray.length; i++) {
         //   theBottle.append('<img src="'+currentUrl+'/dist/images/rotation/' + i + '.png" data-bottleposition="' + i + '">');
         // }
+        var instructionCall = false;
+        var showInstructions = window.setTimeout(function(e) {
+          if (!instructionCall) {
+            $('.instructions').fadeIn();
+          }
+        }, 30000);
+
         function bottleMouseMove(e) {
           if (floatingBottle.hasClass('start')) {
+            instructionCall = true;
             floatingBottle.addClass('disableTransition');
             var x = e.pageX - theBottle.offset().left;
             // Find bottle pos
@@ -932,8 +1924,8 @@
           $('#nl-form').formValidation({
             framework: 'bootstrap',
             fields: {
-             name: {
-              excluded: false,
+              name: {
+                excluded: false,
                 validators: {
                   notEmpty: {
                     message: 'Forget your name?'
@@ -1137,6 +2129,8 @@
             gotData = false;
           // Load image for overlay
           if (!gotData) {
+
+
             if (productJson['products'].hasOwnProperty(theProduct)) {
               var theProductImage = productJson['products'][theProduct].image,
                 productCategory = productJson['products'][theProduct].category;
@@ -1144,6 +2138,133 @@
               var retinaPath = imagePath + theProductImage.replace('/large/', '/large/2x/');
               var srcSetData = combinedPath + " 1x, " + retinaPath + " 2x";
               $('.flavors h3').html(productJson['products'][theProduct].title);
+              var thisProduct = productJson['products'][theProduct],
+                thisNut = thisProduct['nutrition'],
+                sizeKeys = Object.keys(thisProduct['sizes']),
+                curCat = thisProduct['category'];
+              console.log(sizeKeys);
+              if (curCat == 'bar' || curCat == 'Pint' || curCat == 'cheese_curds' || curCat == 'butter'){
+                $('.sizes').hide();
+              }
+              else {
+                $('.sizes').show();
+              }
+              $('.size.available').removeClass('available currentSize');
+              sizeKeys.forEach(function(e, i) {
+                console.log(e);
+                $('.' + e + '').addClass('available');
+              });
+              $('.nutritionFacts').html('').append('<div class="row">' +
+                '<div class="col-lg-4">' +
+                '<div class="row">' +
+                '<div class="col-sm-12 nutFacts">' +
+                '<h2>nutrition facts</h2>' +
+                '</div>' +
+                '<div class="col-sm-12 servingSize">' +
+                '<h3><span class="servingSizeNum">' + thisNut["Servings Per Container"] + '</span> Servings per container</h3>' +
+                '<p>Serving Size <span class="servingPerContainer">' + thisNut["Serving Size"] + '</span></p>' +
+                '</div>' +
+                '<div class="col-sm-12 calories">' +
+                '<div class="row">' +
+                '<div class="col-sm-12">' +
+                '<h2 class="calories">' + thisNut["Calories"] + '</h2>' +
+                '<div class="closeUp">' +
+                '<h3>Calories</h3>' +
+                '<p>Per Serving</p>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '<div class="col-lg-8 stats">' +
+                '<div class="row">' +
+                '<div class="col-sm-6">' +
+                '<div class="row">' +
+                '<div class="col-sm-12 topPart">' +
+                '<h5>% DV* amount per serving</h5>' +
+                '</div>' +
+                '</div>' +
+                '<div class="row">' +
+                '<div class="col-sm-12">' +
+                '<table class="table">' +
+                '<tr>' +
+                '<td>' + thisNut["Total Fat (% of Daily Value)"] + '%</td>' +
+                '<td>Total Fat <span class="lighter">' + thisNut["Total Fat (grams)"] + 'g</span></td>' +
+                '</tr>' +
+                '<tr>' +
+                '<td>' + thisNut["Saturated Fat (% of Daily Value)"] + '%</td>' +
+                '<td class="child">Saturated Fat <span class="lighter">' + thisNut["Saturated Fat (grams)"] + 'g</span></td>' +
+                '</tr>' +
+                '<tr>' +
+                '<td>' + thisNut["Cholesterol (% of Daily Value)"] + '%</td>' +
+                '<td>Cholesterol <span class="lighter">' + thisNut["Cholesterol (mg)"] + 'mg</span></td>' +
+                '</tr>' +
+                '<tr>' +
+                '<td>' + thisNut["Sodium (% of Daily Value)"] + '%</td>' +
+                '<td>Sodium <span class="lighter">' + thisNut["Sodium (mg)"] + 'mg</span></td>' +
+                '</tr>' +
+                '</table>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '<div class="col-sm-6">' +
+                '<div class="row">' +
+                '<div class="col-sm-12 topPart">' +
+                '<h5>% DV* amount per serving</h5>' +
+                '</div>' +
+                '</div>' +
+                '<div class="row">' +
+                '<div class="col-sm-12">' +
+                '<table class="table">' +
+                '<tr>' +
+                '<td>' + thisNut["Total Carbohydrates (% of Daily Value)"] + '%</td>' +
+                '<td>Total Carbs <span class="lighter">' + thisNut["Total Carbohydrates (grams)"] + 'g</span></td>' +
+                '</tr>' +
+                '<tr>' +
+                '<td>' + thisNut["Dietary Fiber (% of Daily Value)"] + '%</td>' +
+                '<td class="child">Dietary Fiber <span class="lighter">' + thisNut["Dietary Fiber (grams)"] + 'g</span></td>' +
+                '</tr>' +
+                '<tr>' +
+                '<td></td><td class="child">Sugars <span class="lighter">' + thisNut["Sugars (grams)"] + 'g</span></td>' +
+                '</tr>' +
+                '<tr>' +
+                '<td></td><td>Protein <span class="lighter">' + thisNut["Proteins (grams)"] + 'g</span></td>' +
+                '</tr>' +
+                '</table>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '<div class="row bottomList">' +
+                '<div class="col-sm-12">' +
+                '<ul>' +
+                '<li>' + thisNut["Vitamin A"] + '% <span class="title">Vitamin A</span></li>' +
+                '<li>' + thisNut["Vitamin C"] + '% <span class="title">Vitamin C</span></li>' +
+                '<li>' + thisNut["Vitamin D"] + '% <span class="title">Vitamin D</span></li>' +
+                '</ul>' +
+                '<ul>' +
+                '<li>' + thisNut["Iron"] + '% <span class="title">Iron</span></li>' +
+                '<li>' + thisNut["Calcium"] + '% <span class="title">Calcium</span></li>' +
+                '</ul>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '<div class="row dailyValues">' +
+                '<div class="col-sm-12 text-center">' +
+                '<p>*Percent Daily Values are based on a 2000 calorie diet.</p> <p>Your daily values may be higher or lower depending on your calorie needs.</p>' +
+                '</div>' +
+                '</div>');
+              
+              $('#ingredientList').html('').append(thisNut["Ingredients"])
+
+              $('.size').on('click', function(e){
+                $('.size').removeClass('currentSize');
+                $(this).addClass('currentSize');
+                var curSize = $(this).data('size');
+                $('.servingSizeNum').html(thisProduct['sizes'][curSize]);
+              })
               $('#overlay_image').attr({
                 'src': imagePath + '/loading_spinner.gif',
                 'data-src': combinedPath,
@@ -1158,7 +2279,12 @@
               }).removeClass().addClass('missing');
             }
           } else {}
+
+          // Remove this conditional once nutrition facts added.
+         if (curCat !== 'artisan_cheese' && curCat !== 'non-dairy'){
           overlayToggle();
+         }
+          
         });
 
         function activateWaypoint() {

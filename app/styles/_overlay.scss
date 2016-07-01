@@ -36,8 +36,6 @@ $overlayDelay: .35s;
 	}
 	.overlay-close {
 		opacity: 0;
-		-webkit-transition: opacity 0.3s 0.5s;
-		transition: opacity 0.3s 0.5s;
 		position: absolute;
 		right: 0%;
 		top: 10px;
@@ -53,7 +51,14 @@ $overlayDelay: .35s;
 		font-family: "futura-pt", sans-serif;
 		cursor: pointer;
 		padding: 15px;
-
+		@include transform(scale(1));
+		@include transition(all 0.1s ease-out);
+		&:hover {
+			@include transform(scale(1.05));
+		}
+		&:active {
+			@include transform(scale(0.95));
+		}
 		@include MQ(maxM) {
 			top: 0px;
 		}
@@ -151,8 +156,7 @@ $overlayDelay: .35s;
 	}
 	.overlay-close {
 		opacity: 1;
-		-webkit-transition-delay: 0.5s;
-		transition-delay: 0.5s;
+		
 	}
 }
 .overlay.close {
@@ -162,11 +166,14 @@ $overlayDelay: .35s;
 		transition-delay: 0s;
 	}
 	.overlay-close {
-		@include transition-delay($overlayDelay);
+		//@include transition-delay($overlayDelay);
 	}
 }
 // Info in overlay
 .productInfo {
+	.container-fluid {
+	max-width:1400px;
+	}
 	opacity: 0;
 	@include transition(all .35s ease-out $overlayDelay);
 
@@ -232,7 +239,8 @@ $overlayDelay: .35s;
 	}
 	h3 {
 		font-size: 26px;
-		line-height: .8em;
+		line-height: 1em;
+		margin-bottom: 5px;
 		margin-top: 5px;
 	}
 	.reducedPadding {
@@ -314,7 +322,7 @@ $overlayDelay: .35s;
 			}
 			h3 {
 				span {
-					display: none;
+					//display: none;
 				}
 				@include MQ(maxM) {
 					font-size: 20px;
@@ -358,7 +366,9 @@ $overlayDelay: .35s;
 			}
 			.closeUp {
 				float: left;
-
+				h3 {
+					margin-bottom: 0;
+				}
 				h3 {
 					@include MQ(maxM) {
 						font-size: 36px;
@@ -515,6 +525,7 @@ $overlayDelay: .35s;
 			}
 		}
 		.dailyValues {
+			margin-top: 10px;
 			p {
 				margin-bottom: 0;
 				line-height: 1em;
@@ -637,7 +648,7 @@ $overlayDelay: .35s;
 		@include MQ(maxM) {
 			position:relative;
 			text-align:left;
-			margin-bottom: 0;
+			margin-bottom: 10px;
 		}
 		p {
 			position:relative;
@@ -656,11 +667,30 @@ $overlayDelay: .35s;
 		.size {
 			position:relative;
 			text-align:center;
+			display:none;
+			&.available {
+				display:block;
+				p {
+					//font-weight:700;
+				}
+				&.currentSize {
+					p {
+						font-weight:700;
+					}
+				}
+			}
 			@include MQ(maxM) {
 				//float: left;
 				width:auto;
-				display:inline-block;
+				//display:inline-block;
 				margin:0 3px;
+				&.available {
+					display:inline-block;
+					p {
+						font-size:16px;
+						text-transform:uppercase;
+					}				
+				}
 			}
 		}
 	}
@@ -697,7 +727,7 @@ $overlayDelay: .35s;
 	.shatto-bottlesilhouette-quart {
 		background-position: 0 78.959276%;
 		background-size: 120%;
-		max-width:40px;
+		max-width:60px;
 		//position:relative;
 		left:-10px;
 	}

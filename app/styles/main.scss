@@ -357,7 +357,7 @@ img {
   position: relative;
   width: 270px;
   height: 510px;
-  @include transform(translate3d(0, -1990px, 0));
+  @include transform(translate3d(0, -1955px, 0));
   @include transition(transform, 0.5s, ease-out, opacity, 0s, ease, width, 0.5s, ease-out);
   text-align: center;
   left: 0;
@@ -367,7 +367,7 @@ img {
   position: absolute;
   margin: 0 auto;
   @include MQ(maxL){
-     @include transform(translate3d(0, -1940px, 0));
+     @include transform(translate3d(0, -1920px, 0));
   }
   @include MQ(maxM) {
     position: relative !important;
