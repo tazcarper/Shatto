@@ -141,12 +141,12 @@
         <div class="col-md-12">
           <h2><?php the_field('newsletter_title'); ?></h2>
           <?php the_field('newsletter_copy'); ?>
-          <form class="form-inline">
-           <div class="form-group">
-            <input id="newsletterSignUpForm" name="newsletterSignUp" placeholder="Email Address" class="form-control"/>
-          </div>
-            <button class="form-control btn invert">Sign Up</button>
-          </form>
+          <form class="form-inline" id="newsletterSignUpForm">
+              <div class="form-group">
+                <input id="newsletterSignUp" name="newsletterSignUp" placeholder="Email Address" class="form-control"/>
+              </div>
+              <button class="form-control btn invert">Sign Up</button>
+            </form>
         </div>
       </div>
     </div>
