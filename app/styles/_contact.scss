@@ -29,7 +29,8 @@ section.contact {
 		margin-top: 15px;
 	}
 }
-.help-block {
+.contact {
+	.help-block {
 	@include MQ(M){
 		display: none !important;
 	}
@@ -53,6 +54,8 @@ section.contact {
 		}
 	}
 }
+}
+
 // form
 @font-face {
 	font-family: 'icomoon';

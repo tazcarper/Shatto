@@ -5,8 +5,10 @@
         <div class="row">
           <div class="col-md-8 col-md-offset-2 center">
             <p class="largerCopy">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <form class="form-inline">
-              <input placeholder="Email Address" class="form-control"/>
+            <form class="form-inline" id="newsletterSignUpForm">
+              <div class="form-group">
+                <input id="newsletterSignUp" name="newsletterSignUp" placeholder="Email Address" class="form-control"/>
+              </div>
               <button class="form-control btn invert">Sign Up</button>
             </form>
           </div>

@@ -1414,40 +1414,44 @@
           // });
         }
         // adjust bg of parallax
-        
+
       });
 
 
       function draw() {
-              requestAnimationFrame(draw);
-              // Drawing code goes here
-              scrollEvent();
-          }
-          draw();
-       
-    
-       
-      function scrollEvent(){
-       
-          if(!is_touch_device()){
-              viewportTop = $(window).scrollTop();
-              windowHeight = $(window).height();
-              viewportBottom = windowHeight+viewportTop;
-       
-              if($(window).width())
-       
-              $('[data-parallax="true"]').each(function(){
-                  distance = viewportTop * $(this).attr('data-speed');
-                  if($(this).attr('data-direction') === 'up'){ sym = '-'; } else { sym = ''; }
-                  $(this).css('transform','translate3d(0, ' + sym + distance +'px,0)');
-              });
-       
-          }
-      } 
-       
+        requestAnimationFrame(draw);
+        // Drawing code goes here
+        scrollEvent();
+      }
+      draw();
+
+
+
+      function scrollEvent() {
+
+        if (!is_touch_device()) {
+          viewportTop = $(window).scrollTop();
+          windowHeight = $(window).height();
+          viewportBottom = windowHeight + viewportTop;
+
+          if ($(window).width())
+
+            $('[data-parallax="true"]').each(function() {
+            distance = viewportTop * $(this).attr('data-speed');
+            if ($(this).attr('data-direction') === 'up') {
+              sym = '-';
+            } else {
+              sym = '';
+            }
+            $(this).css('transform', 'translate3d(0, ' + sym + distance + 'px,0)');
+          });
+
+        }
+      }
+
       function is_touch_device() {
         return 'ontouchstart' in window // works on most browsers 
-            || 'onmsgesturechange' in window; // works on ie10
+          || 'onmsgesturechange' in window; // works on ie10
       }
 
 
@@ -1981,10 +1985,9 @@
               }
 
             }
-
           }).on('success.form.fv', function(e) {
             event.preventDefault();
-            console.log('submit');
+           
             var stuffToSend = {
                 'input_values': {}
               },
@@ -2059,6 +2062,60 @@
         // $('form#nl-form').submit(function(event) {
 
         // });
+      }
+
+      if ($('#newsletterSignUp')[0]) {
+        $('#newsletterSignUpForm').formValidation({
+          framework: 'bootstrap',
+          fields: {
+            
+
+            newsletterSignUp: {
+             
+              validators: {
+                notEmpty: {
+                  message: 'We will need your email.'
+                },
+                emailAddress: {
+                  message: 'The input is not a valid email address.'
+                }
+              }
+            }
+
+          }
+        }).on('success.form.fv', function(e) {
+          event.preventDefault();
+         
+          var stuffToSend = {
+              'input_values': {}
+            },
+            myForm = $(this);
+          // find form values and assign for gravity forms
+         
+          stuffToSend.input_values.input_1 = myForm.find('input#newsletterSignUp').val();
+          $.ajax({
+            url: "/gravityformsapi/forms/3/submissions",
+            method: "POST",
+            data: JSON.stringify(stuffToSend),
+            dataType: "json",
+            processData: false,
+            headers: {
+              "Content-Type": "application/json"
+            }
+          }).success(function(data) {
+            if (data.response.is_valid) {
+              // hide form
+             
+              $('.newsletterSignUpThanks').fadeIn();
+
+              // fire analytics event
+              // ga();
+            } else {
+              // handle errors from gravity forms
+              alert(JSON.stringify(data.response.validation_messages));
+            }
+          });
+        })
       }
 
       // Product Page Animation
@@ -2170,10 +2227,9 @@
                 sizeKeys = Object.keys(thisProduct['sizes']),
                 curCat = thisProduct['category'];
               console.log(sizeKeys);
-              if (curCat == 'bar' || curCat == 'Pint' || curCat == 'cheese_curds' || curCat == 'butter'){
+              if (curCat == 'bar' || curCat == 'Pint' || curCat == 'cheese_curds' || curCat == 'butter') {
                 $('.sizes').hide();
-              }
-              else {
+              } else {
                 $('.sizes').show();
               }
               $('.size.available').removeClass('available currentSize');
@@ -2283,10 +2339,10 @@
                 '<p>*Percent Daily Values are based on a 2000 calorie diet.</p> <p>Your daily values may be higher or lower depending on your calorie needs.</p>' +
                 '</div>' +
                 '</div>');
-              
+
               $('#ingredientList').html('').append(thisNut["Ingredients"])
 
-              $('.size').on('click', function(e){
+              $('.size').on('click', function(e) {
                 $('.size').removeClass('currentSize');
                 $(this).addClass('currentSize');
                 var curSize = $(this).data('size');
@@ -2308,10 +2364,10 @@
           } else {}
 
           // Remove this conditional once nutrition facts added.
-         if (curCat !== 'artisan_cheese' && curCat !== 'non-dairy'){
-          overlayToggle();
-         }
-          
+          if (curCat !== 'artisan_cheese' && curCat !== 'non-dairy') {
+            overlayToggle();
+          }
+
         });
 
         function activateWaypoint() {
@@ -2462,7 +2518,7 @@
             startZoom: 13,
             latitude: 39.0936738,
             longitude: -94.589048,
-            
+
           });
         }
       }

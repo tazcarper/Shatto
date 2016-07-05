@@ -164,6 +164,16 @@ p a {
     padding-right: 0;
   }
 }
+
+#newsletterSignUpForm {
+  .help-block {
+    position:absolute;
+    left:0;
+    right:0;
+    margin:5px auto;
+  }
+}
+
 // Main
 main {
   border-top: 1px solid $darkGrey;
