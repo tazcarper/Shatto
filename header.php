@@ -19,6 +19,23 @@
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>var stylesheet_directory_uri = "<?php echo get_template_directory_uri(); ?>"; $(window).load(function(){$('#status').fadeOut();$('#preloader').delay(350).fadeOut(150);$('body').delay(350);$('body').fadeIn(1000);});</script>
+    <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1071180172936421',
+      xfbml      : true,
+      version    : 'v2.6'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
   </head>
   <body>
     <div id="preloader">

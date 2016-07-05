@@ -290,6 +290,7 @@ main {
   outline: none !important;
   height: auto;
   border:1px solid white;
+  box-shadow:none;
   @include transition(background .4s ease, color .4s ease);
 
   @include MQ(maxM) {
@@ -576,6 +577,20 @@ img {
     //  @include transition(opacity 0.5s ease);
   }
 }
+.equalHeights {
+  @include MQ(M) {
+    display: table;
+    width: 100%;
+    position: relative;
+    // left: -.5%;
+
+    .topColumns {
+      display: table-cell;
+      float: none;
+      vertical-align: top;
+    }
+  }
+}
 .shadow {
   position: absolute;
   bottom: 125px;
@@ -625,6 +640,6 @@ img {
 
 .belowNavigation {
   @media (min-width:$screen-sm-min) {
-    padding-top: 120px;
+    padding-top: 14 0px;
   }
 }

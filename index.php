@@ -12,7 +12,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12 center categoryFilter">
+          <div class="col-md-12 center-block center categoryFilter">
             <hr>
 
             <h4>Filter Posts <ul><?php $cat = get_the_category();
@@ -34,58 +34,86 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12">
+
+          <div class="col-md-12 center-block">
             <?php
             if ( have_posts() ) :
               $i = 0;
               while ( have_posts() ) :
                 the_post();
+              $thumb = get_field('thumbnail_image');
+              $largeImage = get_field('large_image');
                 $i++;
                 $columns_this_row = $i % 3; ?>
             <?php if ( $i === 1 || $i === 3 ) : ?>
-            <div class="row">
+            <div class="row ">
+            <div class="equalHeights">
               <a href="<?php the_permalink(); ?>">
-              <div class="col-md-7">
-                <img src="xxx" />
+              <div class="col-md-7 topColumns articleImage">
+               <div class="overflowHide">
+              <?php if( get_field('thumbnail_image') ){ ?>
+                <img src="<?php echo $thumb['url']; ?>" />
+              <?php } else{ ?>
+                <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=697%C3%97463&w=697&h=463" />
+                <?php } ?>
               </div>
-              <div class="col-md-5">
-                <hr>
+            </div>
+              <div class="col-md-5 topColumns text">
+                
                 <h6><?php the_time('M j, Y'); ?></h6>
                 <h1><?php the_title(); ?></h1>
                 <p><?php echo get_the_excerpt(); ?></p>
-                <hr>
+               
               </div>
               </a>
             </div>
+          </div>
               <?php elseif ( $i === 2 ) : ?>
-            <div class="row">
+            <div class="row ">
+            <div class="equalHeights">
               <a href="<?php the_permalink(); ?>">
-              <div class="col-md-5">
-                <hr>
+              
+              <div class="col-md-7 col-md-push-5 topColumns articleImage">
+               <div class="overflowHide">
+              <?php if( get_field('thumbnail_image') ){ ?>
+                <img src="<?php echo $thumb['url']; ?>" />
+              <?php } else{ ?>
+                <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=697%C3%97463&w=697&h=463" />
+                <?php } ?>
+              </div>
+              </div>
+              <div class="col-md-5 col-md-pull-7 topColumns text">
+              
                 <h6><?php the_time('M j, Y'); ?></h6>
                 <h1><?php the_title(); ?></h1>
                 <p><?php echo get_the_excerpt(); ?></p>
-                <hr>
-              </div>
-              <div class="col-md-7">
-                <img src="xxx" />
+              
               </div>
               </a>
+            </div>
             </div>
               <?php else : ?>
                 <?php if ( $columns_this_row === 1 ) : $row_open = true; ?>
             <div class="row">
+            <div class="equalHeights">
                 <?php endif; ?>
+              
+              <div class="col-md-4 topColumns smallColumns articleImage">
+              <div class="overflowHide">
               <a href="<?php the_permalink(); ?>">
-              <div class="col-md-4">
-                <img src="xxx" />
-                <hr>
+                <?php if( get_field('thumbnail_image') ){ ?>
+                <img src="<?php echo $thumb['url']; ?>" />
+              <?php } else{ ?>
+                <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=697%C3%97463&w=697&h=463" />
+                <?php } ?>
+                </div>
                 <h6><?php the_time('M j, Y'); ?></h6>
                 <h1><?php the_title(); ?></h1>
                 <p><?php echo get_the_excerpt(); ?></p>
-                <hr>
+                
+                </a>
               </div>
-              </a>
+              
                 <?php if ( $columns_this_row === 0 && $row_open === true ) : $row_open = false; ?>
             </div>
                 <?php endif; ?>
@@ -95,6 +123,7 @@
               <?php endwhile;
               if ( $row_open ) : ?>
             </div>
+          </div>
               <?php endif;
             endif;
             ?>

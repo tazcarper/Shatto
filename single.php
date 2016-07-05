@@ -17,16 +17,24 @@
               <div class="col-md-10 col-md-offset-1 overlapPhoto">
                 <h6><?php the_time('M j, Y'); ?></h6>
                 <h1><?php the_title(); ?></h1>
-                social
+                <?php $currentLink = get_permalink(); ?>
+                <div class="social">
+                  <a  target="_blank" class="socialIcon icon-facebook2" id="fbShare" data-link="<?php echo $currentLink; ?>"></a>
+                  <a href="http://twitter.com/share?text=<?php echo urlencode(the_title()); ?>&url=<?php echo urlencode(the_permalink()); ?>&via=Shattomilk" target="_blank" class="socialIcon icon-twitter"></a>
+                  <a href="mailto:Sendto?Subject=<?php echo urlencode(the_title()); ?>&Body=<?php echo urlencode( get_the_content()); ?>" target="_blank" class="socialIcon icon-mail2"></a>  
+                </div>
                 <hr>
+                <div class="articleContent">
                 <?php the_content(); ?>
-                <hr>
+                </div>
+                <!-- <hr>
                 Categories
+                <hr> -->
                 <hr>
               </div>
             </div>
 
-            <div class="row">
+            <div class="row signUp">
               <div class="col-md-8 col-md-offset-2 center">
                 <h4>Sign Up for News Alerts</h4>
                 <form class="form-inline">
@@ -42,6 +50,16 @@
         </div>
       </div>
     </section>
-
+<script>
+document.getElementById('fbShare').onclick = function() {
+  var curLink = document.getElementById('fbShare').dataset.link;
+  console.log(curLink)
+  FB.ui({
+    method: 'share',
+    display: 'popup',
+    href: curLink,
+  }, function(response){});
+}
+</script>
 <?php get_footer(); ?>
 <?php get_footer(); ?>

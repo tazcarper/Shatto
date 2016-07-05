@@ -12,7 +12,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12 center categoryFilter">
+          <div class="col-md-10 center center-block categoryFilter">
             <hr>
 
             <h4>Filter Posts <ul><?php $cat = get_the_category();

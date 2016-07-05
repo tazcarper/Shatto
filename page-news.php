@@ -12,7 +12,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12 center">
+          <div class="col-md-10 center center-block">
             <hr>
             <h4>Filter Posts <a class="btn center invert">All</a> <a class="btn center">At The Farm</a> <a class="btn center">Events</a> <a class="btn center">Products</a> <a class="btn center">Misc</a></h4>
             <hr>
