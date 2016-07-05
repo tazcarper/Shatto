@@ -124,12 +124,10 @@
         <div class="findText">
           <h3 class="desktop"><?php the_field('map_title'); ?></h3>
           <h3 class="mobile">Find Shatto Near You</h3>
-          <form class="form-inline" id="newsletterSignUpForm">
-              <div class="form-group">
-                <input id="newsletterSignUp" name="newsletterSignUp" placeholder="Email Address" class="form-control"/>
-              </div>
-              <button class="form-control btn invert">Sign Up</button>
-            </form><br class="hidden-xs"/>
+          <form class="form-inline">
+            <input placeholder="ZIP Code" class="form-control" type="number" />
+            <button class="form-control btn invert zipFind">GO</button>
+          </form><br class="hidden-xs"/>
           <!-- <p class="mobile"><a href="#">Oh, just use my location. I'm not hiding.</a></p> -->
         </div>
       </div>
