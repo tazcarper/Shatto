@@ -8,7 +8,10 @@
             <div data-type="controls" class="controls">
               <div class="findInput">
                 <input type="text" placeholder="City, State or ZIP" data-zoom="13" data-control-name="autocomplete" data-control-type="autocomplete" autocompelte="on" class="form-control">
-                <div class="btn invert search">GO</div>
+                <div class="btn invert search">
+                <span class="hidden-xs">GO</span>
+                <img src="<?php echo get_template_directory_uri(); ?>/dist/images/map-mobile-pin.png" data-src="<?php echo get_template_directory_uri(); ?>/dist/images/map-mobile-pin.png" data-src-retina="<?php echo get_template_directory_uri(); ?>/dist/images/map-mobile-pin_2x.png" alt="Search Location" class="visible-xs">
+                </div>
                 <span class="geoCode">Or, you can just use my location. I'm not hiding.</span>
                 <span class="resetGeo">Looks like you denied us using your location. <br/>You have to <a href="https://support.google.com/chrome/answer/142065?hl=en">reset it yourself</a>.</span>
               </div>

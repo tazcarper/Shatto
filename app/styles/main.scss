@@ -299,10 +299,14 @@ main {
     background-color: $black;
     color: $white;
    border-color:black;
-    &:active, &:focus, &:hover {
+     &:hover {
       background-color: white;
       border-color:black;
       color: black;
+    }
+    &:active, &:focus {
+      background: $black;
+      color:$white;
     }
   }
 }

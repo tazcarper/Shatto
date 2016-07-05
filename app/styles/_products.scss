@@ -744,6 +744,8 @@ $addedPadding: 35px;
 					@include MQ(maxM) {
 						position: static;
 						float: left;
+						width: 50% !important;
+				margin: 15px auto !important;
 					}
 				}
 			}
@@ -1024,10 +1026,13 @@ $addedPadding: 35px;
 			}
 			@include MQ(maxM) {
 				position: relative;
-				width: 50% !important;
-				margin: 15px auto !important;
+				// width: 50% !important;
+				margin: 25px auto !important;
+				width:100% !important;
 				float: left;
-
+				&:first-child {
+					margin-top: 0 !important;
+				}
 				img {
 					position: relative;
 					left: 0;

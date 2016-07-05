@@ -328,6 +328,8 @@
 					mapTypeId: google.maps.MapTypeId[self.options.mapTypeId]
 					,center: pyrmont
 					,zoom: self.options.startZoom
+					,streetViewControl: false
+					,mapTypeControl: false
 				});
 				
 				//init directions display

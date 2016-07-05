@@ -25,6 +25,7 @@
 			float:none;
 			text-align: center;
 			margin-left: 0;
+
 		}
 
 	}
@@ -41,11 +42,11 @@
 	@include MQ(maxM) {
 		top:0px;
 		background:none;
-		position:relative;
+		position:absolute;
 		height:auto;
 		float: left;
 		.findInput {
-			top:-335px !important;
+			//top:-335px !important;
 			input {
 				font-size:16px;
 			}
@@ -69,6 +70,7 @@
 		
 		@include MQ(maxM){
 			top:0;
+
 		}
 	}
 	.findInput {
@@ -82,6 +84,7 @@
 		width: 400px;
 		text-align: center;
 		position: absolute;
+
 		.search {
 			float: left;
 			padding:.85em 1em;
@@ -89,7 +92,10 @@
 			margin-left:12px;
 			border-radius: 50px;
 			@include MQ(maxM) {
-				display:none;
+				//display:none;
+				float: none;
+				display:inline;
+				background:none !important;
 			}
 		}
 		input {
@@ -105,10 +111,23 @@
 			}
 			@include MQ(maxM) {
 				width:100%;
+				
+					padding:10px;
+			background:white;
+			margin-bottom: 0;
+			height:auto;
+			color:black;
+			display:inline-block;
+			width:60%;
+			margin:10px auto;
+			float: none;
+			border-radius:45px;
+			
 			}
 			@include placeholder {
 				font-style:italic;
 				font-weight:300;
+				color:black;
 			}
 		}
 		@include transition(all .35s ease-out);
@@ -116,11 +135,16 @@
 			top:-335px;
 			max-width:100%;
 			width:100%;
-			border-radius: 0;
+			
+	background:black;
+	padding:15px;
+	height:auto;
+	.geoCode {
+		display:none;
+	}
 			input {
-				border-radius: 0;
-				border-left:0;
-				border-right:0;
+				//border-radius: 0;
+				
 
 			}
 		}
@@ -148,7 +172,7 @@
 		background-color: #a5bfdd;
 		@include MQ(maxM){
 			position:relative;
-			margin-top: 35px;
+			margin-top: 90px;
 		}
 	}
 	.hidden {
@@ -184,7 +208,8 @@
 		@include MQ(maxM) {
 			display:block;
 			float: left;
-			height:auto;
+			height:150px;
+			display:none;
 		}
 	}
 	.store {
@@ -197,8 +222,8 @@
 			//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
 			text-shadow: 1px 1px 1px #fff;
 			@include MQ(maxM) {
-				padding-top:15px;
-				padding-bottom: 15px;
+				padding-top:10px;
+				padding-bottom: 10px;
 			}
 			span {
 				display:block;
@@ -214,7 +239,7 @@
 		}
 	}
 	.active {
-		background-color: #dfe5ff;
+		background-color: lighten(#ddd, 10%);
 	}
 	.title {
 
@@ -288,7 +313,8 @@
 
 		.map {
 			width: 100%;
-			height: 300px;
+			height: 350px;
+
 		}
 		.controls {
 			// padding-top: 10px;
@@ -302,6 +328,9 @@
 			max-height: 300px;
 			width:100%;
 			overflow:scroll-y;
+			.title {
+				font-size:20px;
+			}
 		}
 		> .panel {
 			width: 100%;

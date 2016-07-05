@@ -2461,7 +2461,8 @@
           $('#jlocator').jlocator({
             startZoom: 13,
             latitude: 39.0936738,
-            longitude: -94.589048
+            longitude: -94.589048,
+            
           });
         }
       }

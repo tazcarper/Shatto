@@ -83,7 +83,7 @@ marker=findMarker(self,store);if(marker){google.maps.event.trigger(marker,'click
 	*/var initMap=function initMap(self,$mapRoot){var pyrmont;if(google&&google.maps){google.maps.event.addDomListener(window,'load',function(){ //directions
 self.directionsService=new google.maps['DirectionsService']();self.directionsDisplay=new google.maps['DirectionsRenderer'](); //init pyrmont
 pyrmont=new google.maps.LatLng(self.options.latitude,self.options.longitude); //create map
-self.mapCanvas=new google.maps.Map(self.$mapRoot.get(0),{mapTypeId:google.maps.MapTypeId[self.options.mapTypeId],center:pyrmont,zoom:self.options.startZoom}); //init directions display
+self.mapCanvas=new google.maps.Map(self.$mapRoot.get(0),{mapTypeId:google.maps.MapTypeId[self.options.mapTypeId],center:pyrmont,zoom:self.options.startZoom,streetViewControl:false,mapTypeControl:false}); //init directions display
 self.directionsDisplay.setMap(self.mapCanvas); //init events
 initEvents(self); //get stores list -> draw markers
 self.$root.trigger(self.options.getStoresListEvent,[]); //init geolocation (if needed)
