@@ -8,6 +8,7 @@
            <form class="form-inline" id="newsletterSignUpForm">
               <div class="form-group">
                 <input id="newsletterSignUp" name="newsletterSignUp" placeholder="Email Address" class="form-control"/>
+                <div class="newsletterSignUpThanks">You&rsquo;re signed up!</div>
               </div>
               <button class="form-control btn invert">Sign Up</button>
             </form>

@@ -317,11 +317,11 @@ main {
     font-size: 18px;
   }
   &.success {
-    background-color:green;
-    border-color:green;
+    background-color:green !important;
+    border-color:green !important;
     &:hover, &:active, &:focus {
-       background-color:green;
-      border-color:green;
+       background-color:green !important;
+      border-color:green !important;
     }
   }
   &.invert {
