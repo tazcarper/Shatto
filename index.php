@@ -42,7 +42,7 @@
               while ( have_posts() ) :
                 the_post();
               $thumb = get_field('thumbnail_image');
-              $largeImage = get_field('large_image');
+              
                 $i++;
                 $columns_this_row = $i % 3; ?>
             <?php if ( $i === 1 || $i === 3 ) : ?>

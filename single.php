@@ -8,11 +8,13 @@
             if ( have_posts() ) :
               $i = 0;
               while ( have_posts() ) :
-                the_post(); ?>
+                the_post(); 
+              $largeImage = get_field('large_image');
+              ?>
 
             <div class="row">
               <div class="col-md-12">
-                <img src="//placehold.it/1920x800">
+                <img src="<?php echo $largeImage['url'] ?>">
               </div>
               <div class="col-md-10 col-md-offset-1 overlapPhoto">
                 <h6><?php the_time('M j, Y'); ?></h6>
