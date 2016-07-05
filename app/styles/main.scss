@@ -316,6 +316,14 @@ main {
   @include MQ(maxM) {
     font-size: 18px;
   }
+  &.success {
+    background-color:green;
+    border-color:green;
+    &:hover, &:active, &:focus {
+       background-color:green;
+      border-color:green;
+    }
+  }
   &.invert {
     background-color: $black;
     color: $white;

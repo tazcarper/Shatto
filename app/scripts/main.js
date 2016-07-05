@@ -2105,9 +2105,12 @@
           }).success(function(data) {
             if (data.response.is_valid) {
               // hide form
-             
+             var newsletterBtn = $('#newsletterSignUpForm .btn');
               $('.newsletterSignUpThanks').fadeIn();
-              $('#newsletterSignUpForm .btn').addClass('success').html('<span class="icon-checkmark"></span> Success!');
+              newsletterBtn.addClass('success').html('<span class="icon-checkmark"></span> Success!');
+              var successReset = window.setTimeout(function(e){
+                newsletterBtn.removeClass('success').html('Sign Up');
+              },10000);
               // fire analytics event
               // ga();
             } else {
