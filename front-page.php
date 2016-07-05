@@ -142,6 +142,7 @@
           <form class="form-inline" id="newsletterSignUpForm">
               <div class="form-group">
                 <input id="newsletterSignUp" name="newsletterSignUp" placeholder="Email Address" class="form-control"/>
+                <div class="newsletterSignUpThanks"><span class="icon-checkmark"></span>Success! You're signed up!</div>
               </div>
               <button class="form-control btn invert">Sign Up</button>
             </form>

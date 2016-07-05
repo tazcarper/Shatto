@@ -2107,7 +2107,7 @@
               // hide form
              
               $('.newsletterSignUpThanks').fadeIn();
-
+              $('#newsletterSignUpForm .btn').css({'background-color': 'green'}).html('<span class="icon-checkmark"></span>');
               // fire analytics event
               // ga();
             } else {
