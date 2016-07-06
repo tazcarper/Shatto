@@ -1,8 +1,8 @@
 section.contact {
-	background: url('../images/contact/bg.jpg') top center repeat-x;
+	background: url('../images/contact/bg.jpg') 0 0 no-repeat;
 
 	@include MQ(maxL) {
-		background-position: 60% 100%;
+		//background-position: 60% 100%;
 	}
 	@include MQ(maxM) {
 		background: white;
@@ -733,9 +733,12 @@ textarea {
 }
 .videoSteam {
 	position: absolute !important;
-	left: -350px;
+	left: -7px;
 	width: 810px;
 	height: 682px;
 	z-index: 0;
 	top: 0;
+	@include MQ(maxML) {
+		display:none;
+	}
 }

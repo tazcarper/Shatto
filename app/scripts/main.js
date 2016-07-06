@@ -1381,7 +1381,7 @@
       // on ready
     $(function() {
 
-     
+
 
       var maxHeight = 0,
         halfHeight = 0;
@@ -1880,6 +1880,8 @@
 
         // });
 
+
+
         if (Modernizr.mq('(max-width: 767px)')) {
 
           $('#mobileContact').formValidation({
@@ -1955,6 +1957,18 @@
             });
           })
         } else {
+          $('.videoSteam').vide({
+            mp4: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/shattoSteam_loseless.mp4',
+            webm: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/shattoSteam_loseless.webm',
+            ogv: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/shattoSteam_loseless.ogv'
+          }, {
+            posterType: 'none',
+            autoplay: true,
+            position: '50% 50%',
+            volume: 1,
+            loop: true,
+            resizing: true
+          });
           $('#nl-form').formValidation({
             framework: 'bootstrap',
             fields: {

@@ -1,10 +1,9 @@
 <?php get_header(); ?>
 
     <section class="container-fluid mainContent hero contact">
+     <div class="videoSteam"></div>
       <div class="container">
-      <!-- <div class="videoSteam">
-        
-      </div> -->
+     
         <div class="row">
           <div class="col-lg-8 col-lg-offset-4 col-md-10 col-md-offset-2 formBG hidden-xs">
             <form id="nl-form" class="contactForm ">
