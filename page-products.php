@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div id="trigger"></div>
-<section class="mainContent productPage hero">
+<section class="mainContent productPage hero" data-loaded="false">
   <div class="container">
     <div class="caps">
       

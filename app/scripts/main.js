@@ -1380,6 +1380,9 @@
       }
       // on ready
     $(function() {
+
+     
+
       var maxHeight = 0,
         halfHeight = 0;
       var widthMatch = matchMedia("all and (max-width: 767px)");

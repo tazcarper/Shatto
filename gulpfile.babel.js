@@ -113,7 +113,6 @@ gulp.task('concatScripts', function() {
         'app/scripts/map/jlocator/view/map.js',
         'app/scripts/map/jlocator/models/store.js',
         'app/scripts/map/jlocator/controls/autocomplete.js',
-        // 'app/scripts/map/jlocator/controls/autocomplete-radius.js',
         'app/scripts/plugins/sticky.js',
         'app/scripts/plugins/slick.js',
         'app/scripts/plugins/jquery.vide.js',

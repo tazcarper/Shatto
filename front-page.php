@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div id="floatingTrigger">
-  <section class="container-fluid mainContent hero">
+  <section class="container-fluid mainContent hero" >
     <div class="container">
       <div class="row">
         <div class="col-md-12 desktop text-center">
@@ -59,7 +59,7 @@
       </div>
       <div class="row">
         <div class="col-md-12 productImages home">
-          <div id="floatingBottle" class="img-1">
+          <div id="floatingBottle" class="img-1" data-loaded='false'>
           <?php 
           if( get_field('alert_active') ) {
             ?>

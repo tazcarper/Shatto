@@ -1,4 +1,5 @@
-
+</main>
+</div>
 <div class="footer container-fluid">
   <div class="container">
     <div class="row">
@@ -11,7 +12,7 @@
       <div class="col-sm-2 col-sm-offset-1 hidden-xs">
         <ul>
           <li><a href="products">Products</a>
-            <ul>
+            <ul style="margin-top:5px;">
               <li><a href="<?php echo esc_url( home_url( '/products/#milk' ) ); ?>">Milk</a></li>
               <li><a href="<?php echo esc_url( home_url( '/products/#flavoredMilk' ) ); ?>">Flavored Milks</a></li>
               <li><a href="<?php echo esc_url( home_url( '/products/#cheese' ) ); ?>">Cheeses</a></li>
@@ -31,24 +32,24 @@
           </li>
         </ul>
         <ul>
-          <li><a href="<?php echo esc_url( home_url( '/locate' ) ); ?>">Events/Tours</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/locate' ) ); ?>">Store Locator</a></li>
         </ul>
         <ul>
           <!-- <li><a href="/merchandise">Merchandise</a></li> -->
         </ul>
       </div>
       <div class="col-sm-2  hidden-xs">
-        <ul>
-          <li><a href="<?php echo esc_url( home_url( '/about' ) ); ?>">About Shatto</a></li>
-            <ul>
-              <!-- <li><a href="/faq">FAQs</a></li>
-              <li><a href="/history">History</a></li> -->
+        <ul >
+          <li><a href="<?php echo esc_url( home_url( '/about' ) ); ?>">About Shatto</a>
+            <ul style="margin-top:5px;">
+              <li><a href="<?php echo esc_url( home_url( '/faq' ) ); ?>">Faqs</a></li>
+              <!-- <li><a href="/history">History</a></li> -->
             </ul>
           </li>
         </ul>
-        <ul>
+        <!-- <ul>
           <li><a href="<?php echo esc_url( home_url( '/news' ) ); ?>">News</a></li>
-        </ul>
+        </ul> -->
         <ul>
           <li><a href="<?php echo esc_url( home_url( '/contact' ) ); ?>">Contact</a></li>
             <ul>

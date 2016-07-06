@@ -60,5 +60,5 @@
        
       </div>
     </header>
-  </body>
-  <main>
+  <div id="transitionWrapper">
+  <main class="innerContentContainer">
