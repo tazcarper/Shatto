@@ -1958,9 +1958,9 @@
           })
         } else {
           $('.videoSteam').vide({
-            mp4: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/shattoSteam_loseless.mp4',
-            webm: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/shattoSteam_loseless.webm',
-            ogv: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/shattoSteam_loseless.ogv'
+            mp4: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/shattoSteam_loseless4.mp4',
+            webm: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/shattoSteam_loseless4.webm',
+            ogv: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/shattoSteam_loseless4.ogv'
           }, {
             posterType: 'none',
             autoplay: true,
