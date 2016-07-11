@@ -1340,14 +1340,45 @@
             }
           },
           // flavored
-          "unsweetenedTea": {
-            "title": "Unsweetened Tea",
+          "sweetenedTea": {
+            "title": "Sweet Tea",
             "category": "non-dairy",
             "sizes": {
               'half-gallon': 8
             },
             "image": "/half-gallons/final/large/ShattoMilk_HalfGallon_SweetTea.png",
-            "nutrition": {}
+            "nutrition": {
+              "Serving Size": "1 Cup (240 mL)",
+              "Servings Per Container": 8,
+              "Calories": 120,
+              "Calories from Fat": 0,
+              "Total Fat (grams)": 0,
+              "Total Fat (% of Daily Value)": 0,
+              "Saturated Fat (grams)": 0,
+              "Saturated Fat (% of Daily Value)": 0,
+              "Cholesterol (mg)": 0,
+              "Cholesterol (% of Daily Value)": 0,
+              "Sodium (mg)": 50,
+              "Sodium (% of Daily Value)": 1,
+              "Total Carbohydrates (grams)": 29,
+              "Total Carbohydrates (% of Daily Value)": 10,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 29,
+              "Proteins (grams)": 0,
+              "Vitamin A": 0,
+              "Vitamin C": 4,
+              "Vitamin D": 0,
+              "Iron": 0,
+              "Calcium": 0,
+              "Total Fat": 0,
+              "Sat. Fat": 0,
+              "Cholesterol": 0,
+              "Sodium": 0,
+              "Total Carbohydrates": 0,
+              "Dietary Fiber": 0,
+              "Ingredients": "Water, Sugar, Tea, Carmel Color, Citric Acid, Cellulose Gum, Artificial Flavor, Sodium Benzoate, and Potassium Sorbate."
+            }
           },
           "fruitPunch": {
             "title": "Fruit Punch",
@@ -1356,7 +1387,38 @@
               'half-gallon': 8
             },
             "image": "/half-gallons/final/large/ShattoMilk_HalfGallon_FruitPunch.png",
-            "nutrition": {}
+            "nutrition": {
+              "Serving Size": "1 Cup (240 mL)",
+              "Servings Per Container": 8,
+              "Calories": 130,
+              "Calories from Fat": 0,
+              "Total Fat (grams)": 0,
+              "Total Fat (% of Daily Value)": 0,
+              "Saturated Fat (grams)": 0,
+              "Saturated Fat (% of Daily Value)": 0,
+              "Cholesterol (mg)": 0,
+              "Cholesterol (% of Daily Value)": 0,
+              "Sodium (mg)": 25,
+              "Sodium (% of Daily Value)": 1,
+              "Total Carbohydrates (grams)": 30,
+              "Total Carbohydrates (% of Daily Value)": 10,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 30,
+              "Proteins (grams)": 0,
+              "Vitamin A": 0,
+              "Vitamin C": 2,
+              "Vitamin D": 0,
+              "Iron": 0,
+              "Calcium": 0,
+              "Total Fat": 0,
+              "Sat. Fat": 0,
+              "Cholesterol": 0,
+              "Sodium": 0,
+              "Total Carbohydrates": 0,
+              "Dietary Fiber": 0,
+              "Ingredients": "Water, Sucrose, Pineapple Juice Concentrate, Propylene Glycol, Modified Food Starch, FD&C Red #40, Glyceryal Abiatate, FD&C Blue #2, Sodium Benzoate, and Potassium Sorbate."
+            }
           },
           "lemonade": {
             "title": "Lemonade",
@@ -1365,7 +1427,38 @@
               'half-gallon': 8
             },
             "image": "/half-gallons/final/large/ShattoMilk_HalfGallon_Lemonade.png",
-            "nutrition": {}
+            "nutrition": {
+              "Serving Size": "1 Cup (240 mL)",
+              "Servings Per Container": 8,
+              "Calories": 120,
+              "Calories from Fat": 0,
+              "Total Fat (grams)": 0,
+              "Total Fat (% of Daily Value)": 0,
+              "Saturated Fat (grams)": 0,
+              "Saturated Fat (% of Daily Value)": 0,
+              "Cholesterol (mg)": 0,
+              "Cholesterol (% of Daily Value)": 0,
+              "Sodium (mg)": 5,
+              "Sodium (% of Daily Value)": 0,
+              "Total Carbohydrates (grams)": 30,
+              "Total Carbohydrates (% of Daily Value)": 10,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 27,
+              "Proteins (grams)": 0,
+              "Vitamin A": 0,
+              "Vitamin C": 120,
+              "Vitamin D": 0,
+              "Iron": 0,
+              "Calcium": 8,
+              "Total Fat": 0,
+              "Sat. Fat": 0,
+              "Cholesterol": 0,
+              "Sodium": 0,
+              "Total Carbohydrates": 0,
+              "Dietary Fiber": 0,
+              "Ingredients": "Water, Sugar, Lemon Juice Concentrate, Gum Arabic, Natural Flavors, Citric Acid, Glycerol Ester of Wood Rosin, BVO, Natural Flavors, Citric Acid, Sodium Benzoate and Potassium Sorbate (perservatives), FD&C Yellow #5."
+            }
           },
           "orangeDrink": {
             "title": "Orange Drink",
@@ -1374,8 +1467,39 @@
               'half-gallon': 8
             },
             "image": "/half-gallons/final/large/ShattoMilk_HalfGallon_OrangeDrink.png",
-            "nutrition": {}
-          },
+            "nutrition": {
+              "Serving Size": "1 Cup (240 mL)",
+              "Servings Per Container": 8,
+              "Calories": 120,
+              "Calories from Fat": 0,
+              "Total Fat (grams)": 0,
+              "Total Fat (% of Daily Value)": 0,
+              "Saturated Fat (grams)": 0,
+              "Saturated Fat (% of Daily Value)": 0,
+              "Cholesterol (mg)": 0,
+              "Cholesterol (% of Daily Value)": 0,
+              "Sodium (mg)": 50,
+              "Sodium (% of Daily Value)": 1,
+              "Total Carbohydrates (grams)": 29,
+              "Total Carbohydrates (% of Daily Value)": 10,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 29,
+              "Proteins (grams)": 0,
+              "Vitamin A": 0,
+              "Vitamin C": 4,
+              "Vitamin D": 0,
+              "Iron": 0,
+              "Calcium": 0,
+              "Total Fat": 0,
+              "Sat. Fat": 0,
+              "Cholesterol": 0,
+              "Sodium": 0,
+              "Total Carbohydrates": 0,
+              "Dietary Fiber": 0,
+              "Ingredients": "Water, Sucrose, Concentrated Orange Juice, Citric Acid, Modified Food Starch, Propylene Glycol, FD&C Yellow #6, Xantham Gum, Glyceryal Abiatate, Sodium Benzoate, and Potassium Sorbate."
+            }
+          }
         }
       }
       // on ready
@@ -2227,6 +2351,8 @@
 
         var imagePath = $('.product img').attr('src');
         imagePath = imagePath.substring(0, imagePath.indexOf('products/')) + 'products';
+
+
         $('.productImages').on('click', '.product', function(e) {
           var product = $(this),
             theProduct = product.data('product'),
@@ -2372,7 +2498,7 @@
                 'src': imagePath + '/loading_spinner.gif',
                 'data-src': combinedPath,
                 'data-src-retina': retinaPath
-              }).removeClass().addClass(productCategory).unveil(5, function() {
+              }).addClass(productCategory).unveil(15, function() {
                 $(this).removeClass('hideIt');
               });
             } else {
@@ -2384,7 +2510,7 @@
           } else {}
 
           // Remove this conditional once nutrition facts added.
-          if (curCat !== 'artisan_cheese' && curCat !== 'non-dairy') {
+          if (curCat !== 'artisan_cheese') {
             overlayToggle();
           }
 
@@ -2395,12 +2521,13 @@
           var productsToShow = $('section.productSection').waypoint(function(direction) {
             if (!$(this.element).hasClass('visible')) {
               $(this.element).addClass('visible');
-              $(this.element).find('.product').addClass('reveal');
-              var theImg = $(this.element).find('.product').find('img.main');
+              //$(this.element).find('.product').addClass('reveal');
+              var theProd = $(this.element).find('.product'),
+              theImg = theProd.find('img.main');
               theImg.unveil(200, function() {
                 $(this).load(function() {
                   this.style.opacity = 1;
-
+                  theProd.addClass('reveal')
 
                 });
               });

@@ -444,10 +444,10 @@
         </div>
         <div class="row">
           <div class="col-md-12 productImages">
-            <div data-product="unsweetenedTea" class="product trigger text-center unsweetenedTea"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/loading_spinner.gif" data-src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/SweetTea.png" data-src-retina="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/SweetTea_2x.png" class="main">
+            <div data-product="sweetenedTea" class="product trigger text-center unsweetenedTea"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/loading_spinner.gif" data-src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/SweetTea.png" data-src-retina="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/SweetTea_2x.png" class="main">
               <div class="bottleShadow"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/shadow.png"></div>
               <div class="productName">
-                <h5>UNSWEETENED TEA</h5>
+                <h5>SWEETENED TEA</h5>
                 <p class="factsLabel">nutrition facts</p>
               </div>
             </div>

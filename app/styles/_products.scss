@@ -762,7 +762,13 @@ $addedPadding: 35px;
 				@include transform(translate(0, 0px));
 
 				// ITEM SELECTED
-
+				&.reveal {
+					.bottleShadow {
+						img {
+							opacity:1;
+						}
+					}
+				}
 				&.selected.reveal {
 					right: 0;
 					z-index: 20;

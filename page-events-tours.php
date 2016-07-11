@@ -140,6 +140,7 @@
 <div class="row">
 <div class="col-md-12 text-center">
 <h3><?php the_field('gallery_title'); ?></h3>
+
 <div class="gallerySlider">
   <div class="popUp">
     <div class="row">
@@ -154,8 +155,8 @@
           <img src="<?php echo get_template_directory_uri(); ?>/dist/images/events/temp1_large.jpg" alt="">
         </div>
         <div class="description">
-          <p>Libris pertinacia cu sea, qui ea omnes eirmod recteque. Ius ne viderer tacimates theophrastus. Mazim ridens aperiri ad mei, nec nobis epicurei ne. Cu quot aliquam adolescens per, no modus suavitate eam. Vix vivendo commune ad, convenire definitiones cu eos.</p>
-          <p>Libris pertinacia cu sea, qui ea omnes eirmod recteque. Ius ne viderer tacimates theophrastus. Mazim ridens aperiri ad mei, nec nobis epicurei ne. Cu quot aliquam adolescens per, no modus suavitate eam. Vix vivendo commune ad, convenire definitiones cu eos.</p>
+         <!--  <p>Libris pertinacia cu sea, qui ea omnes eirmod recteque. Ius ne viderer tacimates theophrastus. Mazim ridens aperiri ad mei, nec nobis epicurei ne. Cu quot aliquam adolescens per, no modus suavitate eam. Vix vivendo commune ad, convenire definitiones cu eos.</p>
+          <p>Libris pertinacia cu sea, qui ea omnes eirmod recteque. Ius ne viderer tacimates theophrastus. Mazim ridens aperiri ad mei, nec nobis epicurei ne. Cu quot aliquam adolescens per, no modus suavitate eam. Vix vivendo commune ad, convenire definitiones cu eos.</p> -->
         </div>
 
       </div>
@@ -170,24 +171,37 @@
       <div class="arrow"></div>
     </div>
   </div>
-  <div class="slide" data-desc="Libris pertinacia cu sea, qui ea omnes eirmod recteque. Ius ne viderer tacimates theophrastus. Mazim ridens aperiri ad mei, nec nobis epicurei ne. Cu quot aliquam adolescens per, no modus suavitate eam. Vix vivendo commune ad, convenire definitiones cu eos." data-largeImage="<?php echo get_template_directory_uri(); ?>/dist/images/events/temp1_large.jpg">
-    <img src="<?php echo get_template_directory_uri(); ?>/dist/images/events/temp1.jpg" alt="">
+
+
+<?php
+
+// check if the repeater field has rows of data
+if( have_rows('gallery_images') ):
+
+  // loop through the rows of data
+    while ( have_rows('gallery_images') ) : the_row(); 
+$galleryImage = get_sub_field('slide_image');
+
+
+
+
+  ?>
+
+  <div class="slide" data-largeImage="<?php echo $galleryImage['sizes']['large']; ?>">
+    <img src="<?php echo $galleryImage['sizes']['medium']; ?>" alt="">
   </div>
-  <div class="slide" data-desc="Libris pertinacia cu sea, qui ea omnes eirmod recteque. Ius ne viderer tacimates theophrastus. Mazim ridens aperiri ad mei, nec nobis epicurei ne. Cu quot aliquam adolescens per, no modus suavitate eam. Vix vivendo commune ad, convenire definitiones cu eos." data-largeImage="<?php echo get_template_directory_uri(); ?>/dist/images/events/temp3_large.jpg">
-    <img src="<?php echo get_template_directory_uri(); ?>/dist/images/events/temp2.jpg" alt="">
-  </div>
-  <div class="slide" data-desc="Libris pertinacia cu sea, qui ea omnes eirmod recteque. Ius ne viderer tacimates theophrastus. Mazim ridens aperiri ad mei, nec nobis epicurei ne. Cu quot aliquam adolescens per, no modus suavitate eam. Vix vivendo commune ad, convenire definitiones cu eos." data-largeImage="<?php echo get_template_directory_uri(); ?>/dist/images/events/temp3_large.jpg">
-    <img src="<?php echo get_template_directory_uri(); ?>/dist/images/events/temp3.jpg" alt="">
-  </div>
-  <div class="slide" data-desc="Libris pertinacia cu sea, qui ea omnes eirmod recteque. Ius ne viderer tacimates theophrastus. Mazim ridens aperiri ad mei, nec nobis epicurei ne. Cu quot aliquam adolescens per, no modus suavitate eam. Vix vivendo commune ad, convenire definitiones cu eos." data-largeImage="<?php echo get_template_directory_uri(); ?>/dist/images/events/temp1_large.jpg">
-    <img src="<?php echo get_template_directory_uri(); ?>/dist/images/events/temp1.jpg" alt="">
-  </div>
-  <div class="slide" data-desc="Libris pertinacia cu sea, qui ea omnes eirmod recteque. Ius ne viderer tacimates theophrastus. Mazim ridens aperiri ad mei, nec nobis epicurei ne. Cu quot aliquam adolescens per, no modus suavitate eam. Vix vivendo commune ad, convenire definitiones cu eos." data-largeImage="<?php echo get_template_directory_uri(); ?>/dist/images/events/temp3_large.jpg">
-    <img src="<?php echo get_template_directory_uri(); ?>/dist/images/events/temp2.jpg" alt="">
-  </div>
-  <div class="slide" data-desc="Libris pertinacia cu sea, qui ea omnes eirmod recteque. Ius ne viderer tacimates theophrastus. Mazim ridens aperiri ad mei, nec nobis epicurei ne. Cu quot aliquam adolescens per, no modus suavitate eam. Vix vivendo commune ad, convenire definitiones cu eos." data-largeImage="<?php echo get_template_directory_uri(); ?>/dist/images/events/temp3_large.jpg">
-    <img src="<?php echo get_template_directory_uri(); ?>/dist/images/events/temp3.jpg" alt="">
-  </div>
+
+       
+<?php 
+    endwhile;
+
+else :
+
+    // no rows found
+
+endif;
+
+?>
 </div>
 </div>
 </div>
