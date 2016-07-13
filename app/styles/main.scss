@@ -189,7 +189,7 @@ main {
   border-top: 1px solid $darkGrey;
   position: relative;
   z-index: 2;  /* fix bug on iOS */
-  min-height: 100vh;
+  //min-height: 100%;
   overflow: hidden;
   background: white;
   -webkit-overflow-scrolling: touch;

@@ -57,8 +57,8 @@
   </div>
   <div class="row visible-xs">
     <div class="col-xs-10 center-block">
-      <h2 class="visible-xs text-center">NEED A HEADLINE</h2>
-      <p class="visible-xs text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac tortor dolor. Phasellus cursus lacus ut mi tristique, non condimentum felis pretium. Suspendisse tempus leo sodales orci pulvinar, ac pellentesque est eleifend. Sed elementum orci lacus, in pellentesque dolor ultricie. </p>
+      <h2 class="visible-xs text-center">PRODUCTS</h2>
+      <p class="visible-xs text-center">Local products from local cows.</p>
       <div class="mobileHeroImg">
         <div class="inner"></div>
       </div>

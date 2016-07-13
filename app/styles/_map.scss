@@ -91,11 +91,17 @@
 			font-size:1em;
 			margin-left:12px;
 			border-radius: 50px;
+			img {
+				display:none;
+			}
 			@include MQ(maxM) {
 				//display:none;
 				float: none;
 				display:inline;
 				background:none !important;
+				img {
+					display:inline-block;
+				}
 			}
 		}
 		input {
@@ -132,7 +138,7 @@
 		}
 		@include transition(all .35s ease-out);
 		@include MQ(maxM){
-			top:-335px;
+			//top:-335px;
 			max-width:100%;
 			width:100%;
 			
