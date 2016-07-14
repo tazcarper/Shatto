@@ -62,4 +62,4 @@ control.$jplistBox.trigger(control.options.force_ask_event,[false]);});}if($grid
 control.$jplistBox.addClass('grid'); //update last status
 control.events.lastStatus=jQuery.fn.jplist.controls.Views.getStatus(false,control); //force ask event			
 control.$jplistBox.trigger(control.options.force_ask_event,[false]);});}};})(jQuery);
-//# sourceMappingURL=views.js.map
+//# sourceMappingURL=../../../map/jplist/controls/views.js.map

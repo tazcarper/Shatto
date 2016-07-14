@@ -33,4 +33,4 @@ function grabFile(file){var request=getHTTPObject();if(request){request.onreadys
 function displayResponse(request){var insertContentHere=document.getElementById("outdated");if(request.readyState==4){if(request.status==200||request.status==304){insertContentHere.innerHTML=request.responseText;}else {insertContentHere.innerHTML=ajaxEnglishDefault;}startStylesAndEvents();}return false;} //end displayResponse
 ////////END of outdatedBrowser function
 };
-//# sourceMappingURL=oldBrowser.js.map
+//# sourceMappingURL=../plugins/oldBrowser.js.map

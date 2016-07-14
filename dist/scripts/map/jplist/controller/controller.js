@@ -132,4 +132,4 @@ self.$jplistBox.trigger(self.options.force_ask_event,[true]);}}return $.extend(t
 	* @property {jQuery.fn.jplist.controller.dataSourceJSFunction} dataSourceJSFunction - dataSourceJSFunction object
 	*/jQuery.fn.jplist.controller.Controller=function($jplistBox,options){ //call constructor
 return new Init($jplistBox,options);};})(jQuery);
-//# sourceMappingURL=controller.js.map
+//# sourceMappingURL=../../../map/jplist/controller/controller.js.map

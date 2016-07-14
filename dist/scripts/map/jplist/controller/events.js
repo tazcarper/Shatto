@@ -15,4 +15,4 @@
 	* @property {Object} lastStatus - last status caused html rebuild
 	*/jQuery.fn.jplist.controller.Events=function($jplistBox,options){ //call constructor
 return new Init($jplistBox,options);};})(jQuery);
-//# sourceMappingURL=events.js.map
+//# sourceMappingURL=../../../map/jplist/controller/events.js.map

@@ -115,4 +115,4 @@ initMap(self,self.$mapRoot);return $.extend(this,self);}; /**
 	* @property {Object} directionsDisplay - google directions display
 	*/jQuery.fn.jlocator.map=function($root,options){ //call constructor
 return new Init($root,options);};})(jQuery);
-//# sourceMappingURL=map.js.map
+//# sourceMappingURL=../../../map/jlocator/view/map.js.map

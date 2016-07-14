@@ -96,4 +96,4 @@ $window.on('unload.'+PLUGIN_NAME,function(){return false;}); // Auto initializat
 // Also you can pass options throw the 'data-vide-options' attribute
 // 'data-vide-options' must be like 'muted: false, volume: 0.5'
 $(document).find('[data-'+PLUGIN_NAME+'-bg]').each(function(i,element){var $element=$(element);var options=$element.data(PLUGIN_NAME+'-options');var path=$element.data(PLUGIN_NAME+'-bg');$element[PLUGIN_NAME](path,options);});});});
-//# sourceMappingURL=jquery.vide.js.map
+//# sourceMappingURL=../plugins/jquery.vide.js.map

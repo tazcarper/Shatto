@@ -61,4 +61,4 @@ initEvents(self);return $.extend(this,self);}; /**
 	* @property {jQueryObject} $noResults - jplist no results element
 	*/jQuery.fn.jplist.controller.Server=function($jplistBox,$itemsBox,$noResults,options){ //call constructor
 return new Init($jplistBox,$itemsBox,$noResults,options);};})(jQuery);
-//# sourceMappingURL=server.js.map
+//# sourceMappingURL=../../../map/jplist/controller/server.js.map

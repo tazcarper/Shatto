@@ -68,4 +68,4 @@ if(status.data.isChecked!==true){control.$control.get(0).checked=false;}else {co
 	* @param {jQuery.fn.jplist.view.PanelControl} control
 	* @memberOf jQuery.fn.jplist.controls.CheckboxFilter
 	*/jQuery.fn.jplist.controls.CheckboxFilter.initEvents=function(control){control.$control.off().change(function(){control.events.lastStatus=jQuery.fn.jplist.controls.CheckboxFilter.getStatus(false,control);control.$jplistBox.trigger(control.options.force_ask_event,[false]);});};})(jQuery);
-//# sourceMappingURL=checkbox-filters.js.map
+//# sourceMappingURL=../../../../map/jplist/controls/toggle-filters/checkbox-filters.js.map

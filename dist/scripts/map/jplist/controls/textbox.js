@@ -62,4 +62,4 @@ control.$control.val(status.data.value);}}}; /**
 	*/jQuery.fn.jplist.controls.Textbox.initEvents=function(control){var eventName='keyup';if(control.controlTypeOptions&&control.controlTypeOptions.eventName){ //init event name
 eventName=control.controlTypeOptions.eventName;}control.$control.off(eventName).on(eventName,function(){ //update last status
 control.events.lastStatus=jQuery.fn.jplist.controls.Textbox.getStatus(false,control);control.$jplistBox.trigger(control.options.force_ask_event,[false]);});};})(jQuery);
-//# sourceMappingURL=textbox.js.map
+//# sourceMappingURL=../../../map/jplist/controls/textbox.js.map

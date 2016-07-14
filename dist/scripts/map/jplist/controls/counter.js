@@ -51,4 +51,4 @@ control.$control.data('dataMode',dataMode);control.$control.data('dataType',data
 				 * @param {Array.<jQuery.fn.jplist.models.Status>} statuses
 				 * @param {jQuery.fn.jplist.services.Collection} collection
 				 */control.$jplistBox.on(control.options.answer_event,function(e,statuses,collection){drawCounter(control,collection.dataview);});}break;}};})(jQuery);
-//# sourceMappingURL=counter.js.map
+//# sourceMappingURL=../../../map/jplist/controls/counter.js.map

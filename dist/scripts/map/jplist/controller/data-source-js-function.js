@@ -48,4 +48,4 @@ initEvents(self);return $.extend(this,self);}; /**
 	* @property {jQueryObject} $preloader - jplist preloader element
 	*/jQuery.fn.jplist.controller.dataSourceJSFunction=function($jplistBox,$itemsBox,$noResults,options){ //call constructor
 return new Init($jplistBox,$itemsBox,$noResults,options);};})(jQuery);
-//# sourceMappingURL=data-source-js-function.js.map
+//# sourceMappingURL=../../../map/jplist/controller/data-source-js-function.js.map

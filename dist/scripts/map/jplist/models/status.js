@@ -21,4 +21,4 @@
 this.name=name;this.type=type; //drop-down, placeholder, textbox
 this.data=data; //related data
 this.cookies=cookies;this.category=category;};})(jQuery);
-//# sourceMappingURL=status.js.map
+//# sourceMappingURL=../../../map/jplist/models/status.js.map
