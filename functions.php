@@ -426,3 +426,25 @@ class Shatto_Walker_Menu extends Walker_Nav_Menu
   }
 }
 
+add_action( 'gform_after_submission_3', 'post_to_third_party', 10, 2 );
+function post_to_third_party( $entry, $form ) {
+
+  $post_url = 'https://us13.api.mailchimp.com/3.0/lists/fbf532618c/members/';
+
+  $headers = array(
+    'Authorization' => 'Basic ' . base64_encode( "anystring:9f68c72095b397f02ea2144692cb435b-us13" ),
+  );
+  $body = array(
+    'email_address' => rgar( $entry, '1' ),
+    'status' => 'subscribed'
+  );
+  $data = array(
+    'headers' => $headers,
+    'body' => json_encode($body)
+  );
+  GFCommon::log_debug( 'gform_after_submission: body => ' . print_r( $data, true ) );
+
+  $request = new WP_Http();
+  $response = $request->post( $post_url, $data );
+  GFCommon::log_debug( 'gform_after_submission: response => ' . print_r( $response, true ) );
+}

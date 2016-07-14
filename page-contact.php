@@ -3,7 +3,7 @@
     <section class="container-fluid mainContent hero contact">
      <div class="videoSteam"></div>
       <div class="container">
-     
+
         <div class="row">
           <div class="col-lg-8 col-lg-offset-4 col-md-10 col-md-offset-2 formBG hidden-xs">
             <form id="nl-form" class="contactForm ">
@@ -12,10 +12,10 @@
                 <p>My name is
                   <span class="form-group"><input type="text" placeholder="__________" value="" id="name" class="name" name="name" required></span><span>&nbsp;</span>and I wanted to send you a note about
                   <select id="subject" name="subject">
-                    <option value="1" selected>one of your products.</option>
-                    <option value="2">touring the farm.</option>
-                    <option value="3">a question I had.</option>
-                    <option value="4">something random.</option>
+                    <option value="one of your products" selected>one of your products.</option>
+                    <option value="touring the farm">touring the farm.</option>
+                    <option value="a question I had">a question I had.</option>
+                    <option value="something random">something random.</option>
                   </select>
                 </p>
                 <p>More specifically,
@@ -28,7 +28,7 @@
                 <button class="submit btn invert">SEND</button>
                 <div class="formOverlay"></div>
               </div>
-              
+
             </form>
             <div class="sentSuccess">
                 <h1>We got your message.</h1>
