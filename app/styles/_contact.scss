@@ -184,8 +184,23 @@ $black_50:rgba(0, 0, 0, 0.5);
 	}
 	input {
 		@include MQ(M) {
-			@extend %contact_reset_1;
-			@extend %contact_reset_2;
+			border: none;
+	background: transparent;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+			line-height: inherit;
+	display: inline-block;
+	color: black;
+	cursor: pointer;
+	font-weight: 500;
+	//border-bottom: 1px dashed $color_apple_blossom_approx;
+	word-break: break-word;
 		}
 		&:focus {
 			outline: none;
@@ -201,8 +216,23 @@ $black_50:rgba(0, 0, 0, 0.5);
 	}
 	select {
 		@include MQ(M) {
-			@extend %contact_reset_1;
-			@extend %contact_reset_2;
+			border: none;
+	background: transparent;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+			line-height: inherit;
+	display: inline-block;
+	color: black;
+	cursor: pointer;
+	font-weight: 500;
+	//border-bottom: 1px dashed $color_apple_blossom_approx;
+	word-break: break-word;
 		}
 		@include MQ(maxM) {
 			display: inline;
@@ -368,7 +398,13 @@ $black_50:rgba(0, 0, 0, 0.5);
 	}
 }
 .formField-toggle {
-	@extend %contact_reset_2;
+	line-height: inherit;
+	display: inline-block;
+	color: black;
+	cursor: pointer;
+	font-weight: 500;
+	//border-bottom: 1px dashed $color_apple_blossom_approx;
+	word-break: break-word;
 }
 .no-touch {
 	.formDropdown ul li:hover {
@@ -587,7 +623,7 @@ textarea {
 	}
 }
 .nl-submit:before {
-	@extend %extend_3;
+	
 	content: "\ea10";
 	color: $white;
 	float: left;
@@ -596,7 +632,7 @@ textarea {
 	background: $color_tradewind_approx;
 }
 .formField-go:before {
-	@extend %extend_3;
+	
 	content: "\ea10";
 	font-size: 0.8em;
 	color: $white;
