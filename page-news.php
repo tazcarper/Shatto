@@ -4,7 +4,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-md-offset-2 center">
-            <p class="largerCopy">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p class="largerCopy">The cows think gossip is unbecoming and unwholesome. So, you can be darn sure that what you see here is a fact. Or at least an informed opinion. Or maybe just a wry observation.</p>
            <form class="form-inline" id="newsletterSignUpForm">
               <div class="form-group">
                 <input id="newsletterSignUp" name="newsletterSignUp" placeholder="Email Address" class="form-control"/>
@@ -64,5 +64,4 @@
       </div>
     </section>
 
-<?php get_footer(); ?>
 <?php get_footer(); ?>

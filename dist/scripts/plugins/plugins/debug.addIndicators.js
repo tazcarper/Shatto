@@ -188,4 +188,4 @@ _util.css(e,{position:"absolute",overflow:"visible",width:0,height:0});e.appendC
 var inner=document.createElement('div');inner.textContent="trigger";_util.css(inner,{position:"relative"}); // inner wrapper for right: 0 and main element has no size
 var w=document.createElement('div');_util.css(w,{position:"absolute",overflow:"visible","border-width":0,"border-style":"solid",color:color,"border-color":color});w.appendChild(inner); // wrapper
 var e=document.createElement('div');_util.css(e,{position:"fixed",overflow:"visible","white-space":"nowrap","pointer-events":"none","font-size":FONT_SIZE});e.style.zIndex=ZINDEX;e.appendChild(w);return e;}};});
-//# sourceMappingURL=debug.addIndicators.js.map
+//# sourceMappingURL=../../plugins/plugins/debug.addIndicators.js.map

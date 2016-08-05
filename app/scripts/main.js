@@ -1751,7 +1751,7 @@
       }
 
       function is_touch_device() {
-        return 'ontouchstart' in window // works on most browsers 
+        return 'ontouchstart' in window // works on most browsers
           || 'onmsgesturechange' in window; // works on ie10
       }
 
@@ -2302,7 +2302,7 @@
             }
           }).on('success.form.fv', function(e) {
             event.preventDefault();
-           
+
             var stuffToSend = {
                 'input_values': {}
               },
@@ -2383,10 +2383,7 @@
         $('#newsletterSignUpForm').formValidation({
           framework: 'bootstrap',
           fields: {
-            
-
             newsletterSignUp: {
-             
               validators: {
                 notEmpty: {
                   message: 'We will need your email.'
@@ -2396,17 +2393,16 @@
                 }
               }
             }
-
           }
         }).on('success.form.fv', function(e) {
           event.preventDefault();
-         
+
           var stuffToSend = {
               'input_values': {}
             },
             myForm = $(this);
           // find form values and assign for gravity forms
-         
+
           stuffToSend.input_values.input_1 = myForm.find('input#newsletterSignUp').val();
           $.ajax({
             url: "/gravityformsapi/forms/3/submissions",
@@ -2462,7 +2458,7 @@
               $('html, body').animate({
                 scrollTop: target.offset().top - ($('.headerMain').height() + 95)
               }, 1000);
-              //$(document).scrollTop( target.offset().top - ($('.headerMain').height() + 95) ); 
+              //$(document).scrollTop( target.offset().top - ($('.headerMain').height() + 95) );
               e.preventDefault();
             }
           }

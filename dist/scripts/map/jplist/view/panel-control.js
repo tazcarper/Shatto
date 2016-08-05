@@ -142,4 +142,4 @@ this.options=self['options'];this.$jplistBox=self['$jplistBox'];this.$control=se
 this.type=self['type'];this.action=self['action'];this.name=self['name'];this.category=self['category'];this.cookies=self['cookies']; //control additional properties
 this.controlType=self['controlType'];this.controlTypeClass=self['controlTypeClass'];this.controlTypeOptions=self['controlTypeOptions']; //methods
 this.render=self['render'];this.getPaths=self['getPaths'];this.getStatus=self['getStatus'];this.setStatus=self['setStatus'];this.initEvents=self['initEvents'];this.getStatusByDeepLink=self['getStatusByDeepLink'];this.getDeepLink=self['getDeepLink'];};})(jQuery);
-//# sourceMappingURL=panel-control.js.map
+//# sourceMappingURL=../../../map/jplist/view/panel-control.js.map

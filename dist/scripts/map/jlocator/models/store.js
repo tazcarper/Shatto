@@ -51,4 +51,4 @@ getFullAddress(self);return $.extend(this,self);}; /**
 	* @property {Object} latlng - google latlng object
 	*/jQuery.fn.jlocator.store=function($element,options){ //call constructor
 var self=new Init($element,options);return self;};})(jQuery);
-//# sourceMappingURL=store.js.map
+//# sourceMappingURL=../../../map/jlocator/models/store.js.map

@@ -6,7 +6,7 @@
         <div class="col-md-12 desktop text-center">
           <h1><?php the_field('hero_title'); ?></h1>
           <?php the_field('hero_copy'); ?>
-         
+
         </div>
         <div class="col-xs-12 mobile">
           <object type="image/svg+xml" data="<?php echo get_template_directory_uri(); ?>/dist/images/mobile_hero.svg"></object>
@@ -49,7 +49,7 @@
     </div>
   </section>
   <section class="container-fluid products visible">
-   
+
       <div class="row">
         <div class="col-xs-12 visible-xs"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/rotation/1.png" alt="Shatto Milk" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/rotation/1.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/rotation/1_2x.png 2x" style="display:block; width:100%; max-width:270px; margin:0 auto; margin-bottom:25px;"/></div>
         <div class="col-xs-11 col-sm-12 center-block title">
@@ -60,16 +60,16 @@
       <div class="row">
         <div class="col-md-12 productImages home">
           <div id="floatingBottle" class="img-1" data-loaded='false'>
-          <?php 
+          <?php
           if( get_field('alert_active') ) {
             ?>
-          
+
           <div class="popUp callOut">
           <div class="closeCallout">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30.71 30.71" style="enable-background:new 0 0 30.71 30.71;" xml:space="preserve">
             <line class="st0" x1="0.35" y1="0.35" x2="30.35" y2="30.35"/>
             <line class="st0" x1="30.35" y1="0.35" x2="0.35" y2="30.35"/>
-            </svg> 
+            </svg>
           </div>
 
           <h2> <?php the_field('alert_title'); ?></h2>
@@ -133,7 +133,7 @@
       </div>
     </div>
   </section>
-  <section class="container-fluid signUp desktop">
+  <section class="container-fluid signUp desktop" id="newsletterSignUp">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
