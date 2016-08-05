@@ -1120,7 +1120,36 @@
             },
             "image": "/cheese/final/large/ShattoMilk_Cheese_Artisan_Plattsburg.png",
             "nutrition": {
-
+              "Serving Size": "1 oz",
+              "Servings Per Container": 1,
+              "Calories": 110,
+              "Calories from Fat": 80,
+              "Total Fat (grams)": 9,
+              "Total Fat (% of Daily Value)": 14,
+              "Saturated Fat (grams)": 6,
+              "Saturated Fat (% of Daily Value)": 30,
+              "Cholesterol (mg)": 30,
+              "Cholesterol (% of Daily Value)": 11,
+              "Sodium (mg)": 200,
+              "Sodium (% of Daily Value)": 8,
+              "Total Carbohydrates (grams)": 0,
+              "Total Carbohydrates (% of Daily Value)": 0,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 0,
+              "Proteins (grams)": 7,
+              "Vitamin A": 0,
+              "Vitamin C": 0,
+              "Vitamin D": 0,
+              "Iron": 0,
+              "Calcium": 32,
+              "Total Fat": "9 g",
+              "Sat. Fat": "6 mg",
+              "Cholesterol": "30 mg",
+              "Sodium": "200 mg",
+              "Total Carbohydrates": "0",
+              "Dietary Fiber": "0",
+              "Ingredients": "Pasteurized Cow’s Milk, Salt, Cheese Culture, Vegetable Rennet"
             }
           },
           "smithFork": {
@@ -1131,7 +1160,36 @@
             },
             "image": "/cheese/final/large/ShattoMilk_Cheese_Artisan_SmithFork.png",
             "nutrition": {
-
+              "Serving Size": "1 oz",
+              "Servings Per Container": 1,
+              "Calories": 110,
+              "Calories from Fat": 80,
+              "Total Fat (grams)": 9,
+              "Total Fat (% of Daily Value)": 14,
+              "Saturated Fat (grams)": 6,
+              "Saturated Fat (% of Daily Value)": 30,
+              "Cholesterol (mg)": 30,
+              "Cholesterol (% of Daily Value)": 11,
+              "Sodium (mg)": 200,
+              "Sodium (% of Daily Value)": 8,
+              "Total Carbohydrates (grams)": 0,
+              "Total Carbohydrates (% of Daily Value)": 0,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 0,
+              "Proteins (grams)": 7,
+              "Vitamin A": 0,
+              "Vitamin C": 0,
+              "Vitamin D": 0,
+              "Iron": 0,
+              "Calcium": 32,
+              "Total Fat": "9 g",
+              "Sat. Fat": "6 mg",
+              "Cholesterol": "30 mg",
+              "Sodium": "200 mg",
+              "Total Carbohydrates": "0",
+              "Dietary Fiber": "0",
+              "Ingredients": "Pasteurized Cow’s Milk, Salt, Cheese Culture, Vegetable Rennet"
             }
           },
           "winstead": {
@@ -1142,40 +1200,156 @@
             },
             "image": "/cheese/final/large/ShattoMilk_Cheese_Artisan_WinsteadReserve.png",
             "nutrition": {
-
+              "Serving Size": "1 oz",
+              "Servings Per Container": 1,
+              "Calories": 110,
+              "Calories from Fat": 80,
+              "Total Fat (grams)": 9,
+              "Total Fat (% of Daily Value)": 14,
+              "Saturated Fat (grams)": 6,
+              "Saturated Fat (% of Daily Value)": 30,
+              "Cholesterol (mg)": 30,
+              "Cholesterol (% of Daily Value)": 11,
+              "Sodium (mg)": 200,
+              "Sodium (% of Daily Value)": 8,
+              "Total Carbohydrates (grams)": 0,
+              "Total Carbohydrates (% of Daily Value)": 0,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 0,
+              "Proteins (grams)": 7,
+              "Vitamin A": 0,
+              "Vitamin C": 0,
+              "Vitamin D": 0,
+              "Iron": 0,
+              "Calcium": 32,
+              "Total Fat": "9 g",
+              "Sat. Fat": "6 mg",
+              "Cholesterol": "30 mg",
+              "Sodium": "200 mg",
+              "Total Carbohydrates": "0",
+              "Dietary Fiber": "0",
+              "Ingredients": "Pasteurized Cow’s Milk, Salt, Cheese Culture, Vegetable Rennet"
             }
           },
           "wexford": {
             "title": "Wexford Artisan Cheese",
             "category": "artisan_cheese",
             "sizes": {
-              'pint': 2
+              'container': 1
             },
             "image": "/cheese/final/large/ShattoMilk_Cheese_Artisan_Wexford.png",
             "nutrition": {
-
+              "Serving Size": "1 oz",
+              "Servings Per Container": 1,
+              "Calories": 110,
+              "Calories from Fat": 80,
+              "Total Fat (grams)": 9,
+              "Total Fat (% of Daily Value)": 14,
+              "Saturated Fat (grams)": 6,
+              "Saturated Fat (% of Daily Value)": 30,
+              "Cholesterol (mg)": 30,
+              "Cholesterol (% of Daily Value)": 11,
+              "Sodium (mg)": 200,
+              "Sodium (% of Daily Value)": 8,
+              "Total Carbohydrates (grams)": 0,
+              "Total Carbohydrates (% of Daily Value)": 0,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 0,
+              "Proteins (grams)": 7,
+              "Vitamin A": 0,
+              "Vitamin C": 0,
+              "Vitamin D": 0,
+              "Iron": 0,
+              "Calcium": 32,
+              "Total Fat": "9 g",
+              "Sat. Fat": "6 mg",
+              "Cholesterol": "30 mg",
+              "Sodium": "200 mg",
+              "Total Carbohydrates": "0",
+              "Dietary Fiber": "0",
+              "Ingredients": "Pasteurized Cow’s Milk, Salt, Cheese Culture, Vegetable Rennet"
             }
           },
           "lilly": {
             "title": "Lilly Artisan Cheese",
             "category": "artisan_cheese",
             "sizes": {
-              'pint': 2
+              'container': 1
             },
             "image": "/cheese/final/large/ShattoMilk_Cheese_Artisan_Lilly.png",
             "nutrition": {
-
+              "Serving Size": "1 oz",
+              "Servings Per Container": 1,
+              "Calories": 110,
+              "Calories from Fat": 80,
+              "Total Fat (grams)": 9,
+              "Total Fat (% of Daily Value)": 14,
+              "Saturated Fat (grams)": 6,
+              "Saturated Fat (% of Daily Value)": 30,
+              "Cholesterol (mg)": 30,
+              "Cholesterol (% of Daily Value)": 11,
+              "Sodium (mg)": 200,
+              "Sodium (% of Daily Value)": 8,
+              "Total Carbohydrates (grams)": 0,
+              "Total Carbohydrates (% of Daily Value)": 0,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 0,
+              "Proteins (grams)": 7,
+              "Vitamin A": 0,
+              "Vitamin C": 0,
+              "Vitamin D": 0,
+              "Iron": 0,
+              "Calcium": 32,
+              "Total Fat": "9 g",
+              "Sat. Fat": "6 mg",
+              "Cholesterol": "30 mg",
+              "Sodium": "200 mg",
+              "Total Carbohydrates": "0",
+              "Dietary Fiber": "0",
+              "Ingredients": "Pasteurized Cow’s Milk, Salt, Cheese Culture, Vegetable Rennet"
             }
           },
           "perrin": {
             "title": "Perrin Artisan Cheese",
             "category": "artisan_cheese",
             "sizes": {
-              'pint': 2
+             'container': 1
             },
             "image": "/cheese/final/large/ShattoMilk_Cheese_Artisan_Perrin.png",
             "nutrition": {
-
+              "Serving Size": "1 oz",
+              "Servings Per Container": 1,
+              "Calories": 110,
+              "Calories from Fat": 80,
+              "Total Fat (grams)": 9,
+              "Total Fat (% of Daily Value)": 14,
+              "Saturated Fat (grams)": 6,
+              "Saturated Fat (% of Daily Value)": 30,
+              "Cholesterol (mg)": 30,
+              "Cholesterol (% of Daily Value)": 11,
+              "Sodium (mg)": 200,
+              "Sodium (% of Daily Value)": 8,
+              "Total Carbohydrates (grams)": 0,
+              "Total Carbohydrates (% of Daily Value)": 0,
+              "Dietary Fiber (grams)": 0,
+              "Dietary Fiber (% of Daily Value)": 0,
+              "Sugars (grams)": 0,
+              "Proteins (grams)": 7,
+              "Vitamin A": 0,
+              "Vitamin C": 0,
+              "Vitamin D": 0,
+              "Iron": 0,
+              "Calcium": 32,
+              "Total Fat": "9 g",
+              "Sat. Fat": "6 mg",
+              "Cholesterol": "30 mg",
+              "Sodium": "200 mg",
+              "Total Carbohydrates": "0",
+              "Dietary Fiber": "0",
+              "Ingredients": "Pasteurized Cow’s Milk, Salt, Cheese Culture, Vegetable Rennet"
             }
           },
           // butter
@@ -2373,7 +2547,7 @@
                 sizeKeys = Object.keys(thisProduct['sizes']),
                 curCat = thisProduct['category'];
               console.log(sizeKeys);
-              if (curCat == 'bar' || curCat == 'Pint' || curCat == 'cheese_curds' || curCat == 'butter') {
+              if (curCat == 'bar' || curCat == 'Pint' || curCat == 'cheese_curds' || curCat == 'butter' || curCat == 'artisan_cheese') {
                 $('.sizes').hide();
               } else {
                 $('.sizes').show();
@@ -2510,9 +2684,9 @@
           } else {}
 
           // Remove this conditional once nutrition facts added.
-          if (curCat !== 'artisan_cheese') {
+          
             overlayToggle();
-          }
+          
 
         });
 
