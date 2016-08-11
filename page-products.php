@@ -364,7 +364,7 @@
           </div>
         </div>
       </div>
-      <div id="cheeseTwo" class="row">
+      <!-- <div id="cheeseTwo" class="row">
         <div class="col-md-12 productImages">
           <div data-product="wexford" class="product trigger text-center wexford"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/loading_spinner.gif" data-src="<?php echo get_template_directory_uri(); ?>/dist/images/products/cheese/Wexford.png" data-src-retina="<?php echo get_template_directory_uri(); ?>/dist/images/products/cheese/Wexford_2x.png" class="main">
             <div class="bottleShadow cheese"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/shadow.png"></div>
@@ -388,7 +388,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
   <a data-toggle="collapse" data-parent="#mobileCollapse" href="#butter" aria-controls="Butter" class="mobileCategory collapsed">BUTTER</a>

@@ -145,7 +145,7 @@ $overlayDelay: .35s;
 	visibility: visible;
 	width: 100%;
 	@include transition(all .35s ease);
-	overflow-y: scroll;
+	overflow-y: auto;
 
 	@include MQ(maxM) {
 		padding-bottom: 50px;
