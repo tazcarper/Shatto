@@ -51,14 +51,14 @@
       </picture>
       
     </div>
-    <div class="row hidden-xs">
+   <!--  <div class="row hidden-xs">
       <div class="col-md-12 text-center logo"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/shatto.svg" class="productLogo"></div>
-    </div>
+    </div> -->
   </div>
-  <div class="row visible-xs">
+  <div class="row ">
     <div class="col-xs-10 center-block">
-      <h2 class="visible-xs text-center">PRODUCTS</h2>
-      <p class="visible-xs text-center">Local products from local cows.</p>
+      <h2 class=" text-center headline">PRODUCTS</h2>
+      <p class="text-center headline_subcopy">Local products from local cows.</p>
       <div class="mobileHeroImg">
         <div class="inner"></div>
       </div>
@@ -95,21 +95,21 @@
           <div data-product="HG_twoPercent" class="product twoPercent trigger text-center"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/loading_spinner.gif" data-src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/two.png" data-src-retina="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/two_2x.png" class="main">
             <div class="bottleShadow"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/shadow.png"></div>
             <div class="productName">
-              <h5>2% </h5>
+              <h5>2% Milk</h5>
               <p class="factsLabel">nutrition facts </p>
             </div>
           </div>
           <div data-product="HG_onePercent" class="product onePercent trigger text-center"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/loading_spinner.gif" data-src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/one.png" data-src-retina="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/one_2x.png" class="main">
             <div class="bottleShadow"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/shadow.png"></div>
             <div class="productName">
-              <h5>1% </h5>
+              <h5>1% Milk</h5>
               <p class="factsLabel">nutrition facts </p>
             </div>
           </div>
           <div data-product="HG_skim" class="product trigger text-center front"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/loading_spinner.gif" data-src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/Skim.png"  data-src-retina="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/Skim_2x.png" class="main">
             <div class="bottleShadow"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/shadow.png"></div>
             <div class="productName">
-              <h5>Skim</h5>
+              <h5>Skim Milk</h5>
               <p class="factsLabel">nutrition facts</p>
             </div>
           </div>
@@ -117,14 +117,14 @@
           <div data-product="HG_whole" class="product whole trigger text-center"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/loading_spinner.gif" data-src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/Whole.png" data-src-retina="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/Whole_2x.png" class="main">
             <div class="bottleShadow"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/shadow.png"></div>
             <div class="productName">
-              <h5>Whole</h5>
+              <h5>Whole Milk</h5>
               <p class="factsLabel">nutrition facts</p>
             </div>
           </div>
           <div data-product="pint_half" class="product halfCream  trigger text-center"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/loading_spinner.gif" data-src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/halfHalf.png" data-src-retina="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/halfHalf_2x.png" class="main">
             <div class="bottleShadow pint"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/shadow.png"></div>
             <div class="productName">
-              <h5>Half/Half</h5>
+              <h5>Half/Half Cream</h5>
               <p class="factsLabel">nutrition facts</p>
             </div>
           </div>
@@ -235,14 +235,14 @@
           <div data-product="strawberry_iceCream" class="product trigger text-center strawberryIceCream"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/loading_spinner.gif" data-src="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/Strawberry.png" data-src-retina="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/Strawberry_2x.png" class="main">
             <div class="bottleShadow iceCream"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/shadow.png"></div>
             <div class="productName">
-              <h5>Strawberry</h5>
+              <h5>Strawberry Ice Cream</h5>
               <p class="factsLabel">nutrition facts </p>
             </div>
           </div>
           <div data-product="vanilla_iceCream" class="product trigger text-center vanilla"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/loading_spinner.gif" data-src="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/Vanilla.png" data-src-retina="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/Vanilla_2x.png" class="main">
             <div class="bottleShadow iceCream"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/shadow.png"></div>
             <div class="productName">
-              <h5>Vanilla</h5>
+              <h5>Vanilla Ice Cream</h5>
               <p class="factsLabel">nutrition facts</p>
             </div>
           </div>
@@ -250,14 +250,14 @@
           <div data-product="chocolate_iceCream" class="product trigger text-center chocolateIceCream"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/loading_spinner.gif" data-src="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/Chocolate.png" data-src-retina="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/Chocolate.png" class="main">
             <div class="bottleShadow iceCream"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/shadow.png"></div>
             <div class="productName">
-              <h5>Chocolate</h5>
+              <h5>Chocolate Ice Cream</h5>
               <p class="factsLabel">nutrition facts </p>
             </div>
           </div>
           <div data-product="caramelSeaSalt_iceCream" class="product trigger text-center caramelSeaSalt"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/loading_spinner.gif" data-src="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/CaramelSeaSalt.png" data-src-retina="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/CaramelSeaSalt.png" class="main">
             <div class="bottleShadow iceCream"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/shadow.png"></div>
             <div class="productName">
-              <h5>Caramel Sea Salt</h5>
+              <h5>Caramel Sea Salt Ice Cream</h5>
               <p class="factsLabel">nutrition facts</p>
             </div>
           </div>
@@ -269,28 +269,28 @@
           <div data-product="oatmealRaisin" class="product trigger text-center bar oatmealRaisin"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/loading_spinner.gif" data-src="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-bars/OatmealRaisin.png" data-src-retina="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-bars/OatmealRaisin_2x.png" class="main">
             <div class="bottleShadow iceCreamBar"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-pints/shadow.png"></div>
             <div class="productName">
-              <h5>Oatmeal raisin cookie and caramel sea salt ice cream</h5>
+              <h5>Oatmeal raisin cookie and caramel sea salt ice cream Sammich</h5>
               <p class="factsLabel">nutrition facts</p>
             </div>
           </div>
           <div data-product="sugarCookie" class="product trigger text-center bar sugarCookie"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/loading_spinner.gif" data-src="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-bars/SugarCookie.png" data-src-retina="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-bars/SugarCookie_2x.png" class="main">
             <div class="bottleShadow iceCreamBar"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/shadow.png"></div>
             <div class="productName">
-              <h5>Sugar cookie and strawberry ice cream</h5>
+              <h5>Sugar cookie and strawberry ice cream Sammich</h5>
               <p class="factsLabel">nutrition facts </p>
             </div>
           </div>
           <div data-product="chocolateChip_icecreamBar" class="product trigger text-center bar chocolateChip"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/loading_spinner.gif" data-src="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-bars/ChocolateChip.png" data-src-retina="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-bars/ChocolateChip_2x.png" class="main">
             <div class="bottleShadow iceCreamBar"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/shadow.png"></div>
             <div class="productName">
-              <h5>Chocolate chip cookie and vanilla ice cream</h5>
+              <h5>Chocolate chip cookie and vanilla ice cream Sammich</h5>
               <p class="factsLabel">nutrition facts </p>
             </div>
           </div>
           <div data-product="brownie" class="product trigger text-center bar brownie"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/loading_spinner.gif" data-src="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-bars/Brownie.png" data-src-retina="<?php echo get_template_directory_uri(); ?>/dist/images/products/icecream-bars/Brownie_2x.png" class="main">
             <div class="bottleShadow iceCreamBar"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/shadow.png"></div>
             <div class="productName">
-              <h5>Chocolate brownie and vanilla ice cream</h5>
+              <h5>Chocolate brownie and vanilla ice cream Sammich</h5>
               <p class="factsLabel">nutrition facts</p>
             </div>
           </div>
@@ -333,7 +333,7 @@
           <div data-product="MushroomGarlic" class="product trigger text-center mushroomGarlic"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/loading_spinner.gif" data-src="<?php echo get_template_directory_uri(); ?>/dist/images/products/cheese-curds/MushroomGarlic.png" data-src-retina="<?php echo get_template_directory_uri(); ?>/dist/images/products/cheese-curds/MushroomGarlic_2x.png" class="main">
             <div class="bottleShadow cheeseCurds"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/shadow.png"></div>
             <div class="productName">
-              <h5>Garlic Mushroom Cheddar Cheese Curds</h5>
+              <h5>Mushroom Garlic Cheddar Cheese Curds</h5>
               <p class="factsLabel">nutrition facts</p>
             </div>
           </div>

@@ -1,8 +1,12 @@
 section.contact {
 	background: url('../images/contact/bg.png') 0 0 no-repeat;
+	@include MQ(maxXL){
+		background-position:-255px 0px;
+	}
+
 
 	@include MQ(maxL) {
-		//background-position: 60% 100%;
+		background-position:-350px 0px;
 	}
 	@include MQ(maxM) {
 		background: white;
@@ -777,6 +781,12 @@ textarea {
 	height: 682px;
 	z-index: 0;
 	top: 0;
+	@include MQ(maxXL) {
+		left:-260px;
+	}
+	@include MQ(maxL) {
+		left:-355px;
+	}
 	@include MQ(maxML) {
 		display:none;
 	}

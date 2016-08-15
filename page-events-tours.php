@@ -53,8 +53,9 @@
       </div>
       <div class="container-fluid">
         <div class="row">
-          <div class="col-sm-3 center-block">
+          <div class="col-sm-4 center-block">
             <h4>GET TO SCHEDULIN’ A TOUR</h4>
+            <p style="color:white; margin-bottom:25px;">Our daily tours are more fun with just the right amount of friends and neighbors. Let us know when you’d like to come out and we’ll get back to you to firm up the details.<br/></p>
             <div class="errorAlert">
               <p>Sorry. Something went wrong. Please try again. If this doesn't work, give us a call to schedule a tour.</p>
             </div>

@@ -951,7 +951,7 @@
           },
           // Cheese Curds
           "Cajun": {
-            "title": "Cajun Cheese Curds",
+            "title": "Cajun-flavored Cheddar Cheese Curds",
             "category": "cheese_curds",
             "sizes": {
               'container': 12
@@ -1031,7 +1031,7 @@
             }
           },
           "Dill": {
-            "title": "Dill Cheese Curds",
+            "title": "DILL-FLAVORED CHEDDAR CHEESE CURDS",
             "category": "cheese_curds ",
             "sizes": {
               'container': 12
@@ -1071,7 +1071,7 @@
             }
           },
           "MushroomGarlic": {
-            "title": "Mushroom Garlic Cheese Curds",
+            "title": "Mushroom Garlic Cheddar Cheese Curds",
             "category": "cheese_curds",
             "sizes": {
               'container': 12
@@ -1434,7 +1434,7 @@
             }
           },
           "plainButter": {
-            "title": "Plain Butter",
+            "title": "Plain Ol' Butter",
             "category": "butter",
             "sizes": {
               'container': 8
@@ -2262,7 +2262,7 @@
           }, {
             posterType: 'none',
             autoplay: true,
-            position: '50% 50%',
+            position: '0 50%',
             volume: 1,
             loop: true,
             resizing: true

@@ -3,13 +3,14 @@ $S: 480px;
 $M: 768px;
 $ML: 992px;
 $L: 1201px;
-
+$XL: 1500px;
 // tablet down
 $maxXS: $XS - 1px;
 $maxS: $S - 1px;
 $maxM: $M - 1px;
 $maxML: $ML - 1px;
 $maxL: $L - 1px;
+$maxXL: $XL - 1px;
 
 // media queries
 
@@ -39,9 +40,19 @@ $maxL: $L - 1px;
 			@content;
 		}
 	}
+	@else if $canvas == XL {
+		@media only screen and (min-width:$XL) {
+			@content;
+		}
+	}
 	
 	@else if $canvas == maxML {
 		@media only screen and (max-width:$maxML) {
+			@content;
+		}
+	}
+	@else if $canvas == maxXL {
+		@media only screen and (max-width:$maxXL) {
 			@content;
 		}
 	}
