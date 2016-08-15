@@ -341,7 +341,7 @@
             }
           },
           "cookies_N_Cream": {
-            "title": "Cookies and Cream Milk",
+            "title": "Cookies N' Cream Milk",
             "category": "Quart",
             "sizes": {
 
@@ -465,7 +465,7 @@
             }
           },
           "coffee": {
-            "title": "Coffe Milk",
+            "title": "Coffee Milk",
             "category": "Quart",
             "sizes": {
               'quart': 4,
@@ -588,7 +588,7 @@
             }
           },
           "pumpkinSpiceEggNog": {
-            "title": "Pumpkin Spce Egg Nog Milk",
+            "title": "Pumpkin Spice Egg Nog Milk",
             "category": "Quart",
             "sizes": {
               'quart': 4
