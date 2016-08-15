@@ -233,15 +233,15 @@
   </div>
 </div>
 <?php wp_footer(); ?>
-<!--<script>
+<script>
   (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
   function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
   e=o.createElement(i);r=o.getElementsByTagName(i)[0];
   e.src='//www.google-analytics.com/analytics.js';
   r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-  ga('create','UA-XXXXX-X');ga('send','pageview');
-</script>-->
+  ga('create','UA-82331663-1');ga('send','pageview');
+</script>
 
 <script src="http://maps.google.com/maps/api/js?libraries=places,geometry"></script>
 
-<script src="<?php echo get_template_directory_uri(); ?>/dist/scripts/all.js"></script> 
+<script src="<?php echo get_template_directory_uri(); ?>/dist/scripts/all.js"></script>
