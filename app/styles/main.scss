@@ -461,7 +461,7 @@ img {
       @include transform(translate(0, -5px));
       .bottleShadow {
                 bottom:1px;
-                opacity:.25;
+                opacity:0.075;
               }
     }
     img {
@@ -479,7 +479,7 @@ img {
       display:none;
     }
     .bottleShadow {
-                bottom:8px;
+                bottom:10px;
                 img {
                   opacity: 1;
                 }

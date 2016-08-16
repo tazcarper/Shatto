@@ -109,7 +109,7 @@
       <path d="M44.15,41.01l1.5-0.39c0,0,4,2.92,2.91,5.19c-1.02,2.11-1.46,2.07-2.84,2.13c-0.85,0.04-2.08-0.64-2.08-0.64l1.36-2.33 c0,0,1.75,0.46,2.01-0.32C47.26,43.86,44.15,41.01,44.15,41.01L44.15,41.01z"></path>
     </g>
   </svg>
-  <p>We do have an area where visitors can have a blanket picnic if desired.<br>These areas are only available when the weather is appropriate and the grass is dry.</p>
+  <p>When the grass is dry, we have the perfect spot for a blanket picnic.</p>
 </div>
 </div>
 </div>
@@ -125,12 +125,10 @@
 </div>
 </section>
 <section class="container-fluid country-store " >
-<div class="row text-center">
-  <img src='<?php echo get_template_directory_uri(); ?>/dist/images/events/kid_mobile.jpg' class="kidImage visible-xs" >
-</div>
+
 <div class="container">
 <div class="row">
-<div class="col-lg-10 col-lg-offset-1 text-center">
+<div class="col-lg-9 center-block text-center">
   <h2><?php the_field('store_title'); ?></h2>
   <?php the_field('store_copy'); ?>
 </div>

@@ -59,8 +59,8 @@
               <submit class="btn invert" tabindex="5">Submit</submit>
             </form>
             <div class="sentSuccess">
-                <h1>We got your message.</h1>
-                <h3>We'll be in touch!</h3>
+                <h1>THANK YA.</h1>
+                <h3>We just checked our mailbox and got your message. We’ll be in contact soon. Real soon. But maybe not before the cows come home.</h3>
               </div>
               <div class="row">
                 <div class="col-xs-12 text-center">

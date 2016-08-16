@@ -1,175 +1,251 @@
 .hero.about {
   background: url('../images/about-hero-bg-placeholder.jpg') 50% 90% no-repeat;
-  position:relative;
+  position: relative;
   color: $white;
   height: 900px;
   min-height: 0;
-  overflow:hidden;
+  overflow: hidden;
+
   &:after {
-    display:none;
+    display: none;
   }
   @include MQ(maxM) {
-    height:400px;
-      background: url('../images/about-hero-mobile.jpg') top center no-repeat;
+    height: 400px;
+    background: url('../images/about-hero-mobile.jpg') top center no-repeat;
   }
-h1 {
-  font-size:5.5em;
-  text-transform: uppercase;
-  text-align: center;
-  margin-top: .45em;
-  @include fadeInUp();
-  @include animation-delay(1s);
-  @include MQ(maxM) {
-    font-size:2.8em;
+  h1 {
+    font-size: 5.5em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: .45em;
+    @include fadeInUp();
+    @include animation-delay(1s);
+
+    @include MQ(maxM) {
+      font-size: 2.8em;
+    }
   }
 }
-
-}
-
 section.shattoStory {
   padding-top: 2em;
   padding-bottom: 0em;
- 
-  p {
-    text-align:left;
-  }
+
   h4 {
     color: $blue;
-    line-height: 85%;
-    margin-bottom: 1em;
-    min-height: 80px;
-    margin-top: 10px;
-    @include MQ(maxM){
-      min-height: auto;
-    }
   }
-
   .col-md-3 {
     border-bottom: 1px solid $lightGrey;
     margin-bottom: 1em;
   }
   .smallLegal {
     margin-top: 75px;
-   
+
     p {
-      font-size:11px;
-      text-align:center;
+      font-size: 11px;
+      text-align: center;
+
     }
   }
   .pods {
     margin-top: 3em;
     opacity: 1;
-    
+
     @include MQ(M) {
       display: table;
-    vertical-align: top;
+      vertical-align: top;
     }
     @include MQ(maxM) {
       margin-top: 0;
     }
     .col-md-3 {
-      
-      @include MQ(M){
+      text-align: center;
+    
+      .podImage {
+        margin: 0 auto;
+        margin-bottom: 35px;
+        @include MQ(maxM){
+          margin-top: 15px;
+        }
+      }
+      .headliner {
+        height: 100px;
+        position: relative;
+        @include MQ(maxXL) {
+          height:140px;
+        }
+        @include MQ(maxL) {
+          height:110px;
+          h4 {
+            font-size:1.5em;
+          }
+        }
+        @include MQ(maxM) {
+          height:auto;
+        }
+        h4 {
+          @include MQ(M){
+          margin: auto !important;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          display: table;
+          width: 100%;
+}
+        }
+      }
+      p {
+        padding: 0 5%;
+      }
+      h4 {
+        margin: 0;
+        position: relative;
+        margin-bottom: 25px;
+      }
+      &:nth-child(1) {
+        .podImage {
+          background: url('../images/about-icons.png') 0 100% no-repeat;
+          width: 149px;
+          height: 53px;
+        }
+      }
+      &:nth-child(2) {
+        .podImage {
+          background: url('../images/about-icons.png') 37.103% 0 no-repeat;
+          width: 182px;
+          height: 110px;
+        }
+      }
+      &:nth-child(3) {
+        .podImage {
+          background: url('../images/about-icons.png') 69.076% 90.476% no-repeat;
+          width: 91px;
+          height: 91px;
+        }
+      }
+      &:nth-child(4) {
+        .podImage {
+          background: url('../images/about-icons.png') 100% 60% no-repeat;
+          width: 123px;
+          height: 107px;
+        }
+        &:after {
+          display:none;
+        }
+      }
+      @include MQ(M) {
         display: table-cell;
-      height: 100%;
-      float: none;
-       border-right: 1px solid $lightGrey;
-      border-bottom: none;
-
+        height: 100%;
+        float: none;
+   
+        border-bottom: none;
+        &:after {
+          content: '';
+          width: 1px;
+          height: 50%;
+          background: #efefef;
+          margin: 0 auto;
+          position: absolute;
+          top:30%;
+         
+          right: -1px;
+        }
+      }
+      @include MQ(ML){
+         height: 70%;
       }
       @include MQ(maxM) {
-        border:none;
+        border: none;
         padding-bottom: 30px;
         padding-top: 30px;
         margin-bottom: 0;
+
         &:after {
-          content:'';
-          width:35%;
-          height:1px;
-          background: $lightGrey;
-          margin:0 auto;
-          position:absolute;
-          bottom:0;
-          left:0;
-          right:0;
+          content: '';
+          width: 35%;
+          height: 1px;
+          background: #efefef;
+          margin: 0 auto;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
         }
       }
       &:last-child {
         @include MQ(maxM) {
           padding-bottom: 0;
+
           &:after {
-            display:none
+            display: none
           }
         }
       }
     }
     @include transition(all .15s ease-out);
+
     &.visible {
       opacity: 1;
-
     }
   }
-
   .col-md-3:last-of-type {
     border: none;
   }
-
   p.small.center {
-    margin-top:4em;
+    margin-top: 4em;
   }
-
   @media (min-width:$screen-md-min) {
-   
-
     .col-md-3:last-of-type {
       border: none;
     }
   }
 }
-
 section.scheduleTour {
   color: $black;
-  
   text-align: center;
-  // min-height:  693px;
+  // min-height: 693px;
+
   .row {
     padding: 4.5em 15px 4.5em 15px;
-    @include linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.95) 60%);
+    @include linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .95) 60%);
+
     @include MQ(maxM) {
-      background:white;
+      background: white;
       padding: 1em 0 3em 0;
     }
   }
   @include MQ(maxM) {
-    background:white;
-
+    background: white;
   }
   @include MQ(maxML) {
-    @include linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.95) 55%);
+    @include linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .95) 55%);
   }
   h5 {
     margin-bottom: 25px;
     font-weight: 300;
     font-family: "futura-pt", sans-serif;
-    font-size:1.5em;
+    font-size: 1.5em;
     line-height: 1.3em;
     text-transform: inherit;
+
     a {
       color: black;
+      text-decoration:underline;
+     
     }
     @include MQ(maxM) {
-      font-size:1.1em;
+      font-size: 1.1em;
       margin-top: 25px;
-      text-align:left;
+      text-align: left;
     }
   }
-
   img {
-    max-width:480px;
-    margin:0 auto;
+    max-width: 480px;
+    margin: 0 auto;
   }
   .mobile {
-    width:100%;
+    width: 100%;
   }
   .btn {
     @include MQ(maxM) {
@@ -177,66 +253,80 @@ section.scheduleTour {
       margin-bottom: 25px;
     }
   }
-  
 }
-
 section.findUs {
   background: $blue;
   background: linear-gradient(to bottom, #80e1ff 0%, #00c2fe 100%);
   color: $black;
   padding: 2em 0;
   text-align: center;
-  h2,h3 {
-     font-family: "futura-pt", sans-serif;
+
+  h2, h3 {
+    font-family: "futura-pt", sans-serif;
   }
   h3 {
-    font-size:1em;
+    font-size: 1em;
     margin-bottom: 45px;
+
     @include MQ(maxM) {
-      font-size:1em;
+      font-size: 1em;
       margin-bottom: 15px;
       margin-top: 15px;
     }
   }
-  h4,h5 {
+  h4, h5 {
     color: $white;
   }
-
   h4 {
     margin-top: 1em;
-    font-size:1.1em;
+    font-size: 1.1em;
+
     @include MQ(maxM) {
-      font-size:2em;
+      font-size: 2em;
     }
   }
-
   h5 {
     margin-top: 1.5em;
-    font-size:1.5em;
-    @include MQ(maxM){
-      font-size:1.5em;
+    font-size: 1.5em;
+
+    @include MQ(maxM) {
+      font-size: 1.5em;
     }
   }
   h6 {
-    font-size:1em;
+    font-size: 1em;
     line-height: 1.3em;
-    @include MQ(maxM){
-      font-size:.9em;
+
+    @include MQ(maxM) {
+      font-size: .9em;
     }
-    
   }
   p {
-    font-size:.95em;
-    @include MQ(maxM){
-      font-size:1em;
+    font-size: .95em;
+
+    @include MQ(maxM) {
+      font-size: 1em;
     }
   }
-
   .btn {
     margin-top: 1.5em;
   }
-
   @media (min-width:$screen-sm-min) {
-
+  }
+  .comeVisit {
+    h2 {
+      font-weight:400;
+      font-size:3em;
+    }
+    h3 {
+      text-transform:none;
+      font-size:1.6em;
+    }
+    h4 {
+      font-size:1.4em;
+    }
+    h5 {
+      font-size:1.05em;
+    }
   }
 }

@@ -136,6 +136,7 @@
         margin-bottom: 35px;
       }
       p {
+        margin-bottom: 3px;
        @include MQ(M) {
           padding: 0 15%;
         }
@@ -413,8 +414,24 @@
     padding: 2em 0;
     padding-left: 15px;
     padding-right: 15px;
-    padding-top: em;
-
+    position:relative;
+    padding-top: 0;
+    .container {
+      position:absolute;
+      bottom:15px;
+      left:0;
+      right:0;
+      @include MQ(maxM) {
+        position:relative;
+        bottom:0;
+        top:0;
+        padding-top:45px;
+        padding-bottom: 15px;
+      }
+      h2 {
+        line-height:0.95em;
+      }
+    }
     @media (min-width:$screen-sm-min) {
       background-position: center top;
       background-size: auto 557px;
@@ -431,6 +448,9 @@
     @include MQ(maxM) {
       background: white;
       padding-top: 0;
+      border-bottom:25px solid black;
+      padding-bottom: 15px;
+      margin-bottom: 35px;
       .kidImage {
         width:100%;
         max-width:480px;

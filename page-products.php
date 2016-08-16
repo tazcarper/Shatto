@@ -339,7 +339,7 @@
           </div>
         </div>
       </div>
-      <div id="cheeseOne" class="row">
+      <!-- <div id="cheeseOne" class="row">
         <div class="col-md-12 productImages">
           <div data-product="platsburg" class="product trigger text-center plattsburg"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/loading_spinner.gif" data-src="<?php echo get_template_directory_uri(); ?>/dist/images/products/cheese/Plattsburg.png " data-src-retina="<?php echo get_template_directory_uri(); ?>/dist/images/products/cheese/Plattsburg_2x.png" class="main">
             <div class="bottleShadow cheese"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/shadow.png"></div>
@@ -363,32 +363,32 @@
             </div>
           </div>
         </div>
-      </div>
-      <!-- <div id="cheeseTwo" class="row">
+      </div> -->
+      <div id="cheeseTwo" class="row">
         <div class="col-md-12 productImages">
           <div data-product="wexford" class="product trigger text-center wexford"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/loading_spinner.gif" data-src="<?php echo get_template_directory_uri(); ?>/dist/images/products/cheese/Wexford.png" data-src-retina="<?php echo get_template_directory_uri(); ?>/dist/images/products/cheese/Wexford_2x.png" class="main">
             <div class="bottleShadow cheese"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/shadow.png"></div>
             <div class="productName">
-              <h5>Wexford <span class="smaller">(A Shatto original with a bite)</span></h5>
+              <h5>Wexford Artisian Cheese<br/><span class="smaller">(A Shatto original with a bite)</span></h5>
               <p class="factsLabel">nutrition facts</p>
             </div>
           </div>
           <div data-product="lilly" class="product trigger text-center lilly"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/loading_spinner.gif" data-src="<?php echo get_template_directory_uri(); ?>/dist/images/products/cheese/Lilly.png" data-src-retina="<?php echo get_template_directory_uri(); ?>/dist/images/products/cheese/Lilly_2x.png" class="main">
             <div class="bottleShadow cheese"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/shadow.png"></div>
             <div class="productName">
-              <h5>Lilly <br/><span class="smaller">(A Shatto original that makes a strong statement)</span></h5>
+              <h5>Lilly Artisian Cheese<br/><span class="smaller">(A Shatto original that makes a strong statement)</span></h5>
               <p class="factsLabel">nutrition facts </p>
             </div>
           </div>
           <div data-product="perrin" class="product trigger text-center perrin"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/loading_spinner.gif" data-src="<?php echo get_template_directory_uri(); ?>/dist/images/products/cheese/Perrin.png" data-src-retina="<?php echo get_template_directory_uri(); ?>/dist/images/products/cheese/Perrin_2x.png" class="main">
             <div class="bottleShadow cheese"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/shadow.png"></div>
             <div class="productName">
-              <h5>Perrin <span class="smaller">(A Shatto original with a mild manner)</span></h5>
+              <h5>Perrin Artisian Cheese<br/><span class="smaller">(A Shatto original with a mild manner)</span></h5>
               <p class="factsLabel">nutrition facts</p>
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
     </div>
   </section>
   <a data-toggle="collapse" data-parent="#mobileCollapse" href="#butter" aria-controls="Butter" class="mobileCategory collapsed">BUTTER</a>

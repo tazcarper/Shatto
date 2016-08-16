@@ -1390,7 +1390,7 @@
               "Sodium": 0,
               "Total Carbohydrates": 0,
               "Dietary Fiber": 0,
-              "Ingredients": 0
+              "Ingredients": "Cream, Garlic"
             }
           },
           "honeyButter": {
@@ -1430,7 +1430,7 @@
               "Sodium": 0,
               "Total Carbohydrates": 0,
               "Dietary Fiber": 0,
-              "Ingredients": "cream, garlic, salt"
+              "Ingredients": "Cream, Garlic, Salt"
             }
           },
           "plainButter": {
@@ -1470,7 +1470,7 @@
               "Sodium": 0,
               "Total Carbohydrates": 0,
               "Dietary Fiber": 0,
-              "Ingredients": 0
+              "Ingredients": "Cream, Salt"
             }
           },
           "unsaltedButter": {
@@ -1510,7 +1510,7 @@
               "Sodium": 0,
               "Total Carbohydrates": 0,
               "Dietary Fiber": 0,
-              "Ingredients": "cream"
+              "Ingredients": "Cream"
             }
           },
           // flavored
