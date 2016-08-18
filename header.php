@@ -1,7 +1,9 @@
+
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8"/>
     <meta name="google" content="notranslate" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title><?php wp_title(); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/apple-touch-icon.png">
@@ -53,7 +55,8 @@
           <div class="headerMain">
           <a href="<?php echo esc_url( home_url( '/locate' ) ); ?>" class="storeLocate">Store<br/>Locator</a>
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-              <?php get_template_part(THEME_PARTS.'header-logo'); ?>
+             <img class="cowHead" src="<?php echo get_template_directory_uri(); ?>/dist/images/cowHead.svg" >
+             <img class="letters" src="<?php echo get_template_directory_uri(); ?>/dist/images/shatto_tetx.svg" >
             </a>
           </div>
           <?php get_template_part(THEME_PARTS.'navigation'); ?>

@@ -1744,7 +1744,7 @@
             } else {
               sym = '';
             }
-            $(this).css('transform', 'translate3d(0, ' + sym + distance + 'px,0)');
+            $(this).css('transform', 'translate(0, ' + sym + distance + 'px)');
           });
 
         }

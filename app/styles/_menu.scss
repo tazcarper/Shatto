@@ -7,12 +7,12 @@ $headerHeight: 70px;
     }
     .headerMain {
       //height: 60px;
-
+  padding-top: 0;
       .cowHead {
-        width: 70px;
-        left: 95px;
-        top: 10px;
-
+        // width: 70px;
+        // left: 95px;
+        top: 15px;
+        @include transform(scale(1.3));
         @include MQ(maxML) {
           left: 25px;
           top: 10px;
@@ -46,7 +46,7 @@ $headerHeight: 70px;
         }
       }
       .letters {
-        opacity: 0;
+       opacity: 0;
       }
     }
     .cd-nav-trigger {
@@ -54,7 +54,7 @@ $headerHeight: 70px;
     }
     .cd-nav {
       // height: 60px;
-
+    
       .cd-navigation-wrapper {
         margin-top: 21px;
       }
@@ -183,9 +183,9 @@ header {
     outline: none;
     width: 50px;
     margin: 0 auto;
-    position: absolute;
+    position: relative;
     left: 105px;
-    top: 10px;
+    top: 5px;
 
     path {
       fill-rule: evenodd;
@@ -210,10 +210,10 @@ header {
   }
   .letters {
     outline: none;
-    position: absolute;
+    position: relative;
     width: 190px;
-    top: 55px;
-    left: 35px;
+    top: 48px;
+    left: -19px;
     @include transition(all .2s ease);
 
     @include MQ(maxML) {
@@ -226,7 +226,7 @@ header {
   z-index: 1;
   top: 0;
   left: 0;
-  height: 100%;
+  height: auto;
   //background: black;
   visibility: hidden;
   -webkit-transition: visibility 0s 0.7s;
@@ -239,6 +239,7 @@ header {
 
   @include MQ(maxM) {
     width: 100%;
+    height:100%;
   }
   @media (min-width:$screen-sm-min) {
     padding-bottom: 15px;

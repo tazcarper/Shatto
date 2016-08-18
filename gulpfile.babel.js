@@ -25,7 +25,7 @@ gulp.task('styles', () => {
       precision: 10,
       includePaths: ['.']
     }).on('error', $.sass.logError))
-    //.pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'ie 9-10']}))
+    .pipe($.autoprefixer({browsers: ['> 1%', 'last 4 versions', 'Firefox ESR', 'ie 9-10']}))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('.tmp/styles'))
     .pipe(gulp.dest('dist/styles'))
@@ -94,7 +94,7 @@ gulp.task('html', ['views', 'styles', 'scripts','concatScripts'], () => {
       preserveComments: 'all'
     })))
     .pipe($.if('*.css', $.cssnano({
-      autoprefixer: false
+      autoprefixer: true
     })))
     .pipe($.if('*.html', $.htmlmin({
       collapseWhitespace: false,

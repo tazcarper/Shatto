@@ -379,9 +379,9 @@ img {
 .pad2 {
   padding-top: .5em;
   padding-bottom: .5em;
-}
+} 
 .form-control {
-  border-radius: 18px;
+  border-radius: 18px; 
   font-size: 1em;
   height: auto;
 }
@@ -389,12 +389,12 @@ img {
   overflow:hidden;
 }
 #floatingBottle {
-  z-index: 999999;
+  z-index: 999999; 
   position: relative;
   width: 270px;
   height: 510px;
-  @include transform(translate3d(0, -1955px, 0));
-  @include transition(transform, 0.5s, ease-out, opacity, 0s, ease, width, 0.5s, ease-out);
+  @include transform(translate(0, -1955px));
+  @include transition(transform 0.5s ease-out, opacity 0s ease, width 0.5s ease-out, height 0.5s ease-out );
   text-align: center;
   left: 0;
   right: 0;
@@ -402,12 +402,13 @@ img {
   outline: none;
   position: absolute;
   margin: 0 auto;
+ 
   @include MQ(maxL){
-     @include transform(translate3d(0, -1920px, 0));
+     @include transform(translate(0, -1920px));
   }
   @include MQ(maxM) {
     position: relative !important;
-    @include transform(translate3d(0, 0, 0));
+    @include transform(translate(0, 0));
     @include transition(all 0s ease);
     display: none;
 
@@ -419,14 +420,16 @@ img {
   a {
     margin: 0;
     outline: none;
+    position:relative;
+    height:100%;
   }
   &.start {
     height: 700px;
     width: 370px;
-    @include transform(translate3d(0, -1035px, 0));
-
+    @include transform(translate(0, -1035px));
+   
     @include MQ(maxM) {
-      @include transform(translate3d(0, 0, 0));
+      @include transform(translate(0, 0));
     }
     img {
       max-width: 100%;
@@ -449,10 +452,10 @@ img {
   &.stop {
     // @include transition(all 0.5s ease-out);
     width: 270px;
-    @include transform(translate3d(0, 0px, 0));
+    @include transform(translate(0, 0px));
 
     @include MQ(maxM) {
-      @include transform(translate3d(0, 0, 0));
+      @include transform(translate(0, 0));
     }
     a {
       background: transparent !important;
@@ -514,9 +517,10 @@ img {
   }
   #mainBottle {
     // display: none;
+    display:block;
     position: relative;
-    background: url('../images/rotation/rotation_bg.png') no-repeat;
-    background-position: 0 0%;
+    background: url('../images/rotation/rotation_bg.png');
+    background-position: 0 1px;
     background-size: 100%;
     width: 100%;
     height: 100%;
