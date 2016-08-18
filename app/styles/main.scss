@@ -393,7 +393,7 @@ img {
   position: relative;
   width: 270px;
   height: 510px;
-  @include transform(translate(0, -1955px));
+  @include transform(translate(0, -1970px));
   @include transition(transform 0.5s ease-out, opacity 0s ease, width 0.5s ease-out, height 0.5s ease-out );
   text-align: center;
   left: 0;
