@@ -2490,6 +2490,9 @@
             overlay.removeClass('open');
             overlay.addClass('close');
             $('#overlay_image').addClass('hideIt');
+            var removeClassOnImage = window.setTimeout(function(e){
+              $('#overlay_image').removeClass();
+            }, 270);
             var onEndTransitionFn = function(ev) {
               overlay.removeClass('close');
               if (support.transitions) {

@@ -339,31 +339,31 @@
           </div>
         </div>
       </div>
-      <!-- <div id="cheeseOne" class="row">
+      <div id="cheeseOne" class="row">
         <div class="col-md-12 productImages">
           <div data-product="platsburg" class="product trigger text-center plattsburg"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/loading_spinner.gif" data-src="<?php echo get_template_directory_uri(); ?>/dist/images/products/cheese/Plattsburg.png " data-src-retina="<?php echo get_template_directory_uri(); ?>/dist/images/products/cheese/Plattsburg_2x.png" class="main">
             <div class="bottleShadow cheese"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/shadow.png"></div>
             <div class="productName">
-              <h5>Plattsburg <span class="smaller">(A Gouda-style cheese)</span></h5>
+              <h5>Plattsburg Artisian Cheese<br/><span class="smaller">(A Gouda-style cheese)</span></h5>
               <p class="factsLabel">nutrition facts</p>
             </div>
           </div>
           <div data-product="smithFork" class="product trigger text-center smithFork"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/loading_spinner.gif" data-src="<?php echo get_template_directory_uri(); ?>/dist/images/products/cheese/SmithFork.png " data-src-retina="<?php echo get_template_directory_uri(); ?>/dist/images/products/cheese/SmithFork_2x.png" class="main">
             <div class="bottleShadow cheese"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/shadow.png"></div>
             <div class="productName">
-              <h5>Smith Fork<br/><span class="smaller">(A Cheddar-style cheese)</span></h5>
+              <h5>Smith Fork Artisian Cheese<br/><span class="smaller">(A Cheddar-style cheese)</span></h5>
               <p class="factsLabel">nutrition facts </p>
             </div>
           </div>
           <div data-product="winstead" class="product trigger text-center winstead"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/loading_spinner.gif" data-src="<?php echo get_template_directory_uri(); ?>/dist/images/products/cheese/WinsteadReserve.png" data-src-retina="<?php echo get_template_directory_uri(); ?>/dist/images/products/cheese/WinsteadReserve_2x.png" class="main">
             <div class="bottleShadow cheese"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/half-gallons/final/shadow.png"></div>
             <div class="productName">
-              <h5>Winstead Reserve <span class="smaller">(A Havarti-style cheese)</span></h5>
+              <h5>Winstead Reserve Artisian Cheese<br/><span class="smaller">(A Havarti-style cheese)</span></h5>
               <p class="factsLabel">nutrition facts</p>
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
       <div id="cheeseTwo" class="row">
         <div class="col-md-12 productImages">
           <div data-product="wexford" class="product trigger text-center wexford"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/products/loading_spinner.gif" data-src="<?php echo get_template_directory_uri(); ?>/dist/images/products/cheese/Wexford.png" data-src-retina="<?php echo get_template_directory_uri(); ?>/dist/images/products/cheese/Wexford_2x.png" class="main">
