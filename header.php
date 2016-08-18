@@ -1,6 +1,7 @@
-<html class="no-js">
+<html class="no-js" lang="en">
   <head>
     <meta charset="utf-8"/>
+    <meta name="google" content="notranslate" />
     <title><?php wp_title(); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/apple-touch-icon.png">
