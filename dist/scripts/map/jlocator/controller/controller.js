@@ -1,12 +1,12 @@
-'use strict';(function($){'use strict';/**
+'use strict';(function($){'use strict'; /**
 	* controller constructor
 	* @param {jQueryObject} $root - jlocator root element
 	* @param {Object} options - jlocator user options
 	* @return {Object} - controller + this	
 	* @constructor 
-	*/var Init=function Init($root,options){var self={$root:$root,options:options//objects
-,panel:null,map:null};//init objects
-self.panel=new jQuery.fn.jlocator.panel(self.$root,self.options);self.map=new jQuery.fn.jlocator.map(self.$root,self.options);return $.extend(this,self);};/**
+	*/var Init=function Init($root,options){var self={$root:$root,options:options //objects
+,panel:null,map:null}; //init objects
+self.panel=new jQuery.fn.jlocator.panel(self.$root,self.options);self.map=new jQuery.fn.jlocator.map(self.$root,self.options);return $.extend(this,self);}; /**
 	* controller constructor
 	* @param {jQueryObject} $root - jlocator root element
 	* @param {Object} options - jlocator user options
@@ -19,6 +19,6 @@ self.panel=new jQuery.fn.jlocator.panel(self.$root,self.options);self.map=new jQ
 	* @property {Object} options - jlocator user options
 	* @property {jQuery.fn.jlocator.panel} panel - jlocator panel
 	* @property {jQuery.fn.jlocator.map} map - jlocator map
-	*/jQuery.fn.jlocator.controller=function($root,options){//call constructor
+	*/jQuery.fn.jlocator.controller=function($root,options){ //call constructor
 return new Init($root,options);};})(jQuery);
-//# sourceMappingURL=controller.js.map
+//# sourceMappingURL=../../../map/jlocator/controller/controller.js.map
