@@ -2229,7 +2229,7 @@
             // find form values and assign for gravity forms
             stuffToSend.input_values.input_1 = myForm.find('input#mobileContact_name').val();
             stuffToSend.input_values.input_2 = myForm.find('select#mobileContact_subject').val();
-            stuffToSend.input_values.input_3 = myForm.find('input#mobileContact_message').val();
+            stuffToSend.input_values.input_3 = myForm.find('textarea#mobileContact_message').val();
             stuffToSend.input_values.input_4 = myForm.find('input#mobileContact_email').val();
             $.ajax({
               url: "/gravityformsapi/forms/1/submissions",
