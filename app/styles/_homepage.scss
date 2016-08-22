@@ -1,12 +1,16 @@
 section.bottleDetail {
   p {
-    font-size:20px;
-    font-size:1.3vw;
-    @include MQ(maxL){
-      font-size:1.8vw;
-    }
+    font-size:18px;
+    
+    
     @include MQ(maxML) {
-      font-size:2.3vw;
+      //font-size:2.3vw;
+      display:none;
+    }
+  }
+  .bigBottle {
+    [class*='col-'] {
+     // padding:0;
     }
   }
   .instructions {
@@ -58,6 +62,7 @@ section.products {
       font-size:50px;
       // font-size:6vw;
     }
+
   }
   h2.mobile {
     border-top: 2.5px solid $black;

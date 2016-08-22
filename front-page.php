@@ -22,8 +22,8 @@
           <div class="stopPoint"></div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-3">
+      <div class="row bigBottle">
+        <div class="col-sm-3 col-sm-offset-1">
           <div class="pod pod1">
             <p><?php the_field('fact_1'); ?></p>
           </div>
@@ -31,7 +31,7 @@
             <p><?php the_field('fact_2'); ?></p>
           </div>
         </div>
-        <div class="col-sm-6"></div>
+        <div class="col-sm-4"></div>
         <div class="col-sm-3">
           <div class="pod pod3">
             <p><?php the_field('fact_3'); ?></p>
@@ -40,6 +40,7 @@
             <p><?php the_field('fact_4'); ?></p>
           </div>
         </div>
+        <div class="col-sm-1"></div>
       </div>
       <div class="row instructions">
         <div class="col-sm-12 text-center">
