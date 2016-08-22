@@ -242,6 +242,6 @@
   ga('create','UA-82331663-1');ga('send','pageview');
 </script>
 
-<script src="http://maps.google.com/maps/api/js?libraries=places,geometry&key=AIzaSyB5GGE4ehKdIPSbAFosSFS6d-15Qb9S-bQ"></script>
+<script src="http://maps.google.com/maps/api/js?key=AIzaSyB5GGE4ehKdIPSbAFosSFS6d-15Qb9S-bQ&libraries=places,geometry"></script>
 
 <script src="<?php echo get_template_directory_uri(); ?>/dist/scripts/all.js"></script>
