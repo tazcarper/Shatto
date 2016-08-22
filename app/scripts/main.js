@@ -2244,6 +2244,7 @@
               if (data.response.is_valid) {
                 // hide form
                 $('#mobileContact').fadeOut();
+                $('#nl-form').fadeOut();
                 $('.sentSuccess').fadeIn();
 
                 // fire analytics event
@@ -2325,6 +2326,7 @@
               if (data.response.is_valid) {
                 // hide form
                 $('#nl-form').fadeOut();
+                $('#mobileContact').fadeOut();
                 $('.sentSuccess').fadeIn();
 
                 // fire analytics event
