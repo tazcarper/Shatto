@@ -2710,26 +2710,28 @@
 
         });
 
-        function activateWaypoint() {
-          var waypointOffset = 200;
-          var productsToShow = $('section.productSection').waypoint(function(direction) {
-            if (!$(this.element).hasClass('visible')) {
-              $(this.element).addClass('visible');
-              //$(this.element).find('.product').addClass('reveal');
-              var theProd = $(this.element).find('.product'),
+      function activateWaypoint() {
+        var waypointOffset = 400;
+        var productsToShow = $('section.productSection').waypoint(function(direction) {
+          if (!$(this.element).hasClass('visible')) {
+            $(this.element).addClass('visible');
+            //$(this.element).find('.product').addClass('reveal');
+
+            var theProd = $(this.element).find('.product img.main'),
               theImg = theProd.find('img.main');
-              theImg.unveil(200, function() {
+              theProd.each(function(i, product) {
+              $(product).unveil(200, function() {
                 $(this).load(function() {
                   this.style.opacity = 1;
                   theProd.addClass('reveal')
-
                 });
               });
-            }
-          }, {
-            offset: '100%'
-          });
+            })
 
+          }
+        }, {
+          offset: '100%'
+        });
         }
         if (!Modernizr.mq('(min-width:' + breakpoint + 'px)')) {
           $('#mobileCollapse').on('shown.bs.collapse', function(e) {
