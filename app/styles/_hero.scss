@@ -7,7 +7,7 @@
   position: relative;
 
   h1 {
-   // text-transform: capitalize;
+    text-transform: none;
   }
   &:after {
     @include MQ(maxM) {
