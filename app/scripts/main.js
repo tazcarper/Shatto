@@ -1941,7 +1941,7 @@
       });
       var goToLocate = function(e) {
         var zip = zipField.val();
-        console.log(zip.length);
+        
         zipField.removeClass('error');
         if (zip !== '' && zip.length >= 5) {
           window.location.href = ('locate/?zip=' + zip);
@@ -2220,7 +2220,7 @@
 
           }).on('success.form.fv', function(e) {
             e.preventDefault();
-            console.log('submit mobile');
+          
             var stuffToSend = {
                 'input_values': {}
               },
@@ -2475,7 +2475,7 @@
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
             if (target.length) {
-              console.log($('.headerMain').height(), $(this).height());
+             
               $('html, body').animate({
                 scrollTop: target.offset().top - ($('.headerMain').height() + 95)
               }, 1000);
@@ -2566,7 +2566,7 @@
                 thisNut = thisProduct['nutrition'],
                 sizeKeys = Object.keys(thisProduct['sizes']),
                 curCat = thisProduct['category'];
-              console.log(sizeKeys);
+              
               if (curCat == 'bar' || curCat == 'Pint' || curCat == 'cheese_curds' || curCat == 'butter' || curCat == 'artisan_cheese') {
                 $('.sizes').hide();
               } else {
@@ -2574,7 +2574,7 @@
               }
               $('.size.available').removeClass('available currentSize');
               sizeKeys.forEach(function(e, i) {
-                console.log(e);
+                
                 $('.' + e + '').addClass('available');
               });
               $('.nutritionFacts').html('').append('<div class="row">' +
@@ -2736,8 +2736,7 @@
         if (!Modernizr.mq('(min-width:' + breakpoint + 'px)')) {
           $('#mobileCollapse').on('shown.bs.collapse', function(e) {
             var id = $(e.target).attr('id');
-            console.log($(e.target));
-            console.log(id);
+           
             navigateToElement(id);
           })
 
@@ -2856,7 +2855,7 @@
             }
           });
         } else {
-          console.log('else run');
+          
           $('#jlocator').jlocator({
             startZoom: 13,
             latitude: 39.0936738,
