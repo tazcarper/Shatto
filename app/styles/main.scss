@@ -521,8 +521,8 @@ img {
 
     &.shadow {
       position: relative;
-      top: -22px;
-      @include transform(scale(1.4));
+      top: -24px;
+      @include transform(scale(1.58));
       z-index: -1;
       opacity: 1;
       left: 0;

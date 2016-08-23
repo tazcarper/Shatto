@@ -173,13 +173,13 @@ $addedPadding: 35px;
 	}
 	&#cheese {
 		@include MQ(M) {
-			height: 1453px+ $addedPadding - 500px;
+			height: 1453px+ $addedPadding ;
 		}
 		@include MQ(ML) {
-			height: 1658px+ $addedPadding - 500px;
+			height: 1658px+ $addedPadding ;
 		}
 		@include MQ(L) {
-			height: 1747px+ $addedPadding - 500px;
+			height: 1747px+ $addedPadding ;
 		}
 	}
 	&#butter {

@@ -2167,17 +2167,7 @@
       // Contact
       if ($('.contact')[0]) {
 
-        // $('input').on('focus', function(e){
-        //   $(this).parent().addClass('filled');
-        // });
-
-        // $('input').on('blur', function(e){
-        //   if ($(this).val().trim() === ''){
-        //     $(this).parent().removeClass('filled');
-        //   }
-
-        // });
-
+      
 
 
         if (Modernizr.mq('(max-width: 767px)')) {
@@ -2208,11 +2198,20 @@
               },
               mobileContact_email: {
                 validators: {
-                  notEmpty: {
-                    message: 'We will need your email.'
-                  },
+                 
                   emailAddress: {
                     message: 'The input is not a valid email address.'
+                  }
+                }
+              },
+              mobileContact_phone: {
+                validators: {
+                 notEmpty: {
+                    message: 'Fill in your phone number.'
+                  },
+                  phone: {
+                    country:'US',
+                    message: 'Not a valid phone number.'
                   }
                 }
               }
@@ -2231,6 +2230,7 @@
             stuffToSend.input_values.input_2 = myForm.find('select#mobileContact_subject').val();
             stuffToSend.input_values.input_3 = myForm.find('textarea#mobileContact_message').val();
             stuffToSend.input_values.input_4 = myForm.find('input#mobileContact_email').val();
+            stuffToSend.input_values.input_5 = myForm.find('input#mobileContact_phone').val();
             $.ajax({
               url: "/gravityformsapi/forms/1/submissions",
               method: "POST",
@@ -2256,6 +2256,7 @@
             });
           })
         } else {
+
           $('.videoSteam').vide({
             mp4: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/shattoSteam_loseless4.mp4',
             webm: 'http://6344650e56c93a4cbec3-9648dd174d28e6eb0fc37fdb4970a0be.r54.cf2.rackcdn.com/shatto/shattoSteam_loseless4.webm',
@@ -2268,6 +2269,8 @@
             loop: true,
             resizing: true
           });
+
+
           $('#nl-form').formValidation({
             framework: 'bootstrap',
             fields: {
@@ -2291,15 +2294,27 @@
               email: {
                 excluded: false,
                 validators: {
-                  notEmpty: {
-                    message: 'We will need your email.'
-                  },
+                   notEmpty: {
+                            message: 'Enter your email'
+                        },
                   emailAddress: {
                     message: 'The input is not a valid email address.'
                   }
                 }
+              },
+              phone: {
+                excluded: false,
+                enabled:false,
+                validators: {
+                  notEmpty: {
+                    message: 'Let us know your phone number'
+                  },
+                  phone: {
+                    country:'US',
+                    message: 'Not a valid phone number.'
+                  }
+                }
               }
-
             }
           }).on('success.form.fv', function(e) {
             event.preventDefault();
@@ -2313,6 +2328,7 @@
             stuffToSend.input_values.input_2 = myForm.find('select#subject').val();
             stuffToSend.input_values.input_3 = myForm.find('input#message').val();
             stuffToSend.input_values.input_4 = myForm.find('input#email').val();
+            stuffToSend.input_values.input_5 = myForm.find('input#phone').val();
             $.ajax({
               url: "/gravityformsapi/forms/1/submissions",
               method: "POST",
@@ -2337,7 +2353,10 @@
               }
             });
           })
+
         }
+
+      
         var nlform = new NLForm(document.getElementById('nl-form'));
 
 

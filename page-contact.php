@@ -23,7 +23,7 @@
             </p>
             <p>Email me back at&nbsp;
               <br/>
-              <span class="form-group"><input type="text" id="email" name="email" placeholder="__________" value="" class="email" required></span>
+              <span class="form-group"><input type="text" id="email" name="email" placeholder="__________" value="" class="email"><br/></span> or call me at <span class="form-group"><input type="text" id="phone" name="phone" placeholder="__________" value="" class="phone"></span>.
             </p>
             <p style="margin-bottom:.4em;">Thanks for your time!</p>
             <button class="submit btn invert">SEND</button>
@@ -33,7 +33,7 @@
         </form>
         <div class="sentSuccess">
           <h1>We got your message.</h1>
-          <h3>We'll be in touch!</h3>
+          <h3>We&rsquo;ll be in touch!</h3>
         </div>
       </div>
       <div class="col-xs-12 visible-xs text-center mobileContact">
@@ -46,7 +46,10 @@
             <input type="email" name="mobileContact_email" id="mobileContact_email" class="form-control" placeholder="Email" tabindex="2">
           </div>
           <div class="form-group">
-            <select id="mobileContact_subject" name="mobileContact_subject" class="form-control" tabindex="3">
+            <input type="text" name="mobileContact_phone" id="mobileContact_phone" class="form-control" placeholder="Phone Number" tabindex="3">
+          </div>
+          <div class="form-group">
+            <select id="mobileContact_subject" name="mobileContact_subject" class="form-control" tabindex="4">
               <option selected disabled>Choose a Reason</option>
               <option value="Product Question">Product Question</option>
               <option value="Tour Question">Tour Question</option>
@@ -55,9 +58,9 @@
             </select>
           </div>
           <div class="form-group">
-            <textarea name="mobileContact_message" id="mobileContact_message" cols="30" rows="10" class="form-control" placeholder="Question / Comments / Random " tabindex="4"></textarea>
+            <textarea name="mobileContact_message" id="mobileContact_message" cols="30" rows="10" class="form-control" placeholder="Question / Comments / Random " tabindex="5"></textarea>
           </div>
-          <submit class="btn invert" tabindex="5">Submit</submit>
+          <submit class="btn invert" tabindex="6">Submit</submit>
         </form>
         <div class="sentSuccess">
           <h1>THANK YA.</h1>

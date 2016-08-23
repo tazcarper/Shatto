@@ -78,14 +78,14 @@
 				}
 			});
 			this.optionsList.innerHTML = ihtml;
-			this.optionsList.className ="custom_dropdown";
+			this.optionsList.className = "custom_dropdown";
 			this.ddContainer = document.createElement('div');
 			this.ddContainer.className = "selection";
 			this.fld.appendChild(this.toggle);
 
 			this.ddContainer.appendChild(this.optionsList);
 			this.elOriginal.parentNode.insertBefore(this.fld, this.elOriginal);
-			this.fld.parentNode.insertBefore(this.ddContainer,this.fld)
+			this.fld.parentNode.insertBefore(this.ddContainer, this.fld)
 			this.elOriginal.style.display = 'none';
 		},
 		_createInput: function() {
@@ -112,8 +112,8 @@
 			}
 
 			this.getinput.setAttribute('placeholder', this.elOriginal.getAttribute('placeholder'));
-			
-			this.getinput.setAttribute('required',true);
+
+			this.getinput.setAttribute('required', true);
 			this.getinputWrapper = document.createElement('li');
 			this.getinputWrapper.className = 'nl-ti-input';
 			if (this.elOriginal.className === 'message') {
@@ -219,8 +219,7 @@
 			if (this.elOriginal.type === 'select-one') {
 				console.log('its dropdown')
 				$('.selection').addClass('open');
-			}
-			else {
+			} else {
 				this.fld.className += ' formField-open';
 			}
 			if (this.elOriginal.className === 'message') {
@@ -263,22 +262,54 @@
 				this.toggle.innerHTML = this.getinput.value.trim() !== '' ? this.getinput.value : this.getinput.getAttribute('placeholder');
 				this.elOriginal.value = this.getinput.value;
 				
+				var phone = $('#nl-form').find('[name="phone"]').val(),
+					email = $('#nl-form').find('[name="email"]').val(),
+					fv = $('#nl-form').data('formValidation');
+				console.log('key up')
+				switch (this.elOriginal.id) {
+					// User is focusing the ssn field
+					case 'email':
+						fv.enableFieldValidators('phone', email === '').revalidateField('phone');
+
+						if (email && fv.getOptions('email', null, 'enabled') === false) {
+							fv.enableFieldValidators('email', true).revalidateField('email');
+						} else if (email === '' && phone !== '') {
+							fv.enableFieldValidators('email', false).revalidateField('email');
+						}
+						break;
+
+						// User is focusing the drivers license field
+					case 'phone':
+						if (phone === '') {
+							fv.enableFieldValidators('email', true).revalidateField('email');
+						} else if (email === '') {
+							fv.enableFieldValidators('email', false).revalidateField('email');
+							console.log('check email')
+						}
+
+						if (phone && email === '' && fv.getOptions('phone', null, 'enabled') === false) {
+							fv.enableFieldValidators('phone', true).revalidateField('phone');
+						}
+						break;
+
+					default:
+						break;
+				}
 				$('#nl-form').formValidation('revalidateField', this.elOriginal.id);
 				if (this.elOriginal.value === '') {
-					
-					if (this.getinput.localName == 'textarea'){
+
+					if (this.getinput.localName == 'textarea') {
 						$('.textarea .formField-toggle').removeClass('active');
 						$('.textarea').removeClass('active');
 					}
-					 
-				}
-				else {
-					
-					if (this.getinput.localName == 'textarea'){
+
+				} else {
+
+					if (this.getinput.localName == 'textarea') {
 						$('.textarea .formField-toggle').addClass('active');
 						$('.textarea').removeClass('active');
 					}
-					
+
 				}
 
 			}
