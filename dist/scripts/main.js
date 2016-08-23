@@ -16,7 +16,15 @@ $(".cd-nav-trigger").on("click",function(event){event.preventDefault();$(".cd-na
 //stop if nav animation is running
 if(!isLateralNavAnimating){if($(this).parents(".csstransitions").length>0){isLateralNavAnimating=true}$("html").toggleClass("navigation-is-open");$(".headerMain").toggleClass("makeBlack");$(".cd-navigation-wrapper").one("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend",function(){//animation is over
 isLateralNavAnimating=false})}});$(".faqContainer .question").on("click",function(event){toggleFAQ(event.target)});// homepage scripts / .home
-if($("#floatingBottle")[0]){var theH,callout,closeCallOut,floatingBottle,bottleWidth,theBottle,bottles,arrayIndex,bottlePos,customRotation,screenWidth,bottlesArray;var instructionCall;var showInstructions;var floatTrigger;var stopWay;(function(){var bottleMouseMove=function bottleMouseMove(e){if(floatingBottle.hasClass("start")){instructionCall=true;floatingBottle.addClass("disableTransition");var x=e.pageX-theBottle.offset().left;// Find bottle pos
+if($("#floatingBottle")[0]){var theH,callout,closeCallOut,floatingBottle,bottleWidth,theBottle,bottles,arrayIndex,bottlePos,customRotation,screenWidth,bottlesArray;var floatTrigger;var stopWay;(function(){// for (var i = 2; i <= bottlesArray.length; i++) {
+//   theBottle.append('<img src="'+currentUrl+'/dist/images/rotation/' + i + '.png" data-bottleposition="' + i + '">');
+// }
+// var showInstructions = window.setTimeout(function(e) {
+//   if (!instructionCall) {
+//     $('.instructions').fadeIn();
+//   }
+// }, 30000);
+var bottleMouseMove=function bottleMouseMove(e){if(floatingBottle.hasClass("start")){floatingBottle.addClass("disableTransition");var x=e.pageX-theBottle.offset().left;// Find bottle pos
 bottlePos=customRotation[parseInt(x/370*customRotation.length)];arrayIndex=parseInt(x/screenWidth*customRotation.length);var textPod=$(".pod");textPod.removeClass("visible");if(arrayIndex===11||arrayIndex===12){textPod.removeClass("visible")}else if(arrayIndex<=5){$(".pod1").addClass("visible")}else if(arrayIndex<=10){$(".pod2").addClass("visible")}else if(arrayIndex<=18){$(".pod3").addClass("visible")}else if(arrayIndex<=23){$(".pod4").addClass("visible")}var bottleBgPos="img-"+bottlePos;theBottle.attr("class",function(i,c){return c.replace(/(^|\s)img-\S+/g,"")}).addClass(bottleBgPos)}};// bottle turn function
 var changeIt=function changeIt(i){// Quick fix for this. Fix later
 if(i>=16){i=16}var origNum=i;theBottle.attr("class",function(i,c){return c.replace(/(^|\s)img-\S+/g,"")}).addClass("img-"+customRotation[origNum]);// if not on starting position
@@ -24,10 +32,7 @@ if(i!==8){if(arrayIndex<8){origNum++;setTimeout(function(){changeIt(origNum)},25
 if(i===8){arrayIndex=8}};var rotateBack=function rotateBack(){changeIt(arrayIndex)};// if desktop
 var onResize=function onResize(){screenWidth=theBottle.width()};theH=0;callout=$(".callOut");closeCallOut=$(".closeCallout");floatingBottle=$("#floatingBottle");bottleWidth=$("#floatingBottle").width();theBottle=$("#mainBottle");bottles=16;arrayIndex=8;bottlePos=11;// currentUrl = stylesheet_directory_uri,
 // Custom rotation order
-customRotation=[9,10,11,12,13,14,15,16,1,2,3,4,5,6,7,8,9];bottlesArray=Array.apply(null,{length:bottles}).map(Number.call,Number);// for (var i = 2; i <= bottlesArray.length; i++) {
-//   theBottle.append('<img src="'+currentUrl+'/dist/images/rotation/' + i + '.png" data-bottleposition="' + i + '">');
-// }
-instructionCall=false;showInstructions=window.setTimeout(function(e){if(!instructionCall){$(".instructions").fadeIn()}},3e4);theBottle.on("mousemove",bottleMouseMove);$(window).resize(onResize);onResize();floatTrigger=$("#floatingTrigger").waypoint(function(direction){if(direction==="down"){//$('#mainBottle').css({'max-width':'400px'});
+customRotation=[9,10,11,12,13,14,15,16,1,2,3,4,5,6,7,8,9];bottlesArray=Array.apply(null,{length:bottles}).map(Number.call,Number);theBottle.on("mousemove",bottleMouseMove);$(window).resize(onResize);onResize();floatTrigger=$("#floatingTrigger").waypoint(function(direction){if(direction==="down"){//$('#mainBottle').css({'max-width':'400px'});
 floatingBottle.addClass("start");$("#mainBottle").addClass("shown");$(".shadow").addClass("hideIt");callout.removeClass("active")}else{floatingBottle.removeClass("start disableTransition");rotateBack();var quickDelay=window.setTimeout(function(e){callout.addClass("active")},501);if(!floatingBottle.hasClass("stop")){$(".shadow").removeClass("hideIt")}}},{offset:"-600"});stopWay=$(".bottleDetail").waypoint(function(direction){if(direction==="down"&&!floatingBottle.hasClass("stop")){// $('#mainBottle').css({'max-width':'300px'});
 floatingBottle.addClass("stop").removeClass("start disableTransition").find("a").attr("href","/products.html#milk");rotateBack();//$('#mainBottle').wrap('<a href="/products.html#milk"></a>');
 $(".product").each(function(e){$(this).addClass("productShown")})}else{// $('#mainBottle').css({'max-width':'250px'});

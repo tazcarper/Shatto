@@ -1798,16 +1798,16 @@
         // for (var i = 2; i <= bottlesArray.length; i++) {
         //   theBottle.append('<img src="'+currentUrl+'/dist/images/rotation/' + i + '.png" data-bottleposition="' + i + '">');
         // }
-        var instructionCall = false;
-        var showInstructions = window.setTimeout(function(e) {
-          if (!instructionCall) {
-            $('.instructions').fadeIn();
-          }
-        }, 30000);
+      
+        // var showInstructions = window.setTimeout(function(e) {
+        //   if (!instructionCall) {
+        //     $('.instructions').fadeIn();
+        //   }
+        // }, 30000);
 
         function bottleMouseMove(e) {
           if (floatingBottle.hasClass('start')) {
-            instructionCall = true;
+            
             floatingBottle.addClass('disableTransition');
             var x = e.pageX - theBottle.offset().left;
             // Find bottle pos
