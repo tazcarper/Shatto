@@ -21,7 +21,7 @@ $icon-font-path: '../fonts/';
 @import "_modal.scss";
 @import "_map.scss";
 @import "_datepicker.scss";
- 
+
 body, html {
   font-family: "futura-pt", sans-serif;
   font-style: normal;
@@ -402,9 +402,9 @@ img {
 .pad2 {
   padding-top: .5em;
   padding-bottom: .5em;
-} 
+}
 .form-control {
-  border-radius: 18px; 
+  border-radius: 18px;
   font-size: 1em;
   height: auto;
 }
@@ -412,7 +412,7 @@ img {
   overflow:hidden;
 }
 #floatingBottle {
-  z-index: 999999; 
+  z-index: 999999;
   position: relative;
   width: 270px;
   height: 510px;
@@ -425,7 +425,7 @@ img {
   outline: none;
   position: absolute;
   margin: 0 auto;
- 
+
   @include MQ(maxL){
      @include transform(translate(0, -1920px));
   }
@@ -450,7 +450,7 @@ img {
     height: 700px;
     width: 370px;
     @include transform(translate(0, -1035px));
-   
+
     @include MQ(maxM) {
       @include transform(translate(0, 0));
     }
@@ -696,5 +696,48 @@ img {
 .belowNavigation {
   @media (min-width:$screen-sm-min) {
     padding-top: 14 0px;
+  }
+}
+
+$base-line-height: 24px;
+$white: rgb(255,255,255);
+$off-white: rgba($white, 0.2);
+$spin-duration: 1s;
+$pulse-duration: 750ms;
+
+.loading-pulse {
+  position: relative;
+  width: 6px;
+  height: 10px;
+  background: $off-white;
+  animation: pulse $pulse-duration infinite;
+  animation-delay: ($pulse-duration / 3);
+  top:-1px;
+  margin-left: 15px;
+  margin-right: 15px;
+  display:inline-block;
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: ($base-line-height / 1.5);
+    width: ($base-line-height / 4);
+    background: $off-white;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: pulse $pulse-duration infinite;
+  }
+  &:before {
+    left: -($base-line-height / 2);
+  }
+  &:after {
+    left: ($base-line-height / 2);
+    animation-delay: ($pulse-duration / 1.5);
+  }
+}
+
+@keyframes pulse {
+  50% {
+    background: $white;
   }
 }

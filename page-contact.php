@@ -60,7 +60,7 @@
           <div class="form-group">
             <textarea name="mobileContact_message" id="mobileContact_message" cols="30" rows="10" class="form-control" placeholder="Question / Comments / Random " tabindex="5"></textarea>
           </div>
-          <submit class="btn invert" tabindex="6">Submit</submit>
+          <button class="btn invert" tabindex="6">Submit</button>
         </form>
         <div class="sentSuccess">
           <h1>THANK YA.</h1>

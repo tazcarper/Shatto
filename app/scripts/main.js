@@ -1798,7 +1798,7 @@
         // for (var i = 2; i <= bottlesArray.length; i++) {
         //   theBottle.append('<img src="'+currentUrl+'/dist/images/rotation/' + i + '.png" data-bottleposition="' + i + '">');
         // }
-      
+
         // var showInstructions = window.setTimeout(function(e) {
         //   if (!instructionCall) {
         //     $('.instructions').fadeIn();
@@ -1807,7 +1807,7 @@
 
         function bottleMouseMove(e) {
           if (floatingBottle.hasClass('start')) {
-            
+
             floatingBottle.addClass('disableTransition');
             var x = e.pageX - theBottle.offset().left;
             // Find bottle pos
@@ -1941,7 +1941,7 @@
       });
       var goToLocate = function(e) {
         var zip = zipField.val();
-        
+
         zipField.removeClass('error');
         if (zip !== '' && zip.length >= 5) {
           window.location.href = ('locate/?zip=' + zip);
@@ -2167,7 +2167,7 @@
       // Contact
       if ($('.contact')[0]) {
 
-      
+
 
 
         if (Modernizr.mq('(max-width: 767px)')) {
@@ -2198,7 +2198,7 @@
               },
               mobileContact_email: {
                 validators: {
-                 
+
                   emailAddress: {
                     message: 'The input is not a valid email address.'
                   }
@@ -2220,7 +2220,7 @@
 
           }).on('success.form.fv', function(e) {
             e.preventDefault();
-          
+
             var stuffToSend = {
                 'input_values': {}
               },
@@ -2320,15 +2320,17 @@
             event.preventDefault();
 
             var stuffToSend = {
-                'input_values': {}
-              },
-              myForm = $(this);
+                  'input_values': {}
+                },
+                myForm = $(this);
+
+            myForm.find('button').html('Processing <span class="loading-pulse"></span>').prop('disabled',true);
+
             // find form values and assign for gravity forms
             stuffToSend.input_values.input_1 = myForm.find('input#name').val();
             stuffToSend.input_values.input_2 = myForm.find('select#subject').val();
             stuffToSend.input_values.input_3 = myForm.find('input#message').val();
             stuffToSend.input_values.input_4 = myForm.find('input#email').val();
-            stuffToSend.input_values.input_5 = myForm.find('input#phone').val();
             $.ajax({
               url: "/gravityformsapi/forms/1/submissions",
               method: "POST",
@@ -2351,12 +2353,14 @@
                 // handle errors from gravity forms
                 alert(JSON.stringify(data.response.validation_messages));
               }
+            }).error(function(data){
+              myForm.find('button').prop('disabled',false);
             });
           })
 
         }
 
-      
+
         var nlform = new NLForm(document.getElementById('nl-form'));
 
 
@@ -2475,7 +2479,7 @@
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
             if (target.length) {
-             
+
               $('html, body').animate({
                 scrollTop: target.offset().top - ($('.headerMain').height() + 95)
               }, 1000);
@@ -2566,7 +2570,7 @@
                 thisNut = thisProduct['nutrition'],
                 sizeKeys = Object.keys(thisProduct['sizes']),
                 curCat = thisProduct['category'];
-              
+
               if (curCat == 'bar' || curCat == 'Pint' || curCat == 'cheese_curds' || curCat == 'butter' || curCat == 'artisan_cheese') {
                 $('.sizes').hide();
               } else {
@@ -2574,7 +2578,7 @@
               }
               $('.size.available').removeClass('available currentSize');
               sizeKeys.forEach(function(e, i) {
-                
+
                 $('.' + e + '').addClass('available');
               });
               $('.nutritionFacts').html('').append('<div class="row">' +
@@ -2736,7 +2740,7 @@
         if (!Modernizr.mq('(min-width:' + breakpoint + 'px)')) {
           $('#mobileCollapse').on('shown.bs.collapse', function(e) {
             var id = $(e.target).attr('id');
-           
+
             navigateToElement(id);
           })
 
@@ -2855,7 +2859,7 @@
             }
           });
         } else {
-          
+
           $('#jlocator').jlocator({
             startZoom: 13,
             latitude: 39.0936738,

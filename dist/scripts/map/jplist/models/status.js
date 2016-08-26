@@ -1,4 +1,4 @@
-'use strict';(function($){'use strict';/**
+'use strict';(function($){'use strict'; /**
 	* Status
 	* @param {?string} name
 	* @param {?string} action
@@ -17,8 +17,8 @@
 	* @property {Object} data - related data
 	* @property {boolean} cookies - if store control in cookies
     * @property {string} category - control category
-	*/jQuery.fn.jplist.models.Status=function(name,action,type,data,cookies,category){this.action=action;//filter, sort, paging			
-this.name=name;this.type=type;//drop-down, placeholder, textbox
-this.data=data;//related data
+	*/jQuery.fn.jplist.models.Status=function(name,action,type,data,cookies,category){this.action=action; //filter, sort, paging			
+this.name=name;this.type=type; //drop-down, placeholder, textbox
+this.data=data; //related data
 this.cookies=cookies;this.category=category;};})(jQuery);
-//# sourceMappingURL=status.js.map
+//# sourceMappingURL=../../../map/jplist/models/status.js.map
