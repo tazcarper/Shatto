@@ -712,8 +712,8 @@ $pulse-duration: 750ms;
   background: $off-white;
   animation: pulse $pulse-duration infinite;
   animation-delay: ($pulse-duration / 3);
-  top:-1px;
-  margin-left: 15px;
+  top:-6px;
+  margin-left: 20px;
   margin-right: 15px;
   display:inline-block;
   &:before, &:after {
