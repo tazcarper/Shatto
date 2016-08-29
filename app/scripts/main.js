@@ -2135,6 +2135,7 @@
         stuffToSend.input_values.input_5 = myForm.find('input#schedule_date').val();
         stuffToSend.input_values.input_6 = myForm.find('textarea#schedule_comment').val();
         if (theButton.is('[disabled=disabled]')) {
+          theButton.prop('disabled', true);
           $.ajax({
             url: "/gravityformsapi/forms/2/submissions",
             method: "POST",
@@ -2240,6 +2241,7 @@
             stuffToSend.input_values.input_4 = myForm.find('input#mobileContact_email').val();
             stuffToSend.input_values.input_5 = myForm.find('input#mobileContact_phone').val();
             if (theButton.is('[disabled=disabled]')){
+               theButton.prop('disabled', true);
             $.ajax({
               url: "/gravityformsapi/forms/1/submissions",
               method: "POST",
